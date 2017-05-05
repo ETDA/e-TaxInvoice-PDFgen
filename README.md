@@ -8,18 +8,23 @@ The applicaion will generate [PDF/A-3](https://en.wikipedia.org/wiki/PDF/A) arch
 For more information about e-Tax Invoice by Email please visit [e-Tax](https://etax.teda.th/)
 
 
-## Documentation 
-Available soon 
-
 ## Latest Release
 Download the latest Windows x64 : [e-Tax Invoice by Email - PDF Generator on PC](https://github.com/ETDA/e-TaxInvoice-PDFgen/releases/download/0.1.0/e-TaxInvoice-PDFgen0.1.0.zip)
 
 Or release page [release page](https://github.com/ETDA/e-TaxInvoice-PDFgen/releases)
 
-## Prerequisite
-* itextsharp.dll
-* itextsharp.pdfa.dll
-* itextsharp.xtra.dll
+## Document
+you can download [ installation and user guide ](https://github.com/ETDA/e-TaxInvoice-PDFgen/blob/master/Document/eTax%20Invoice_PDFGen%20on%20PC%20User%20manual.pdf)  
+
+## Dependency 
+iTextSharp5.5.9.0 
+ * itextsharp.dll
+ * itextsharp.pdfa.dll
+ * itextsharp.xtra.dll
+
+Font
+ * [THSarabun-PSK](https://github.com/ETDA/e-TaxInvoice-PDFgen/blob/master/Font/th-sarabun-psk.zip)
+    For font installation instruction please read installation and user guide
 
 ## License 
 [GNU Affero General Public License v3.0](https://github.com/ETDA/e-TaxInvoice-PDFgen/blob/master/LICENSE)
