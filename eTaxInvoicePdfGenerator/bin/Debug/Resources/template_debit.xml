@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:DebitCreditNote_CrossIndustryInvoice 
+    xmlns:ram="urn:etda:uncefact:data:standard:DebitCreditNote_ReusableAggregateBusinessInformationEntity:2"
+    xmlns:rsm="urn:etda:uncefact:data:standard:DebitCreditNote_CrossIndustryInvoice:2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:etda:uncefact:data:standard:DebitCreditNote_CrossIndustryInvoice:2">
+    <rsm:ExchangedDocumentContext>
+      <ram:GuidelineSpecifiedDocumentContextParameter>
+        <ram:ID schemeAgencyID="ETDA" schemeVersionID="v2.0">ER3-2560</ram:ID>
+      </ram:GuidelineSpecifiedDocumentContextParameter>
+    </rsm:ExchangedDocumentContext>
+    <rsm:ExchangedDocument>
+      <ram:ID>*invoice_id</ram:ID>
+      <ram:Name>*invoice_name</ram:Name>
+      <ram:TypeCode>*invoice_typecode</ram:TypeCode>
+      <ram:IssueDateTime>*invoice_issue_date</ram:IssueDateTime>
+      *invoice_purpose
+      *invoice_Purpose_code
+      <ram:CreationDateTime>*invoice_create_date</ram:CreationDateTime>
+      *invoice_remark
+    </rsm:ExchangedDocument>
+    <rsm:SupplyChainTradeTransaction>
+        <ram:ApplicableHeaderTradeAgreement>
+            <ram:SellerTradeParty>
+				<ram:Name>*seller_name</ram:Name>
+                <ram:SpecifiedTaxRegistration>
+                    <ram:ID schemeID="TXID" >*seller_taxid</ram:ID>
+                </ram:SpecifiedTaxRegistration>
+              *seller_DefinedCITradeContact
+              <ram:PostalTradeAddress>
+                    <ram:PostcodeCode>*seller_zipcode</ram:PostcodeCode>
+                *seller_address1
+                *seller_address2
+                *seller_cityname
+                *seller_city_subdivision_name
+                <ram:CountryID schemeID="3166-1 alpha-2">*seller_country</ram:CountryID>
+					*sellercountry_subdivision_id
+                </ram:PostalTradeAddress>
+            </ram:SellerTradeParty>
+            <ram:BuyerTradeParty>
+                <ram:Name>*buyer_name</ram:Name>
+                <ram:SpecifiedTaxRegistration>
+                    <ram:ID schemeID="TXID" >*buyer_taxid</ram:ID>
+                </ram:SpecifiedTaxRegistration>
+              *buyer_DefinedCITradeContact
+             <ram:PostalTradeAddress>
+                    <ram:PostcodeCode>*buyer_zipcode</ram:PostcodeCode>
+               *buyer_address1
+               *buyer_address2
+               *buyer_cityname
+               *buyer_city_subdivision_name
+               <ram:CountryID schemeID="3166-1 alpha-2">*buyer_country</ram:CountryID>
+					*buyercountry_subdivision_id
+				</ram:PostalTradeAddress>
+            </ram:BuyerTradeParty>
+			  *reference
+        </ram:ApplicableHeaderTradeAgreement>
+        <ram:ApplicableHeaderTradeDelivery>
+        <ram:ShipToTradeParty>
+				<ram:DefinedTradeContact>
+					*buyer_contact_person
+				</ram:DefinedTradeContact>
+        </ram:ShipToTradeParty>
+        </ram:ApplicableHeaderTradeDelivery>
+        <ram:ApplicableHeaderTradeSettlement>
+            <ram:InvoiceCurrencyCode listID="ISO 4217 3A">*currency</ram:InvoiceCurrencyCode>
+            <ram:ApplicableTradeTax>
+                <ram:TypeCode>*invoice_tax_code</ram:TypeCode>
+                <ram:CalculatedRate>*invoice_tax_rate</ram:CalculatedRate>
+                <ram:BasisAmount>*invoice_basis_amount</ram:BasisAmount>
+               <ram:CalculatedAmount>*calculated_amount</ram:CalculatedAmount>
+            </ram:ApplicableTradeTax>
+            *invoice_allowance
+            <ram:SpecifiedTradeSettlementHeaderMonetarySummation>
+				      <ram:OriginalInformationAmount>*invoice_original</ram:OriginalInformationAmount>
+				      <ram:LineTotalAmount>*invoice_line_total</ram:LineTotalAmount>
+				      <ram:DifferenceInformationAmount>*invoice_difference</ram:DifferenceInformationAmount>
+              <ram:TaxBasisTotalAmount>*tax_basis_total_amount</ram:TaxBasisTotalAmount>
+              <ram:TaxTotalAmount>*invoice_tax_total</ram:TaxTotalAmount>
+              <ram:GrandTotalAmount>*invoice_grand_total</ram:GrandTotalAmount>                
+            </ram:SpecifiedTradeSettlementHeaderMonetarySummation>
+        </ram:ApplicableHeaderTradeSettlement>
+		    *item
+    </rsm:SupplyChainTradeTransaction>
+</rsm:DebitCreditNote_CrossIndustryInvoice>

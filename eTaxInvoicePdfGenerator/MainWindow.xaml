@@ -1,0 +1,41 @@
+﻿<Window x:Class="eTaxInvoicePdfGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:eTaxInvoicePdfGenerator"
+        mc:Ignorable="d" Height="700" Width="1024" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closed="Window_Closed" Title="ระบบสร้างใบกำกับภาษีอิเล็กทรอนิกส์" Loaded="Window_Loaded" WindowStyle="None" Style="{StaticResource MainWindow}">
+    <Window.Resources>
+        <ImageBrush x:Key="Background" ImageSource="in\elements\main_BG@2x.jpg" />
+    </Window.Resources>
+    <Window.Background>
+        <StaticResource ResourceKey="Background" />
+    </Window.Background>
+    <Grid>
+        <Image x:Name="image" HorizontalAlignment="Center" Height="157" Margin="0,20,0,0" VerticalAlignment="Top" Width="724" Source="in\elements\main_txt@2x.png"/>
+        <Button x:Name="sellerConfigBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="161,455,0,0" Click="sellerConfigBtn_Click" Height="233" Width="176" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Image Source="in\elements\main_1Btn_shop@2x.png" Style="{StaticResource imageBtn}"/>
+        </Button>
+        <Button x:Name="buyerConfigBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="449,455,0,0" Click="buyerConfigBtn_Click" Height="233" Width="176" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Image Source="in\elements\main_2Btn_buyer@2x.png" Style="{StaticResource imageBtn}"/>
+        </Button>
+        <Button x:Name="itemConfigBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="719,455,0,0" VerticalAlignment="Top" Click="itemConfigBtn_Click" Width="176" Height="233">
+            <Image Source="in\elements\main_3Btn_product@2x.png" Style="{StaticResource imageBtn}"/>
+        </Button>
+        <Button x:Name="cre8TaxBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="137,196,0,240" Click="cre8TaxBtn_Click" Height="236" Width="237">
+            <!--<Button.Background>
+                <ImageBrush ImageSource="in\elements\main_4Btn_tax_invoice@2x.png" ></ImageBrush>
+            </Button.Background>-->
+            <Image Source="in\elements\main_4Btn_tax_invoice@2x.png" Style="{StaticResource imageBtn}"/>
+        </Button>
+        <Button x:Name="cre8DebitNoteBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="444,196,0,240" Click="cre8DebitNoteBtn_Click" Height="236" Width="192">
+            <Image Source="in\elements\main_5Btn_debit_invoice@2x.png" Style="{StaticResource imageBtn}"/>
+        </Button>
+        <Button x:Name="cre8CreditNoteBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="717,196,0,240" Click="cre8CreditNoteBtn_Click" Width="183" Height="236">
+            <Image Source="in\elements\main_6Btn_credit_invoice@2x.png" Style="{StaticResource imageBtn}"/>
+        </Button>
+        <Button x:Name="exitBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Click="exitBtn_Click">
+            <Image Source="in\elements\btn_close@2x.png" Style="{StaticResource imageBtn}"/>
+        </Button>
+    </Grid>
+</Window>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\release\0.1.0\|C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\publish\eTaxInvoice_v2.3.11\|C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\publish\eTaxInvoice_v2.3.10\|C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\publish\eTaxInvoice_v2.39\|C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\publish\eTaxInvoice_v2.38\</PublishUrlHistory>
+    <InstallUrlHistory />
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+    <ProjectView>ProjectFiles</ProjectView>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <RemoteDebugEnabled>false</RemoteDebugEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,46 @@
+<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?><x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.1.0-jc003">
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:pdfaid="http://www.aiim.org/pdfa/ns/id/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+      <dc:format>application/pdf</dc:format>
+      <pdfaid:part>3</pdfaid:part>
+      <pdfaid:conformance>U</pdfaid:conformance>
+    </rdf:Description>
+  <rdf:Description xmlns:pdfaExtension="http://www.aiim.org/pdfa/ns/extension/" xmlns:pdfaProperty="http://www.aiim.org/pdfa/ns/property#" xmlns:pdfaSchema="http://www.aiim.org/pdfa/ns/schema#" rdf:about="">
+		<pdfaExtension:schemas>
+			<rdf:Bag>
+				<rdf:li rdf:parseType="Resource">
+					<pdfaSchema:schema>Electronic Tax Invoice PDFA Extension Schema</pdfaSchema:schema>
+					<pdfaSchema:namespaceURI>urn:etda:uncefact:data:standard:Invoice_CrossIndustryInvoice:2</pdfaSchema:namespaceURI>
+					<pdfaSchema:prefix>rsm</pdfaSchema:prefix>
+					<pdfaSchema:property>
+						<rdf:Seq>
+							<rdf:li rdf:parseType="Resource">
+								<pdfaProperty:name>DocumentFileName</pdfaProperty:name>
+								<pdfaProperty:valueType>Text</pdfaProperty:valueType>
+								<pdfaProperty:category>external</pdfaProperty:category>
+								<pdfaProperty:description>Name of the embedded XML invoice file</pdfaProperty:description>
+							</rdf:li>
+							<rdf:li rdf:parseType="Resource">
+								<pdfaProperty:name>DocumentType</pdfaProperty:name>
+								<pdfaProperty:valueType>Text</pdfaProperty:valueType>
+								<pdfaProperty:category>external</pdfaProperty:category>
+								<pdfaProperty:description>Type of the document</pdfaProperty:description>
+							</rdf:li>
+							<rdf:li rdf:parseType="Resource">
+								<pdfaProperty:name>Version</pdfaProperty:name>
+								<pdfaProperty:valueType>Text</pdfaProperty:valueType>
+								<pdfaProperty:category>external</pdfaProperty:category>
+								<pdfaProperty:description>Version of the ETDA XML data</pdfaProperty:description>
+							</rdf:li>
+						</rdf:Seq>
+					</pdfaSchema:property>
+				</rdf:li>
+			</rdf:Bag>
+		</pdfaExtension:schemas>
+	</rdf:Description>
+    <rdf:Description xmlns:rsm="urn:etda:uncefact:data:standard:Invoice_CrossIndustryInvoice:2" rdf:about="">
+    <rsm:DocumentFileName>ETDA-invoice.xml</rsm:DocumentFileName>
+    <rsm:DocumentType>@DocumentType</rsm:DocumentType>
+    <rsm:Version>2.0</rsm:Version>
+</rdf:Description></rdf:RDF>
+</x:xmpmeta><?xpacket end="r"?>

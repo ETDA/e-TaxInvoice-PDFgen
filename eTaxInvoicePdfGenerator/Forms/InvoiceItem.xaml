@@ -1,0 +1,56 @@
+﻿<Window x:Class="eTaxInvoicePdfGenerator.Forms.InvoiceItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:eTaxInvoicePdfGenerator.Forms"
+        mc:Ignorable="d"
+        Title="เพิ่ม/แก้ไข รายการสินค้า" Height="423" Width="420" Closed="Window_Closed" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" KeyUp="Window_KeyUp" WindowStyle="None" Style="{StaticResource MainWindow}">
+    <Window.Resources>
+        <ImageBrush x:Key="Background" ImageSource="/eTaxInvoicePdfGenerator;component/in/elements/main_BG@2x.jpg" />
+    </Window.Resources>
+    <Window.Background>
+        <StaticResource ResourceKey="Background" />
+
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image x:Name="image" HorizontalAlignment="Stretch" Margin="0,20,0,0" VerticalAlignment="Top" Source="/eTaxInvoicePdfGenerator;component/in/elements/popup_addProduct.png" Width="183" Height="37" />
+        <!--<Label x:Name="label" HorizontalAlignment="Left" Margin="148,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.673,-0.625" Content="เพิ่ม/แก้ไข รายการสินค้า" />-->
+        <ComboBox x:Name="itemNameCbb" HorizontalAlignment="Left" Margin="200,93,0,0" VerticalAlignment="Top" Width="200" Height="22" SelectionChanged="itemNameCbb_SelectionChanged" IsEditable="True"/>
+        <Label x:Name="label1" Content="รายการ *" HorizontalAlignment="Left" Margin="20,89,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label2" Content="จำนวน *" HorizontalAlignment="Left" Margin="20,162,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="quantityTb" HorizontalAlignment="Left" Height="23" Margin="200,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Text="1" TextAlignment="Right" KeyUp="quantityTb_KeyUp" MaxLength="5"/>
+        <ComboBox x:Name="unitCbb" HorizontalAlignment="Left" Margin="319,167,0,0" VerticalAlignment="Top" Width="82" Height="22" IsEditable="True" Loaded="unitCbb_Loaded" DropDownOpened="unitCbb_DropDownOpened"/>
+        <Label x:Name="label4" Content="ราคาต่อหน่วย *" HorizontalAlignment="Left" Margin="20,123,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label5" Content="ส่วนลด" HorizontalAlignment="Left" Margin="20,201,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="pricePerUnitTb" HorizontalAlignment="Left" Height="23" Margin="200,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" TextAlignment="Right" Text="0.00" KeyUp="pricePerUnitTb_KeyUp" MaxLength="18" GotFocus="pricePerUnitTb_GotFocus" LostFocus="pricePerUnitTb_LostFocus"/>
+        <TextBox x:Name="discountTb" HorizontalAlignment="Left" Height="23" Margin="200,205,0,0" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" Width="44" TextAlignment="Right" KeyUp="discountTb_KeyUp" MaxLength="5" GotFocus="discountTb_GotFocus" LostFocus="discountTb_LostFocus"/>
+        <Label x:Name="label6" Content="%" HorizontalAlignment="Left" Margin="242,202,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="discountTotalTb" HorizontalAlignment="Left" Height="23" Margin="272,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" Text="0.00" TextAlignment="Right" KeyUp="discountTotalTb_KeyUp" GotFocus="discountTotalTb_GotFocus" LostFocus="discountTotalTb_LostFocus"/>
+        <Label x:Name="label7" Content="จำนวนเงิน (ไม่รวม VAT)" HorizontalAlignment="Left" Margin="20,240,0,0" VerticalAlignment="Top"  />
+        <TextBox x:Name="itemTotalTb" HorizontalAlignment="Left" Height="23" Margin="200,243,0,0" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" Width="160" TextAlignment="Right" IsEnabled="False"/>
+        <Button x:Name="saveBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="47,365,0,0" VerticalAlignment="Top" Width="143" Click="saveBtn_Click" Height="48">
+            <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_save.png" Style="{StaticResource imageBtn}"/>
+        </Button>
+        <Button x:Name="exitBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="232,365,0,0" VerticalAlignment="Top" Width="143" Click="exitBtn_Click" Height="48">
+            <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_cancel.png" Style="{StaticResource imageBtn}"/>
+        </Button>
+        <Label x:Name="label8" Content="บาท" HorizontalAlignment="Left" Margin="362,202,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label9" Content="บาท" HorizontalAlignment="Left" Margin="362,242,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label3" Content="หน่วย" HorizontalAlignment="Left" Margin="266,163,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label8_Copy" Content="บาท" HorizontalAlignment="Left" Margin="363,128,0,0" VerticalAlignment="Top" />
+        <RadioButton x:Name="is_item" Content="สินค้า" HorizontalAlignment="Left" Margin="200,58,0,0" VerticalAlignment="Top" Height="15" Checked="is_item_Checked"/>
+        <RadioButton x:Name="is_service" Content="บริการ" HorizontalAlignment="Left" Margin="266,58,0,0" VerticalAlignment="Top" Height="15" Checked="is_service_Checked"/>
+        <Label x:Name="label6_Copy" Content="รหัสสินค้า" HorizontalAlignment="Left" Margin="20,277,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label7_Copy" Content="รหัสสินค้าสากล &#xD;&#xA;(รหัส GTIN โดย GS1)" HorizontalAlignment="Left" Margin="20,310,0,0" VerticalAlignment="Top" Height="Auto"/>
+        <TextBox x:Name="itemCodeTb" HorizontalAlignment="Left" Height="23" Margin="200,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="itemCodeInterTb" HorizontalAlignment="Left" Height="23" Margin="200,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+
+    </Grid>
+</Window>

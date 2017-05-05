@@ -1,0 +1,184 @@
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\bin\x64\Debug\eTaxInvoicePdfGenerator.exe.manifest
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\bin\x64\Debug\eTaxInvoicePdfGenerator.application
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\bin\x64\Debug\eTaxInvoicePdfGenerator.exe
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\bin\x64\Debug\eTaxInvoicePdfGenerator.pdb
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\bin\x64\Debug\SqliteConnector.dll
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\bin\x64\Debug\System.Data.SQLite.dll
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\bin\x64\Debug\SqliteConnector.pdb
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\bin\x64\Debug\System.Data.SQLite.pdb
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\bin\x64\Debug\System.Data.SQLite.xml
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.csprojResolveAssemblyReference.cache
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Buyer.g.cs
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\BuyerConfig.g.cs
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\CreditNote.g.cs
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\DebitNote.g.cs
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\ETaxInvoice.g.cs
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Item.g.cs
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Seller.g.cs
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\MainWindow.g.cs
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\App.g.cs
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator_MarkupCompile.cache
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator_MarkupCompile.lref
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Buyer.baml
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\BuyerConfig.baml
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\CreditNote.baml
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\DebitNote.baml
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\ETaxInvoice.baml
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Item.baml
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Seller.baml
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\MainWindow.baml
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.g.resources
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.Properties.Resources.resources
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.csproj.GenerateResource.Cache
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.TrustInfo.xml
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.exe.manifest
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.application
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.exe
+E:\Projects\DotNet\eTaxInvoicePdfGenerator\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.pdb
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Buyer.g.cs
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\BuyerConfig.g.cs
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\CreditNote.g.cs
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\DebitNote.g.cs
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\ETaxInvoice.g.cs
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Item.g.cs
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Seller.g.cs
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\MainWindow.g.cs
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\App.g.cs
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator_MarkupCompile.cache
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator_MarkupCompile.lref
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Buyer.baml
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\BuyerConfig.baml
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\CreditNote.baml
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\DebitNote.baml
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\ETaxInvoice.baml
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Item.baml
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Seller.baml
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\MainWindow.baml
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.g.resources
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.csproj.GenerateResource.Cache
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.pdb
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\bin\x64\Debug\eTaxInvoicePdfGenerator.exe.manifest
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\bin\x64\Debug\eTaxInvoicePdfGenerator.application
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\bin\x64\Debug\eTaxInvoicePdfGenerator.exe
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\bin\x64\Debug\eTaxInvoicePdfGenerator.pdb
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.Properties.Resources.resources
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.TrustInfo.xml
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.exe.manifest
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.application
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.exe
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\bin\x64\Debug\eTaxInvoicePdfGenerator.exe.manifest
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\bin\x64\Debug\eTaxInvoicePdfGenerator.application
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\bin\x64\Debug\eTaxInvoicePdfGenerator.exe
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\bin\x64\Debug\eTaxInvoicePdfGenerator.pdb
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\bin\x64\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\bin\x64\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\bin\x64\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\bin\x64\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\bin\x64\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\bin\x64\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\bin\x64\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\bin\x64\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\bin\x64\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\bin\x64\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\bin\x64\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\bin\x64\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Buyer.g.cs
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\BuyerConfig.g.cs
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\CreditNote.g.cs
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\DebitNote.g.cs
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\ETaxInvoice.g.cs
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Item.g.cs
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Seller.g.cs
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\MainWindow.g.cs
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\App.g.cs
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator_MarkupCompile.cache
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator_MarkupCompile.lref
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Buyer.baml
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\BuyerConfig.baml
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\CreditNote.baml
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\DebitNote.baml
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\ETaxInvoice.baml
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Item.baml
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Seller.baml
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\MainWindow.baml
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.g.resources
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.Properties.Resources.resources
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.csproj.GenerateResource.Cache
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.TrustInfo.xml
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.exe.manifest
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.application
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.exe
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etaxinv\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.pdb
+C:\Users\pragasit-ETDA\Desktop\branch\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.exe
+C:\Users\pragasit-ETDA\Desktop\branch\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.pdb
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\bin\x64\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\bin\x64\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\bin\x64\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\bin\x64\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\bin\x64\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\bin\x64\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\bin\x64\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\bin\x64\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\bin\x64\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\bin\x64\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\bin\x64\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\bin\x64\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.csprojResolveAssemblyReference.cache
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\RdlCompile.cache
+C:\Users\pragasit-ETDA\Desktop\New folder\eTaxInvoicePdfGenerator\obj\x64\Debug\RdlCompile.compiled
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\bin\x64\Debug\eTaxInvoicePdfGenerator.exe.manifest
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\bin\x64\Debug\eTaxInvoicePdfGenerator.application
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\bin\x64\Debug\eTaxInvoicePdfGenerator.exe
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\bin\x64\Debug\eTaxInvoicePdfGenerator.pdb
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\bin\x64\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\bin\x64\Debug\System.Data.SQLite.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\bin\x64\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\bin\x64\Debug\System.Data.SQLite.pdb
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\bin\x64\Debug\System.Data.SQLite.xml
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\bin\x64\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\bin\x64\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\bin\x64\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\bin\x64\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\bin\x64\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\bin\x64\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\bin\x64\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\bin\x64\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\bin\x64\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\bin\x64\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.csprojResolveAssemblyReference.cache
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Buyer.g.cs
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\BuyerConfig.g.cs
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\CreditNote.g.cs
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\DebitNote.g.cs
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\ETaxInvoice.g.cs
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Item.g.cs
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Seller.g.cs
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\MainWindow.g.cs
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\App.g.cs
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator_MarkupCompile.cache
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator_MarkupCompile.lref
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Buyer.baml
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\BuyerConfig.baml
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\CreditNote.baml
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\DebitNote.baml
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\ETaxInvoice.baml
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Item.baml
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\Forms\Seller.baml
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\MainWindow.baml
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.g.resources
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.Properties.Resources.resources
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.csproj.GenerateResource.Cache
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.TrustInfo.xml
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.exe.manifest
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.application
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.exe
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.pdb
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\RdlCompile.cache
+C:\Users\pragasit-ETDA\Documents\Visual Studio 2015\Projects\etax_branch\eTaxInvoicePdfGenerator\obj\x64\Debug\RdlCompile.compiled
+C:\Users\pragasit-ETDA\Desktop\branches\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.exe
+C:\Users\pragasit-ETDA\Desktop\branches\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.pdb
+C:\Users\pragasit-ETDA\Desktop\fordeploy2\eTaxInvoicePdfGenerator\bin\x64\Debug\eTaxInvoicePdfGenerator.exe.config
+C:\Users\pragasit-ETDA\Desktop\fordeploy2\eTaxInvoicePdfGenerator\obj\x64\Debug\Interop.Shell32.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy2\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.csproj.ResolveComReference.cache
+C:\Users\pragasit-ETDA\Desktop\fordeploy2\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.exe
+C:\Users\pragasit-ETDA\Desktop\fordeploy2\eTaxInvoicePdfGenerator\obj\x64\Debug\eTaxInvoicePdfGenerator.pdb

@@ -1,0 +1,5 @@
+			<ram:AdditionalReferencedCIReferencedDocument>
+				<ram:IssuerAssignedID>*reference_document_id</ram:IssuerAssignedID>
+				<ram:IssueDateTime>*reference_document_date</ram:IssueDateTime>
+				<ram:ReferenceTypeCode>*reference_document_type_code</ram:ReferenceTypeCode>
+			</ram:AdditionalReferencedCIReferencedDocument>

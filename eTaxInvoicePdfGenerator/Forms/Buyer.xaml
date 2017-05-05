@@ -1,0 +1,78 @@
+﻿<Window x:Class="eTaxInvoicePdfGenerator.Forms.Buyer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:eTaxInvoicePdfGenerator.Forms"
+        mc:Ignorable="d"
+        Title="รายละเอียดผู้ซื้อ" Height="700" Width="1024" Closed="Window_Closed" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Style="{StaticResource MainWindow}">
+    <Window.Resources>
+        <DataTemplate x:Key="ArrowUp">
+            <DockPanel>
+                <TextBlock HorizontalAlignment="Center" Text="{Binding}" />
+                <Path VerticalAlignment="Center" Fill="Black" Data="M 5,5 15,5 10,0 5,5" />
+            </DockPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="ArrowDown">
+            <DockPanel>
+                <TextBlock HorizontalAlignment="Center" Text="{Binding}" />
+                <Path VerticalAlignment="Center" Fill="Black" Data="M 5,0 10,5 15,0 5,0" />
+            </DockPanel>
+        </DataTemplate>
+        <ImageBrush x:Key="Background" ImageSource="/eTaxInvoicePdfGenerator;component/in/elements/buyer_BG.jpg" />
+    </Window.Resources>
+    <Window.Background>
+        <StaticResource ResourceKey="Background" />
+    </Window.Background>
+    <Grid>
+        <Image x:Name="image" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Top" Source="/eTaxInvoicePdfGenerator;component/in/elements/titile.png"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Margin="0,160,0,0" VerticalAlignment="Top" Source="/eTaxInvoicePdfGenerator;component/in/elements/buyer_detail_txtleft.png" Width="296" Height="90"/>
+        <Button x:Name="addBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="760,560,0,0" VerticalAlignment="Top" Width="96" Height="29" Click="addBtn_Click">
+            <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_dataAdd.png" Style="{StaticResource imageBtn}"/>
+        </Button>
+        <Button x:Name="delBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="860,560,0,0" VerticalAlignment="Top" Width="96" Height="29" Click="delBtn_Click">
+            <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_dataDel.png" Style="{StaticResource imageBtn}"/>
+        </Button>
+        <Button x:Name="exitBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="557,600,0,0" VerticalAlignment="Top" Width="143" Height="47" Click="exitBtn_Click">
+            <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_backHome.png" Style="{StaticResource imageBtn}"/>
+        </Button>
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="360" Margin="320,185,0,0" VerticalAlignment="Top" GridViewColumnHeader.Click="listView_Click">
+            <ListView.View>
+                <GridView AllowsColumnReorder="False">
+                    <GridViewColumn Header="" Width="30">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding isSelected, UpdateSourceTrigger=PropertyChanged}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <!--<GridViewColumn Header="ID" DisplayMemberBinding="{Binding id}"  Width="40"/>-->
+                    <GridViewColumn Header="ชื่อผู้ประกอบการ" DisplayMemberBinding="{Binding name}" Width="150" />
+                    <GridViewColumn Header="เลขประจำตัวผู้เสียภาษีอากร" DisplayMemberBinding="{Binding taxid_no}" Width="200"/>
+                    <GridViewColumn Header="เบอร์โทรศัพท์" DisplayMemberBinding="{Binding phone_no}" Width="200"/>
+                    <GridViewColumn Header="" Width="60">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                <Hyperlink NavigateUri="{Binding id}" Click="OnHyperlinkClick">
+                                    <TextBlock Text="[แก้ไข]" />
+                                </Hyperlink>
+                            </TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="nextBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="432,568,0,0" Width="15" Height="16" VerticalAlignment="Top" Click="nextBtn_Click">
+            <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/arrowRight.png" Style="{StaticResource imageBtn}"/>
+        </Button>
+        <Button x:Name="prevBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="325,568,0,0" Width="15" Height="16" VerticalAlignment="Top" Click="prevBtn_Click">
+            <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/arrowLeft.png" Style="{StaticResource imageBtn}"/>
+        </Button>
+        <Label x:Name="pageLb" Content="หน้า 1 จาก 2" HorizontalAlignment="Left" Margin="339,560,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="shutdownBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Click="shutdownBtn_Click">
+            <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_close@2x.png" Style="{StaticResource imageBtn}"/>
+        </Button>
+    </Grid>
+</Window>

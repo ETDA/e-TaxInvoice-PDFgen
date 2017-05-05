@@ -1,0 +1,25 @@
+        <ram:IncludedSupplyChainTradeLineItem>
+            <ram:AssociatedDocumentLineDocument>
+                <ram:LineID>*item_order</ram:LineID>
+            </ram:AssociatedDocumentLineDocument>
+            <ram:SpecifiedTradeProduct>
+              *item_id
+              *item_global_id  
+              *item_name
+            </ram:SpecifiedTradeProduct>
+            <ram:SpecifiedLineTradeAgreement>
+                <ram:GrossPriceProductTradePrice>
+                    <ram:ChargeAmount>*item_price_per_unit</ram:ChargeAmount>
+                </ram:GrossPriceProductTradePrice>
+            </ram:SpecifiedLineTradeAgreement>
+            <ram:SpecifiedLineTradeDelivery>
+                <ram:BilledQuantity *item_unit_code>*item_quantity</ram:BilledQuantity>
+            </ram:SpecifiedLineTradeDelivery>
+            <ram:SpecifiedLineTradeSettlement>
+              *trade_allowance
+              <ram:SpecifiedTradeSettlementLineMonetarySummation>
+                    <ram:NetLineTotalAmount>*item_total</ram:NetLineTotalAmount>
+                    <ram:NetIncludingTaxesLineTotalAmount>*item_including_tax</ram:NetIncludingTaxesLineTotalAmount>
+                </ram:SpecifiedTradeSettlementLineMonetarySummation>
+            </ram:SpecifiedLineTradeSettlement>
+        </ram:IncludedSupplyChainTradeLineItem>

@@ -1,0 +1,3 @@
+C:\Users\pragasit-ETDA\Desktop\fordeploy2\eTaxInvoicePdfGenerator\bin\Release\eTaxInvoicePdfGenerator.exe.config
+C:\Users\pragasit-ETDA\Desktop\fordeploy2\eTaxInvoicePdfGenerator\obj\Release\Interop.Shell32.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy2\eTaxInvoicePdfGenerator\obj\Release\eTaxInvoicePdfGenerator.csproj.ResolveComReference.cache

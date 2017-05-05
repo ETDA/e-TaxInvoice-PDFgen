@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rsm:TaxInvoice_CrossIndustryInvoice 
+ xmlns:ram="urn:etda:uncefact:data:standard:TaxInvoice_ReusableAggregateBusinessInformationEntity:2"
+ xmlns:rsm="urn:etda:uncefact:data:standard:TaxInvoice_CrossIndustryInvoice:2"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="urn:etda:uncefact:data:standard:TaxInvoice_CrossIndustryInvoice:2">
+    <rsm:ExchangedDocumentContext>
+        <ram:GuidelineSpecifiedDocumentContextParameter>
+            <ram:ID schemeAgencyID="ETDA" schemeVersionID="v2.0">ER3-2560</ram:ID>
+        </ram:GuidelineSpecifiedDocumentContextParameter>
+    </rsm:ExchangedDocumentContext>
+    <rsm:ExchangedDocument>
+        <ram:ID>a0006</ram:ID>
+        <ram:Name>ใบกำกับภาษี</ram:Name>
+        <ram:TypeCode>388</ram:TypeCode>
+        <ram:IssueDateTime>2017-04-05T00:00:00.000</ram:IssueDateTime>
+        
+        
+        <ram:CreationDateTime>2017-04-05T15:12:17.000</ram:CreationDateTime>
+        
+    </rsm:ExchangedDocument>
+    <rsm:SupplyChainTradeTransaction>
+        <ram:ApplicableHeaderTradeAgreement>
+            <ram:SellerTradeParty>
+				      <ram:Name>sadfsafd</ram:Name>
+              <ram:SpecifiedTaxRegistration>
+              <ram:ID schemeID="TXID">123461136111100000</ram:ID>
+              </ram:SpecifiedTaxRegistration>
+              <ram:DefinedTradeContact>
+            <ram:EmailURIUniversalCommunication> 
+ <ram:URIID>email@mail.com</ram:URIID> 
+ </ram:EmailURIUniversalCommunication> 
+
+            <ram:TelephoneUniversalCommunication> 
+ <ram:CompleteNumber>+66-66666666</ram:CompleteNumber> 
+ </ram:TelephoneUniversalCommunication> 
+
+</ram:DefinedTradeContact>
+                                 
+              <ram:PostalTradeAddress>
+                    <ram:PostcodeCode>12346</ram:PostcodeCode>
+                <ram:LineOne>safdsaf</ram:LineOne>
+                <ram:LineTwo>sdsfaf</ram:LineTwo>
+                <ram:CityName>8104</ram:CityName>
+                <ram:CitySubDivisionName>810402</ram:CitySubDivisionName>
+                <ram:CountryID schemeID="3166-1 alpha-2">TH</ram:CountryID>
+					<ram:CountrySubDivisionID>81</ram:CountrySubDivisionID>
+                </ram:PostalTradeAddress>
+            </ram:SellerTradeParty>
+            <ram:BuyerTradeParty>
+                <ram:Name>ชื่อผู้ประกบอการ</ram:Name>
+              <ram:SpecifiedTaxRegistration>
+                    <ram:ID schemeID="TXID">222222222222100000</ram:ID>
+                </ram:SpecifiedTaxRegistration>
+              
+              <ram:PostalTradeAddress>
+                    <ram:PostcodeCode>11111</ram:PostcodeCode>
+                <ram:LineOne>123456</ram:LineOne>
+                <ram:LineTwo>กด</ram:LineTwo>
+                <ram:CityName>8101</ram:CityName>
+                <ram:CitySubDivisionName>810402</ram:CitySubDivisionName>
+                <ram:CountryID schemeID="3166-1 alpha-2">TH</ram:CountryID>
+					<ram:CountrySubDivisionID>81</ram:CountrySubDivisionID>
+				</ram:PostalTradeAddress>
+            </ram:BuyerTradeParty>
+			   
+        </ram:ApplicableHeaderTradeAgreement>
+        <ram:ApplicableHeaderTradeDelivery>
+          <ram:ShipToTradeParty>
+            <ram:DefinedTradeContact>
+					    <ram:PersonName>ฟหกด</ram:PersonName>
+				  </ram:DefinedTradeContact>
+            </ram:ShipToTradeParty>
+        </ram:ApplicableHeaderTradeDelivery>
+        <ram:ApplicableHeaderTradeSettlement>
+            <ram:InvoiceCurrencyCode listID="ISO 4217 3A">THB</ram:InvoiceCurrencyCode>
+            <ram:ApplicableTradeTax>
+                <ram:TypeCode>VAT</ram:TypeCode>
+                <ram:CalculatedRate>7</ram:CalculatedRate>
+                <ram:BasisAmount>38</ram:BasisAmount>
+                <ram:CalculatedAmount>2.66</ram:CalculatedAmount>
+            </ram:ApplicableTradeTax>
+            
+       <ram:SpecifiedTradeSettlementHeaderMonetarySummation>
+			     <ram:LineTotalAmount>38</ram:LineTotalAmount>
+           <ram:TaxBasisTotalAmount>38</ram:TaxBasisTotalAmount>
+           <ram:TaxTotalAmount>2.66</ram:TaxTotalAmount>
+           <ram:GrandTotalAmount>40.66</ram:GrandTotalAmount>
+       </ram:SpecifiedTradeSettlementHeaderMonetarySummation>
+        </ram:ApplicableHeaderTradeSettlement>
+		            <ram:IncludedSupplyChainTradeLineItem>
+            <ram:AssociatedDocumentLineDocument>
+                <ram:LineID>1</ram:LineID>
+            </ram:AssociatedDocumentLineDocument>
+            <ram:SpecifiedTradeProduct>
+              
+                
+              <ram:Name>test</ram:Name>
+            </ram:SpecifiedTradeProduct>
+            <ram:SpecifiedLineTradeAgreement>
+                <ram:GrossPriceProductTradePrice>
+                    <ram:ChargeAmount>38</ram:ChargeAmount>
+                </ram:GrossPriceProductTradePrice>
+            </ram:SpecifiedLineTradeAgreement>
+            <ram:SpecifiedLineTradeDelivery>
+                <ram:BilledQuantity unitCode="ZZ">1</ram:BilledQuantity>
+            </ram:SpecifiedLineTradeDelivery>
+            <ram:SpecifiedLineTradeSettlement>
+              
+              <ram:SpecifiedTradeSettlementLineMonetarySummation>
+                    <ram:NetLineTotalAmount>38</ram:NetLineTotalAmount>
+                    <ram:NetIncludingTaxesLineTotalAmount>40.66</ram:NetIncludingTaxesLineTotalAmount>
+                </ram:SpecifiedTradeSettlementLineMonetarySummation>
+            </ram:SpecifiedLineTradeSettlement>
+        </ram:IncludedSupplyChainTradeLineItem>
+    </rsm:SupplyChainTradeTransaction>
+</rsm:TaxInvoice_CrossIndustryInvoice>
