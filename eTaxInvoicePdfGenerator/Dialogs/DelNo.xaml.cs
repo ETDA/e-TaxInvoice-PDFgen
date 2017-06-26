@@ -30,6 +30,13 @@ namespace eTaxInvoicePdfGenerator.Dialogs
             InitializeComponent();
         }
 
+        public DelNo()
+        {
+            this.msg = "ท่านต้องการลบข้อมูลตามที่ระบุ หรือไม่";
+            this.title = "ยืนยันการลบรายการ";
+            InitializeComponent();
+        }
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             try

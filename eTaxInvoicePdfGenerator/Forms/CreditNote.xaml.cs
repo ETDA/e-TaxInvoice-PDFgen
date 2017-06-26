@@ -20,9 +20,11 @@ namespace eTaxInvoicePdfGenerator.Forms
     public partial class CreditNote : Window
     {
         // ใบลดหนี้
+        private const string PREFIX = "CRN";
+        private const string REF_TYPE = "388";
+        private const string REF_NAME = "ใบกำกับภาษี";
+        private const string INVOICE_NAME = "ใบลดหนี้";
         private string invoiceID;
-        private Collection<TypeCodeObj> typeCodes = new Collection<TypeCodeObj>() { new TypeCodeObj("ALT", "ใบกำกับภาษีเดิม"), new TypeCodeObj("ZZZ", "อื่นๆ") };
-        public Collection<TypeCodeObj> TypeCodes { get { return typeCodes; } }
         private List<ReferenceObj> refList;
         private SellerObj seller;
         public CreditNote()
@@ -39,7 +41,7 @@ namespace eTaxInvoicePdfGenerator.Forms
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Keyboard.Focus(nameCbb);
+            Keyboard.Focus(taxIdTb);
             is_main.IsChecked = true;
             init();
         }
@@ -54,7 +56,15 @@ namespace eTaxInvoicePdfGenerator.Forms
                 nameCbb.ItemsSource = buyerList;
                 seller = new SellerDao().select();
                 vatTb.Text = seller.vat.ToString("N");
-                this.invoiceID = seller.running_prefix + seller.running_number;
+                //this.invoiceID = seller.running_prefix + seller.running_number;
+                this.invoiceID = PREFIX + seller.crn_no;
+
+                List<CauseCodeListObj> list = new CauseCodeListDao().list("ใบลดหนี้");
+                purposeCbb.DisplayMemberPath = "description";
+                purposeCbb.SelectedValuePath = "code";
+                purposeCbb.ItemsSource = list;
+                purposeCbb.SelectedIndex = 0;
+                otherPurposeTb.IsEnabled = false;
                 setProvinceList();
             }
             catch (Exception ex)
@@ -69,21 +79,11 @@ namespace eTaxInvoicePdfGenerator.Forms
             {
                 docIdTb.Text = refList[0].documentId;
                 docDateTb.Text = refList[0].documentDate;
-                TypeCodeObj typeCode = typeCodes.FirstOrDefault(s => s.code == refList[0].typeCodeObj.description);
-                if (typeCode != null)
-                {
-                    typeCodeTb.SelectedItem = typeCode;
-                }
-                else
-                {
-                    typeCodeTb.Text = refList[0].typeCodeObj.description;
-                }
             }
             else
             {
                 docIdTb.Text = "";
                 docDateTb.Text = "";
-                typeCodeTb.Text = "";
             }
         }
 
@@ -94,25 +94,15 @@ namespace eTaxInvoicePdfGenerator.Forms
                 ReferenceObj ref1 = refList.FirstOrDefault(s => s.number == 1);
                 if (ref1 == null)
                 {
-                    refList.Add(new ReferenceObj(1, this.invoiceID, docIdTb.Text, docDateTb.Text, typeCodeTb.Text, (TypeCodeObj)typeCodeTb.SelectedItem));
+                    //refList.Add(new ReferenceObj(1, this.invoiceID, docIdTb.Text, docDateTb.Text, REF_TYPE, new TypeCodeObj(REF_TYPE, "ใบกำกับภาษี")));
+                    refList.Add(new ReferenceObj(1));
                 }
-                else
-                {
-                    ref1.documentId = docIdTb.Text;
-                    ref1.documentDate = docDateTb.Text;
-                    ref1.typeCode = typeCodeTb.Text;
-                    ref1.invoiceId = this.invoiceID;
-                    ref1.typeCodeObj = (TypeCodeObj)typeCodeTb.SelectedItem;
-                    if (ref1.typeCodeObj == null)
-                    {
-                        ref1.typeCode = typeCodeTb.Text;
-                        ref1.typeCodeObj = new TypeCodeObj("ZZZ", typeCodeTb.Text);
-                    }
-                    else
-                    {
-                        ref1.typeCode = refList[0].typeCodeObj.code;
-                    }
-                }
+                ref1 = refList.FirstOrDefault(s => s.number == 1);
+                ref1.documentId = docIdTb.Text;
+                ref1.documentDate = docDateTb.Text;
+                ref1.typeCode = REF_TYPE;
+                ref1.invoiceId = this.invoiceID;
+                ref1.typeCodeObj = new TypeCodeObj(REF_TYPE, REF_NAME);
             }
         }
 
@@ -123,7 +113,7 @@ namespace eTaxInvoicePdfGenerator.Forms
             {
                 nameCbb.SelectedItem = obj;
                 address1Tb.Text = obj.address1;
-                address2Tb.Text = obj.address2;
+                houseNoTb.Text = obj.houseNo;
                 zipcodeTb.Text = obj.zipCode;
                 taxIdTb.Text = obj.taxId;
                 if (obj.isBranch)
@@ -135,13 +125,11 @@ namespace eTaxInvoicePdfGenerator.Forms
                 {
                     is_main.IsChecked = true;
                 }
-                websiteTb.Text = obj.website;
                 emailTb.Text = obj.email;
                 contactTb.Text = obj.contactPerson;
+                phoneExtTb.Text = ""; phoneNoTb.Text = "";
                 phoneNoTb.Text = obj.phoneNo;
                 phoneExtTb.Text = obj.phoneExt;
-                faxNoTb.Text = obj.faxNo;
-                faxExtTb.Text = obj.faxExt;
                 if (obj.provinceCode != null && obj.provinceCode != "")
                 {
                     provinceCbb.SelectedValue = obj.provinceCode + "000000";
@@ -167,8 +155,8 @@ namespace eTaxInvoicePdfGenerator.Forms
             provinceCbb.SelectionChanged -= new SelectionChangedEventHandler(provinceCbb_SelectionChanged);
             util.ProvinceCodeList pcl = new util.ProvinceCodeList();
             pcl.SetChangwat(provinceCbb);
-            pcl.SetAmphoe(amphoeCbb, ((AddressCodeListObj)provinceCbb.SelectedItem).code.Substring(0, 2));
-            pcl.SetTambon(tambonCbb, ((AddressCodeListObj)amphoeCbb.SelectedItem).code.Substring(0, 4));
+            //pcl.SetAmphoe(amphoeCbb, ((AddressCodeListObj)provinceCbb.SelectedItem).code.Substring(0, 2));
+            //pcl.SetTambon(tambonCbb, ((AddressCodeListObj)amphoeCbb.SelectedItem).code.Substring(0, 4));
             provinceCbb.SelectionChanged += new SelectionChangedEventHandler(provinceCbb_SelectionChanged);
         }
 
@@ -187,12 +175,21 @@ namespace eTaxInvoicePdfGenerator.Forms
                     obj.invoiceId = this.invoiceID;
                     isNew = true;
                 }
-                obj.invoiceName = "ใบลดหนี้";
-                obj.purpose = purposeTb.Text;
+                obj.invoiceName = INVOICE_NAME;
+                if (purposeCbb.SelectedValue.ToString() == "DCNG99" || purposeCbb.SelectedValue.ToString() == "DCNS99")
+                {
+                    obj.purpose = otherPurposeTb.Text;
+                }
+                else
+                {
+                    obj.purpose = purposeCbb.Text;
+                }
+                obj.purposeCode = purposeCbb.SelectedValue.ToString();
                 obj.taxCode = "VAT";
                 obj.taxRate = Convert.ToDouble(vatTb.Text);
                 obj.lineTotal = Convert.ToDouble(lineTotalTb.Text);
                 obj.discount = 0.0;
+                obj.discount_rate = 0.0;
                 obj.taxTotal = Convert.ToDouble(taxTotalTb.Text);
                 obj.grandTotal = Convert.ToDouble(grandTotalTb.Text);
                 obj.remark = remarkTb.Text;
@@ -208,8 +205,8 @@ namespace eTaxInvoicePdfGenerator.Forms
                     buyer = new BuyerObj();
                 }
                 buyer.name = nameCbb.Text;
+                buyer.houseNo = houseNoTb.Text;
                 buyer.address1 = address1Tb.Text;
-                buyer.address2 = address2Tb.Text;
                 buyer.zipCode = zipcodeTb.Text;
                 buyer.taxId = taxIdTb.Text;
                 if (is_branch.IsChecked.Value)
@@ -222,13 +219,10 @@ namespace eTaxInvoicePdfGenerator.Forms
                     buyer.isBranch = false;
                     buyer.branchId = "00000";
                 }
-                buyer.website = websiteTb.Text;
                 buyer.email = emailTb.Text;
                 buyer.contactPerson = contactTb.Text;
                 buyer.phoneNo = phoneNoTb.Text;
                 buyer.phoneExt = phoneExtTb.Text;
-                buyer.faxNo = faxNoTb.Text;
-                buyer.faxExt = faxExtTb.Text;
 
                 buyer.provinceCode = ((AddressCodeListObj)provinceCbb.SelectedItem).code.Substring(0, 2);
                 buyer.provinceName = ((AddressCodeListObj)provinceCbb.SelectedItem).changwat_th;
@@ -258,16 +252,13 @@ namespace eTaxInvoicePdfGenerator.Forms
             contact.name = obj.name;
             contact.taxId = obj.taxId;
             contact.branchId = obj.branchId;
-            contact.website = obj.website;
+            //contact.website = obj.website;
             contact.email = obj.email;
             contact.zipCode = obj.zipCode;
             contact.address1 = obj.address1;
-            contact.address2 = obj.address2;
             contact.country = "TH";
             contact.phoneNo = obj.phoneNo;
             contact.phoneExt = obj.phoneExt;
-            contact.faxNo = obj.faxNo;
-            contact.faxExt = obj.faxExt;
 
             contact.provinceCode = obj.provinceCode;
             contact.provinceName = obj.provinceName;
@@ -275,6 +266,7 @@ namespace eTaxInvoicePdfGenerator.Forms
             contact.districtName = obj.districtName;
             contact.subdistrcitCode = obj.subdistrcitCode;
             contact.subdistrictName = obj.subdistrictName;
+            contact.houseNo = obj.houseNo;
             return new ContactDao().save(contact);
         }
 
@@ -284,16 +276,13 @@ namespace eTaxInvoicePdfGenerator.Forms
             contact.name = obj.name;
             contact.taxId = obj.taxId;
             contact.branchId = obj.branchId;
-            contact.website = obj.website;
+            //contact.website = obj.website;
             contact.email = obj.email;
             contact.zipCode = obj.zipCode;
             contact.address1 = obj.address1;
-            contact.address2 = obj.address2;
             contact.country = "TH";
             contact.phoneNo = obj.phoneNo;
             contact.phoneExt = obj.phoneExt;
-            contact.faxNo = obj.faxNo;
-            contact.faxExt = obj.faxExt;
             contact.contactPerson = obj.contactPerson;
 
             contact.provinceCode = obj.provinceCode;
@@ -302,6 +291,7 @@ namespace eTaxInvoicePdfGenerator.Forms
             contact.districtName = obj.districtName;
             contact.subdistrcitCode = obj.subdistrcitCode;
             contact.subdistrictName = obj.subdistrictName;
+            contact.houseNo = obj.houseNo;
             return new ContactDao().save(contact);
         }
 
@@ -327,91 +317,63 @@ namespace eTaxInvoicePdfGenerator.Forms
         private void validateData()
         {
             util.Validator validator = new util.Validator();
-
-            // Validate name
-            validator.validateText(nameCbb, "ชื่อผู้ประกอบการ", 256, true);
-            // Validate address1
-            validator.validateText(address1Tb, "ที่อยู่บรรทัดที่หนึ่ง", 256, true);
-            // Validate address2
-            validator.validateText(address2Tb, "ที่อยู่บรรทัดที่สอง", 256, true);
-            // Validate zip code
-            validator.validateZipCode(zipcodeTb);
-            // Validate tax id
+            validator.validateText(docIdTb, "เลขที่ใบกำกับภาษีอ้างถึง", 35, true);
+            validator.validateDocDate(docDateTb, "ใบกำกับภาษีอ้างถึง");
             validator.validateTaxID(taxIdTb);
-            // Validate branch
             if (is_branch.IsChecked == true)
             {
                 validator.validateBranchNo(branchNoTb);
-                checkBranchID();
+                validator.checkBranchID(branchNoTb, is_branch.IsChecked.Value);
             }
-            // Validate email
+            validator.validateCbb(purposeCbb, "สาเหตุการออกเอกสาร", 256, true);
+            validator.validateNameCbb(nameCbb, "ชื่อบริษัท/ผู้ซื้อ", 256, true);
+            validator.validateText(address1Tb, "ที่อยู่", 256, false);
+            validator.validateText(houseNoTb, "บ้านเลขที่", 256, true);
+            validator.validateProviceCodeList(provinceCbb, "จังหวัด");
+            validator.validateProviceCodeList(amphoeCbb, "อำเภอ/เขต");
+            validator.validateProviceCodeList(tambonCbb, "ตำบล/แขวง");
+            validator.validateZipCode(zipcodeTb);
             validator.validateEmail(emailTb);
-            // Validate Contact Person
-            validator.validateText(contactTb, "ชื่อผู้ติดต่อ", 140, true);
-            // Validate Phone no
+            validator.validateText(contactTb, "ชื่อผู้ติดต่อ", 140, false);
             validator.validatePhoneNumber(phoneNoTb, phoneExtTb, "เบอร์โทรศัพท์");
-            // Validate Fax no
-            validator.validatePhoneNumber(faxNoTb, faxExtTb, "เบอร์โทรสาร");
-
-            // validate reference
-            validator.validateText(purposeTb, "เหตุผลในการออกใบลดหนี้", 256, true);
-
-            // validate doc id
-            validator.validateText(docIdTb, "เลขที่ของใบกำกับภาษีเดิม", 35, true);
-
-            validator.validateDocDate(docDateTb);
-
-            validator.validateTypeCode(typeCodeTb);
-
-            // validate vat rate
-            validator.validateDouble(vatTb, "อัตราภาษีมูลค่าเพิ่ม", 99.99);
-
-            // validate has item in list
+            validator.validateDiffValue(diffValueTb.Text);
+            
             List<InvoiceItemObj> items = listView.Items.Cast<InvoiceItemObj>().ToList();
             if (items.Count < 1)
             {
                 throw new Exception("กรุณาเพิ่มรายการสินค้า/บริการ");
             }
+            validator.validateDouble(originalValueTotal, "มูลค่าสินค้า/บริการตามใบกำกับภาษีเดิม", 0);
+            validator.validateDouble(lineTotalTb, "มูลค่าสินค้า/บริการที่ถูกต้อง", 0);
+            validator.validateDoubleRate(vatTb, "อัตราภาษีมูลค่าเพิ่ม", 99.99);
         }
 
-        private bool validateDate(DateTime? date)
-        {
-            if (date == null)
-            {
-                return false;
-            }
-
-            if (date > DateTime.Now)
-            {
-                return false;
-            }
-            return true;
-        }
-
-        private void checkBranchID()
-        {
-            if (is_branch.IsChecked == true)
-            {
-                int intTemp;
-                if (int.TryParse(branchNoTb.Text, out intTemp))
-                {
-                    string temp = branchNoTb.Text;
-                    while (temp.Length < 5)
-                    {
-                        temp = "0" + temp;
-                    }
-                    branchNoTb.Text = temp;
-                }
-                else
-                {
-                    new AlertBox("กรุณาใส่เลขที่สาขา เป็นตัวเลขความยาวไม่เกิน 5 หลัก และไม่ใช่ \"00000\"").ShowDialog();
-                }
-            }
-            else
-            {
-                branchNoTb.Text = "";
-            }
-        }
+        #region backup checkBranchID function
+        //private void checkBranchID()
+        //{
+        //    if (is_branch.IsChecked == true)
+        //    {
+        //        int intTemp;
+        //        if (int.TryParse(branchNoTb.Text, out intTemp))
+        //        {
+        //            string temp = branchNoTb.Text;
+        //            while (temp.Length < 5)
+        //            {
+        //                temp = "0" + temp;
+        //            }
+        //            branchNoTb.Text = temp;
+        //        }
+        //        else
+        //        {
+        //            new AlertBox("กรุณาใส่เลขที่สาขา เป็นตัวเลขความยาวไม่เกิน 5 หลัก และไม่ใช่ \"00000\"").ShowDialog();
+        //        }
+        //    }
+        //    else
+        //    {
+        //        branchNoTb.Text = "";
+        //    }
+        //}
+        #endregion
 
         private void createBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -445,7 +407,7 @@ namespace eTaxInvoicePdfGenerator.Forms
                         string documentID = this.invoiceID;
                         string documentOID = "";
                         Microsoft.Win32.SaveFileDialog dlg = new Microsoft.Win32.SaveFileDialog();
-                        dlg.FileName = "report.pdf";
+                        dlg.FileName = this.invoiceID + ".pdf";
                         dlg.DefaultExt = ".pdf";
                         dlg.Filter = "Pdf Files|*.pdf";
                         bool result = dlg.ShowDialog().Value;
@@ -474,30 +436,18 @@ namespace eTaxInvoicePdfGenerator.Forms
 
         private void updateRunningNumber()
         {
-            int runningNumber = 0;
-            int.TryParse(seller.running_number, out runningNumber);
-            runningNumber = runningNumber + 1;
-            string runningNumberStr = runningNumber.ToString();
-            if (seller.running_prefix.Length + runningNumberStr.Length >= 35)
-            {
-                runningNumberStr = "1";
-            }
-            while (seller.running_number.Length > runningNumberStr.Length)
-            {
-                runningNumberStr = "0" + runningNumberStr;
-            }
-            seller.running_number = runningNumberStr;
+            seller.crn_no = new util.RunningNumber().updateRunningNumber(seller.crn_no);
             new SellerDao().save(seller);
         }
 
         private bool isChange()
         {
-            return nameCbb.Text != "" || address1Tb.Text != "" || address2Tb.Text != "" || zipcodeTb.Text != "" ||
-                 taxIdTb.Text != "" || is_branch.IsChecked != false || branchNoTb.Text != "" || websiteTb.Text != "" ||
-                 emailTb.Text != "" || contactTb.Text != "" || vatTb.Text != "7.00" || phoneNoTb.Text != "" ||
-                phoneExtTb.Text != "" || faxNoTb.Text != "" || faxExtTb.Text != "" || refList.Count != 0 || listView.Items.Count != 0 ||
-                originalValueTotal.Text != "0.00" || remarkTb.Text != "" ||
-                purposeTb.Text != "" || docIdTb.Text != "" || docDateTb.Text != "" || typeCodeTb.Text != "";
+            return nameCbb.Text != "" || address1Tb.Text != "" || houseNoTb.Text != "" || zipcodeTb.Text != "" ||
+                taxIdTb.Text != "" || is_branch.IsChecked != false || branchNoTb.Text != "" ||
+                emailTb.Text != "" || contactTb.Text != "" || vatTb.Text != "7.00" || phoneNoTb.Text != "" ||
+                phoneExtTb.Text != "" || refList.Count != 0 || listView.Items.Count != 0 ||
+                originalValueTotal.Text != "0.00" || remarkTb.Text != "" || provinceCbb.SelectedIndex != 0 ||
+                purposeCbb.SelectedIndex != 0 || docIdTb.Text != "" || docDateTb.Text != "";
         }
 
         private void addRefBtn_Click(object sender, RoutedEventArgs e)
@@ -561,9 +511,7 @@ namespace eTaxInvoicePdfGenerator.Forms
             }
             if (selectedItems.Count > 0)
             {
-                DelNo dn = new DelNo("ต้องการลบข้อมูลหรือไม่", "ยืนยันการลบรายการ");
-                //yn.yesBtn.Content = "ลบ";
-                //yn.noBtn.Content = "ยกเลิก";
+                DelNo dn = new DelNo();
                 dn.ShowDialog();
                 switch (dn.response)
                 {
@@ -601,7 +549,7 @@ namespace eTaxInvoicePdfGenerator.Forms
         {
             if (isChange())
             {
-                YesNo yn = new YesNo("ต้องการออกจากหน้านี้หรือไม่ โดยระบบจะไม่บันทึกข้อมูลไว้", "ยืนยันการออกจากการหน้านี้");
+                YesNo yn = new YesNo("ท่านต้องการออกจากหน้านี้ ซึ่งระบบจะยังไม่บันทึกข้อมูล ที่ท่านดำเนินการค้างอยู่", "ยืนยันการออกจากการหน้านี้");
                 yn.ShowDialog();
                 switch (yn.response)
                 {
@@ -649,10 +597,12 @@ namespace eTaxInvoicePdfGenerator.Forms
             }
             lineTotalTb.Text = lineTotal.ToString("N");
 
-            double basisAmount = lineTotal;
+            //double basisAmount = lineTotal;
 
             double original = 0.0;
             double.TryParse(originalValueTotal.Text, out original);
+
+            double.TryParse(lineTotalTb.Text, out lineTotal);
 
             double difference = 0.0;
             difference = original - lineTotal;
@@ -683,7 +633,14 @@ namespace eTaxInvoicePdfGenerator.Forms
 
         private void branchNoTb_LostFocus(object sender, RoutedEventArgs e)
         {
-            checkBranchID();
+            try
+            {
+                new util.Validator().checkBranchID(branchNoTb, is_branch.IsChecked.Value);
+            }
+            catch (Exception ex)
+            {
+                new AlertBox(ex.Message).ShowDialog();
+            }
         }
 
         private void is_main_Checked(object sender, RoutedEventArgs e)
@@ -700,6 +657,15 @@ namespace eTaxInvoicePdfGenerator.Forms
             }
         }
 
+        private void lineTotalTb_KeyUp(object sender, KeyEventArgs e)
+        {
+            double lineTotal = 0.0;
+            if (double.TryParse(lineTotalTb.Text, out lineTotal))
+            {
+                calculate();
+            }
+        }
+
         private void phoneNoTb_TextChanged(object sender, TextChangedEventArgs e)
         {
             new util.Validator().validateExtNumber(phoneNoTb, phoneExtTb, "เบอร์โทรศัพท์");
@@ -708,16 +674,6 @@ namespace eTaxInvoicePdfGenerator.Forms
         private void phoneExtTb_TextChanged(object sender, TextChangedEventArgs e)
         {
             new util.Validator().validateExtNumber(phoneNoTb, phoneExtTb, "เบอร์โทรศัพท์");
-        }
-
-        private void faxNoTb_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            new util.Validator().validateExtNumber(faxNoTb, faxExtTb, "เบอร์โทรสาร");
-        }
-
-        private void faxExtTb_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            new util.Validator().validateExtNumber(faxNoTb, faxExtTb, "เบอร์โทรสาร");
         }
 
         private void originalValueTotal_GotFocus(object sender, RoutedEventArgs e)
@@ -757,17 +713,60 @@ namespace eTaxInvoicePdfGenerator.Forms
 
         private void provinceCbb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            util.ProvinceCodeList pcl = new util.ProvinceCodeList();
-            amphoeCbb.SelectionChanged -= new SelectionChangedEventHandler(amphoeCbb_SelectionChanged);
-            pcl.SetAmphoe(amphoeCbb, ((AddressCodeListObj)provinceCbb.SelectedItem).code.Substring(0, 2));
-            amphoeCbb.SelectionChanged += new SelectionChangedEventHandler(amphoeCbb_SelectionChanged);
-            pcl.SetTambon(tambonCbb, ((AddressCodeListObj)amphoeCbb.SelectedItem).code.Substring(0, 4));
+            if (provinceCbb.SelectedIndex > 0)
+            {
+                util.ProvinceCodeList pcl = new util.ProvinceCodeList();
+                amphoeCbb.SelectionChanged -= new SelectionChangedEventHandler(amphoeCbb_SelectionChanged);
+                pcl.SetAmphoe(amphoeCbb, ((AddressCodeListObj)provinceCbb.SelectedItem).code.Substring(0, 2));
+                amphoeCbb.SelectionChanged += new SelectionChangedEventHandler(amphoeCbb_SelectionChanged);
+                //pcl.SetTambon(tambonCbb, ((AddressCodeListObj)amphoeCbb.SelectedItem).code.Substring(0, 4));
+            }
+            else
+            {
+                amphoeCbb.ItemsSource = null;
+            }
         }
 
         private void amphoeCbb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            util.ProvinceCodeList pcl = new util.ProvinceCodeList();
-            pcl.SetTambon(tambonCbb, ((AddressCodeListObj)amphoeCbb.SelectedItem).code.Substring(0, 4));
+            if (amphoeCbb.SelectedIndex > 0)
+            {
+                util.ProvinceCodeList pcl = new util.ProvinceCodeList();
+                pcl.SetTambon(tambonCbb, ((AddressCodeListObj)amphoeCbb.SelectedItem).code.Substring(0, 4));
+            }
+            else
+            {
+                tambonCbb.ItemsSource = null;
+            }
+        }
+
+        private void lineTotalTb_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (lineTotalTb.Text == "0.00")
+            {
+                lineTotalTb.Text = string.Empty;
+            }
+        }
+
+        private void lineTotalTb_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (lineTotalTb.Text == string.Empty)
+            {
+                lineTotalTb.Text = "0.00";
+            }
+        }
+
+        private void purposeCbb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (purposeCbb.SelectedValue.ToString() == "CDNCG99" || purposeCbb.SelectedValue.ToString() == "CDNS99")
+            {
+                otherPurposeTb.IsEnabled = true;
+            }
+            else
+            {
+                otherPurposeTb.Text = "";
+                otherPurposeTb.IsEnabled = false;
+            }
         }
     }
 }

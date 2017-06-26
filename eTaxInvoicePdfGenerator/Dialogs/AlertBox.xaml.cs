@@ -20,6 +20,8 @@ namespace eTaxInvoicePdfGenerator.Dialogs
     {
         public string msg { get; set; }
         public string title { get; set; }
+        public string response { get; set; }
+        public const string RESULT_OK = "OK";
         public AlertBox(string content)
         {
             InitializeComponent();
@@ -33,6 +35,8 @@ namespace eTaxInvoicePdfGenerator.Dialogs
 
         private void okBtn_Click(object sender, RoutedEventArgs e)
         {
+            DialogResult = true;
+            this.response = RESULT_OK;
             this.Close();
         }
     }

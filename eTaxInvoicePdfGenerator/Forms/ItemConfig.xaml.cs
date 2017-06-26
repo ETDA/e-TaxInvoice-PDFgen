@@ -71,7 +71,7 @@ namespace eTaxInvoicePdfGenerator.Forms
                 //ItemObj obj = new ItemDao().select(this.id);
                 nameTb.Text = itemObj.name;
                 detailTb.Text = itemObj.detail;
-                priceTb.Text = itemObj.pricePerUnit.ToString("N");
+                priceTb.Text = itemObj.pricePerUnit.ToString();
                 if (itemObj.isService)
                 {
                     is_service.IsChecked = true;
@@ -111,42 +111,44 @@ namespace eTaxInvoicePdfGenerator.Forms
                 if (is_service.IsChecked.Value)
                 {
                     itemObj.isService = true;
+                    itemObj.unit = "";
+                    itemObj.unitXml = "";
                 }
                 else
                 {
                     itemObj.isService = false;
-                }
-                CodeList codelist = (CodeList)unitCbb.SelectedItem;
-                if (codelist == null)
-                {
-                    if (unitCbb.Text == "")
+                    CodeList codelist = (CodeList)unitCbb.SelectedItem;
+                    if (codelist == null)
                     {
-                        itemObj.unitXml = "";
+                        if (unitCbb.Text == "")
+                        {
+                            itemObj.unitXml = "";
+                        }
+                        else
+                        {
+                            itemObj.unitXml = "ZZ";
+                        }
+                        itemObj.unit = unitCbb.Text;
+                        if (is_item.IsChecked.Value)
+                        {
+                            if (!new CodeListDao().exist(new CodeList(itemObj.unitXml, itemObj.unit)))
+                            {
+                                new CodeListDao().save(new CodeList(itemObj.unitXml, itemObj.unit));
+                            }
+                        }
                     }
                     else
                     {
-                        itemObj.unitXml = "ZZ";
+                        itemObj.unit = codelist.description;
+                        itemObj.unitXml = codelist.code;
                     }
-                    itemObj.unit = unitCbb.Text;
-                    if (is_item.IsChecked.Value)
-                    {
-                        if (!new CodeListDao().exist(new CodeList(itemObj.unitXml, itemObj.unit)))
-                        {
-                            new CodeListDao().save(new CodeList(itemObj.unitXml, itemObj.unit));
-                        }
-                    }
-                }
-                else
-                {
-                    itemObj.unit = codelist.description;
-                    itemObj.unitXml = codelist.code;
                 }
                 if (saveStatus)
                 {
                     new ItemDao().save(itemObj);
                 }
-                this.DialogResult = true;
-                //this.Close();
+                new AlertBox("บันทึกข้อมูลสินค้า/บริการเรียบร้อยแล้ว").ShowDialog();
+                this.Close();
                 return true;
             }
             catch (Exception ex)
@@ -159,22 +161,14 @@ namespace eTaxInvoicePdfGenerator.Forms
         private void validateData()
         {
             util.Validator validator = new util.Validator();
-            // Validate name
-            validator.validateText(nameTb,"ชื่อสินค้า หรือบริการ",256,true);
-
-            // Validate Price per unit
+            validator.validateText(nameTb, "ชื่อสินค้า/บริการ", 256, true);
             validator.validatePrice(priceTb);
-            
-            // Validate Unit
             if (is_item.IsChecked.Value)
             {
                 validator.validateUnit(unitCbb);
             }
 
-            // Validate Item Code
             validator.validateItemCode(itemCodeTb);
-
-            // Validate Item Code Inter
             validator.validateItemCodeInter(itemCodeInterTb);
         }
 
@@ -182,7 +176,7 @@ namespace eTaxInvoicePdfGenerator.Forms
         {
             if (itemObj == null)
             {
-                return nameTb.Text != "" || detailTb.Text != "" || is_item.IsChecked != true || priceTb.Text != "0.00" || unitCbb.Text != "" ||
+                return nameTb.Text != "" || detailTb.Text != "" || is_item.IsChecked != true || priceTb.Text != "" || unitCbb.Text != "" ||
                     itemCodeTb.Text != "" || itemCodeInterTb.Text != "";
             }
             else
@@ -190,7 +184,7 @@ namespace eTaxInvoicePdfGenerator.Forms
                 //ItemObj obj = new ItemDao().select(this.id);
                 ItemObj obj = itemObj;
                 return nameTb.Text != obj.name || detailTb.Text != obj.detail || obj.isService != is_service.IsChecked ||
-                    obj.pricePerUnit.ToString("N") != priceTb.Text || obj.unit != unitCbb.Text ||
+                    obj.pricePerUnit.ToString() != priceTb.Text || obj.unit != unitCbb.Text ||
                     itemCodeTb.Text != itemObj.itemCode || itemCodeInterTb.Text != itemObj.itemCodeInter;
             }
         }
@@ -246,32 +240,16 @@ namespace eTaxInvoicePdfGenerator.Forms
             }
         }
 
-        private void priceTb_GotFocus(object sender, RoutedEventArgs e)
-        {
-            if (priceTb.Text == "0.00")
-            {
-                priceTb.Text = string.Empty;
-            }
-        }
-
-        private void priceTb_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (priceTb.Text == string.Empty)
-            {
-                priceTb.Text = "0.00";
-            }
-        }
-
         private void is_service_Checked(object sender, RoutedEventArgs e)
         {
             unitCbb.IsEditable = false;
-            unitCbb.SelectedItem = null;
-            unitCbb.Text = "";
+            unitCbb.IsEnabled = false;
         }
 
         private void is_item_Checked(object sender, RoutedEventArgs e)
         {
             unitCbb.IsEditable = true;
+            unitCbb.IsEnabled = true;
         }
 
         private void unitCbb_DropDownOpened(object sender, EventArgs e)

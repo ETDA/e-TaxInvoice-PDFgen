@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel;
 namespace eTaxInvoicePdfGenerator.Entity
 {
-    /*public class ItemObj : INotifyPropertyChanged */
     public class ItemObj
     {
         public int id { get; set; }

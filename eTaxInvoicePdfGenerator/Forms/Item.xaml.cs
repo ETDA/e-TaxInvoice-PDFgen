@@ -106,8 +106,8 @@ namespace eTaxInvoicePdfGenerator.Forms
             ItemConfig config = new ItemConfig(true);
             //config.id = item.id;
             config.itemObj = new ItemDao().select(item.id);
+            config.Show();
             this.Hide();
-            bool result = config.ShowDialog().Value;
             
         }
 
@@ -115,7 +115,7 @@ namespace eTaxInvoicePdfGenerator.Forms
         {
             ItemConfig config = new ItemConfig(true);
             this.Hide();
-            bool result = config.ShowDialog().Value;
+            config.Show();
         }
 
         private void delBtn_Click(object sender, RoutedEventArgs e)
@@ -131,9 +131,7 @@ namespace eTaxInvoicePdfGenerator.Forms
             }
             if (selectedItems.Count > 0)
             {
-                DelNo dn = new DelNo("ต้องการลบข้อมูลหรือไม่", "ยืนยันการลบรายการ");
-                //yn.yesBtn.Content = "ลบ";
-                //yn.noBtn.Content = "ยกเลิก";
+                DelNo dn = new DelNo();
                 dn.ShowDialog();
                 switch (dn.response)
                 {

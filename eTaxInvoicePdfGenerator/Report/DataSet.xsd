@@ -12,7 +12,7 @@
   <xs:element name="DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet" msprop:Generator_UserDSName="DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Tax" msprop:Generator_TableClassName="TaxDataTable" msprop:Generator_TableVarName="tableTax" msprop:Generator_RowChangedName="TaxRowChanged" msprop:Generator_TablePropName="Tax" msprop:Generator_RowDeletingName="TaxRowDeleting" msprop:Generator_RowChangingName="TaxRowChanging" msprop:Generator_RowEvHandlerName="TaxRowChangeEventHandler" msprop:Generator_RowDeletedName="TaxRowDeleted" msprop:Generator_RowClassName="TaxRow" msprop:Generator_UserTableName="Tax" msprop:Generator_RowEvArgName="TaxRowChangeEvent">
+        <xs:element name="Tax" msprop:Generator_TableClassName="TaxDataTable" msprop:Generator_TableVarName="tableTax" msprop:Generator_TablePropName="Tax" msprop:Generator_RowDeletingName="TaxRowDeleting" msprop:Generator_RowChangingName="TaxRowChanging" msprop:Generator_RowEvHandlerName="TaxRowChangeEventHandler" msprop:Generator_RowDeletedName="TaxRowDeleted" msprop:Generator_UserTableName="Tax" msprop:Generator_RowChangedName="TaxRowChanged" msprop:Generator_RowEvArgName="TaxRowChangeEvent" msprop:Generator_RowClassName="TaxRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="item_name" msprop:Generator_ColumnVarNameInTable="columnitem_name" msprop:Generator_ColumnPropNameInRow="item_name" msprop:Generator_ColumnPropNameInTable="item_nameColumn" msprop:Generator_UserColumnName="item_name" type="xs:string" minOccurs="0" />

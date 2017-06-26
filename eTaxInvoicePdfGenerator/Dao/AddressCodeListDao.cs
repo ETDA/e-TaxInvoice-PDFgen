@@ -68,6 +68,7 @@ namespace eTaxInvoicePdfGenerator.Dao
                     {
                         using (SQLiteDataReader dr = cmd.ExecuteReader())
                         {
+                            items.Add(new AddressCodeListObj("0","กรุณาเลือกจังหวัด","กรุณาเลือกอำเภอ","กรุณาเลือกตำบล"));
                             while (dr.Read())
                             {
                                 AddressCodeListObj obj = new AddressCodeListObj();
@@ -102,6 +103,7 @@ namespace eTaxInvoicePdfGenerator.Dao
                         cmd.Parameters.AddWithValue("@code", code + "%");
                         using (SQLiteDataReader dr = cmd.ExecuteReader())
                         {
+                            items.Add(new AddressCodeListObj("0", "กรุณาเลือกจังหวัด", "กรุณาเลือกอำเภอ", "กรุณาเลือกตำบล"));
                             while (dr.Read())
                             {
                                 AddressCodeListObj obj = new AddressCodeListObj();
@@ -136,6 +138,7 @@ namespace eTaxInvoicePdfGenerator.Dao
                         cmd.Parameters.AddWithValue("@code", code + "%");
                         using (SQLiteDataReader dr = cmd.ExecuteReader())
                         {
+                            items.Add(new AddressCodeListObj("0", "กรุณาเลือกจังหวัด", "กรุณาเลือกอำเภอ", "กรุณาเลือกตำบล"));
                             while (dr.Read())
                             {
                                 AddressCodeListObj obj = new AddressCodeListObj();

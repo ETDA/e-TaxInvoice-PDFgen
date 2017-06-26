@@ -1,3 +1,28 @@
 C:\Users\pragasit-ETDA\Desktop\fordeploy2\eTaxInvoicePdfGenerator\bin\Release\eTaxInvoicePdfGenerator.exe.config
 C:\Users\pragasit-ETDA\Desktop\fordeploy2\eTaxInvoicePdfGenerator\obj\Release\Interop.Shell32.dll
 C:\Users\pragasit-ETDA\Desktop\fordeploy2\eTaxInvoicePdfGenerator\obj\Release\eTaxInvoicePdfGenerator.csproj.ResolveComReference.cache
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\eTaxInvoicePdfGenerator.csprojResolveAssemblyReference.cache
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\Interop.Shell32.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\eTaxInvoicePdfGenerator.csproj.ResolveComReference.cache
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\Dialogs\AlertBox.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\Dialogs\DelNo.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\Dialogs\YesNo.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\Dialogs\YesNoCancel.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\Forms\Buyer.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\Forms\BuyerConfig.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\Forms\CreditNote.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\Forms\DebitNote.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\Forms\Invoice.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\Forms\InvoiceItem.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\Forms\ItemConfig.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\Forms\RefDoc.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\Forms\Report.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\Forms\Item.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\Forms\Seller.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\Forms\TermNConditions.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\MainWindow.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\App.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\eTaxInvoicePdfGenerator_Content.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\eTaxInvoicePdfGenerator_MarkupCompile.cache
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Release\eTaxInvoicePdfGenerator_MarkupCompile.lref
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Release\eTaxInvoicePdfGenerator.exe.config

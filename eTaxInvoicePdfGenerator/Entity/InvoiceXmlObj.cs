@@ -26,6 +26,7 @@ namespace eTaxInvoicePdfGenerator.Entity
         public string sellerCountry { get; set; }
         public string sellerCountrySubID { get; set; }
         public string sellercontactPersonPhoneno { get; set; }
+        public string sellerBuildingName{ get; set; }
         public string buyerName { get; set; }
         public string buyerTaxid { get; set; }
         public string buyerWebsite { get; set; }
@@ -39,12 +40,15 @@ namespace eTaxInvoicePdfGenerator.Entity
         public string buyerCountrySubID { get; set; }
         public string buyerContactPerson { get; set; }
         public string buyercontactPersonPhoneno { get; set; }
+        public string buyerBuildingName { get; set; }
         public string currency { get; set; }
         public string invoiceTaxcode { get; set; }
         public string invoiceTaxrate { get; set; }
         public string invoiceBasisamount { get; set; }
         public string invoiceChargeindicator { get; set; }
+        public string invoiceServiceindicator { get; set; }        
         public string invoiceDiscount { get; set; }
+        public string invoiceService { get; set; }
         public string invoiceLinetotal { get; set; }
         public string invoiceTaxtotal { get; set; }
         public string invoiceGrandtotal { get; set; }

@@ -13,151 +13,157 @@
     <Window.Background>
         <StaticResource ResourceKey="Background" />
     </Window.Background>
-    <ScrollViewer Margin="0,0,3,10">
-        <Grid>
-            <Image x:Name="image" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Top" Source="/eTaxInvoicePdfGenerator;component/in/elements/titile.png"/>
-            <Image x:Name="image1" HorizontalAlignment="Left" Margin="0,160,0,0" VerticalAlignment="Top" Source="/eTaxInvoicePdfGenerator;component/in/elements/tax_invoice_txtleft.png" Width="296" Height="90"/>
-            <Label x:Name="label1" Content="ชื่อบริษัท/ผู้ชื้อ *" HorizontalAlignment="Left" Margin="326,358,0,0" VerticalAlignment="Top" Height="26"/>
-            <Label x:Name="label2" Content="ที่อยู่ *" HorizontalAlignment="Left" Margin="326,385,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="address1Tb" HorizontalAlignment="Left" Height="23" Margin="560,387,0,0" VerticalAlignment="Top" Width="360" TabIndex="2" MaxLength="256"/>
-            <TextBox x:Name="address2Tb" HorizontalAlignment="Left" Height="23" Margin="560,416,0,0" VerticalAlignment="Top" Width="360" TabIndex="3" MaxLength="256"/>
-            <TextBox x:Name="zipcodeTb" HorizontalAlignment="Left" Height="23" Margin="560,548,0,0" VerticalAlignment="Top" Width="360" TabIndex="4" MaxLength="5"/>
-            <Label x:Name="label3" Content="รหัสไปรษณีย์ *" HorizontalAlignment="Left" Margin="326,546,0,0" VerticalAlignment="Top" />
-            <Label x:Name="label4" Content="เลขประจำตัวผู้เสียภาษีอากร *" HorizontalAlignment="Left" Margin="326,580,0,0" VerticalAlignment="Top" />
-            <TextBox x:Name="taxIdTb" HorizontalAlignment="Left" Height="23" Margin="560,582,0,0" VerticalAlignment="Top" Width="360" TabIndex="5" MaxLength="13"/>
-            <RadioButton x:Name="is_main" GroupName="branch" Content="สำนักงานใหญ่" HorizontalAlignment="Left" Margin="562,621,0,0" VerticalAlignment="Top" Checked="is_main_Checked"/>
-            <RadioButton x:Name="is_branch" Content="สาขาเลขที่" GroupName="branch" HorizontalAlignment="Left" Margin="679,622,0,0" VerticalAlignment="Top" Height="14" Checked="is_branch_Checked"/>
-            <TextBox x:Name="branchNoTb" HorizontalAlignment="Left" Height="22" Margin="780,618,0,0" VerticalAlignment="Top" Width="140" LostFocus="branchNoTb_LostFocus" MaxLength="5"/>
-            <Label x:Name="label6" Content="เว็บไซต์" HorizontalAlignment="Left" Margin="326,653,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="websiteTb" HorizontalAlignment="Left" Height="23" Margin="560,655,0,0" VerticalAlignment="Top" Width="360" TabIndex="6" MaxLength="256"/>
-            <Label x:Name="label7" Content="อีเมล" HorizontalAlignment="Left" Margin="326,684,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="label8" Content="ผู้ติดต่อ *" HorizontalAlignment="Left" Margin="326,715,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="emailTb" HorizontalAlignment="Left" Height="23" Margin="560,686,0,0" VerticalAlignment="Top" Width="360" TabIndex="7" MaxLength="256"/>
-            <TextBox x:Name="contactTb" HorizontalAlignment="Left" Height="23" Margin="560,717,0,0" VerticalAlignment="Top" Width="360" TabIndex="8" MaxLength="140"/>
-            <Label x:Name="label9" Content="เบอร์โทรศัพท์" HorizontalAlignment="Left" Margin="326,748,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="28"/>
-            <Label x:Name="label10" Content="เบอร์โทรสาร" HorizontalAlignment="Left" Margin="326,781,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="label11" Content="+66-" HorizontalAlignment="Left" Margin="560,748,0,0" VerticalAlignment="Top" Height="28" />
-            <Label x:Name="label12" Content="+66-" HorizontalAlignment="Left" Margin="560,781,0,0" VerticalAlignment="Top" />
-            <TextBox x:Name="phoneNoTb" HorizontalAlignment="Left" Height="24" Margin="610,750,0,0" VerticalAlignment="Top" Width="155" TabIndex="9" MaxLength="16" TextChanged="phoneNoTb_TextChanged"/>
-            <TextBox x:Name="faxNoTb" HorizontalAlignment="Left" Height="23" Margin="610,783,0,0" VerticalAlignment="Top" Width="155" TabIndex="11" MaxLength="16" TextChanged="faxNoTb_TextChanged"/>
-            <Label x:Name="label13" Content="เบอร์ต่อ" HorizontalAlignment="Left" Margin="769,748,0,0" VerticalAlignment="Top" Height="28"/>
-            <Label x:Name="label14" Content="เบอร์ต่อ" HorizontalAlignment="Left" Margin="769,781,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="phoneExtTb" HorizontalAlignment="Left" Height="24" Margin="840,750,0,0" VerticalAlignment="Top" Width="80" TabIndex="10" MaxLength="10" TextChanged="phoneExtTb_TextChanged"/>
-            <TextBox x:Name="faxExtTb" HorizontalAlignment="Left" Height="23" Margin="840,783,0,0" VerticalAlignment="Top" Width="80" TabIndex="12" MaxLength="10" TextChanged="faxExtTb_TextChanged"/>
-            <Button x:Name="addRefBtn" Content="เพิ่มใบกำกับภาษีที่อ้างถึง" HorizontalAlignment="Left" Margin="693,199,0,0" VerticalAlignment="Top" Width="124" Height="20" Click="addRefBtn_Click" TabIndex="17" Visibility="Hidden"/>
-            <Button x:Name="addItemBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="730,980,0,0" VerticalAlignment="Top" Click="addItemBtn_Click" TabIndex="18" Height="29" Width="96" HorizontalAlignment="Left">
-                <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_dataAdd.png" Style="{StaticResource imageBtn}"/>
-            </Button>
-            <Button x:Name="deleteItemBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="823,980,0,0" VerticalAlignment="Top" Click="deleteItemBtn_Click" TabIndex="16" Height="29" Width="96" HorizontalAlignment="Left">
-                <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_dataDel.png" Style="{StaticResource imageBtn}"/>
-            </Button>
-            <ListView x:Name="listView" Height="137" Margin="100,830,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="860" >
-                <ListView.Resources>
-                    <!--<DataTemplate x:Key="ItemListComboBox">
-                    <ComboBox Margin="0,3" x:Name="ItemComboBox"
-                          ItemsSource="{Binding RelativeSource={RelativeSource AncestorType=ListBox},Path=DataContext.ItemList}"
-                              DisplayMemberPath="name"
-                              SelectedValue="{Binding Path=name, Mode=TwoWay}"
-                              />
-                </DataTemplate>-->
-                </ListView.Resources>
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn Header="" Width="30">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <CheckBox IsChecked="{Binding isSelected, UpdateSourceTrigger=PropertyChanged}"/>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
-                        <GridViewColumn Header="ลำดับที่" DisplayMemberBinding="{Binding number}"  Width="50" />
+    <Grid>
+        <Image x:Name="image" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Top" Source="/eTaxInvoicePdfGenerator;component/in/elements/titile.png"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Margin="0,160,0,0" VerticalAlignment="Top" Source="/eTaxInvoicePdfGenerator;component/in/elements/tax_invoice_txtleft.png" Width="296" Height="90"/>
+        <Button x:Name="shutdownBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Click="shutdownBtn_Click">
+            <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_close@2x.png" Style="{StaticResource imageBtn}"/>
+        </Button>
+        <Grid Margin="0,140,0,20">
+            <ScrollViewer>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <RadioButton x:Name="is_first" GroupName="reference" Content="ใบกำกับภาษี" HorizontalAlignment="Left" Margin="326,13,0,0" VerticalAlignment="Top" Height="15" Checked="is_first_Checked" TabIndex="1"/>
+                    <RadioButton x:Name="is_replace" GroupName="reference" Content="ยกเลิกใบกำกับภาษีเดิม เพื่อออกใบกำกับภาษีใหม่" HorizontalAlignment="Left" Margin="466,13,0,0" VerticalAlignment="Top" Height="15" Checked="is_replace_Checked" TabIndex="2"/>
+                    <Expander x:Name="typeEx" IsExpanded="True" Grid.Row="1" Margin="321,0,-41,0" Style="{DynamicResource ExpanderStyle1}">
+                        <GroupBox x:Name="groupBox" Header="" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="152" Width="620">
+                            <Grid HorizontalAlignment="Left" Height="155" Margin="10,5,0,0" VerticalAlignment="Top" Width="590">
+                                <Label x:Name="label15" Content="สาเหตุในการยกเลิกใบกำกับภาษีเดิม" HorizontalAlignment="Left" Margin="-3,3,0,0" VerticalAlignment="Top" />
+                                <ComboBox x:Name="purposeCbb" HorizontalAlignment="Left" Height="23" Margin="309,7,0,0" VerticalAlignment="Top" Width="281" TabIndex="1" SelectionChanged="purposeCbb_SelectionChanged" />
+                                <Label x:Name="label16" Content="เลขที่ใบกำกับภาษีเดิม" HorizontalAlignment="Left" Margin="-3,60,0,0" VerticalAlignment="Top" />
+                                <TextBox x:Name="docIdTb" HorizontalAlignment="Left" Height="23" Margin="309,64,0,0" VerticalAlignment="Top" Width="281" TabIndex="3" MaxLength="35"/>
+                                <Label x:Name="label17" Content="วันที่ของใบกำกับภาษีเดิม" HorizontalAlignment="Left" Margin="-3,89,0,0" VerticalAlignment="Top" />
+                                <DatePicker x:Name="docDateTb" HorizontalAlignment="Left" Margin="309,93,0,0" VerticalAlignment="Top" Width="281" TabIndex="4" Height="24">
+                                    <DatePicker.Resources>
+                                        <Style TargetType="{x:Type DatePickerTextBox}">
+                                            <Setter Property="IsReadOnly" Value="True"/>
+                                        </Style>
+                                    </DatePicker.Resources>
+                                </DatePicker>
+                                <Label x:Name="label6" Content="เหตุอื่น" HorizontalAlignment="Left" Margin="-3,34,0,0" VerticalAlignment="Top" Width="82"/>
+                                <TextBox x:Name="otherPurposeTb" HorizontalAlignment="Left" Height="23" Margin="309,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" TabIndex="2" IsEnabled="False"/>
+                            </Grid>
+                        </GroupBox>
+                    </Expander>
+                    <DockPanel Grid.Row="2">
+                        <Grid>
+                            <Label x:Name="label1" Content="ชื่อบริษัท/ผู้ชื้อ *" HorizontalAlignment="Left" Margin="326,95,0,0" VerticalAlignment="Top" Height="26"/>
+                            <Label x:Name="label2" Content="ที่อยู่" HorizontalAlignment="Left" Margin="326,155,0,0" VerticalAlignment="Top"/>
+                            <TextBox x:Name="taxIdTb" HorizontalAlignment="Left" Height="23" Margin="560,25,0,0" VerticalAlignment="Top" Width="360" TabIndex="5" MaxLength="13"/>
+                            <TextBox x:Name="address1Tb" HorizontalAlignment="Left" Height="23" Margin="560,157,0,0" VerticalAlignment="Top" Width="360" TabIndex="8" MaxLength="256"/>
+                            <TextBox x:Name="houseNoTb" HorizontalAlignment="Left" Height="23" Margin="560,127,0,0" VerticalAlignment="Top" Width="360" TabIndex="7" MaxLength="256"/>
+                            <TextBox x:Name="zipcodeTb" HorizontalAlignment="Left" Height="23" Margin="560,285,0,0" VerticalAlignment="Top" Width="360" TabIndex="12" MaxLength="5"/>
+                            <Label x:Name="label3" Content="รหัสไปรษณีย์ *" HorizontalAlignment="Left" Margin="326,283,0,0" VerticalAlignment="Top" />
+                            <Label x:Name="label4" Content="เลขประจำตัวผู้เสียภาษีอากร *" HorizontalAlignment="Left" Margin="326,23,0,0" VerticalAlignment="Top" />
+                            <RadioButton x:Name="is_main" GroupName="branch" Content="สำนักงานใหญ่" HorizontalAlignment="Left" Margin="562,64,0,0" VerticalAlignment="Top" Checked="is_main_Checked"/>
+                            <RadioButton x:Name="is_branch" Content="สาขาเลขที่" GroupName="branch" HorizontalAlignment="Left" Margin="679,65,0,0" VerticalAlignment="Top" Height="14" Checked="is_branch_Checked"/>
+                            <TextBox x:Name="branchNoTb" HorizontalAlignment="Left" Height="22" Margin="780,61,0,0" VerticalAlignment="Top" Width="140" LostFocus="branchNoTb_LostFocus" MaxLength="5"/>
+                            <Label x:Name="label7" Content="อีเมล *" HorizontalAlignment="Left" Margin="326,324,0,0" VerticalAlignment="Top"/>
+                            <Label x:Name="label8" Content="ผู้ติดต่อ" HorizontalAlignment="Left" Margin="326,355,0,0" VerticalAlignment="Top"/>
+                            <TextBox x:Name="emailTb" HorizontalAlignment="Left" Height="23" Margin="560,326,0,0" VerticalAlignment="Top" Width="360" TabIndex="13" MaxLength="256"/>
+                            <TextBox x:Name="contactTb" HorizontalAlignment="Left" Height="23" Margin="560,357,0,0" VerticalAlignment="Top" Width="360" TabIndex="14" MaxLength="140"/>
+                            <Label x:Name="label9" Content="เบอร์โทรศัพท์" HorizontalAlignment="Left" Margin="326,388,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="28"/>
+                            <Label x:Name="label11" Content="+66-" HorizontalAlignment="Left" Margin="560,388,0,0" VerticalAlignment="Top" Height="28" />
+                            <TextBox x:Name="phoneNoTb" HorizontalAlignment="Left" Height="24" Margin="610,390,0,0" VerticalAlignment="Top" Width="155" TabIndex="15" MaxLength="16" TextChanged="phoneNoTb_TextChanged"/>
+                            <Label x:Name="label13" Content="เบอร์ต่อ" HorizontalAlignment="Left" Margin="769,388,0,0" VerticalAlignment="Top" Height="28"/>
+                            <TextBox x:Name="phoneExtTb" HorizontalAlignment="Left" Height="24" Margin="840,390,0,0" VerticalAlignment="Top" Width="80" MaxLength="10" TextChanged="phoneExtTb_TextChanged"/>
+                            <Button x:Name="addRefBtn" Content="เพิ่มใบกำกับภาษีที่อ้างถึง" HorizontalAlignment="Left" Margin="693,199,0,0" VerticalAlignment="Top" Width="124" Height="20" Click="addRefBtn_Click" TabIndex="17" Visibility="Hidden"/>
+                            <Button x:Name="addItemBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="720,599,0,0" VerticalAlignment="Top" Click="addItemBtn_Click" TabIndex="22" Height="29" Width="96" HorizontalAlignment="Left">
+                                <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_dataAdd.png" Style="{StaticResource imageBtn}"/>
+                            </Button>
+                            <Button x:Name="deleteItemBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="820,599,0,0" VerticalAlignment="Top" Click="deleteItemBtn_Click" TabIndex="23" Height="29" Width="96" HorizontalAlignment="Left">
+                                <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_dataDel.png" Style="{StaticResource imageBtn}"/>
+                            </Button>
+                            <ListView x:Name="listView" Height="137" Margin="60,438,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="860" >
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Header="" Width="30">
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <CheckBox IsChecked="{Binding isSelected, UpdateSourceTrigger=PropertyChanged}"/>
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+                                        <GridViewColumn Header="ลำดับที่" DisplayMemberBinding="{Binding number}"  Width="50" />
 
-                        <GridViewColumn Header="รายการ *" DisplayMemberBinding="{Binding itemName}"  Width="150" />
-                        <GridViewColumn Header="จำนวน *" DisplayMemberBinding="{Binding quantityText}" Width="70"/>
-                        <GridViewColumn Header="หน่วย" DisplayMemberBinding="{Binding unit}" Width="120"/>
-                        <GridViewColumn Header="ราคาต่อหน่วย *" DisplayMemberBinding="{Binding pricePerUnitText}" Width="110"/>
-                        <GridViewColumn Header="ส่วนลด" DisplayMemberBinding="{Binding discountText}" Width="100" />
-                        <!--<GridViewColumn Header="" DisplayMemberBinding="{Binding discountTotal}" Width="50"/>-->
-                        <GridViewColumn Header="จำนวนเงิน (ไม่รวม VAT)" Width="160" >
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding itemTotalText}" TextAlignment="Right" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                                        <GridViewColumn Header="รายการ *" DisplayMemberBinding="{Binding itemName}"  Width="150" />
+                                        <GridViewColumn Header="จำนวน *" DisplayMemberBinding="{Binding quantityText}" Width="70"/>
+                                        <GridViewColumn Header="หน่วย" DisplayMemberBinding="{Binding unit}" Width="120"/>
+                                        <GridViewColumn Header="ราคาต่อหน่วย *" DisplayMemberBinding="{Binding pricePerUnitText}" Width="110"/>
+                                        <GridViewColumn Header="ส่วนลด" DisplayMemberBinding="{Binding discountText}" Width="100" />
+                                        <!--<GridViewColumn Header="" DisplayMemberBinding="{Binding discountTotal}" Width="50"/>-->
+                                        <GridViewColumn Header="จำนวนเงิน (ไม่รวม VAT)" Width="160" >
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Text="{Binding itemTotalText}" TextAlignment="Right" />
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
 
-                        <GridViewColumn Header="" Width="60">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock>
+                                        <GridViewColumn Header="" Width="60">
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock>
                                 <Hyperlink NavigateUri="{Binding id}" Click="OnHyperlinkClick">
                                     <TextBlock Text="[แก้ไข]" />
                                 </Hyperlink>
                             </TextBlock>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
-                    </GridView>
-                </ListView.View>
-            </ListView>
-            <Label x:Name="label19" Content="ราคารวมทั้งสิ้น" HorizontalAlignment="Left" Margin="688,1133,0,0" VerticalAlignment="Top" />
-            <TextBox x:Name="lineTotalTb" HorizontalAlignment="Left" Height="23" Margin="795,1135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Text="0.00" TextAlignment="Right" IsEnabled="False"/>
-            <TextBox x:Name="extraDiscountTb" HorizontalAlignment="Left" Height="23" Margin="795,1163,0,0" VerticalAlignment="Top" Width="80" Text="0.00" TextAlignment="Right" MaxLength="10" KeyUp="extraDiscountTb_KeyUp" TabIndex="21" GotFocus="extraDiscountTb_GotFocus" LostFocus="extraDiscountTb_LostFocus"/>
-            <TextBox x:Name="basisAmountTb" HorizontalAlignment="Left" Height="23" Margin="795,1191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Text="0.00" TextAlignment="Right" IsEnabled="False"/>
-            <TextBox x:Name="taxTotalTb" HorizontalAlignment="Left" Height="23" Margin="795,1218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Text="0.00" TextAlignment="Right" IsEnabled="False"/>
-            <TextBox x:Name="grandTotalTb" HorizontalAlignment="Left" Height="23" Margin="795,1247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Text="0.00" TextAlignment="Right" IsEnabled="False"/>
-            <Button x:Name="createBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="440,1310,0,0" Width="143" Click="createBtn_Click" Height="47" VerticalAlignment="Top" TabIndex="23">
-                <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_GenPDF.png" Style="{StaticResource imageBtn}" />
-            </Button>
-            <Button x:Name="exitBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="640,1310,0,0" Width="143" Click="exitBtn_Click" Height="47" VerticalAlignment="Top" TabIndex="24">
-                <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_backHome.png" Style="{StaticResource imageBtn}" />
-            </Button>
-            <TextBox x:Name="vatTb" Height="23" Margin="522,1218,0,0" Text="7.00" VerticalAlignment="Top" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Width="50" KeyUp="vatTb_KeyUp" MaxLength="5" TabIndex="22"/>
-            <TextBox x:Name="extraDiscountRateTb" HorizontalAlignment="Left" Height="23" Margin="707,1163,0,0" Text="0.00" VerticalAlignment="Top" Width="50" HorizontalContentAlignment="Right" KeyUp="extraDisCountRateTb_KeyUp" MaxLength="5" TabIndex="20" GotFocus="extraDiscountRateTb_GotFocus" LostFocus="extraDiscountRateTb_LostFocus"/>
-            <Label x:Name="label20" Content="ส่วนลดเพิ่มเติม" HorizontalAlignment="Left" Margin="593,1161,0,0" VerticalAlignment="Top" />
-            <Label x:Name="label21" Content="%" HorizontalAlignment="Left" Margin="763,1161,0,0" VerticalAlignment="Top" />
-            <Label x:Name="label22" Content="จำนวนเงินหลังหักส่วนลด" HorizontalAlignment="Left" Margin="625,1189,0,0" VerticalAlignment="Top" />
-            <Label x:Name="label23" Content="จำนวนภาษีมูลค่าเพิ่ม" HorizontalAlignment="Left" Margin="650,1216,0,0" VerticalAlignment="Top" />
-            <Label x:Name="label24" Content="จำนวนเงินรวมทั้งสิ้น" HorizontalAlignment="Left" Margin="655,1245,0,0" VerticalAlignment="Top" />
-            <Label x:Name="label25" Content="อัตราภาษีมูลค่าเพิ่ม *" Margin="375,1216,0,0" VerticalAlignment="Top"  HorizontalAlignment="Left"/>
-            <Label x:Name="label26" Content="%" Margin="575,1216,0,0" VerticalAlignment="Top"  HorizontalAlignment="Left"/>
-            <Label x:Name="label27" Content="บาท" HorizontalAlignment="Left" Margin="880,1133,0,0" VerticalAlignment="Top" />
-            <Label x:Name="label28" Content="บาท" HorizontalAlignment="Left" Margin="880,1161,0,0" VerticalAlignment="Top" />
-            <Label x:Name="label29" Content="บาท" HorizontalAlignment="Left" Margin="880,1189,0,0" VerticalAlignment="Top" />
-            <Label x:Name="label30" Content="บาท" HorizontalAlignment="Left" Margin="880,1216,0,0" VerticalAlignment="Top" />
-            <Label x:Name="label31" Content="บาท" HorizontalAlignment="Left" Margin="880,1245,0,0" VerticalAlignment="Top" />
-            <ComboBox x:Name="nameCbb" HorizontalAlignment="Left" Margin="560,360,0,0" VerticalAlignment="Top" Width="360" IsEditable="True" SelectionChanged="nameCbb_SelectionChanged" TabIndex="1" Height="22" IsTextSearchEnabled="false"/>
-            <TextBox x:Name="remarkTb" HorizontalAlignment="Left" Height="70" Margin="100,1046,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="820" MaxLength="500" VerticalScrollBarVisibility="Auto"/>
-            <Label x:Name="label32" HorizontalAlignment="Left" Margin="100,1010,0,0" VerticalAlignment="Top" Content="หมายเหตุ"/>
-            <GroupBox x:Name="groupBox" Header="" HorizontalAlignment="Left" Margin="315,155,0,0" VerticalAlignment="Top" Height="185" Width="620">
-                <Grid HorizontalAlignment="Left" Height="155" Margin="10,5,0,0" VerticalAlignment="Top" Width="590">
-                    <RadioButton x:Name="is_first" GroupName="reference" Content="ใบกำกับภาษีปกติ" HorizontalAlignment="Left" Margin="-3,13,0,0" VerticalAlignment="Top" Height="15" Checked="is_first_Checked"/>
-                    <RadioButton x:Name="is_replace" GroupName="reference" Content="ยกเลิกใบกำกับภาษีเดิม" HorizontalAlignment="Left" Margin="137,13,0,0" VerticalAlignment="Top" Height="15" Checked="is_replace_Checked"/>
-                    <Label x:Name="label15" Content="เหตุผลในการยกเลิกใบกำกับภาษีเดิม" HorizontalAlignment="Left" Margin="-3,38,0,0" VerticalAlignment="Top" />
-                    <TextBox x:Name="purposeTb" HorizontalAlignment="Left" Height="23" Margin="309,42,0,0" VerticalAlignment="Top" Width="281" TabIndex="13" MaxLength="256"/>
-                    <Label x:Name="label16" Content="เลขที่ของใบกำกับภาษีเดิม" HorizontalAlignment="Left" Margin="-3,67,0,0" VerticalAlignment="Top" />
-                    <TextBox x:Name="docIdTb" HorizontalAlignment="Left" Height="23" Margin="309,71,0,0" VerticalAlignment="Top" Width="281" TabIndex="14" MaxLength="35"/>
-                    <Label x:Name="label17" Content="วันที่ออกใบกำกับภาษีเดิม" HorizontalAlignment="Left" Margin="-3,96,0,0" VerticalAlignment="Top" />
-                    <DatePicker x:Name="docDateTb" HorizontalAlignment="Left" Margin="309,100,0,0" VerticalAlignment="Top" Width="281" TabIndex="15" Height="24">
-                        <DatePicker.Resources>
-                            <Style TargetType="{x:Type DatePickerTextBox}">
-                                <Setter Property="IsReadOnly" Value="True"/>
-                            </Style>
-                        </DatePicker.Resources>
-                    </DatePicker>
-                    <Label x:Name="label18" Content="ประเภทเอกสารอ้างอิง" HorizontalAlignment="Left" Margin="-3,123,0,0" VerticalAlignment="Top" />
-                    <ComboBox x:Name="typeCodeTb" HorizontalAlignment="Left" Margin="309,128,0,0" VerticalAlignment="Top" Width="281" ItemsSource="{Binding TypeCodes}" DisplayMemberPath="description" TabIndex="16" Height="22" />
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                            <Label x:Name="label19" Content="มูลค่าสินค้า/บริการ" HorizontalAlignment="Left" Margin="655,751,0,0" VerticalAlignment="Top" />
+                            <TextBox x:Name="lineTotalTb" HorizontalAlignment="Left" Height="23" Margin="790,753,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Text="0.00" TextAlignment="Right" IsEnabled="False"/>
+                            <TextBox x:Name="extraDiscountTb" HorizontalAlignment="Left" Height="23" Margin="790,781,0,0" VerticalAlignment="Top" Width="80" Text="0.00" TextAlignment="Right" MaxLength="10" KeyUp="extraDiscountTb_KeyUp" TabIndex="17" GotFocus="extraDiscountTb_GotFocus" LostFocus="extraDiscountTb_LostFocus"/>
+                            <TextBox x:Name="basisAmountTb" HorizontalAlignment="Left" Height="23" Margin="790,850,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Text="0.00" TextAlignment="Right" IsEnabled="False"/>
+                            <TextBox x:Name="taxTotalTb" HorizontalAlignment="Left" Height="23" Margin="790,877,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Text="0.00" TextAlignment="Right" IsEnabled="False"/>
+                            <TextBox x:Name="grandTotalTb" HorizontalAlignment="Left" Height="23" Margin="790,906,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Text="0.00" TextAlignment="Right" IsEnabled="False"/>
+                            <Button x:Name="createBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="455,955,0,0" Width="143" Click="createBtn_Click" Height="47" VerticalAlignment="Top" TabIndex="29">
+                                <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_GenPDF.png" Style="{StaticResource imageBtn}" />
+                            </Button>
+                            <Button x:Name="exitBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="635,955,0,0" Width="143" Click="exitBtn_Click" Height="47" VerticalAlignment="Top" TabIndex="30">
+                                <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_backHome.png" Style="{StaticResource imageBtn}" />
+                            </Button>
+                            <TextBox x:Name="vatTb" Height="23" Margin="517,877,0,0" Text="7.00" VerticalAlignment="Top" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Width="50" KeyUp="vatTb_KeyUp" MaxLength="5" TabIndex="20"/>
+                            <TextBox x:Name="extraDiscountRateTb" HorizontalAlignment="Left" Height="23" Margin="702,781,0,0" Text="0.00" VerticalAlignment="Top" Width="50" HorizontalContentAlignment="Right" KeyUp="extraDisCountRateTb_KeyUp" MaxLength="5" TabIndex="16" GotFocus="extraDiscountRateTb_GotFocus" LostFocus="extraDiscountRateTb_LostFocus"/>
+                            <Label x:Name="label20" Content="ส่วนลด" HorizontalAlignment="Left" Margin="636,779,0,0" VerticalAlignment="Top" />
+                            <Label x:Name="label21" Content="%" HorizontalAlignment="Left" Margin="758,779,0,0" VerticalAlignment="Top" />
+                            <Label x:Name="label22" Content="จำนวนเงินรวมสุทธิ" HorizontalAlignment="Left" Margin="659,848,0,0" VerticalAlignment="Top" />
+                            <Label x:Name="label23" Content="ภาษีมูลค่าเพิ่ม" HorizontalAlignment="Left" Margin="687,875,0,0" VerticalAlignment="Top" />
+                            <Label x:Name="label24" Content="มูลค่าสุทธิ" HorizontalAlignment="Left" Margin="712,904,0,0" VerticalAlignment="Top" />
+                            <Label x:Name="label25" Content="อัตราภาษีมูลค่าเพิ่ม *" Margin="370,875,0,0" VerticalAlignment="Top"  HorizontalAlignment="Left"/>
+                            <Label x:Name="label26" Content="%" Margin="570,875,0,0" VerticalAlignment="Top"  HorizontalAlignment="Left"/>
+                            <Label x:Name="label27" Content="บาท" HorizontalAlignment="Left" Margin="880,751,0,0" VerticalAlignment="Top" />
+                            <Label x:Name="label28" Content="บาท" HorizontalAlignment="Left" Margin="880,779,0,0" VerticalAlignment="Top" />
+                            <Label x:Name="label29" Content="บาท" HorizontalAlignment="Left" Margin="880,848,0,0" VerticalAlignment="Top" />
+                            <Label x:Name="label30" Content="บาท" HorizontalAlignment="Left" Margin="880,875,0,0" VerticalAlignment="Top" />
+                            <Label x:Name="label31" Content="บาท" HorizontalAlignment="Left" Margin="880,904,0,0" VerticalAlignment="Top" />
+                            <ComboBox x:Name="nameCbb" HorizontalAlignment="Left" Margin="560,97,0,0" VerticalAlignment="Top" Width="360" IsEditable="True" SelectionChanged="nameCbb_SelectionChanged" TabIndex="6" Height="22" IsTextSearchEnabled="false"/>
+                            <TextBox x:Name="remarkTb" HorizontalAlignment="Left" Height="70" Margin="60,664,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="860" MaxLength="500" VerticalScrollBarVisibility="Auto"/>
+                            <Label x:Name="label32" HorizontalAlignment="Left" Margin="80,625,0,0" VerticalAlignment="Top" Content="หมายเหตุ"/>
+                            <ComboBox x:Name="provinceCbb" HorizontalAlignment="Left" Height="23" Margin="560,188,0,0" VerticalAlignment="Top" Width="360" TabIndex="9" />
+                            <ComboBox x:Name="amphoeCbb" HorizontalAlignment="Left" Height="23" Margin="560,218,0,0" VerticalAlignment="Top" Width="360" TabIndex="10"/>
+                            <ComboBox x:Name="tambonCbb" HorizontalAlignment="Left" Height="23" Margin="560,251,0,0" VerticalAlignment="Top" Width="360" TabIndex="11"/>
+                            <Label x:Name="label" Content="จังหวัด *" HorizontalAlignment="Left" Margin="326,186,0,0" VerticalAlignment="Top"/>
+                            <Label x:Name="label16_Copy" Content="อำเภอ/เขต *" HorizontalAlignment="Left" Margin="326,216,0,0" VerticalAlignment="Top"/>
+                            <Label x:Name="label17_Copy" Content="ตำบล/แขวง *" HorizontalAlignment="Left" Margin="326,249,0,0" VerticalAlignment="Top"/>
+                            <Label x:Name="label5" Content="บ้านเลขที่ *" HorizontalAlignment="Left" Margin="326,125,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.208,0.185"/>
+                            <TextBox x:Name="serviceChargeTb" HorizontalAlignment="Left" Height="23" Margin="790,814,0,0" VerticalAlignment="Top" Width="80" Text="0.00" TextAlignment="Right" MaxLength="10" TabIndex="19" GotFocus="serviceChargeTb_GotFocus" KeyUp="serviceChargeTb_KeyUp" LostFocus="serviceChargeTb_LostFocus"/>
+                            <TextBox x:Name="serviceChargeRateTb" HorizontalAlignment="Left" Height="23" Margin="702,814,0,0" Text="0.00" VerticalAlignment="Top" Width="50" HorizontalContentAlignment="Right" KeyUp="serviceChargeRateTb_KeyUp" MaxLength="5" TabIndex="18" GotFocus="serviceChargeRateTb_GotFocus" LostFocus="serviceChargeRateTb_LostFocus"/>
+                            <Label x:Name="label10" Content="ค่าบริการ" HorizontalAlignment="Left" Margin="623,812,0,0" VerticalAlignment="Top" />
+                            <Label x:Name="label12" Content="%" HorizontalAlignment="Left" Margin="758,812,0,0" VerticalAlignment="Top" />
+                            <Label x:Name="label14" Content="บาท" HorizontalAlignment="Left" Margin="880,812,0,0" VerticalAlignment="Top" />
+                        </Grid>
+                    </DockPanel>
+
                 </Grid>
-            </GroupBox>
-            <Button x:Name="shutdownBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Click="shutdownBtn_Click">
-                <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_close@2x.png" Style="{StaticResource imageBtn}"/>
-            </Button>
-            <ComboBox x:Name="provinceCbb" HorizontalAlignment="Left" Height="23" Margin="560,451,0,0" VerticalAlignment="Top" Width="360" />
-            <ComboBox x:Name="amphoeCbb" HorizontalAlignment="Left" Height="23" Margin="560,481,0,0" VerticalAlignment="Top" Width="360"/>
-            <ComboBox x:Name="tambonCbb" HorizontalAlignment="Left" Height="23" Margin="560,514,0,0" VerticalAlignment="Top" Width="360"/>
-            <Label x:Name="label" Content="จังหวัด" HorizontalAlignment="Left" Margin="326,449,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="label16_Copy" Content="อำเภอ/เขต" HorizontalAlignment="Left" Margin="326,479,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="label17_Copy" Content="ตำบล/แขวง" HorizontalAlignment="Left" Margin="326,512,0,0" VerticalAlignment="Top"/>
+            </ScrollViewer>
         </Grid>
-    </ScrollViewer>
+    </Grid>
 </Window>

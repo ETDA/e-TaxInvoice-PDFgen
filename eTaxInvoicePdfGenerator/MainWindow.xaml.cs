@@ -27,8 +27,7 @@ namespace eTaxInvoicePdfGenerator
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
-            //System.Collections.Generic.List<eTaxInvoicePdfGenerator.Entity.AddressCodeList> list =  new AddressCodeListDao().find("80");
+
         }
 
         private void sellerConfigBtn_Click(object sender, RoutedEventArgs e)
@@ -62,7 +61,7 @@ namespace eTaxInvoicePdfGenerator
             }
             else
             {
-                new AlertBox("กรุณาบันทึกข้อมูล ในหน้า ตั้งค่าผู้ขายก่อน").ShowDialog();
+                new AlertBox("กรุณาบันทึกข้อมูล ในเมนู ตั้งค่าผู้ขาย ก่อนดำเนินการสร้างเอกสาร").ShowDialog();
             }
         }
 
@@ -76,7 +75,7 @@ namespace eTaxInvoicePdfGenerator
             }
             else
             {
-                new AlertBox("กรุณาบันทึกข้อมูล ในหน้า ตั้งค่าผู้ขายก่อน").ShowDialog();
+                new AlertBox("กรุณาบันทึกข้อมูล ในเมนู ตั้งค่าผู้ขาย ก่อนดำเนินการสร้างเอกสาร").ShowDialog();
             }
         }
 
@@ -90,12 +89,12 @@ namespace eTaxInvoicePdfGenerator
             }
             else
             {
-                new AlertBox("กรุณาบันทึกข้อมูล ในหน้า ตั้งค่าผู้ขายก่อน").ShowDialog();
+                new AlertBox("กรุณาบันทึกข้อมูล ในเมนู ตั้งค่าผู้ขาย ก่อนดำเนินการสร้างเอกสาร").ShowDialog();
                 //MessageBox.Show("กรุณาบันทึกข้อมูล ในหน้า ตั้งค่า-ผู้ขายก่อน");
             }
         }
 
-        private Boolean IsSellerExist()
+        private bool IsSellerExist()
         {
             if (new SellerDao().count() > 0)
             {

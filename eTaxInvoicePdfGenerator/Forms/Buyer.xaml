@@ -27,16 +27,16 @@
     <Grid>
         <Image x:Name="image" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Top" Source="/eTaxInvoicePdfGenerator;component/in/elements/titile.png"/>
         <Image x:Name="image1" HorizontalAlignment="Left" Margin="0,160,0,0" VerticalAlignment="Top" Source="/eTaxInvoicePdfGenerator;component/in/elements/buyer_detail_txtleft.png" Width="296" Height="90"/>
-        <Button x:Name="addBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="760,560,0,0" VerticalAlignment="Top" Width="96" Height="29" Click="addBtn_Click">
+        <Button x:Name="addBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="757,560,0,0" VerticalAlignment="Top" Width="96" Height="29" Click="addBtn_Click">
             <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_dataAdd.png" Style="{StaticResource imageBtn}"/>
         </Button>
-        <Button x:Name="delBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="860,560,0,0" VerticalAlignment="Top" Width="96" Height="29" Click="delBtn_Click">
+        <Button x:Name="delBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="857,560,0,0" VerticalAlignment="Top" Width="96" Height="29" Click="delBtn_Click">
             <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_dataDel.png" Style="{StaticResource imageBtn}"/>
         </Button>
         <Button x:Name="exitBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="557,600,0,0" VerticalAlignment="Top" Width="143" Height="47" Click="exitBtn_Click">
             <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_backHome.png" Style="{StaticResource imageBtn}"/>
         </Button>
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="360" Margin="320,185,0,0" VerticalAlignment="Top" GridViewColumnHeader.Click="listView_Click">
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="360" Margin="320,180,0,0" VerticalAlignment="Top" GridViewColumnHeader.Click="listView_Click">
             <ListView.View>
                 <GridView AllowsColumnReorder="False">
                     <GridViewColumn Header="" Width="30">
@@ -64,13 +64,13 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="nextBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="432,568,0,0" Width="15" Height="16" VerticalAlignment="Top" Click="nextBtn_Click">
+        <Button x:Name="nextBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="429,568,0,0" Width="15" Height="16" VerticalAlignment="Top" Click="nextBtn_Click">
             <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/arrowRight.png" Style="{StaticResource imageBtn}"/>
         </Button>
-        <Button x:Name="prevBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="325,568,0,0" Width="15" Height="16" VerticalAlignment="Top" Click="prevBtn_Click">
+        <Button x:Name="prevBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="322,568,0,0" Width="15" Height="16" VerticalAlignment="Top" Click="prevBtn_Click">
             <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/arrowLeft.png" Style="{StaticResource imageBtn}"/>
         </Button>
-        <Label x:Name="pageLb" Content="หน้า 1 จาก 2" HorizontalAlignment="Left" Margin="339,560,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="pageLb" Content="หน้า 1 จาก 2" HorizontalAlignment="Left" Margin="336,560,0,0" VerticalAlignment="Top"/>
         <Button x:Name="shutdownBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Click="shutdownBtn_Click">
             <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_close@2x.png" Style="{StaticResource imageBtn}"/>
         </Button>

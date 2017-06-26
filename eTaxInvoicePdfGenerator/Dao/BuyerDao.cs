@@ -40,12 +40,12 @@ namespace eTaxInvoicePdfGenerator.Dao
                                 data.phoneExt = dr["phone_ext"].ToString();
                                 data.zipCode = dr["zipcode"].ToString();
                                 data.address1 = dr["address1"].ToString();
-                                data.address2 = dr["address2"].ToString();
+                                //data.address2 = dr["address2"].ToString();
                                 data.email = dr["email"].ToString();
-                                data.website = dr["website"].ToString();
+                                //data.website = dr["website"].ToString();
                                 data.contactPerson = dr["contact_person"].ToString();
-                                data.faxNo = dr["fax_no"].ToString();
-                                data.faxExt = dr["fax_ext"].ToString();
+                                //data.faxNo = dr["fax_no"].ToString();
+                                //data.faxExt = dr["fax_ext"].ToString();
                                 data.isBranch = Convert.ToBoolean(dr["is_branch"]);
                                 data.branchId = dr["branch_id"].ToString();
 
@@ -55,6 +55,7 @@ namespace eTaxInvoicePdfGenerator.Dao
                                 data.districtCode = dr["district_code"].ToString();
                                 data.subdistrictName = dr["subdistrict_name"].ToString();
                                 data.subdistrcitCode = dr["subdistrict_code"].ToString();
+                                data.houseNo = dr["house_no"].ToString();
                             }
                         }
                     }
@@ -144,18 +145,18 @@ namespace eTaxInvoicePdfGenerator.Dao
                                 obj.id = Convert.ToInt32(dr["id"]);
                                 obj.name = dr["name"].ToString();
                                 obj.address1 = dr["address1"].ToString();
-                                obj.address2 = dr["address2"].ToString();
+                                //obj.address2 = dr["address2"].ToString();
                                 obj.zipCode = dr["zipcode"].ToString();
                                 obj.taxId = dr["tax_id"].ToString();
                                 obj.isBranch = Convert.ToBoolean(dr["is_branch"]);
                                 obj.branchId = dr["branch_id"].ToString();
-                                obj.website = dr["website"].ToString();
+                                //obj.website = dr["website"].ToString();
                                 obj.email = dr["email"].ToString();
                                 obj.contactPerson = dr["contact_person"].ToString();
                                 obj.phoneNo = dr["phone_no"].ToString();
                                 obj.phoneExt = dr["phone_ext"].ToString();
-                                obj.faxNo = dr["fax_no"].ToString();
-                                obj.faxExt = dr["fax_ext"].ToString();
+                                //obj.faxNo = dr["fax_no"].ToString();
+                                //obj.faxExt = dr["fax_ext"].ToString();
 
                                 obj.provinceCode = dr["province_code"].ToString();
                                 obj.provinceName = dr["province_name"].ToString();
@@ -163,6 +164,7 @@ namespace eTaxInvoicePdfGenerator.Dao
                                 obj.districtName = dr["district_name"].ToString();
                                 obj.subdistrcitCode = dr["subdistrict_code"].ToString();
                                 obj.subdistrictName = dr["subdistrict_name"].ToString();
+                                obj.houseNo = dr["house_no"].ToString();
                                 items.Add(obj);
                             }
                         }
@@ -201,18 +203,19 @@ namespace eTaxInvoicePdfGenerator.Dao
             string txtQuery = string.Empty;
             if (obj.id == 0)
             {
-                txtQuery = string.Format("INSERT INTO {0} (name,tax_id,phone_no,phone_ext,zipcode,address1,address2,email,website,contact_person,fax_no,fax_ext,is_branch,branch_id"
-                    + ",province_name,province_code,district_name,district_code,subdistrict_name,subdistrict_code) VALUES ", this.tableName);
-                string values = string.Format("(@name,@tax_id,@phone_no,@phone_ext,@zipcode,@address1,@address2,@email,@website,@contact_person,@fax_no,@fax_ext,@is_branch,@branch_id"
-                    + ",@province_name,@province_code,@district_name,@district_code,@subdistrict_name,@subdistrict_code)");
+                txtQuery = string.Format("INSERT INTO {0} (name,tax_id,phone_no,phone_ext,zipcode,address1,email,contact_person,is_branch,branch_id"
+                    + ",province_name,province_code,district_name,district_code,subdistrict_name,subdistrict_code,house_no) VALUES ", this.tableName);
+                string values = string.Format("(@name,@tax_id,@phone_no,@phone_ext,@zipcode,@address1,@email,@contact_person,@is_branch,@branch_id"
+                    + ",@province_name,@province_code,@district_name,@district_code,@subdistrict_name,@subdistrict_code,@house_no)");
                 txtQuery = txtQuery + values;
             }
             else
             {
                 txtQuery = string.Format("UPDATE {0} SET ", this.tableName);
-                string values = string.Format("name=@name,tax_id=@tax_id,phone_no=@phone_no,phone_ext=@phone_ext,zipcode=@zipcode,address1=@address1,address2=@address2"
-                    + ",email=@email,website=@website,contact_person=@contact_person,fax_no=@fax_no,fax_ext=@fax_ext,is_branch=@is_branch,branch_id=@branch_id"
-                    + ",province_name=@province_name,province_code=@province_code,district_name=@district_name,district_code=@district_code,subdistrict_name=@subdistrict_name,subdistrict_code=@subdistrict_code ");
+                string values = string.Format("name=@name,tax_id=@tax_id,phone_no=@phone_no,phone_ext=@phone_ext,zipcode=@zipcode,address1=@address1"
+                    + ",email=@email,contact_person=@contact_person,is_branch=@is_branch,branch_id=@branch_id"
+                    + ",province_name=@province_name,province_code=@province_code,district_name=@district_name,district_code=@district_code"
+                    + ",subdistrict_name=@subdistrict_name,subdistrict_code=@subdistrict_code,house_no=@house_no ");
                 string condition = string.Format("WHERE id=@id");
                 txtQuery = txtQuery + values + condition;
             }
@@ -227,12 +230,12 @@ namespace eTaxInvoicePdfGenerator.Dao
                     cmd.Parameters.AddWithValue("@phone_ext", obj.phoneExt);
                     cmd.Parameters.AddWithValue("@zipcode", obj.zipCode);
                     cmd.Parameters.AddWithValue("@address1", obj.address1);
-                    cmd.Parameters.AddWithValue("@address2", obj.address2);
+                    //cmd.Parameters.AddWithValue("@address2", obj.address2);
                     cmd.Parameters.AddWithValue("@email", obj.email);
-                    cmd.Parameters.AddWithValue("@website", obj.website);
+                    //cmd.Parameters.AddWithValue("@website", obj.website);
                     cmd.Parameters.AddWithValue("@contact_person", obj.contactPerson);
-                    cmd.Parameters.AddWithValue("@fax_no", obj.faxNo);
-                    cmd.Parameters.AddWithValue("@fax_ext", obj.faxExt);
+                    //cmd.Parameters.AddWithValue("@fax_no", obj.faxNo);
+                    //cmd.Parameters.AddWithValue("@fax_ext", obj.faxExt);
                     cmd.Parameters.AddWithValue("@is_branch", (obj.isBranch) ? 1 : 0);
                     cmd.Parameters.AddWithValue("@branch_id", obj.branchId);
 
@@ -242,6 +245,7 @@ namespace eTaxInvoicePdfGenerator.Dao
                     cmd.Parameters.AddWithValue("@district_code", obj.districtCode);
                     cmd.Parameters.AddWithValue("@subdistrict_name", obj.subdistrictName);
                     cmd.Parameters.AddWithValue("@subdistrict_code", obj.subdistrcitCode);
+                    cmd.Parameters.AddWithValue("@house_no", obj.houseNo);
                     if (obj.id != 0)
                     {
                         cmd.Parameters.AddWithValue("@id", obj.id);

@@ -8,12 +8,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("favicon.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("in/elements/arrowleft.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("in/elements/arrowright.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("in/elements/btn_addtax.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("in/elements/btn_backhome.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("in/elements/btn_cancel.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("in/elements/btn_close@2x.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("in/elements/btn_continue.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("in/elements/btn_dataadd.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("in/elements/btn_datadel.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("in/elements/btn_del.png")]
@@ -58,7 +60,6 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("report/tax_multipage.rdlc")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("report/tax_multipage_return.rdlc")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database.db")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/tedagig2016.p12")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/srgb%20color%20space%20profile.icm")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/template.xml")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/item.xml")]

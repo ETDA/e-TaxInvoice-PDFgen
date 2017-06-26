@@ -35,18 +35,18 @@ namespace eTaxInvoicePdfGenerator.util
 
             if (!string.IsNullOrEmpty(cancleReason))
             {
-                PurposeCode = "TIVC99";
+                //PurposeCode = "TIVC99";
             }
             if (name == "ใบเพิ่มหนี้")
             {
                 typeCode = "80";
-                PurposeCode = "DBNG99";
+                //PurposeCode = "DBNG99";
 
             }
             else if (name == "ใบลดหนี้")
             {
                 typeCode = "81";
-                PurposeCode = "DCNG99";
+                //PurposeCode = "CDNG99";
             }
             else
             {
@@ -71,7 +71,6 @@ namespace eTaxInvoicePdfGenerator.util
                 XmlObj.invoiceCreate_date = dateTime.ToString("yyyy-MM-ddTHH:mm:ss.fff");
                 XmlObj.sellerName = seller.Rows[0]["name"].ToString() == null ? "" : seller.Rows[0]["name"].ToString();
                 XmlObj.sellerTaxid = seller.Rows[0]["tax_id"].ToString() == null ? "" : seller.Rows[0]["tax_id"].ToString()+seller.Rows[0]["branch_id"].ToString();
-                XmlObj.sellerWebsite = seller.Rows[0]["website"].ToString() == null ? "" : seller.Rows[0]["website"].ToString();
                 XmlObj.sellerEmail = seller.Rows[0]["email"].ToString() == null ? "" : seller.Rows[0]["email"].ToString();
                 XmlObj.sellerZipcode = seller.Rows[0]["zipcode"].ToString() == null ? "" : seller.Rows[0]["zipcode"].ToString();
                 XmlObj.sellerAddress1 = seller.Rows[0]["address1"].ToString() == null ? "" : seller.Rows[0]["address1"].ToString();
@@ -82,10 +81,10 @@ namespace eTaxInvoicePdfGenerator.util
                 XmlObj.sellerCountrySubID = seller.Rows[0]["province_code"].ToString() == null ? "" : seller.Rows[0]["province_code"].ToString();
                 string seller_phoneno = ReportUtils.getFullThaiMobilePhone(seller.Rows[0]["phone_no"].ToString(), seller.Rows[0]["phone_ext"].ToString());
                 XmlObj.sellercontactPersonPhoneno = seller.Rows[0]["phone_no"].ToString() == null ? "" : seller_phoneno;
+                XmlObj.sellerBuildingName = seller.Rows[0]["house_no"].ToString() == null ? "" : seller.Rows[0]["house_no"].ToString();
 
                 XmlObj.buyerName = buyer.Rows[0]["name"].ToString() == null ? "" : buyer.Rows[0]["name"].ToString();
                 XmlObj.buyerTaxid = buyer.Rows[0]["tax_id"].ToString() == null ? "" : buyer.Rows[0]["tax_id"].ToString() + buyer.Rows[0]["branch_id"].ToString();
-                XmlObj.buyerWebsite = buyer.Rows[0]["website"].ToString() == null ? "" : buyer.Rows[0]["website"].ToString();
                 XmlObj.buyereMail = buyer.Rows[0]["email"].ToString() == null ? "" : buyer.Rows[0]["email"].ToString();
                 XmlObj.buyerZipcode = buyer.Rows[0]["zipcode"].ToString() == null ? "" : buyer.Rows[0]["zipcode"].ToString();
                 XmlObj.buyerAddress1 = buyer.Rows[0]["address1"].ToString() == null ? "" : buyer.Rows[0]["address1"].ToString();
@@ -98,13 +97,17 @@ namespace eTaxInvoicePdfGenerator.util
 
                 string buyer_phoneno = ReportUtils.getFullThaiMobilePhone(buyer.Rows[0]["phone_no"].ToString(), buyer.Rows[0]["phone_ext"].ToString() );
                 XmlObj.buyercontactPersonPhoneno = buyer.Rows[0]["phone_no"].ToString() == null ? "" : buyer_phoneno;
+                XmlObj.buyerBuildingName = buyer.Rows[0]["house_no"].ToString() == null ? "" : buyer.Rows[0]["house_no"].ToString();
+
+
                 XmlObj.currency = "THB";
                 XmlObj.invoiceTaxcode = item.Rows[0]["tax_code"].ToString() == null ? "" : item.Rows[0]["tax_code"].ToString();
                 XmlObj.invoiceTaxrate = item.Rows[0]["tax_rate"].ToString() == null ? "" : item.Rows[0]["tax_rate"].ToString();
                 XmlObj.invoiceChargeindicator = item.Rows[0]["charge_indicator"].ToString() == null ? "" : item.Rows[0]["charge_indicator"].ToString();
                 XmlObj.invoicePurpose = item.Rows[0]["purpose"].ToString() == null ? "" : item.Rows[0]["purpose"].ToString();
-                XmlObj.invoicePurposeCode = PurposeCode == null ? "" : PurposeCode;
+                XmlObj.invoicePurposeCode = item.Rows[0]["purpose_code"].ToString() == null ? "" : item.Rows[0]["purpose_code"].ToString();
                 XmlObj.invoiceDiscount = item.Rows[0]["invoice_discount"].ToString() == null ? "" : item.Rows[0]["invoice_discount"].ToString();
+                XmlObj.invoiceService = item.Rows[0]["service_charge"].ToString() == null ? "" : item.Rows[0]["service_charge"].ToString();
                 XmlObj.invoiceLinetotal = item.Rows[0]["line_total"].ToString() == null ? "" : item.Rows[0]["line_total"].ToString();
                 XmlObj.invoiceTaxtotal = item.Rows[0]["tax_total"].ToString() == null ? "" : item.Rows[0]["tax_total"].ToString();
                 XmlObj.invoiceGrandtotal = item.Rows[0]["grand_total"].ToString() == null ? "" : item.Rows[0]["grand_total"].ToString();
@@ -168,7 +171,9 @@ namespace eTaxInvoicePdfGenerator.util
                 {"*seller_city_subdivision_name",(string.IsNullOrWhiteSpace(XmlObj.sellerCitySubName))? "":"<ram:CitySubDivisionName>"+XmlObj.sellerCitySubName+"</ram:CitySubDivisionName>"},
                 { "*seller_country",XmlObj.sellerCountry },
                 {"*sellercountry_subdivision_id",(string.IsNullOrWhiteSpace(XmlObj.sellerCountrySubID))? "":"<ram:CountrySubDivisionID>"+XmlObj.sellerCountrySubID+"</ram:CountrySubDivisionID>"},
-                {"*buyer_name",XmlObj.buyerName},
+                {"*seller_building_name",(string.IsNullOrWhiteSpace(XmlObj.sellerBuildingName))? "":"<ram:BuildingNumber>"+XmlObj.sellerBuildingName+"</ram:BuildingNumber>" },
+
+                { "*buyer_name",XmlObj.buyerName},
                 {"*buyer_taxid",XmlObj.buyerTaxid },
                 {"*buyer_DefinedCITradeContact",getCITradeContact(XmlObj.buyereMail,XmlObj.buyercontactPersonPhoneno)},
                 {"*buyer_zipcode",XmlObj.buyerZipcode },
@@ -180,11 +185,13 @@ namespace eTaxInvoicePdfGenerator.util
                 {"*buyercountry_subdivision_id",(string.IsNullOrWhiteSpace(XmlObj.buyerCountrySubID))? "":"<ram:CountrySubDivisionID>"+XmlObj.buyerCountrySubID+"</ram:CountrySubDivisionID>" },
                 { "*buyer_contact_person",(string.IsNullOrWhiteSpace(XmlObj.buyerContactPerson))? "":"<ram:PersonName>"+XmlObj.buyerContactPerson+"</ram:PersonName>" }, // DefinedCITradeContact is seller ? 
                 {"*buyer_person_phoneno_contact",(string.IsNullOrWhiteSpace(XmlObj.buyercontactPersonPhoneno))? "":"<ram:CompleteNumber>"+XmlObj.buyercontactPersonPhoneno+"</ram:CompleteNumber>" },
-                {"*currency",XmlObj.currency },
+                {"*buyer_building_name",(string.IsNullOrWhiteSpace(XmlObj.buyerBuildingName))? "":"<ram:BuildingNumber>"+XmlObj.buyerBuildingName+"</ram:BuildingNumber>" },
+                { "*currency",XmlObj.currency },
                 {"*invoice_tax_code",XmlObj.invoiceTaxcode  },
                 {"*invoice_tax_rate",XmlObj.invoiceTaxrate},
                 {"*invoice_basis_amount",XmlObj.invoiceBasisamount },
-                {"*invoice_allowance",(string.IsNullOrWhiteSpace(XmlObj.invoiceDiscount) || XmlObj.invoiceDiscount == "0" )? "":getActualAmount(XmlObj.invoiceDiscount,XmlObj.invoiceChargeindicator)},
+                {"*invoice_discountallowance",(string.IsNullOrWhiteSpace(XmlObj.invoiceDiscount) || XmlObj.invoiceDiscount == "0" )? "":getActualAmount(XmlObj.invoiceDiscount,XmlObj.invoiceChargeindicator)},
+                {"*invoice_serviceallowance",(string.IsNullOrWhiteSpace(XmlObj.invoiceService) || XmlObj.invoiceService == "0" )? "":getActualAmount(XmlObj.invoiceService,XmlObj.invoiceServiceindicator)},
                 {"*invoice_line_total",XmlObj.invoiceLinetotal},
                 {"*invoice_tax_total",XmlObj.invoiceTaxtotal },
                 {"*invoice_grand_total",XmlObj.invoiceGrandtotal },
@@ -271,11 +278,19 @@ namespace eTaxInvoicePdfGenerator.util
 	<ram:Reason>ส่วนลดจากราคาปกติ</ram:Reason>
 </ram:SpecifiedTradeAllowanceCharge>";
 
-            result = result.Replace("*item_charge_indicator", charge_indicator);
-            result = result.Replace("*item_discount", ActualAmount);
+            if (ActualAmount == "0")
+            {
+                result = "";
+            }
+            else
+            {
+                result = result.Replace("*item_charge_indicator", charge_indicator);
+                result = result.Replace("*item_discount", ActualAmount);
+            }
 
             return result;
         }
+
 
         public string getReference_template(DataTable reference)
         {

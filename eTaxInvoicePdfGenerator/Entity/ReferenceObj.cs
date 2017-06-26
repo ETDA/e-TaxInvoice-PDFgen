@@ -20,12 +20,14 @@
             this.number = number;
         }
 
-        public ReferenceObj(int number,string invoiceId,string documentId,string documentDate,string typeCode, TypeCodeObj typeCodeObj)
+
+        public ReferenceObj(int number, string invoiceId, string documentId, string documentDate, string typeCode, TypeCodeObj typeCodeObj)
         {
             this.number = number;
             this.invoiceId = invoiceId;
             this.documentId = documentId;
             this.documentDate = documentDate;
+            this.typeCode = typeCode;
             if (typeCodeObj == null)
             {
                 this.typeCode = typeCode;
@@ -56,11 +58,11 @@
             {
                 return false;
             }
-            if(this.typeCodeObj.code != obj.typeCodeObj.code)
+            if (this.typeCodeObj.code != obj.typeCodeObj.code)
             {
                 return false;
             }
-            if(this.typeCodeObj.description != obj.typeCodeObj.description)
+            if (this.typeCodeObj.description != obj.typeCodeObj.description)
             {
                 return false;
             }

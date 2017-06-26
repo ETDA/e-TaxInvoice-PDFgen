@@ -2,7 +2,7 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
-    <PublishUrl>C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\release\0.1.0\</PublishUrl>
+    <PublishUrl>C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\apps\PDFGenerator\backup\publish\eTaxInvoice_v0.2.5.3\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -12,11 +12,11 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ProductName>etaxinvoice</ProductName>
+    <ProductName>e-Tax Invoice by Teda</ProductName>
     <PublisherName>สำนักงานพัฒนาธุรกรรมทางอิเล็กทรอนิกส์ %28ETDA%29</PublisherName>
     <SuiteName>สำนักงานพัฒนาธุรกรรมทางอิเล็กทรอนิกส์ %28ETDA%29</SuiteName>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>0.1.0.0</ApplicationVersion>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>0.2.5.3</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -154,7 +154,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Dao\AddressCodeListDao.cs" />
+    <Compile Include="Dao\CauseCodeListDao.cs" />
     <Compile Include="Dao\CodeListDao.cs" />
+    <Compile Include="Dao\ConfigDao.cs" />
     <Compile Include="Dao\ContactDao.cs" />
     <Compile Include="Dao\InvoiceDao.cs" />
     <Compile Include="Dao\InvoiceItemDao.cs" />
@@ -175,7 +177,9 @@
       <DependentUpon>YesNoCancel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Entity\AddressCodeListObj.cs" />
+    <Compile Include="Entity\CauseCodeListObj.cs" />
     <Compile Include="Entity\CodeList.cs" />
+    <Compile Include="Entity\ConfigObj.cs" />
     <Compile Include="Entity\InvoiceXmlObj.cs" />
     <Compile Include="Entity\ItemList.cs" />
     <Compile Include="Entity\RunningNumberObj.cs" />
@@ -192,6 +196,9 @@
     <Compile Include="Forms\RefDoc.xaml.cs">
       <DependentUpon>RefDoc.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TermNConditions.xaml.cs">
+      <DependentUpon>TermNConditions.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PDFA3\ElectronicDocument.cs" />
     <Compile Include="PDFA3\PDFA3Invoice.cs" />
     <Compile Include="Report\DataSet.cs">
@@ -207,6 +214,7 @@
     <Compile Include="util\ProvinceCodeList.cs" />
     <Compile Include="util\ReportUtils.cs" />
     <Compile Include="util\GridViewSort.cs" />
+    <Compile Include="util\RunningNumber.cs" />
     <Compile Include="util\Validator.cs" />
     <Page Include="Dialogs\AlertBox.xaml">
       <SubType>Designer</SubType>
@@ -268,6 +276,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Forms\TermNConditions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -326,13 +338,21 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Resource Include="favicon.ico" />
+    <SplashScreen Include="SplassScreen_SplashScreen.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </SplashScreen>
+    <Content Include="favicon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="in\elements\arrowLeft.png" />
     <Content Include="in\elements\arrowRight.png" />
     <Content Include="in\elements\btn_addtax.png" />
     <Content Include="in\elements\btn_backHome.png" />
     <Content Include="in\elements\btn_cancel.png" />
     <Content Include="in\elements\btn_close%402x.png" />
+    <Content Include="in\elements\btn_continue.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="in\elements\btn_dataAdd.png" />
     <Content Include="in\elements\btn_dataDel.png" />
     <Content Include="in\elements\btn_del.png" />
@@ -406,8 +426,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Report\tax_multipage_return.rdlc" />
-    <Content Include="database.db" />
-    <Content Include="Resources\tedagig2016.p12" />
+    <Content Include="database.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\sRGB Color Space Profile.icm" />
   </ItemGroup>
   <ItemGroup>

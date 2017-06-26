@@ -34,8 +34,9 @@
                 *seller_cityname
                 *seller_city_subdivision_name
                 <ram:CountryID schemeID="3166-1 alpha-2">*seller_country</ram:CountryID>
-					*sellercountry_subdivision_id
-                </ram:PostalTradeAddress>
+                *sellercountry_subdivision_id
+                *seller_building_name
+              </ram:PostalTradeAddress>
             </ram:SellerTradeParty>
             <ram:BuyerTradeParty>
                 <ram:Name>*buyer_name</ram:Name>
@@ -50,8 +51,9 @@
                *buyer_cityname
                *buyer_city_subdivision_name
                <ram:CountryID schemeID="3166-1 alpha-2">*buyer_country</ram:CountryID>
-					*buyercountry_subdivision_id
-				</ram:PostalTradeAddress>
+               *buyercountry_subdivision_id
+               *buyer_building_name
+             </ram:PostalTradeAddress>
             </ram:BuyerTradeParty>
 			  *reference
         </ram:ApplicableHeaderTradeAgreement>
@@ -70,8 +72,9 @@
                 <ram:BasisAmount>*invoice_basis_amount</ram:BasisAmount>
                <ram:CalculatedAmount>*calculated_amount</ram:CalculatedAmount>
             </ram:ApplicableTradeTax>
-            *invoice_allowance
-            <ram:SpecifiedTradeSettlementHeaderMonetarySummation>
+          *invoice_discountallowance
+          *invoice_serviceallowance
+          <ram:SpecifiedTradeSettlementHeaderMonetarySummation>
 				      <ram:OriginalInformationAmount>*invoice_original</ram:OriginalInformationAmount>
 				      <ram:LineTotalAmount>*invoice_line_total</ram:LineTotalAmount>
 				      <ram:DifferenceInformationAmount>*invoice_difference</ram:DifferenceInformationAmount>

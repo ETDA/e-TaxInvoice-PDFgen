@@ -49,7 +49,7 @@ namespace eTaxInvoicePdfGenerator.Dao
                     cmd.Parameters.AddWithValue("@discount", obj.discountTotal);
                     cmd.Parameters.AddWithValue("@quantity", obj.quantity);
                     cmd.Parameters.AddWithValue("@unit", obj.unit);
-                    cmd.Parameters.AddWithValue("@unit_xml", obj.unti_xml);
+                    cmd.Parameters.AddWithValue("@unit_xml", obj.unitXml);
                     cmd.Parameters.AddWithValue("@item_total", obj.itemTotal);
                     cmd.Parameters.AddWithValue("@item_name", obj.itemName);
                     cmd.Parameters.AddWithValue("@item_code", obj.itemCode);

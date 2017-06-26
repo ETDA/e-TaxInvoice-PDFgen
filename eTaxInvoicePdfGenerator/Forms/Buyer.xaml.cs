@@ -133,9 +133,7 @@ namespace eTaxInvoicePdfGenerator.Forms
             }
             if (selectedItems.Count > 0)
             {
-                DelNo dn = new DelNo("ต้องการลบข้อมูลหรือไม่", "ยืนยันการลบรายการ");
-                //yn.yesBtn.Content = "ลบ";
-                //yn.noBtn.Content = "ยกเลิก";
+                DelNo dn = new DelNo();
                 dn.ShowDialog();
                 switch (dn.response)
                 {

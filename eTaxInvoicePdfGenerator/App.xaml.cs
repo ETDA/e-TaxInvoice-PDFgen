@@ -35,11 +35,11 @@ namespace eTaxInvoicePdfGenerator
                 this.Shutdown();
             }
 
-            /*Shell32.Shell shell = new Shell32.Shell();
+            //Shell32.Shell shell = new Shell32.Shell();
 
             //Shell32.Folder fontFolder = shell.NameSpace(0x14);
             string fontFolderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Fonts);
-            Shell32.Folder fontFolder = shell.NameSpace(fontFolderPath);
+            Shell32.Folder fontFolder = GetShell32NameSpaceFolder(fontFolderPath);
             string base_folder = System.AppDomain.CurrentDomain.BaseDirectory + "in\\";
             string segueUi = "Segoe UI.ttf";
             string sarabunBold = "THSarabun Bold.ttf";
@@ -65,7 +65,15 @@ namespace eTaxInvoicePdfGenerator
                 {
                     fontFolder.CopyHere(fontSarabun, 4);
                 }
-            }*/
+            }
+        }
+        public Shell32.Folder GetShell32NameSpaceFolder(Object folder)
+        {
+            Type shellAppType = Type.GetTypeFromProgID("Shell.Application");
+
+            Object shell = Activator.CreateInstance(shellAppType);
+            return (Shell32.Folder)shellAppType.InvokeMember("NameSpace",
+            System.Reflection.BindingFlags.InvokeMethod, null, shell, new object[] { folder });
         }
     }
 

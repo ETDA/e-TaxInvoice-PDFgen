@@ -27,17 +27,18 @@ namespace eTaxInvoicePdfGenerator.Dao
                 string Query = @"
                select   item.item_name , item.quantity ,
                item.price_per_unit,item.unit,
-                case when(item.discount isnull) then 0 else   item.discount end as item_discount , 
+                case when(item.discount isnull) then 0 else   item.discount end as item_discount ,
                item.item_total as item_total , 
                 invoice.line_total as line_total ,
                 invoice.discount as invoice_discount,
                 invoice.basis_amount as basis_amount ,
                 invoice.tax_total as tax_total,
                 invoice.grand_total as grand_total ,
-                invoice.invoice_name , invoice.purpose ,
+                invoice.invoice_name , invoice.purpose , invoice.purpose_code , 
                 invoice.tax_code,
                 invoice.tax_rate,
                  ""false"" as charge_indicator ,
+                invoice.service_charge,
                 item.unit_xml ,
                 item.item_code,
                 item.item_code_inter,
@@ -53,37 +54,6 @@ namespace eTaxInvoicePdfGenerator.Dao
                 join invoice invoice  on (invoice.invoice_id = item.invoice_id)
                where invoice.invoice_id = ""*id""
 ";
-                #region backup qry
-                /*string Query = @"
-                select   item.item_name , item.quantity ,
-                item.price_per_unit,item.unit,
-                 case when(item.discount isnull) then 0 else   item.discount end as item_discount , 
-                item.item_total as item_total , 
-                 invoice.line_total as line_total ,
-                 invoice.discount as invoice_discount,
-                 invoice.basis_amount as basis_amount ,
-                 invoice.tax_total as tax_total,
-                 invoice.grand_total as grand_total ,
-                 invoice.invoice_name , invoice.purpose ,
-                 invoice.tax_code,
-                 invoice.tax_rate,
-                  ""false"" as charge_indicator ,
-                 item.unit_xml ,
-                 item.item_code,
-                 item.item_code_inter,
-                 invoice.original,
-				 invoice.difference,
-                 invoice.issue_date,
-                 invoice.remark,
-                 case when(invoice.invoice_name like ""%ภาษี%"") then 'Y' else  'N' end as  invoice_debit_flag,
-			     case when(invoice.purpose = """") then 'Y' else  'N' end as purpose_flag,
-                 (item.item_total+(item.item_total * (tax_rate/100))) as item_total_including_tax
-                 from invoice_item item
-                 left
-                 join invoice invoice  on (invoice.invoice_id = item.invoice_id)
-                where invoice.invoice_id = ""*id""
-";*/
-                #endregion
                 Query = Query.Replace("*id", id);
                 DataTable dt = new System.Data.DataTable();
                 dt = sqlite.ExecuteDataTable(Query);

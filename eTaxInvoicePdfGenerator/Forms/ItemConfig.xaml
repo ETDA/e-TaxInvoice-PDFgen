@@ -17,31 +17,31 @@
         <Image x:Name="image1" HorizontalAlignment="Left" Margin="0,160,0,0" VerticalAlignment="Top" Source="/eTaxInvoicePdfGenerator;component/in/elements/product_txtleft.png" Width="296" Height="90"/>
         <RadioButton x:Name="is_item" Content="สินค้า" HorizontalAlignment="Left" Margin="652,175,0,0" VerticalAlignment="Top" Height="15" Checked="is_item_Checked"/>
         <RadioButton x:Name="is_service" Content="บริการ" HorizontalAlignment="Left" Margin="730,175,0,0" VerticalAlignment="Top" Height="15" Checked="is_service_Checked"/>
-        <Label x:Name="label1" Content="ชื่อสินค้า *" HorizontalAlignment="Left" Margin="422,200,0,0" VerticalAlignment="Top" />
-        <Label x:Name="label2" Content="รายละเอียดสินค้า" HorizontalAlignment="Left" Margin="422,242,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label1" Content="ชื่อสินค้า/บริการ *" HorizontalAlignment="Left" Margin="422,200,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label2" Content="รายละเอียด" HorizontalAlignment="Left" Margin="422,242,0,0" VerticalAlignment="Top" />
         <TextBox x:Name="nameTb" HorizontalAlignment="Left" Height="23" Margin="655,204,0,0" VerticalAlignment="Top" Width="280" MaxLength="256"/>
         <TextBox x:Name="detailTb" HorizontalAlignment="Left" Height="73" Margin="655,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" MaxLength="256" MaxLines="50"/>
-        <Label x:Name="label3" Content="ราคาต่อหน่วย *&#xA;(ไม่รวมภาษีมูลค่าเพิ่ม)" HorizontalAlignment="Left" Margin="422,322,0,0" VerticalAlignment="Top" Height="Auto"/>
-        <TextBox x:Name="priceTb" HorizontalAlignment="Left" Height="23" Margin="655,326,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" TextAlignment="Right" Text="0.00" MaxLength="18" GotFocus="priceTb_GotFocus" LostFocus="priceTb_LostFocus"/>
-        <Label x:Name="label4" Content="บาท" HorizontalAlignment="Left" Margin="899,322,0,0" VerticalAlignment="Top" />
-        <Label x:Name="label5" Content="หน่วยสินค้า" HorizontalAlignment="Left" Margin="422,369,0,0" VerticalAlignment="Top" />
-        <ComboBox x:Name="unitCbb" HorizontalAlignment="Left" Margin="655,369,0,0" VerticalAlignment="Top" Width="280" IsEditable="True" Loaded="unitCbb_Loaded" Height="22" DropDownOpened="unitCbb_DropDownOpened">
+        <Label x:Name="label3" Content="ราคาต่อหน่วย *&#xA;(ไม่รวมภาษีมูลค่าเพิ่ม)" HorizontalAlignment="Left" Margin="422,325,0,0" VerticalAlignment="Top" Height="Auto"/>
+        <TextBox x:Name="priceTb" HorizontalAlignment="Left" Height="23" Margin="655,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" TextAlignment="Right" MaxLength="18"/>
+        <Label x:Name="label4" Content="บาท" HorizontalAlignment="Left" Margin="899,325,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label5" Content="หน่วยสินค้า &#xD;&#xA;(หากเป็นค่าอื่น กรุณาระบุเพิ่ม)" HorizontalAlignment="Left" Margin="422,372,0,0" VerticalAlignment="Top" Height="46" />
+        <ComboBox x:Name="unitCbb" HorizontalAlignment="Left" Margin="655,377,0,0" VerticalAlignment="Top" Width="280" IsEditable="True" Loaded="unitCbb_Loaded" Height="22" DropDownOpened="unitCbb_DropDownOpened">
             <ComboBox.Resources>
                 <Style TargetType="{x:Type TextBox}">
                     <Setter Property="MaxLength" Value="10"></Setter>
                 </Style>
             </ComboBox.Resources>
         </ComboBox>
-        <Button x:Name="saveBtn"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="655,492,0,0" VerticalAlignment="Top" Width="143" Click="saveBtn_Click" Height="47">
+        <Button x:Name="saveBtn"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="655,511,0,0" VerticalAlignment="Top" Width="143" Click="saveBtn_Click" Height="47">
             <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_save.png" Style="{StaticResource imageBtn}"/>
         </Button>
-        <Button x:Name="exitBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="797,494,0,0" VerticalAlignment="Top" Width="143" Click="exitBtn_Click" Height="47">
+        <Button x:Name="exitBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="797,513,0,0" VerticalAlignment="Top" Width="143" Click="exitBtn_Click" Height="47">
             <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_backHome.png" Style="{StaticResource imageBtn}"/>
         </Button>
-        <Label x:Name="label6" Content="รหัสสินค้า" HorizontalAlignment="Left" Margin="422,403,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label7" Content="รหัสสินค้าสากล &#xD;&#xA;(รหัส GTIN โดย GS1)" HorizontalAlignment="Left" Margin="422,438,0,0" VerticalAlignment="Top" Height="Auto"/>
-        <TextBox x:Name="itemCodeTb" HorizontalAlignment="Left" Height="23" Margin="655,406,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280"/>
-        <TextBox x:Name="itemCodeInterTb" HorizontalAlignment="Left" Height="23" Margin="655,441,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280"/>
+        <Label x:Name="label6" Content="รหัสสินค้า" HorizontalAlignment="Left" Margin="422,429,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label7" Content="รหัสสินค้าสากล &#xD;&#xA;(รหัส GTIN โดย GS1)" HorizontalAlignment="Left" Margin="422,464,0,0" VerticalAlignment="Top" Height="Auto"/>
+        <TextBox x:Name="itemCodeTb" HorizontalAlignment="Left" Height="23" Margin="655,432,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280"/>
+        <TextBox x:Name="itemCodeInterTb" HorizontalAlignment="Left" Height="23" Margin="655,467,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280"/>
         <Button x:Name="shutdownBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Click="shutdownBtn_Click">
             <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_close@2x.png" Style="{StaticResource imageBtn}"/>
         </Button>

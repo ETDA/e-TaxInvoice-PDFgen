@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="eTaxInvoicePdfGenerator.exe" version="0.1.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="amd64" type="win32" />
-  <description asmv2:iconFile="favicon.ico" asmv2:publisher="สำนักงานพัฒนาธุรกรรมทางอิเล็กทรอนิกส์ (ETDA)" co.v1:suiteName="สำนักงานพัฒนาธุรกรรมทางอิเล็กทรอนิกส์ (ETDA)" asmv2:product="etaxinvoice" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <asmv1:assemblyIdentity name="eTaxInvoicePdfGenerator.exe" version="0.2.5.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="amd64" type="win32" />
+  <description asmv2:iconFile="favicon.ico" asmv2:publisher="สำนักงานพัฒนาธุรกรรมทางอิเล็กทรอนิกส์ (ETDA)" co.v1:suiteName="สำนักงานพัฒนาธุรกรรมทางอิเล็กทรอนิกส์ (ETDA)" asmv2:product="e-Tax Invoice by Teda" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="eTaxInvoicePdfGenerator" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
@@ -44,14 +44,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="eTaxInvoicePdfGenerator.exe" size="479232">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="eTaxInvoicePdfGenerator.exe" size="949248">
       <assemblyIdentity name="eTaxInvoicePdfGenerator" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>/yzf+AAou6mo7b5domQlMibqGNc=</dsig:DigestValue>
+        <dsig:DigestValue>H4Sg9aWBAqNc4Aida9viGICDZes=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -331,31 +331,31 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="database.db" size="786432">
+  <file name="database.db" size="806912">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>0SKriXilSpaEyy02nX2UeIIt/Ew=</dsig:DigestValue>
+      <dsig:DigestValue>IoNCWnFxoHvnpyvONNqRt3mZPd8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="eTaxInvoicePdfGenerator.exe.config" size="1245">
+  <file name="eTaxInvoicePdfGenerator.exe.config" size="1101">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>2U9+hGeY95JHiUkAvD5qOvKo+CQ=</dsig:DigestValue>
+      <dsig:DigestValue>u20iaTKCp9TJ7xI9FDiXpCZ5+yw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="favicon.ico" size="67646">
+  <file name="favicon.ico" size="370070">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>7Cl07MpGWPUstAaQudazjmToIK0=</dsig:DigestValue>
+      <dsig:DigestValue>KMzJ24MIk2Jokjq6Gqv8JsclfuU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="in\elements\arrowLeft.png" size="254">
@@ -376,13 +376,13 @@
       <dsig:DigestValue>qhtoQSi13In14J4jKFHD5Gte380=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="in\elements\btn_addtax.png" size="1658">
+  <file name="in\elements\btn_addtax.png" size="1460">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>wd2lvS1uEEHctnph9cplQYF0lsA=</dsig:DigestValue>
+      <dsig:DigestValue>8iiuRhiXZXxZIcMxOCblxO+V4Gs=</dsig:DigestValue>
     </hash>
   </file>
   <file name="in\elements\btn_backHome.png" size="1766">
@@ -410,6 +410,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>jFKNxJLxg/wfAbCL19a+rnPYlyU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="in\elements\btn_continue.png" size="1980">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>k1OO2rtCtKnRpl8l4yLVpVSt/ro=</dsig:DigestValue>
     </hash>
   </file>
   <file name="in\elements\btn_dataAdd.png" size="1174">
@@ -601,13 +610,13 @@
       <dsig:DigestValue>sSE7XVmmOSAtw+hamOtgXiXEY40=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="in\elements\main_txt@2x.png" size="14236">
+  <file name="in\elements\main_txt@2x.png" size="15354">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>nheccSocBFXMkcGSyhZgP8PfWQ0=</dsig:DigestValue>
+      <dsig:DigestValue>6DiYlV+dRP+lga+Bp2vyD/VqkAY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="in\elements\popup_addProduct.png" size="1667">
@@ -619,13 +628,13 @@
       <dsig:DigestValue>CPlLiypCLPof4yizrIVHFCAsT2E=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="in\elements\PopUp_taxinvoice.png" size="1531">
+  <file name="in\elements\PopUp_taxinvoice.png" size="1161">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>Ka8U9Kk2xwikD8TW4Nvbxbt7hgU=</dsig:DigestValue>
+      <dsig:DigestValue>PQhAzHiL1LubchAypDcS8I2T7oM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="in\elements\product_BG.jpg" size="54883">
@@ -673,13 +682,13 @@
       <dsig:DigestValue>uxRHcyDrnkeUT34bDBFKJrB91ZM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="in\elements\SplassScreen_SplashScreen.jpg" size="236093">
+  <file name="in\elements\SplassScreen_SplashScreen.jpg" size="180067">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>YYgVrsDbVwwz1a4qR5QNyLQ+/QM=</dsig:DigestValue>
+      <dsig:DigestValue>lGZyDTgHAOCjPDWj/bY7BQku6JI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="in\elements\tax_invoice_BG.jpg" size="58159">
@@ -691,22 +700,22 @@
       <dsig:DigestValue>J5G5hMYPGpOLAKID04ERz+N9+B8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="in\elements\tax_invoice_txtleft.png" size="5816">
+  <file name="in\elements\tax_invoice_txtleft.png" size="5690">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>Qy057O2PgdRrG3tMiFfUJsBXR6k=</dsig:DigestValue>
+      <dsig:DigestValue>mOv+ptVH7BSDzd6CNPb4wsvqCx0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="in\elements\titile.png" size="24625">
+  <file name="in\elements\titile.png" size="25997">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>rnFP+RAATV/gLtOKUu4O6W6AzKQ=</dsig:DigestValue>
+      <dsig:DigestValue>NeeYynojhKX9surjkOjG66+UDAA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="in\pdfA3.pdf" size="130477">
@@ -763,22 +772,22 @@
       <dsig:DigestValue>xU/urO6WLYoTbl51xYqPLXtduBU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Report\tax_multipage.rdlc" size="183126">
+  <file name="Report\tax_multipage.rdlc" size="154731">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>el24nTR2C2T1CQW56UPKF3vMEWc=</dsig:DigestValue>
+      <dsig:DigestValue>aMAJ14CxHhQVud10I7KSCP//6dA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Report\tax_multipage_return.rdlc" size="171473">
+  <file name="Report\tax_multipage_return.rdlc" size="164367">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>Zv/gnsciKaI47rmm7uV1ZIGAqC4=</dsig:DigestValue>
+      <dsig:DigestValue>jN4hR7f4bxaIE4aDfTln0wu3aS8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\ContentInformation.xml" size="30">
@@ -862,31 +871,22 @@
       <dsig:DigestValue>nq6gkR2J1j456V8uIRbq7H4LuR4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\tedagig2016.p12" size="7620">
+  <file name="Resources\template.xml" size="4300">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>Cif8zlWQ+a4cf3ln1smmq3sOoDc=</dsig:DigestValue>
+      <dsig:DigestValue>zbMgH1UyF+2+V6hxi+iIEpGM0oo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\template.xml" size="4131">
+  <file name="Resources\template_debit.xml" size="4496">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>SNbHf2EHLMNfFPk5LnEIEgXheuw=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\template_debit.xml" size="4351">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>w5zHiDNHyp3kvMo+rIKrRKrAF94=</dsig:DigestValue>
+      <dsig:DigestValue>A/pV+w4K2wDCytX7j6uAXCElcQU=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

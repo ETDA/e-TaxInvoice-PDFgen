@@ -15,52 +15,53 @@
     <Grid>
         <Image x:Name="image" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Top" Source="/eTaxInvoicePdfGenerator;component/in/elements/titile.png"/>
         <Image x:Name="image1" HorizontalAlignment="Left" Margin="0,160,0,0" VerticalAlignment="Top" Source="/eTaxInvoicePdfGenerator;component/in/elements/shop_txtleft.png" Width="296" Height="90"/>
-        <Label x:Name="label1" Content="ชื่อผู้ประกอบการ *" HorizontalAlignment="Left" Margin="400,162,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label2" Content="ที่อยู่ *" HorizontalAlignment="Left" Margin="400,192,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="nameTb" HorizontalAlignment="Left" Height="23" Margin="640,164,0,0" VerticalAlignment="Top" Width="285" MaxLength="256" />
-        <TextBox x:Name="address1Tb" HorizontalAlignment="Left" Height="23" Margin="640,194,0,0" VerticalAlignment="Top" Width="285" MaxLength="256"/>
-        <TextBox x:Name="address2Tb" HorizontalAlignment="Left" Height="23" Margin="640,223,0,0" VerticalAlignment="Top" Width="285" MaxLength="256"/>
-        <Label x:Name="label3" Content="รหัสไปรษณีย์ *" HorizontalAlignment="Left" Margin="400,343,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="zipcodeTb" HorizontalAlignment="Left" Height="23" Margin="640,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" MaxLength="5"/>
-        <Label x:Name="label4" Content="เลขประจำตัวผู้เสียภาษีอากร *" HorizontalAlignment="Left" Margin="400,373,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="taxIdTb" HorizontalAlignment="Left" Height="23" Margin="640,375,0,0" VerticalAlignment="Top" Width="285" MaxLength="13"/>
-        <RadioButton x:Name="is_main" Content="สำนักงานใหญ่" HorizontalAlignment="Left" Margin="640,408,0,0" VerticalAlignment="Top" Checked="is_main_Checked"/>
-        <RadioButton x:Name="is_branch" Content="สาขาเลขที่" HorizontalAlignment="Left" Margin="759,408,0,0" VerticalAlignment="Top" Checked="is_branch_Checked"/>
-        <TextBox x:Name="branchNoTb" HorizontalAlignment="Left" Height="24" Margin="853,404,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="72" MaxLength="5" LostFocus="branchNoTb_LostFocus"/>
-        <Label x:Name="label5" Content="เว็บไซต์" HorizontalAlignment="Left" Margin="400,434,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label6" Content="อีเมล" HorizontalAlignment="Left" Margin="400,466,0,0" VerticalAlignment="Top" />
-        <Label x:Name="label8" Content="เบอร์โทรศัพท์" HorizontalAlignment="Left" Margin="400,501,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label9" Content="เบอร์โทรสาร" HorizontalAlignment="Left" Margin="400,532,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="websiteTb" HorizontalAlignment="Left" Height="23" Margin="640,437,0,0" VerticalAlignment="Top" Width="285" MaxLength="256"/>
-        <TextBox x:Name="emailTb" HorizontalAlignment="Left" Height="23" Margin="640,470,0,0" VerticalAlignment="Top" Width="285" MaxLength="256"/>
-        <TextBox x:Name="phoneNoTb" HorizontalAlignment="Left" Height="23" Margin="685,504,0,0" VerticalAlignment="Top" Width="125" MaxLength="16" TextChanged="phoneNoTb_TextChanged"/>
-        <TextBox x:Name="faxNoTb" HorizontalAlignment="Left" Height="23" Margin="685,535,0,0" VerticalAlignment="Top" Width="125" MaxLength="16" TextChanged="faxNoTb_TextChanged"/>
-        <Button x:Name="saveBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="642,641,0,0" VerticalAlignment="Top" Width="143" Click="saveBtn_Click" Height="47">
+        <Label x:Name="label1" Content="ชื่อผู้ประกอบการ *" HorizontalAlignment="Left" Margin="400,218,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="ที่อยู่" HorizontalAlignment="Left" Margin="401,278,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="nameTb" HorizontalAlignment="Left" Height="23" Margin="640,220,0,0" VerticalAlignment="Top" Width="285" MaxLength="256" TabIndex="2" />
+        <TextBox x:Name="address1Tb" HorizontalAlignment="Left" Height="23" Margin="640,280,0,0" VerticalAlignment="Top" Width="285" MaxLength="256" TabIndex="4"/>
+        <Label x:Name="label3" Content="รหัสไปรษณีย์ *" HorizontalAlignment="Left" Margin="400,401,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="zipcodeTb" HorizontalAlignment="Left" Height="23" Margin="640,405,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" MaxLength="5" TabIndex="8"/>
+        <Label x:Name="label4" Content="เลขประจำตัวผู้เสียภาษีอากร *" HorizontalAlignment="Left" Margin="400,159,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="taxIdTb" HorizontalAlignment="Left" Height="23" Margin="640,161,0,0" VerticalAlignment="Top" Width="285" MaxLength="13" TabIndex="1"/>
+        <RadioButton x:Name="is_main" Content="สำนักงานใหญ่" HorizontalAlignment="Left" Margin="640,193,0,0" VerticalAlignment="Top" Checked="is_main_Checked"/>
+        <RadioButton x:Name="is_branch" Content="สาขาเลขที่" HorizontalAlignment="Left" Margin="759,193,0,0" VerticalAlignment="Top" Checked="is_branch_Checked"/>
+        <TextBox x:Name="branchNoTb" HorizontalAlignment="Left" Height="24" Margin="853,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="72" MaxLength="5" LostFocus="branchNoTb_LostFocus"/>
+        <Label x:Name="label6" Content="อีเมล *" HorizontalAlignment="Left" Margin="400,434,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label8" Content="เบอร์โทรศัพท์" HorizontalAlignment="Left" Margin="400,466,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="emailTb" HorizontalAlignment="Left" Height="23" Margin="640,438,0,0" VerticalAlignment="Top" Width="285" MaxLength="256" TabIndex="9"/>
+        <TextBox x:Name="phoneNoTb" HorizontalAlignment="Left" Height="23" Margin="685,469,0,0" VerticalAlignment="Top" Width="125" MaxLength="16" TextChanged="phoneNoTb_TextChanged" TabIndex="10"/>
+        <Button x:Name="saveBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="642,635,0,0" VerticalAlignment="Top" Width="143" Click="saveBtn_Click" Height="47">
             <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_save.png" Style="{StaticResource imageBtn}"/>
         </Button>
-        <Button x:Name="exitBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="802,642,0,0" VerticalAlignment="Top" Width="143" Click="exitBtn_Click" Height="47">
+        <Button x:Name="exitBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="802,636,0,0" VerticalAlignment="Top" Width="143" Click="exitBtn_Click" Height="47">
             <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_backHome.png" Style="{StaticResource imageBtn}"/>
         </Button>
-        <Label x:Name="label10" Content="+66-" HorizontalAlignment="Left" Margin="640,501,0,0" VerticalAlignment="Top"  RenderTransformOrigin="0.028,0.5"/>
-        <Label x:Name="label11" Content="+66-" HorizontalAlignment="Left" Margin="640,532,0,0" VerticalAlignment="Top" />
-        <Label x:Name="label12" Content="เบอร์ต่อ" HorizontalAlignment="Left" Margin="807,501,0,0" VerticalAlignment="Top" />
-        <Label x:Name="label13" Content="เบอร์ต่อ" HorizontalAlignment="Left" Margin="807,532,0,0" VerticalAlignment="Top" />
-        <TextBox x:Name="phoneExtTb" HorizontalAlignment="Left" Height="23" Margin="865,505,0,0" VerticalAlignment="Top" Width="60" MaxLength="10" TextChanged="phoneExtTb_TextChanged"/>
-        <TextBox x:Name="faxExtTb" HorizontalAlignment="Left" Height="23" Margin="865,535,0,0" VerticalAlignment="Top" Width="60" MaxLength="10" TextChanged="faxExtTb_TextChanged"/>
-        <Label x:Name="label7" Content="ค่าเริ่มต้นของเลขที่เอกสาร *" HorizontalAlignment="Left" Margin="400,563,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label14" Content="อัตราภาษีมูลค่าเพิ่ม *" HorizontalAlignment="Left" Margin="400,594,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="runningNumberTb" HorizontalAlignment="Left" Height="23" Margin="640,567,0,0" VerticalAlignment="Top" Width="285" MaxLength="35"/>
-        <TextBox x:Name="vatTb" HorizontalAlignment="Left" Height="23" Margin="640,598,0,0" VerticalAlignment="Top" Width="49" Text="7.00" MaxLength="5" TextWrapping="Wrap" TextAlignment="Right"/>
-        <Label x:Name="label15" Content="%" HorizontalAlignment="Left" Margin="701,594,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label10" Content="+66-" HorizontalAlignment="Left" Margin="640,466,0,0" VerticalAlignment="Top"  RenderTransformOrigin="0.028,0.5"/>
+        <Label x:Name="label12" Content="เบอร์ต่อ" HorizontalAlignment="Left" Margin="807,466,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="phoneExtTb" HorizontalAlignment="Left" Height="23" Margin="865,470,0,0" VerticalAlignment="Top" Width="60" MaxLength="10" TextChanged="phoneExtTb_TextChanged" TabIndex="11"/>
+        <Label x:Name="label7" Content="ค่าเริ่มต้นของเลขที่ใบกำกับภาษี *" HorizontalAlignment="Left" Margin="400,501,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label14" Content="อัตราภาษีมูลค่าเพิ่ม *" HorizontalAlignment="Left" Margin="400,593,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="invRunningNumberTb" HorizontalAlignment="Left" Height="23" Margin="685,505,0,0" VerticalAlignment="Top" Width="240" MaxLength="35" TabIndex="12"/>
+        <TextBox x:Name="vatTb" HorizontalAlignment="Left" Height="23" Margin="640,597,0,0" VerticalAlignment="Top" Width="49" Text="7.00" MaxLength="5" TextWrapping="Wrap" TextAlignment="Right" TabIndex="15"/>
+        <Label x:Name="label15" Content="%" HorizontalAlignment="Left" Margin="701,593,0,0" VerticalAlignment="Top"/>
         <Button x:Name="shutdownBtn" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Click="shutdownBtn_Click">
             <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_close@2x.png" Style="{StaticResource imageBtn}"/>
         </Button>
-        <ComboBox x:Name="provinceCbb" HorizontalAlignment="Left" Height="23" Margin="641,253,0,0" VerticalAlignment="Top" Width="285" />
+        <ComboBox x:Name="provinceCbb" HorizontalAlignment="Left" Height="23" Margin="640,311,0,0" VerticalAlignment="Top" Width="285" TabIndex="5" />
 
-        <ComboBox x:Name="amphoeCbb" HorizontalAlignment="Left" Height="23" Margin="641,283,0,0" VerticalAlignment="Top" Width="285"/>
-        <ComboBox x:Name="tambonCbb" HorizontalAlignment="Left" Height="23" Margin="641,316,0,0" VerticalAlignment="Top" Width="285"/>
-        <Label x:Name="label" Content="จังหวัด" HorizontalAlignment="Left" Margin="401,251,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label16" Content="อำเภอ/เขต" HorizontalAlignment="Left" Margin="401,281,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label17" Content="ตำบล/แขวง" HorizontalAlignment="Left" Margin="401,314,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="amphoeCbb" HorizontalAlignment="Left" Height="23" Margin="640,341,0,0" VerticalAlignment="Top" Width="285" TabIndex="6"/>
+        <ComboBox x:Name="tambonCbb" HorizontalAlignment="Left" Height="23" Margin="640,374,0,0" VerticalAlignment="Top" Width="285" TabIndex="7"/>
+        <Label x:Name="label" Content="จังหวัด *" HorizontalAlignment="Left" Margin="401,309,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label16" Content="อำเภอ/เขต *" HorizontalAlignment="Left" Margin="401,339,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label17" Content="ตำบล/แขวง *" HorizontalAlignment="Left" Margin="401,372,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2_Copy" Content="บ้านเลขที่ *" HorizontalAlignment="Left" Margin="401,247,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="houseNoTb" HorizontalAlignment="Left" Height="23" Margin="640,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" TabIndex="3"/>
+        <Label x:Name="label7_Copy" Content="ค่าเริ่มต้นของเลขที่ใบเพิ่มหนี้ *" HorizontalAlignment="Left" Margin="400,533,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="dbnRunningNumberTb" HorizontalAlignment="Left" Height="23" Margin="685,537,0,0" VerticalAlignment="Top" Width="240" MaxLength="35" TabIndex="13"/>
+        <Label x:Name="label7_Copy1" Content="ค่าเริ่มต้นของเลขที่ใบลดหนี้ *" HorizontalAlignment="Left" Margin="400,563,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="CrnRunningNumberTb" HorizontalAlignment="Left" Height="23" Margin="685,567,0,0" VerticalAlignment="Top" Width="240" MaxLength="35" TabIndex="14"/>
+        <Label x:Name="label5" Content="INV" HorizontalAlignment="Left" Margin="640,503,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.938,0.556"/>
+        <Label x:Name="label5_Copy" Content="DBN" HorizontalAlignment="Left" Margin="640,535,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.938,0.556"/>
+        <Label x:Name="label5_Copy1" Content="CRN" HorizontalAlignment="Left" Margin="640,565,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.938,0.556"/>
     </Grid>
 </Window>

@@ -17,7 +17,11 @@ namespace eTaxInvoicePdfGenerator.Forms
     {
         public string invoiceId;
         public List<ReferenceObj> refList { get; set; }
-        private Collection<TypeCodeObj> typeCodes = new Collection<TypeCodeObj>() { new TypeCodeObj("ALT", "ใบกำกับภาษีเดิม"), new TypeCodeObj("ZZZ", "อื่นๆ") };
+        private Collection<TypeCodeObj> typeCodes = new Collection<TypeCodeObj>() {
+            //new TypeCodeObj("ALT", "ใบกำกับภาษี"),
+            new TypeCodeObj("81", "ใบลดหนี้"),
+            new TypeCodeObj("80", "ใบเพิ่มหนี้")
+        };
         public Collection<TypeCodeObj> TypeCodes { get { return typeCodes; } }
         public RefDoc()
         {
@@ -49,15 +53,7 @@ namespace eTaxInvoicePdfGenerator.Forms
             {
                 documentId1.Text = refList[0].documentId;
                 documentDate1.Text = refList[0].documentDate;
-                TypeCodeObj typeCode = typeCodes.FirstOrDefault(s => s.code == refList[0].typeCodeObj.description);
-                if (typeCode == null)
-                {
-                    typeCode1.Text = refList[0].typeCodeObj.description;
-                }
-                else
-                {
-                    typeCode1.SelectedItem = typeCode;
-                }
+                typeCode1.Text = refList[0].typeCodeObj.description;
                 delCb1.IsEnabled = true;
             }
 
@@ -135,8 +131,10 @@ namespace eTaxInvoicePdfGenerator.Forms
         {
             documentId1.Text = "";
             documentDate1.Text = "";
-            typeCode1.SelectedItem = null;
-            typeCode1.Text = "";
+            //typeCode1.SelectedItem = null;
+            typeCode1.IsEditable = true;
+            typeCode1.IsEnabled = false;
+            typeCode1.Text = "ใบกำกับภาษี";
             delCb1.IsChecked = false;
             delCb1.IsEnabled = false;
 
@@ -227,7 +225,7 @@ namespace eTaxInvoicePdfGenerator.Forms
 
                 validator.validateTypeCode(typeCode);
 
-                validator.validateDocDate(date);
+                validator.validateDocDate(date,"เอกสารอ้างถึง");
             }
         }
 

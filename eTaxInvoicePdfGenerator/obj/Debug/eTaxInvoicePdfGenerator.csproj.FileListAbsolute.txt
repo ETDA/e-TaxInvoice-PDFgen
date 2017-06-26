@@ -155,153 +155,234 @@ C:\Users\pragasit-ETDA\Desktop\fordeploy2\eTaxInvoicePdfGenerator\obj\Debug\eTax
 C:\Users\pragasit-ETDA\Desktop\fordeploy2\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.exe
 C:\Users\pragasit-ETDA\Desktop\fordeploy2\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.pdb
 C:\Users\pragasit-ETDA\Desktop\fordeploy2\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.csprojResolveAssemblyReference.cache
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\Resources\template_debit.xml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\Resources\template.xml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\Resources\item.xml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.exe.config
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.exe.manifest
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.application
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.exe
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.pdb
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\itextsharp.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\itextsharp.pdfa.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\itextsharp.xtra.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\Microsoft.ReportViewer.WinForms.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\SqliteConnector.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\Microsoft.SqlServer.Types.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.csprojResolveAssemblyReference.cache
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Interop.Shell32.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.csproj.ResolveComReference.cache
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\AlertBox.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\DelNo.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNo.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNoCancel.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Buyer.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\BuyerConfig.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\CreditNote.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\DebitNote.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Invoice.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\InvoiceItem.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\ItemConfig.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\RefDoc.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Report.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Item.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Seller.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\MainWindow.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\App.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator_Content.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator_MarkupCompile.cache
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator_MarkupCompile.lref
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\App.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\AlertBox.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\DelNo.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNo.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNoCancel.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Buyer.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\BuyerConfig.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\CreditNote.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\DebitNote.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Invoice.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\InvoiceItem.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\ItemConfig.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\RefDoc.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Report.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Item.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Seller.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\MainWindow.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.g.resources
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.Properties.Resources.resources
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.csproj.GenerateResource.Cache
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\RdlCompile.cache
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\RdlCompile.compiled
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.TrustInfo.xml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.exe.manifest
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.application
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.exe
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\PDFGenerator\backup\app\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.pdb
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\Resources\template_debit.xml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\Resources\template.xml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\Resources\item.xml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.exe.config
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.exe.manifest
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.application
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.exe
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.pdb
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\itextsharp.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\itextsharp.pdfa.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\itextsharp.xtra.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\Microsoft.ReportViewer.WinForms.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\SqliteConnector.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\Microsoft.SqlServer.Types.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.csprojResolveAssemblyReference.cache
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Interop.Shell32.dll
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.csproj.ResolveComReference.cache
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\AlertBox.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\DelNo.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNo.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNoCancel.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\Buyer.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\BuyerConfig.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\CreditNote.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\DebitNote.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\Invoice.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\InvoiceItem.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\ItemConfig.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\RefDoc.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\Report.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\Item.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\Seller.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\MainWindow.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\App.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator_Content.g.cs
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator_MarkupCompile.cache
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator_MarkupCompile.lref
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\App.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\AlertBox.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\DelNo.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNo.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNoCancel.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\Buyer.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\BuyerConfig.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\CreditNote.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\DebitNote.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\Invoice.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\InvoiceItem.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\ItemConfig.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\RefDoc.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\Report.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\Item.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\Forms\Seller.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\MainWindow.baml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.g.resources
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.Properties.Resources.resources
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.csproj.GenerateResource.Cache
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\RdlCompile.cache
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\RdlCompile.compiled
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.TrustInfo.xml
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.exe.manifest
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.application
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.exe
-C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\github\pdfgen\app\0.1.0\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.pdb
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\Resources\template_debit.xml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\Resources\template.xml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\Resources\item.xml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.exe.config
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.exe.manifest
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.application
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.exe
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.pdb
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\itextsharp.dll
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\itextsharp.pdfa.dll
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\itextsharp.xtra.dll
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\SqliteConnector.dll
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Interop.Shell32.dll
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.csproj.ResolveComReference.cache
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\AlertBox.g.cs
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\DelNo.g.cs
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNo.g.cs
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNoCancel.g.cs
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Buyer.g.cs
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\BuyerConfig.g.cs
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\CreditNote.g.cs
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\DebitNote.g.cs
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Invoice.g.cs
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\InvoiceItem.g.cs
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\ItemConfig.g.cs
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\RefDoc.g.cs
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Report.g.cs
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Item.g.cs
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Seller.g.cs
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\TermNConditions.g.cs
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\MainWindow.g.cs
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\App.g.cs
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator_Content.g.cs
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator_MarkupCompile.cache
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator_MarkupCompile.lref
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\App.baml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\AlertBox.baml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\DelNo.baml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNo.baml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNoCancel.baml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Buyer.baml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\BuyerConfig.baml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\CreditNote.baml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\DebitNote.baml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Invoice.baml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\InvoiceItem.baml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\ItemConfig.baml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\RefDoc.baml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Report.baml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Item.baml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Seller.baml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\TermNConditions.baml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\MainWindow.baml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.g.resources
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.Properties.Resources.resources
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.TrustInfo.xml
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.exe.manifest
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.application
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.exe
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.pdb
+C:\Users\admin\Desktop\fordeploy20170418\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.csprojResolveAssemblyReference.cache
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Interop.Shell32.dll
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.csproj.ResolveComReference.cache
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\favicon.ico
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\Resources\template_debit.xml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\Resources\template.xml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\Resources\item.xml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.exe.config
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.exe.manifest
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.application
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.exe
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.pdb
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\itextsharp.dll
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\itextsharp.pdfa.dll
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\itextsharp.xtra.dll
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\SqliteConnector.dll
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\AlertBox.g.cs
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\DelNo.g.cs
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNo.g.cs
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNoCancel.g.cs
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Buyer.g.cs
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\BuyerConfig.g.cs
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\CreditNote.g.cs
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\DebitNote.g.cs
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Invoice.g.cs
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\InvoiceItem.g.cs
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\ItemConfig.g.cs
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\RefDoc.g.cs
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Report.g.cs
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Item.g.cs
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Seller.g.cs
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\TermNConditions.g.cs
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\MainWindow.g.cs
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\App.g.cs
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator_Content.g.cs
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator_MarkupCompile.cache
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator_MarkupCompile.lref
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\App.baml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\AlertBox.baml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\DelNo.baml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNo.baml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNoCancel.baml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Buyer.baml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\BuyerConfig.baml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\CreditNote.baml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\DebitNote.baml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Invoice.baml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\InvoiceItem.baml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\ItemConfig.baml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\RefDoc.baml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Report.baml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Item.baml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\Seller.baml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\Forms\TermNConditions.baml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\MainWindow.baml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.g.resources
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.Properties.Resources.resources
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.csproj.GenerateResource.Cache
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\RdlCompile.cache
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\RdlCompile.compiled
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.TrustInfo.xml
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.exe.manifest
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.application
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.exe
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.pdb
+C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.csprojResolveAssemblyReference.cache
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\favicon.ico
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\btn_continue.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\Resources\template_debit.xml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\Resources\template.xml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\Resources\item.xml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\database.db
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.exe.config
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.exe.manifest
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.application
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.exe
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.pdb
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\itextsharp.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\itextsharp.pdfa.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\itextsharp.xtra.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\SqliteConnector.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Interop.Shell32.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.csproj.ResolveComReference.cache
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\AlertBox.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\DelNo.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNo.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNoCancel.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\Buyer.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\BuyerConfig.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\CreditNote.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\DebitNote.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\Invoice.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\InvoiceItem.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\ItemConfig.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\RefDoc.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\Report.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\Item.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\Seller.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\TermNConditions.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\MainWindow.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\App.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator_Content.g.cs
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator_MarkupCompile.cache
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator_MarkupCompile.lref
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\App.baml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\AlertBox.baml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\DelNo.baml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNo.baml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\YesNoCancel.baml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\Buyer.baml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\BuyerConfig.baml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\CreditNote.baml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\DebitNote.baml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\Invoice.baml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\InvoiceItem.baml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\ItemConfig.baml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\RefDoc.baml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\Report.baml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\Item.baml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\Seller.baml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Forms\TermNConditions.baml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\MainWindow.baml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.g.resources
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.Properties.Resources.resources
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.csproj.GenerateResource.Cache
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\RdlCompile.cache
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\RdlCompile.compiled
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.TrustInfo.xml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.exe.manifest
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.application
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.exe
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.pdb

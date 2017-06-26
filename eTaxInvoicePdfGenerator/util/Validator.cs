@@ -11,37 +11,64 @@ namespace eTaxInvoicePdfGenerator.util
     {
         public void validateText(TextBox obj, string name, int length, bool required)
         {
-            if (required)
-            {
-                if (obj.Text.Length == 0)
-                {
-                    obj.Focus();
-                    throw new Exception(string.Format("กรุณาใส่{0} ความยาวไม่เกิน {1} ตัวอักษร", name, length));
-                }
-            }
-
-            if (obj.Text.Length > length)
+            if (required && obj.Text.Length == 0 || obj.Text.Length > length)
             {
                 obj.Focus();
-                throw new Exception(string.Format("กรุณาใส่{0} ความยาวไม่เกิน {1} ตัวอักษร", name, length));
+                throw new Exception(string.Format("กรุณาระบุ{0}", name));
+                //throw new Exception(string.Format("กรุณากรอก{0} ความยาวไม่เกิน {1} ตัวอักษร", name, length));
             }
         }
 
-        public void validateText(ComboBox obj, string name, int length, bool required)
+        public void validateCbb(ComboBox obj, string name, int length, bool required)
         {
-            if (required)
-            {
-                if (obj.Text.Length == 0)
-                {
-                    obj.Focus();
-                    throw new Exception(string.Format("กรุณาเลือก หรือใส่{0} ความยาวไม่เกิน {1} ตัวอักษร", name, length));
-                }
-            }
-
-            if (obj.Text.Length > length)
+            if (required && obj.SelectedIndex == 0 || obj.Text.Length > length)
             {
                 obj.Focus();
-                throw new Exception(string.Format("กรุณาเลือก หรือใส่{0} ความยาวไม่เกิน {1} ตัวอักษร", name, length));
+                throw new Exception(string.Format("กรุณากรอก{0}", name));
+                //throw new Exception(string.Format("กรุณาระบุ{0} ความยาวไม่เกิน {1} ตัวอักษร", name, length));
+            }
+        }
+
+        public void validateNameCbb(ComboBox obj, string name, int length, bool required)
+        {
+            if (required && obj.Text.Length == 0 || obj.Text.Length > length)
+            {
+                obj.Focus();
+                throw new Exception(string.Format("กรุณากรอก{0}", name));
+            }
+        }
+
+        public void validateProviceCodeList(ComboBox obj, string name)
+        {
+            if (obj.SelectedIndex < 1)
+            {
+                obj.Focus();
+                throw new Exception(string.Format("กรุณากรอก{0}", name));
+            }
+        }
+
+        public void validateDoubleRate(TextBox obj, string name, double maxValue)
+        {
+            double doubleTemp = 0.0;
+            if (double.TryParse(obj.Text, out doubleTemp))
+            {
+                if (doubleTemp < 0.00 || (doubleTemp > maxValue && maxValue > 0))
+                {
+                    obj.Focus();
+                    if (maxValue > 0)
+                    {
+                        throw new Exception(string.Format("กรุณาระบุ{0} เป็นร้อยละ ไม่เกิน {1}", name, maxValue));
+                    }
+                    else
+                    {
+                        throw new Exception(string.Format("ระบุ{0}ไม่ถูกต้อง โปรดตรวจสอบ", name));
+                    }
+                }
+            }
+            else
+            {
+                obj.Focus();
+                throw new Exception(string.Format("ระบุ{0}ไม่ถูกต้อง โปรดตรวจสอบ", name, maxValue));
             }
         }
 
@@ -50,16 +77,23 @@ namespace eTaxInvoicePdfGenerator.util
             double doubleTemp = 0.0;
             if (double.TryParse(obj.Text, out doubleTemp))
             {
-                if (doubleTemp < 0.00 || doubleTemp > maxValue)
+                if (doubleTemp < 0.00 || (doubleTemp > maxValue && maxValue > 0))
                 {
                     obj.Focus();
-                    throw new Exception(string.Format("กรุณาใส่{0} เป็นร้อยละ ไม่เกิน {1}", name, maxValue));
+                    if (maxValue > 0)
+                    {
+                        throw new Exception(string.Format("กรุณาระบุ{0} ไม่เกิน {1}", name, maxValue));
+                    }
+                    else
+                    {
+                        throw new Exception(string.Format("ระบุ{0}ไม่ถูกต้อง โปรดตรวจสอบ", name));
+                    }
                 }
             }
             else
             {
                 obj.Focus();
-                throw new Exception(string.Format("กรุณาใส่{0} เป็นร้อยละ ไม่เกิน {1}", name, maxValue));
+                throw new Exception(string.Format("ระบุ{0}ไม่ถูกต้อง โปรดตรวจสอบ", name));
             }
         }
 
@@ -69,14 +103,14 @@ namespace eTaxInvoicePdfGenerator.util
             if (obj.Text.Length == 0 || obj.Text.Length > length)
             {
                 obj.Focus();
-                throw new Exception(string.Format("กรุณาใส่จำนวน เป็นตัวเลขความยาวไม่เกิน {0} หลัก", length));
+                throw new Exception(string.Format("กรุณาระบุจำนวน เป็นตัวเลขความยาวไม่เกิน {0} หลัก", length));
             }
             else
             {
                 if (!int.TryParse(obj.Text, out quantity))
                 {
                     obj.Focus();
-                    throw new Exception(string.Format("กรุณาใส่จำนวน เป็นตัวเลขความยาวไม่เกิน {0} หลัก", length));
+                    throw new Exception(string.Format("กรุณาระบุจำนวน เป็นตัวเลขความยาวไม่เกิน {0} หลัก", length));
                 }
             }
             return quantity;
@@ -84,31 +118,32 @@ namespace eTaxInvoicePdfGenerator.util
 
         public void validateZipCode(TextBox obj)
         {
+            if (obj.Text.Length == 0)
+            {
+                throw new Exception("กรุณาระบุรหัสไปรษณีย์");
+            }
+
             int intTemp = 0;
-            if (!int.TryParse(obj.Text, out intTemp) || obj.Text.Length == 0 || obj.Text.Length != 5)
+            if (!int.TryParse(obj.Text, out intTemp) || obj.Text.Length != 5)
             {
                 obj.Focus();
-                throw new Exception("กรุณาใส่รหัสไปรษณีย์ เป็นตัวเลขความยาว 5 หลัก");
+                throw new Exception("ระบุรหัสไปรษณีย์ไม่ถูกต้อง โปรดตรวจสอบ");
             }
         }
 
         public void validateTaxID(TextBox obj)
         {
+            if (obj.Text.Length == 0)
+            {
+                throw new Exception("กรุณาระบุเลขประจําตัวผู้เสียภาษีอากร");
+            }
+
             long longTemp = 0;
             if (!long.TryParse(obj.Text, out longTemp) || obj.Text.Length != 13)
             {
                 obj.Focus();
-                throw new Exception("กรุณาใส่เลขประจําตัวผู้เสียภาษีอากร เป็นตัวเลขความยาว 13 หลัก");
-            }
-        }
-
-        public void validateBranchNo(TextBox obj)
-        {
-            int intTemp = 0;
-            if (!int.TryParse(obj.Text, out intTemp) || obj.Text.Length > 5 || obj.Text.Length == 0 || obj.Text == "00000")
-            {
-                obj.Focus();
-                throw new Exception("กรุณาใส่เลขที่สาขา เป็นตัวเลขความยาวไม่เกิน 5 หลัก และไม่ใช่ \"00000\"");
+                throw new Exception("ระบุเลขประจำตัวผู้เสียภาษีอากรไม่ถูกต้อง โปรดตรวจสอบ");
+                //throw new Exception("กรุณากรอกเลขประจําตัวผู้เสียภาษีอากร เป็นตัวเลขความยาว 13 หลัก");
             }
         }
 
@@ -120,11 +155,15 @@ namespace eTaxInvoicePdfGenerator.util
                 if (!isEmail)
                 {
                     obj.Focus();
-                    throw new Exception("กรุณาใส่อีเมลที่ถูกต้อง");
+                    throw new Exception("ระบุอีเมลไม่ถูกต้อง โปรดตรวจสอบ");
                 }
             }
+            else
+            {
+                throw new Exception("กรุณาระบุอีเมล");
+            }
         }
-        
+
         public void validatePhoneNumber(TextBox phoneNo, TextBox phoneExt, string name)
         {
             if (phoneNo.Text.Length > 0)
@@ -134,14 +173,16 @@ namespace eTaxInvoicePdfGenerator.util
                     if (!Regex.IsMatch(phoneExt.Text, @"^[0-9\(\)\+\-]{1,10}$"))
                     {
                         phoneExt.Focus();
-                        throw new Exception(string.Format("กรุณาใส่{0}และเบอร์ต่อ ช่องนี้รองรับตัวเลข และอักขระ  \"(\", \")\", \" + \", \" - \" เท่านั้น ความยาว ไม่เกิน 24 ตัวอักษร", name));
+                        //throw new Exception(string.Format("กรุณาใส่{0}และเบอร์ต่อ ช่องนี้รองรับตัวเลข และอักขระ  \"(\", \")\", \" + \", \" - \" เท่านั้น ความยาว ไม่เกิน 24 ตัวอักษร", name));
+                        throw new Exception(string.Format("ระบุเบอร์โทรศัพท์หรือเบอร์ต่อไม่ถูกต้อง โปรดตรวจสอบ", name));
                     }
                 }
 
                 if (!Regex.IsMatch(phoneNo.Text, @"^[0-9\(\)\+\-]{1,16}$"))
                 {
                     phoneNo.Focus();
-                    throw new Exception(string.Format("กรุณาใส่{0} ช่องนี้รองรับตัวเลข และอักขระ  \"(\", \")\", \" + \", \" - \" เท่านั้น ความยาว ไม่เกิน 26 ตัวอักษร", name));
+                    //throw new Exception(string.Format("กรุณาใส่{0} ช่องนี้รองรับตัวเลข และอักขระ  \"(\", \")\", \" + \", \" - \" เท่านั้น ความยาว ไม่เกิน 26 ตัวอักษร", name));
+                    throw new Exception(string.Format("ระบุเบอร์โทรศัพท์หรือเบอร์ต่อไม่ถูกต้อง โปรดตรวจสอบ", name));
                 }
 
                 while (phoneNo.Text.StartsWith("0"))
@@ -151,29 +192,32 @@ namespace eTaxInvoicePdfGenerator.util
             }
         }
 
-        public void validateExtNumber(TextBox phoneNo,TextBox phoneExt,string name)
+        public void validateExtNumber(TextBox phoneNo, TextBox phoneExt, string name)
         {
             if (phoneNo.Text.Length == 0 && phoneExt.Text.Length > 0)
             {
-                new Dialogs.AlertBox(string.Format("กรุณาใส่{0} ช่องนี้รองรับตัวเลข และอักขระ  \"(\", \")\", \" + \", \" - \" เท่านั้น ความยาว ไม่เกิน 26 ตัวอักษร",name)).ShowDialog();
                 phoneExt.Text = "";
                 phoneNo.Focus();
+                //new Dialogs.AlertBox(string.Format("กรุณาใส่{0} ช่องนี้รองรับตัวเลข และอักขระ  \"(\", \")\", \" + \", \" - \" เท่านั้น ความยาว ไม่เกิน 26 ตัวอักษร",name)).ShowDialog();
+                new Dialogs.AlertBox("ระบุเบอร์โทรศัพท์หรือเบอร์ต่อไม่ถูกต้อง โปรดตรวจสอบ").ShowDialog();
             }
         }
 
         public double validatePrice(TextBox obj)
         {
             double doubleTemp = 0.00;
-            if (!Regex.IsMatch(obj.Text, @"^[0-9]{1,15}(?:\.[0-9]{0,2})?$") || !double.TryParse(obj.Text, out doubleTemp))
+            string value = obj.Text.Replace(",", "");
+            double.TryParse(value, out doubleTemp);
+            if (doubleTemp <= 0)
             {
-                //if (doubleTemp < 0)
-                //{
-                //    Math.Abs(doubleTemp);
-                //}
-                obj.Text = doubleTemp.ToString("N");
-                obj.Focus();
-                throw new Exception("กรุณาใส่ราคาต่อหน่วย ที่ยังไม่รวมภาษีมูลค่าเพิ่ม เป็นตัวเลขความยาวไม่เกิน 18 หลักรวมจุด");
+                throw new Exception("กรุณาระบุราคาต่อหน่วย");
             }
+            if (!Regex.IsMatch(value, @"^[0-9]{1,15}(?:\.[0-9]{0,2})?$"))
+            {
+                obj.Focus();
+                throw new Exception("ระบุข้อมูลไม่ถูกต้อง โปรดตรวจสอบ");
+            }
+            obj.Text = doubleTemp.ToString();
             return doubleTemp;
         }
 
@@ -182,14 +226,14 @@ namespace eTaxInvoicePdfGenerator.util
             if (obj.Text.Length == 0)
             {
                 obj.Focus();
-                throw new Exception("กรุณาเลือกหน่วยสินค้า หรือเพิ่มใหม่หากไม่พบหน่วยที่ต้องการ");
+                throw new Exception("กรุณาระบุหน่วยสินค้า หรือเพิ่มใหม่หากไม่พบหน่วยที่ต้องการ");
             }
             else
             {
                 if (obj.Text.Length > 20)
                 {
                     obj.Focus();
-                    throw new Exception("กรุณาใส่หน่วยสินค้า เป็นตัวอักษรความยาวไม่เกิน 20 ตัวอักษร");
+                    throw new Exception("กรุณาระบุหน่วยสินค้า เป็นตัวอักษรความยาวไม่เกิน 20 ตัวอักษร");
                 }
             }
         }
@@ -201,7 +245,8 @@ namespace eTaxInvoicePdfGenerator.util
                 if (!Regex.IsMatch(obj.Text, @"^[0-9a-zA-Z]{1,35}$") || obj.Text.Length > 35)
                 {
                     obj.Focus();
-                    throw new Exception("กรุณาใส่รหัสสินค้า ช่องนี้รองรับตัวอักษร A-Z และตัวเลข 0-9 เท่านั้น ความยาวไม่เกิน 35 ตัวอักษร");
+                    //throw new Exception("กรุณากรอกรหัสสินค้า ช่องนี้รองรับตัวอักษร A-Z และตัวเลข 0-9 เท่านั้น ความยาวไม่เกิน 35 ตัวอักษร");
+                    throw new Exception("ระบุรหัสสินค้าไม่ถูกต้อง โปรดตรวจสอบ");
                 }
             }
         }
@@ -213,12 +258,13 @@ namespace eTaxInvoicePdfGenerator.util
                 if (!Regex.IsMatch(obj.Text, @"^[0-9]{13,14}$") || obj.Text.Length > 14)
                 {
                     obj.Focus();
-                    throw new Exception("กรุณาใส่รหัสสินค้าสากล ช่องนี้รองรับตัวเลข 0-9 เท่านั้น ความยาว 13 หรือ 14 ตัวอักษร");
+                    //throw new Exception("กรุณาใส่รหัสสินค้าสากล ช่องนี้รองรับตัวเลข 0-9 เท่านั้น ความยาว 13 หรือ 14 ตัวอักษร");
+                    throw new Exception("ท่านระบุรหัสสินค้าสากลไม่ถูกต้อง โปรดตรวจสอบ");
                 }
             }
         }
 
-        public double validateDiscount(TextBox obj,double total)
+        public double validateDiscount(TextBox obj, double total)
         {
             double doubleTemp = 0.0;
             if (double.TryParse(obj.Text, out doubleTemp))
@@ -226,23 +272,23 @@ namespace eTaxInvoicePdfGenerator.util
                 if (doubleTemp < 0.00 || doubleTemp > total)
                 {
                     obj.Focus();
-                    throw new Exception("กรุณาใส่ส่วนลดต่อรายการ เป็นบาท ไม่เกินยอดรวมของรายการสินค้า");
+                    throw new Exception("กรุณาระบุส่วนลดต่อรายการ เป็นบาท ไม่เกินยอดรวมของรายการสินค้า");
                 }
             }
             else
             {
                 obj.Focus();
-                throw new Exception("กรุณาใส่ส่วนลดต่อรายการ เป็นบาท ไม่เกินยอดรวมของรายการสินค้า");
+                throw new Exception("กรุณาระบุส่วนลดต่อรายการ เป็นบาท ไม่เกินยอดรวมของรายการสินค้า");
             }
             return doubleTemp;
         }
 
-        public void validateDocDate(DatePicker obj)
+        public void validateDocDate(DatePicker obj, string name)
         {
             if (!validateDate(obj.SelectedDate))
             {
                 obj.Focus();
-                throw new Exception("กรุณาใส่วันที่ออกใบกำกับภาษีเดิมเป็นวันที่ ที่ไม่เกินวันที่ปัจจุบัน");
+                throw new Exception(string.Format("ระบุวันที่ออก{0}ไม่ถูกต้อง โปรดตรวจสอบ", name));
             }
         }
 
@@ -265,7 +311,88 @@ namespace eTaxInvoicePdfGenerator.util
             if (obj.Text.Length == 0 || obj.Text.Length > 20)
             {
                 obj.Focus();
-                throw new Exception("กรุณาเลือกประเภทเอกสารอ้างอิง");
+                throw new Exception("กรุณาระบุประเภทเอกสารอ้างอิง");
+            }
+        }
+
+        public void validateRunningNumber(TextBox obj, string name, int length)
+        {
+            if (obj.Text.Length > length)
+            {
+                obj.Focus();
+                throw new Exception(string.Format("ระบุ{0}ไม่ถูกต้อง โปรดตรวจสอบ", name, length));
+            }
+
+            if (obj.Text.Length == 0)
+            {
+                obj.Focus();
+                throw new Exception(string.Format("กรุณาระบุ{0}", name));
+            }
+            else
+            {
+                string[] result = new RunningNumber().separatePrefix(obj.Text);
+                string prefix = result[0];
+                string number = result[1];
+                int maxLength = Math.Min(prefix.Length, length);
+                prefix = prefix.Substring(0, maxLength);
+                if (number.Length == 0)
+                {
+                    number = "00001";
+                }
+                obj.Text = prefix + number;
+
+            }
+        }
+        
+        public void validateBranchNo(TextBox obj)
+        {
+            if (obj.Text.Length == 0)
+            {
+                throw new Exception("กรุณาระบุรหัสสาขา");
+            }
+
+            int intTemp = 0;
+            if (!int.TryParse(obj.Text, out intTemp) || obj.Text.Length > 5 || obj.Text.Length == 0 || obj.Text == "00000")
+            {
+                obj.Focus();
+                throw new Exception("ระบุเลขที่สาขาไม่ถูกต้อง โปรดตรวจสอบ");
+                //throw new Exception("กรุณากรอกเลขที่สาขา เป็นตัวเลขความยาวไม่เกิน 5 หลัก และไม่ใช่ \"00000\"");
+            }
+        }
+
+        public void checkBranchID(TextBox obj, bool is_branch)
+        {
+            if (is_branch)
+            {
+                int intTemp;
+                if (int.TryParse(obj.Text, out intTemp))
+                {
+                    string temp = obj.Text;
+                    while (temp.Length < 5)
+                    {
+                        temp = "0" + temp;
+                    }
+                    obj.Text = temp;
+                }
+                else
+                {
+                    //new AlertBox("กรุณาใส่เลขที่สาขา เป็นตัวเลขความยาวไม่เกิน 5 หลัก และไม่ใช่ \"00000\"").ShowDialog();
+                    throw new Exception("ระบุเลขที่สาขาไม่ถูกต้อง โปรดตรวจสอบ");
+                }
+            }
+            else
+            {
+                obj.Text = "";
+            }
+        }
+
+        public void validateDiffValue(string value)
+        {
+            double temp = 0;
+            double.TryParse(value, out temp);
+            if(temp < 0)
+            {
+                throw new Exception("กรุณาตรวจสอบ มูลค่าสินค้า/บริการ ตามใบกำกับภาษีเดิม");
             }
         }
     }

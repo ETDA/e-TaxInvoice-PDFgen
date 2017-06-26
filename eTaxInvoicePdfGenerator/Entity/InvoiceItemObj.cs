@@ -12,7 +12,7 @@
         public int quantity { get; set; }
         public string quantityText { get; set; }
         public string unit { get; set; }
-        public string unti_xml { get; set; }
+        public string unitXml { get; set; }
         public double itemTotal { get; set; }
         public string itemTotalText { get; set; }
         public string itemName { get; set; }
