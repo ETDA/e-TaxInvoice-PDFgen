@@ -32,36 +32,6 @@ namespace eTaxInvoicePdfGenerator.util
 
         }
 
-        //internal string updateRunningNumber(string text)
-        //{
-        //    text = text.Trim();
-        //    int runningNumber = 0;
-        //    //Regex re = new Regex(@"\d+$");
-        //    string regTerm = @"^(?<alphabet>[\D]+)?(?<numeric>[\d]+)$";
-        //    Regex re = new Regex(regTerm);
-        //    Match match = re.Match(text);
-        //    if (match.Success)
-        //    {
-        //        string number = match.Groups["numeric"].ToString();
-        //        int.TryParse(number, out runningNumber);
-        //        runningNumber = runningNumber + 1;
-        //        string runningNumberStr = runningNumber.ToString();
-        //        if (3 + match.Groups["alphabet"].Length + runningNumberStr.Length > 35)
-        //        {
-        //            runningNumberStr = "1";
-        //        }
-        //        while (number.Length > runningNumberStr.Length)
-        //        {
-        //            runningNumberStr = "0" + runningNumberStr;
-        //        }
-        //        return match.Groups["alphabet"].ToString() + runningNumberStr;
-        //    }
-        //    else
-        //    {
-        //        throw new Exception("กรุณาตรวจสอบเลขที่เอกสาร");
-        //    }
-        //}
-
         internal string[] separatePrefix(string str)
         {
             string prefix = "";

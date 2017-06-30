@@ -2,7 +2,7 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
-    <PublishUrl>C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\apps\PDFGenerator\backup\publish\eTaxInvoice_v0.2.5.3\</PublishUrl>
+    <PublishUrl>C:\Users\pragasit-ETDA\Documents\my_project\onhand_project\eTaxInvoice\apps\PDFGenerator\backup\publish\eTaxInvoice_v1.0.0\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -15,8 +15,8 @@
     <ProductName>e-Tax Invoice by Teda</ProductName>
     <PublisherName>สำนักงานพัฒนาธุรกรรมทางอิเล็กทรอนิกส์ %28ETDA%29</PublisherName>
     <SuiteName>สำนักงานพัฒนาธุรกรรมทางอิเล็กทรอนิกส์ %28ETDA%29</SuiteName>
-    <ApplicationRevision>3</ApplicationRevision>
-    <ApplicationVersion>0.2.5.3</ApplicationVersion>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -210,6 +210,7 @@
       <DependentUpon>DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Report\InvoiceGenerator.cs" />
+    <Compile Include="util\DateHelper.cs" />
     <Compile Include="util\getInvoice_Xml.cs" />
     <Compile Include="util\ProvinceCodeList.cs" />
     <Compile Include="util\ReportUtils.cs" />
@@ -344,49 +345,129 @@
     <Content Include="favicon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="in\elements\arrowLeft.png" />
-    <Content Include="in\elements\arrowRight.png" />
-    <Content Include="in\elements\btn_addtax.png" />
-    <Content Include="in\elements\btn_backHome.png" />
-    <Content Include="in\elements\btn_cancel.png" />
-    <Content Include="in\elements\btn_close%402x.png" />
+    <Content Include="in\elements\arrowLeft.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\arrowRight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\btn_addtax.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\btn_backHome.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\btn_cancel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\btn_close%402x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="in\elements\btn_continue.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="in\elements\btn_dataAdd.png" />
-    <Content Include="in\elements\btn_dataDel.png" />
-    <Content Include="in\elements\btn_del.png" />
-    <Content Include="in\elements\btn_GenPDF.png" />
-    <Content Include="in\elements\btn_nosave.png" />
-    <Content Include="in\elements\btn_ok.png" />
-    <Content Include="in\elements\btn_save.png" />
-    <Content Include="in\elements\buyer_BG.jpg" />
-    <Content Include="in\elements\buyer_detail_txtleft.png" />
-    <Content Include="in\elements\buyer_txtleft.png" />
-    <Content Include="in\elements\credit_invoice_BG.jpg" />
-    <Content Include="in\elements\credit_invoice_txtleft.png" />
-    <Content Include="in\elements\debit_invoice_BG.jpg" />
-    <Content Include="in\elements\debit_invoice_txtleft.png" />
-    <Content Include="in\elements\main_1Btn_shop%402x.png" />
-    <Content Include="in\elements\main_2Btn_buyer%402x.png" />
-    <Content Include="in\elements\main_3Btn_product%402x.png" />
-    <Content Include="in\elements\main_4Btn_tax_invoice%402x.png" />
-    <Content Include="in\elements\main_5Btn_debit_invoice%402x.png" />
-    <Content Include="in\elements\main_6Btn_credit_invoice%402x.png" />
-    <Content Include="in\elements\main_BG%402x.jpg" />
-    <Content Include="in\elements\main_txt%402x.png" />
-    <Content Include="in\elements\popup_addProduct.png" />
-    <Content Include="in\elements\PopUp_taxinvoice.png" />
-    <Content Include="in\elements\product_BG.jpg" />
-    <Content Include="in\elements\product_detail_txtleft.png" />
-    <Content Include="in\elements\product_txtleft.png" />
-    <Content Include="in\elements\shop_BG.jpg" />
-    <Content Include="in\elements\shop_txtleft.png" />
-    <Content Include="in\elements\SplassScreen_SplashScreen.jpg" />
-    <Content Include="in\elements\tax_invoice_BG.jpg" />
-    <Content Include="in\elements\tax_invoice_txtleft.png" />
-    <Content Include="in\elements\titile.png" />
-    <Content Include="Resources\favicon.ico" />
+    <Content Include="in\elements\btn_dataAdd.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\btn_dataDel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\btn_del.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\btn_GenPDF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\btn_nosave.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\btn_ok.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\btn_save.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\buyer_BG.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\buyer_detail_txtleft.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\buyer_txtleft.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\credit_invoice_BG.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\credit_invoice_txtleft.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\debit_invoice_BG.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\debit_invoice_txtleft.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\main_1Btn_shop%402x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\main_2Btn_buyer%402x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\main_3Btn_product%402x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\main_4Btn_tax_invoice%402x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\main_5Btn_debit_invoice%402x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\main_6Btn_credit_invoice%402x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\main_BG%402x.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\main_txt%402x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\popup_addProduct.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\PopUp_taxinvoice.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\product_BG.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\product_detail_txtleft.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\product_txtleft.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\shop_BG.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\shop_txtleft.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\SplassScreen_SplashScreen.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\tax_invoice_BG.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\tax_invoice_txtleft.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\elements\titile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\favicon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\template_debit.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
@@ -399,12 +480,24 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="eTaxInvoicePdfGenerator_TemporaryKey.pfx" />
-    <Content Include="in\pdfA3.pdf" />
-    <Content Include="in\Segoe UI.ttf" />
-    <Content Include="in\THSarabun Bold Italic.ttf" />
-    <Content Include="in\THSarabun Bold.ttf" />
-    <Content Include="in\THSarabun Italic.ttf" />
-    <Content Include="in\THSarabun.ttf" />
+    <Content Include="in\pdfA3.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\Segoe UI.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\THSarabun Bold Italic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\THSarabun Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\THSarabun Italic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="in\THSarabun.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -424,12 +517,17 @@
     </None>
     <Content Include="Report\tax_multipage.rdlc">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Report\tax_multipage_return.rdlc" />
+    <Content Include="Report\tax_multipage_return.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="database.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\sRGB Color Space Profile.icm" />
+    <Content Include="Resources\sRGB Color Space Profile.icm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
@@ -457,12 +555,21 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Resources\reference.xml" />
-    <Content Include="Resources\EDocument_PDFAExtensionSchema.xml" />
-    <Content Include="Resources\ContentInformation.xml" />
-    <Content Include="Resources\exchange_document_xmp.xml" />
+    <Content Include="Resources\reference.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\EDocument_PDFAExtensionSchema.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ContentInformation.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\exchange_document_xmp.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\result.xml">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\SqliteConnector.dll" />
   </ItemGroup>

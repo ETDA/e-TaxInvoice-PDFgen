@@ -11,6 +11,7 @@ using System.Linq;
 using System.Windows.Documents;
 using ECertificateAPI;
 using eTaxInvoicePdfGenerator.Dialogs;
+using System.Globalization;
 
 namespace eTaxInvoicePdfGenerator.Forms
 {
@@ -193,7 +194,7 @@ namespace eTaxInvoicePdfGenerator.Forms
                 }
                 else
                 {
-                    obj.issueDate = DateTime.Now.ToString();
+                    obj.issueDate = DateTime.Now.ToString("dd/MM/yyyy",new CultureInfo("en-US"));
                 }
                 obj.invoiceName = "ใบกำกับภาษี";
                 obj.taxCode = "VAT";
@@ -341,6 +342,10 @@ namespace eTaxInvoicePdfGenerator.Forms
                 validator.validateCbb(purposeCbb, "สาเหตุการออกเอกสาร", 256, true);
                 validator.validateText(docIdTb, "เลขที่ของใบกำกับภาษีเดิม", 35, true);
                 validator.validateDocDate(docDateTb, "ใบกำกับภาษีเดิม");
+                if (purposeCbb.SelectedValue.ToString() == "TIVC99")
+                {
+                    validator.validateText(otherPurposeTb, "เหตุอื่น", 256, true);
+                }
                 //validator.validateTypeCode(typeCodeTb);
             }
             validator.validateNameCbb(nameCbb, "ชื่อบริษัท/ผู้ซื้อ", 256, true);

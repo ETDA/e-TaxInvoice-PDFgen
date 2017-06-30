@@ -46,8 +46,7 @@ namespace eTaxInvoicePdfGenerator.Report
                 DataTable reference = repDAO.getDatatable("select * from reference where invoice_id = '" + invoice_id + "'");
                 DataTable dt = repDAO.getReportData(invoice_id);
                 DataTable item = repDAO.getDatatable_Item_Raw();
-                DateTime dateTime = Convert.ToDateTime(dt.Rows[0]["issue_date"].ToString());
-                String date = util.ReportUtils.getThaiDate(dateTime.ToString());
+                String date = util.ReportUtils.getThaiDate(dt.Rows[0]["issue_date"].ToString());
                 string reftext1 = "";
                 string reftext2 = "";
                 string reftext3 = "";
@@ -91,6 +90,7 @@ namespace eTaxInvoicePdfGenerator.Report
                     ReportParameter sell_district = new ReportParameter("sell_district", seller.Rows[0]["district_name"].ToString());
                     ReportParameter sell_subdistrict = new ReportParameter("sell_subdistrict", seller.Rows[0]["subdistrict_name"].ToString());
                     ReportParameter sell_province = new ReportParameter("sell_province", seller.Rows[0]["province_name"].ToString());
+                    ReportParameter sell_house_no = new ReportParameter("sell_house_no", seller.Rows[0]["house_no"].ToString());
 
                     ReportParameter buy_name = new ReportParameter("buy_name", buyer.Rows[0]["name"].ToString());
                     ReportParameter buy_taxno = new ReportParameter("buy_taxno", buyer.Rows[0]["tax_id"].ToString());
@@ -104,6 +104,7 @@ namespace eTaxInvoicePdfGenerator.Report
                     ReportParameter buy_district = new ReportParameter("buy_district", seller.Rows[0]["district_name"].ToString());
                     ReportParameter buy_subdistrict = new ReportParameter("buy_subdistrict", seller.Rows[0]["subdistrict_name"].ToString());
                     ReportParameter buy_province = new ReportParameter("buy_province", seller.Rows[0]["province_name"].ToString());
+                    ReportParameter buy_house_no = new ReportParameter("buy_house_no", seller.Rows[0]["house_no"].ToString());
 
                     ReportParameter testflag = new ReportParameter("testflag", "Y");
                     ReportParameter referText1 = new ReportParameter("referText1", reftext1);
@@ -138,7 +139,7 @@ namespace eTaxInvoicePdfGenerator.Report
                         buy_name,buy_taxno,buy_comno,buy_email,buy_tellno,buy_refer
                         ,testflag,grand_totalthai,ref_docno,ref_docdate
                         ,sell_add1 ,sell_zipcode,buy_add1,buy_zipcode
-                        ,referText1,referText2,referText3,sell_district,sell_subdistrict,sell_province,buy_district,buy_subdistrict,buy_province
+                        ,referText1,referText2,referText3,sell_district,sell_subdistrict,sell_province,buy_district,buy_subdistrict,buy_province,sell_house_no,buy_house_no
                          });
 
                     invoicePdf = reportViewer.LocalReport.Render("PDF", null, out mimeType, out encoding, out extension, out streamIds, out warnings);
@@ -183,7 +184,7 @@ namespace eTaxInvoicePdfGenerator.Report
                     ReportParameter sell_district = new ReportParameter("sell_district", seller.Rows[0]["district_name"].ToString());
                     ReportParameter sell_subdistrict = new ReportParameter("sell_subdistrict", seller.Rows[0]["subdistrict_name"].ToString());
                     ReportParameter sell_province = new ReportParameter("sell_province", seller.Rows[0]["province_name"].ToString());
-
+                    ReportParameter sell_house_no = new ReportParameter("sell_house_no", seller.Rows[0]["house_no"].ToString());
 
                     ReportParameter buy_name = new ReportParameter("buy_name", buyer.Rows[0]["name"].ToString());
                     ReportParameter buy_taxno = new ReportParameter("buy_taxno", buyer.Rows[0]["tax_id"].ToString());
@@ -191,6 +192,8 @@ namespace eTaxInvoicePdfGenerator.Report
                     ReportParameter buy_email = new ReportParameter("buy_email", buyer.Rows[0]["email"].ToString());
                     ReportParameter buy_tellno = new ReportParameter("buy_tellno", util.ReportUtils.getFullThaiMobilePhone(buyer.Rows[0]["phone_no"].ToString(), buyer.Rows[0]["phone_ext"].ToString()));
                     ReportParameter buy_refer = new ReportParameter("buy_refer", buyer.Rows[0]["contact_person"].ToString());
+                    ReportParameter buy_house_no = new ReportParameter("buy_house_no", buyer.Rows[0]["house_no"].ToString());
+
 
                     ReportParameter buy_add1 = new ReportParameter("buy_add1", buyer.Rows[0]["address1"].ToString());
                     ReportParameter buy_zipcode = new ReportParameter("buy_zipcode", buyer.Rows[0]["zipcode"].ToString());
@@ -227,7 +230,7 @@ namespace eTaxInvoicePdfGenerator.Report
                         docNo,reportDate,
                         sell_name,sell_taxno,sell_comno,sell_email,sell_tellno,
                         buy_name,buy_taxno,buy_comno,buy_email,buy_tellno,buy_refer
-                        ,testflag,grand_totalthai  ,sell_add1,sell_zipcode,buy_add1 ,buy_zipcode,sell_district,sell_subdistrict,sell_province,buy_district,buy_subdistrict,buy_province
+                        ,testflag,grand_totalthai  ,sell_add1,sell_zipcode,buy_add1 ,buy_zipcode,sell_district,sell_subdistrict,sell_province,buy_district,buy_subdistrict,buy_province,buy_house_no,sell_house_no
                         });
 
                     reportViewer.LocalReport.DisplayName = "Hello";

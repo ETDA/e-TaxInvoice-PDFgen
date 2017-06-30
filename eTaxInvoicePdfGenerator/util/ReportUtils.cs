@@ -13,14 +13,23 @@ namespace eTaxInvoicePdfGenerator.util
             string dateThai = "";
             if (!string.IsNullOrEmpty(date))
             {
-                DateTime datetime = Convert.ToDateTime(date);
-                //IFormatProvider culture = new System.Globalization.CultureInfo("th-TH", true);
+
+                DateTime datetime = new util.DateHelper().Convert2Date(date);
+
                 ThaiBuddhistCalendar cal = new ThaiBuddhistCalendar();
                 string[] thaiMonth = { "มกราคม","กุมภาพันธ์","มีนาคม","เมษายน","พฤษภาคม"
-                                    ,"มิถุนายน","กรกฏาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม" };    
-
+                                    ,"มิถุนายน","กรกฏาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม" };
                 DateTime thai = new DateTime(cal.GetYear(datetime), cal.GetMonth(datetime), datetime.Day);
-                dateThai = thai.Day + " " + thaiMonth[thai.Month-1] + " " + thai.Year;
+                string culture_th = System.Globalization.CultureInfo.CurrentCulture.DisplayName;
+                if (culture_th=="Thai (Thailand)")
+                {
+                    string year = thai.ToString("yyyy", new System.Globalization.CultureInfo("th-TH"));
+                    dateThai = thai.Day + " " + thaiMonth[thai.Month - 1] + " " + year;
+                }
+                else
+                {
+                    dateThai = thai.Day + " " + thaiMonth[thai.Month - 1] + " " + thai.Year;
+                }
             }
             else { dateThai = null; }
 

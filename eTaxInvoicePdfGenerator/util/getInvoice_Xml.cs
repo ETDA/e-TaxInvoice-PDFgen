@@ -31,7 +31,7 @@ namespace eTaxInvoicePdfGenerator.util
             absolutepath = path;
             string name = Item.Rows[0]["invoice_name"].ToString();
             string cancleReason = Item.Rows[0]["purpose"].ToString();
-            DateTime dateTime = Convert.ToDateTime(Item.Rows[0]["issue_date"].ToString());
+            DateTime dateTime = new util.DateHelper().Convert2Date(Item.Rows[0]["issue_date"].ToString());
 
             if (!string.IsNullOrEmpty(cancleReason))
             {
@@ -190,8 +190,8 @@ namespace eTaxInvoicePdfGenerator.util
                 {"*invoice_tax_code",XmlObj.invoiceTaxcode  },
                 {"*invoice_tax_rate",XmlObj.invoiceTaxrate},
                 {"*invoice_basis_amount",XmlObj.invoiceBasisamount },
-                {"*invoice_discountallowance",(string.IsNullOrWhiteSpace(XmlObj.invoiceDiscount) || XmlObj.invoiceDiscount == "0" )? "":getActualAmount(XmlObj.invoiceDiscount,XmlObj.invoiceChargeindicator)},
-                {"*invoice_serviceallowance",(string.IsNullOrWhiteSpace(XmlObj.invoiceService) || XmlObj.invoiceService == "0" )? "":getActualAmount(XmlObj.invoiceService,XmlObj.invoiceServiceindicator)},
+                {"*invoice_discountallowance",(string.IsNullOrWhiteSpace(XmlObj.invoiceDiscount) || XmlObj.invoiceDiscount == "0" )? "":getActualAmount_discount(XmlObj.invoiceDiscount,XmlObj.invoiceChargeindicator)},
+                {"*invoice_serviceallowance",(string.IsNullOrWhiteSpace(XmlObj.invoiceService) || XmlObj.invoiceService == "0" )? "":getActualAmount_service(XmlObj.invoiceService)},
                 {"*invoice_line_total",XmlObj.invoiceLinetotal},
                 {"*invoice_tax_total",XmlObj.invoiceTaxtotal },
                 {"*invoice_grand_total",XmlObj.invoiceGrandtotal },
@@ -243,7 +243,7 @@ namespace eTaxInvoicePdfGenerator.util
                             {"*item_id",(string.IsNullOrWhiteSpace(dr["item_code"].ToString()))?"":"<ram:ID>"+dr["item_code"].ToString()+"</ram:ID>"},
                             {"*item_name",(string.IsNullOrWhiteSpace(dr["item_name"].ToString()))?"":"<ram:Name>"+dr["item_name"].ToString()+"</ram:Name>"},
                             {"*item_unit_code",(string.IsNullOrWhiteSpace(dr["unit_xml"].ToString()))? "":"unitCode="+'"'+dr["unit_xml"].ToString()+'"'},
-                            {"*trade_allowance",(string.IsNullOrWhiteSpace(dr["item_discount"].ToString()) || dr["item_discount"].ToString() == "0" )? "":getActualAmount(dr["item_discount"].ToString(),dr["charge_indicator"].ToString())}
+                            {"*trade_allowance",(string.IsNullOrWhiteSpace(dr["item_discount"].ToString()) || dr["item_discount"].ToString() == "0" )? "":getActualAmount_discount(dr["item_discount"].ToString(),dr["charge_indicator"].ToString())}
                             //{"*reason",(string.IsNullOrWhiteSpace(XmlObj.reason))? "":XmlObj.reason},
                             //{"*reason_code",(string.IsNullOrWhiteSpace(XmlObj.reasonCode))? "":XmlObj.reasonCode}
                         };
@@ -268,7 +268,7 @@ namespace eTaxInvoicePdfGenerator.util
             }
         }
 
-        private string getActualAmount(string ActualAmount,string charge_indicator)
+        private string getActualAmount_discount(string ActualAmount,string charge_indicator)
         {
             string result = @"
 <ram:SpecifiedTradeAllowanceCharge>
@@ -285,6 +285,28 @@ namespace eTaxInvoicePdfGenerator.util
             else
             {
                 result = result.Replace("*item_charge_indicator", charge_indicator);
+                result = result.Replace("*item_discount", ActualAmount);
+            }
+
+            return result;
+        }
+
+        private string getActualAmount_service(string ActualAmount)
+        {
+            string result = @"
+<ram:SpecifiedTradeAllowanceCharge>
+	<ram:ChargeIndicator>true</ram:ChargeIndicator>
+	<ram:ActualAmount>*item_discount</ram:ActualAmount>
+	<ram:ReasonCode>57</ram:ReasonCode>
+	<ram:Reason>ค่าเบ็ดเตล็ด</ram:Reason>
+</ram:SpecifiedTradeAllowanceCharge>";
+
+            if (ActualAmount == "0")
+            {
+                result = "";
+            }
+            else
+            {
                 result = result.Replace("*item_discount", ActualAmount);
             }
 

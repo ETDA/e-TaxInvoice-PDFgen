@@ -1458,7 +1458,7 @@
                                     </Paragraph>
                                   </Paragraphs>
                                   <rd:DefaultName>Textbox2</rd:DefaultName>
-                                  <Top>0.78341in</Top>
+                                  <Top>0.56944in</Top>
                                   <Left>4.42444in</Left>
                                   <Height>0.21389in</Height>
                                   <Width>2.16386in</Width>
@@ -1479,7 +1479,7 @@
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value>=IIf(First(Fields!invoice_debit_flag.Value) = "Y","ส่วนลด","มูลค่าสินค้า/บริการถูกต้อง")</Value>
+                                          <Value>=IIf(First(Fields!invoice_debit_flag.Value) = "Y","ส่วนลด","มูลค่าสินค้า/บริการที่ถูกต้อง")</Value>
                                           <Style>
                                             <FontFamily>TH SarabunPSK</FontFamily>
                                             <FontSize>14pt</FontSize>
@@ -1492,7 +1492,7 @@
                                     </Paragraph>
                                   </Paragraphs>
                                   <rd:DefaultName>Textbox2</rd:DefaultName>
-                                  <Top>0.99729in</Top>
+                                  <Top>0.78341in</Top>
                                   <Left>4.42444in</Left>
                                   <Height>0.22778in</Height>
                                   <Width>2.16386in</Width>
@@ -1594,7 +1594,7 @@
                                     </Paragraph>
                                   </Paragraphs>
                                   <rd:DefaultName>Textbox2</rd:DefaultName>
-                                  <Top>0.7834in</Top>
+                                  <Top>0.56944in</Top>
                                   <Left>7.41973in</Left>
                                   <Height>0.21389in</Height>
                                   <Width>0.37165in</Width>
@@ -1628,7 +1628,7 @@
                                     </Paragraph>
                                   </Paragraphs>
                                   <rd:DefaultName>Textbox2</rd:DefaultName>
-                                  <Top>0.99728in</Top>
+                                  <Top>0.78341in</Top>
                                   <Left>7.41973in</Left>
                                   <Height>0.22778in</Height>
                                   <Width>0.37165in</Width>
@@ -1798,7 +1798,7 @@
                                     </Paragraph>
                                   </Paragraphs>
                                   <rd:DefaultName>Textbox2</rd:DefaultName>
-                                  <Top>0.7834in</Top>
+                                  <Top>0.56944in</Top>
                                   <Left>6.61608in</Left>
                                   <Height>0.21389in</Height>
                                   <Width>0.72165in</Width>
@@ -1832,7 +1832,7 @@
                                     </Paragraph>
                                   </Paragraphs>
                                   <rd:DefaultName>Textbox2</rd:DefaultName>
-                                  <Top>0.99728in</Top>
+                                  <Top>0.78341in</Top>
                                   <Left>6.61608in</Left>
                                   <Height>0.22778in</Height>
                                   <Width>0.72165in</Width>
@@ -2273,7 +2273,7 @@
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value>=IIf(First(Fields!service_charge.Value) like 0," ","ค่าธรรมเนียม")</Value>
+                                          <Value>=IIf(First(Fields!invoice_debit_flag.Value) = "Y","ค่าบริการ","  ")</Value>
                                           <Style>
                                             <FontFamily>TH SarabunPSK</FontFamily>
                                             <FontSize>14pt</FontSize>
@@ -2286,7 +2286,7 @@
                                     </Paragraph>
                                   </Paragraphs>
                                   <rd:DefaultName>Textbox2</rd:DefaultName>
-                                  <Top>0.56944in</Top>
+                                  <Top>1.01117in</Top>
                                   <Left>4.42444in</Left>
                                   <Height>0.21389in</Height>
                                   <Width>2.16386in</Width>
@@ -2307,7 +2307,7 @@
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value>=IIf(First(Fields!service_charge.Value) like 0," ","บาท")</Value>
+                                          <Value>=IIf(First(Fields!invoice_debit_flag.Value) = "Y","บาท","  ")</Value>
                                           <Style>
                                             <FontFamily>TH SarabunPSK</FontFamily>
                                             <FontSize>14pt</FontSize>
@@ -2320,7 +2320,7 @@
                                     </Paragraph>
                                   </Paragraphs>
                                   <rd:DefaultName>Textbox2</rd:DefaultName>
-                                  <Top>0.56943in</Top>
+                                  <Top>1.01117in</Top>
                                   <Left>7.41973in</Left>
                                   <Height>0.21389in</Height>
                                   <Width>0.37165in</Width>
@@ -2340,7 +2340,7 @@
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value>=IIf(First(Fields!service_charge.Value) like 0," ",Fields!service_charge.Value)</Value>
+                                          <Value>=IIf(First(Fields!invoice_debit_flag.Value) = "Y",Fields!service_charge.Value,"  ")</Value>
                                           <Style>
                                             <FontFamily>TH SarabunPSK</FontFamily>
                                             <FontSize>14pt</FontSize>
@@ -2354,7 +2354,7 @@
                                     </Paragraph>
                                   </Paragraphs>
                                   <rd:DefaultName>Textbox2</rd:DefaultName>
-                                  <Top>0.56943in</Top>
+                                  <Top>1.01117in</Top>
                                   <Left>6.61608in</Left>
                                   <Height>0.21389in</Height>
                                   <Width>0.72165in</Width>

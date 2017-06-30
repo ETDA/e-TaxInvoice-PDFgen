@@ -308,10 +308,64 @@ C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxI
 C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.pdb
 C:\Users\pragasit-ETDA\Desktop\pdfgen repository\current\fordeploy20170418\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.csprojResolveAssemblyReference.cache
 C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\favicon.ico
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\arrowLeft.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\arrowRight.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\btn_addtax.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\btn_backHome.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\btn_cancel.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\btn_close@2x.png
 C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\btn_continue.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\btn_dataAdd.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\btn_dataDel.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\btn_del.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\btn_GenPDF.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\btn_nosave.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\btn_ok.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\btn_save.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\buyer_BG.jpg
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\buyer_detail_txtleft.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\buyer_txtleft.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\credit_invoice_BG.jpg
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\credit_invoice_txtleft.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\debit_invoice_BG.jpg
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\debit_invoice_txtleft.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\main_1Btn_shop@2x.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\main_2Btn_buyer@2x.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\main_3Btn_product@2x.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\main_4Btn_tax_invoice@2x.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\main_5Btn_debit_invoice@2x.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\main_6Btn_credit_invoice@2x.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\main_BG@2x.jpg
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\main_txt@2x.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\popup_addProduct.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\PopUp_taxinvoice.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\product_BG.jpg
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\product_detail_txtleft.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\product_txtleft.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\shop_BG.jpg
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\shop_txtleft.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\SplassScreen_SplashScreen.jpg
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\tax_invoice_BG.jpg
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\tax_invoice_txtleft.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\elements\titile.png
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\Resources\favicon.ico
 C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\Resources\template_debit.xml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\pdfA3.pdf
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\Segoe UI.ttf
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\THSarabun Bold Italic.ttf
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\THSarabun Bold.ttf
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\THSarabun Italic.ttf
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\in\THSarabun.ttf
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\Resources\sRGB Color Space Profile.icm
 C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\Resources\template.xml
 C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\Resources\item.xml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\Resources\reference.xml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\Resources\EDocument_PDFAExtensionSchema.xml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\Resources\ContentInformation.xml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\Resources\exchange_document_xmp.xml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\Resources\result.xml
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\Report\tax_multipage.rdlc
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\Report\tax_multipage_return.rdlc
 C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\database.db
 C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.exe.config
 C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\eTaxInvoicePdfGenerator.exe.manifest
@@ -335,6 +389,7 @@ C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\
 C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.csprojResolveAssemblyReference.cache
 C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Interop.Shell32.dll
 C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\eTaxInvoicePdfGenerator.csproj.ResolveComReference.cache
 C:\Users\pragasit-ETDA\Desktop\fordeploy20170418 - Copy\eTaxInvoicePdfGenerator\obj\Debug\Dialogs\AlertBox.g.cs

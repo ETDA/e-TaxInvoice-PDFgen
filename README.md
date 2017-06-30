@@ -1,20 +1,35 @@
-![Alt text](https://raw.githubusercontent.com/ETDA/e-TaxInvoice-PDFgen/master/eTaxInvoicePdfGenerator/icon_AppETax-01.png)
+![Alt text](https://raw.githubusercontent.com/ETDA/e-TaxInvoice-PDFgen/master/eTaxInvoicePdfGenerator/icon_AppETax.png)
 
 
-e-Tax Invoice by Email - PDF Generator on PC is an .NET offline application for generate PDF/A-3 file, which developed and used in e-Tax invoice by email project, that has been included in National e-Payment Master Plan strategy (Tax scheme and electronic transaction) and followed by the regulation of Revenue Department about an invoice standard. 
+## e-Tax Invoice by TeDA - PDF Generator on PC 
 
-The applicaion will generate [PDF/A-3](https://en.wikipedia.org/wiki/PDF/A) archived with XML invoice structure written based on .NET and iTextsharp library
+  e-Tax Invoice by TeDA - PDF Generator on PC  มิติใหม่ของการสร้างใบกำกับภาษีอิเล็กทรอนิกส์ โดยอำนวยความสะดวกให้ผู้ประกอบการ สามารถสร้างใบกำกับภาษีอิเล็กทรอนิกส์ เพื่อสนับสนุนโครงการ e-Tax Invoice by Email ที่เป็นความร่วมมือระหว่าง สพธอ.และกรมสรรพากร 
 
-For more information about e-Tax Invoice by Email please visit [e-Tax](https://etax.teda.th/)
+สพธอ.ได้ พัฒนาโปรแกรมสร้างใบกํากับภาษีในรูปแบบ [PDF/A-3](https://en.wikipedia.org/wiki/PDF/A) ให้มีข้อมูล XML ตามเอกสารข้อเสนอแนะมาตรฐานด้านเทคโนโลยีสารสนเทศ และการสื่อสารที่จําเป็นต่อธุรกรรม ทางอิเล็กทรอนิกส์ (ขมธอ. 3-2560 เวอร์ชั่น 2.0) โดยตัวโปรแกรมนี้จะทํางานบน Stand-alone PC
 
+**คุณลักษณะสำคัญของ e-Tax Invoice by TeDA - PDF Generator on PC  :**
+* บันทึกข้อมูลผู้ประกอบการ ทั้งผู้ขายและผู้ซื้อ
+* บันทึกข้อมูลสินค้า/บริการ
+* สร้างใบกำกับภาษีอิเล็กทรอนิกส์
+* สร้างใบเพิ่มหนี้อิเล็กทรอนิกส์
+* สร้างใบลดหนี้อิเล็กทรอนิกส์
 
 ## Latest Release
-Download the latest Windows x64 : [e-Tax Invoice by Email - PDF Generator on PC](https://github.com/ETDA/e-TaxInvoice-PDFgen/releases/download/0.1.0/e-TaxInvoice-PDFgen0.1.0.zip)
+Windows x64 : [โปรแกรมจัดเตรียมใบกำกับภาษีอิเล็กทรอนิกส์ในรูปแบบ PDF/A-3 สำหรับติดตั้งที่เครื่อง PC](https://github.com/ETDA/e-TaxInvoice-PDFgen/releases/download/0.1.0/e-TaxInvoice-PDFgen0.1.0.zip)
 
-Or release page [release page](https://github.com/ETDA/e-TaxInvoice-PDFgen/releases)
+หรือตรวจสอบ version ทั้งหมดได้จากหน้า [release page](https://github.com/ETDA/e-TaxInvoice-PDFgen/releases)
+
+## Changelog 
+
+[Read full changelog](https://github.com/ponderelar/testgit/blob/master/CHANGELOG.md)
+
+[1.0.0] - 2017-06-28
+
+**Added** 
+- e-Tax Invoice by TeDA - PDF Generator on PC baseline version 
 
 ## Document
-you can download [ installation and user guide ](https://github.com/ETDA/e-TaxInvoice-PDFgen/blob/master/Document/eTax%20Invoice_PDFGen%20on%20PC%20User%20manual.pdf)  
+สามารถ download ได้จาก [ คู่มือโปรแกรมจัดเตรียมใบกำกับภาษีอิเล็กทรอนิกส์ในรูปแบบ PDF/A-3 (PC) ](http://teda.th/files/etaxdocuments/eTaxInvoice_PDF_A3_pc.pdf)  
 
 ## Dependency 
 iTextSharp5.5.9.0 
@@ -22,9 +37,10 @@ iTextSharp5.5.9.0
  * itextsharp.pdfa.dll
  * itextsharp.xtra.dll
 
-Font
- * [THSarabun-PSK](https://github.com/ETDA/e-TaxInvoice-PDFgen/blob/master/Font/th-sarabun-psk.zip)
-    For font installation instruction please read installation and user guide
+## Font
+ สามารถ download ได้จาก [THSarabun-PSK](https://github.com/ETDA/e-TaxInvoice-PDFgen/blob/master/Font/th-sarabun-psk.zip)
+ 
+ > รายละเอียดการลง font สามารถอ่านได้จาก[ คู่มือโปรแกรมจัดเตรียมใบกำกับภาษีอิเล็กทรอนิกส์ในรูปแบบ PDF/A-3 (PC) ](http://teda.th/files/etaxdocuments/eTaxInvoice_PDF_A3_pc.pdf)  
 
 ## License 
 [GNU Affero General Public License v3.0](https://github.com/ETDA/e-TaxInvoice-PDFgen/blob/master/LICENSE)

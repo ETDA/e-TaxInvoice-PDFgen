@@ -176,7 +176,7 @@ namespace eTaxInvoicePdfGenerator.Forms
                     isNew = true;
                 }
                 obj.invoiceName = INVOICE_NAME;
-                if (purposeCbb.SelectedValue.ToString() == "DCNG99" || purposeCbb.SelectedValue.ToString() == "DCNS99")
+                if (purposeCbb.SelectedValue.ToString() == "CDNG99" || purposeCbb.SelectedValue.ToString() == "CDNS99")
                 {
                     obj.purpose = otherPurposeTb.Text;
                 }
@@ -197,7 +197,7 @@ namespace eTaxInvoicePdfGenerator.Forms
                 obj.difference = Convert.ToDouble(diffValueTb.Text);
                 obj.basisAmount = obj.difference;
                 obj.original = Convert.ToDouble(originalValueTotal.Text);
-                obj.issueDate = DateTime.Now.ToString();
+                obj.issueDate = DateTime.Now.ToString("dd/MM/yyyy", new System.Globalization.CultureInfo("en-US"));
 
                 BuyerObj buyer = (BuyerObj)nameCbb.SelectedItem;
                 if (buyer == null)
@@ -326,6 +326,10 @@ namespace eTaxInvoicePdfGenerator.Forms
                 validator.checkBranchID(branchNoTb, is_branch.IsChecked.Value);
             }
             validator.validateCbb(purposeCbb, "สาเหตุการออกเอกสาร", 256, true);
+            if (purposeCbb.SelectedValue.ToString() == "CDNG99" || purposeCbb.SelectedValue.ToString() == "CDNS99")
+            {
+                validator.validateText(otherPurposeTb, "เหตุอื่น", 256, true);
+            }
             validator.validateNameCbb(nameCbb, "ชื่อบริษัท/ผู้ซื้อ", 256, true);
             validator.validateText(address1Tb, "ที่อยู่", 256, false);
             validator.validateText(houseNoTb, "บ้านเลขที่", 256, true);
@@ -493,6 +497,7 @@ namespace eTaxInvoicePdfGenerator.Forms
                 item = config.itemObj;
             }
             setItemsSource(items);
+            lineTotalTb.Text = "0.00";
             calculate();
             this.Show();
         }
@@ -526,6 +531,7 @@ namespace eTaxInvoicePdfGenerator.Forms
                                 }
                             }
                             setItemsSource(items);
+                            lineTotalTb.Text = "0.00";
                             calculate();
                         }
                         catch (Exception ex)
@@ -575,6 +581,7 @@ namespace eTaxInvoicePdfGenerator.Forms
                 items.Add(item.itemObj);
             }
             setItemsSource(items);
+            lineTotalTb.Text = "0.00";
             calculate();
             this.Show();
         }
@@ -589,15 +596,17 @@ namespace eTaxInvoicePdfGenerator.Forms
 
         private void calculate()
         {
-            List<InvoiceItemObj> items = listView.Items.Cast<InvoiceItemObj>().ToList();
-            double lineTotal = 0.0;
-            foreach (InvoiceItemObj item in items)
-            {
-                lineTotal += item.itemTotal;
-            }
-            lineTotalTb.Text = lineTotal.ToString("N");
+            //List<InvoiceItemObj> items = listView.Items.Cast<InvoiceItemObj>().ToList();
+            //double lineTotal = 0.0;
+            //foreach (InvoiceItemObj item in items)
+            //{
+            //    lineTotal += item.itemTotal;
+            //}
+            //lineTotalTb.Text = lineTotal.ToString("N");
 
             //double basisAmount = lineTotal;
+            double lineTotal;
+            double.TryParse(lineTotalTb.Text, out lineTotal);
 
             double original = 0.0;
             double.TryParse(originalValueTotal.Text, out original);
@@ -659,10 +668,15 @@ namespace eTaxInvoicePdfGenerator.Forms
 
         private void lineTotalTb_KeyUp(object sender, KeyEventArgs e)
         {
-            double lineTotal = 0.0;
-            if (double.TryParse(lineTotalTb.Text, out lineTotal))
+            double value = 0.0;
+            if (double.TryParse(lineTotalTb.Text, out value))
             {
                 calculate();
+            }
+
+            if (lineTotalTb.Text == string.Empty)
+            {
+                lineTotalTb.Text = "0.00";
             }
         }
 
@@ -758,7 +772,7 @@ namespace eTaxInvoicePdfGenerator.Forms
 
         private void purposeCbb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (purposeCbb.SelectedValue.ToString() == "CDNCG99" || purposeCbb.SelectedValue.ToString() == "CDNS99")
+            if (purposeCbb.SelectedValue.ToString() == "CDNG99" || purposeCbb.SelectedValue.ToString() == "CDNS99")
             {
                 otherPurposeTb.IsEnabled = true;
             }

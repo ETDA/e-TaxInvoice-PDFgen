@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="eTaxInvoicePdfGenerator.exe" version="0.2.5.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="amd64" type="win32" />
+  <asmv1:assemblyIdentity name="eTaxInvoicePdfGenerator.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="amd64" type="win32" />
   <description asmv2:iconFile="favicon.ico" asmv2:publisher="สำนักงานพัฒนาธุรกรรมทางอิเล็กทรอนิกส์ (ETDA)" co.v1:suiteName="สำนักงานพัฒนาธุรกรรมทางอิเล็กทรอนิกส์ (ETDA)" asmv2:product="e-Tax Invoice by Teda" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -44,14 +44,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="eTaxInvoicePdfGenerator.exe" size="949248">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="eTaxInvoicePdfGenerator.exe" size="950784">
       <assemblyIdentity name="eTaxInvoicePdfGenerator" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>H4Sg9aWBAqNc4Aida9viGICDZes=</dsig:DigestValue>
+        <dsig:DigestValue>0BDWAeuGszww7AoHkGAoXu/Bcb8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -337,7 +337,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>IoNCWnFxoHvnpyvONNqRt3mZPd8=</dsig:DigestValue>
+      <dsig:DigestValue>GaQOo6rz4ktH3KYzOchl5L9Ru6E=</dsig:DigestValue>
     </hash>
   </file>
   <file name="eTaxInvoicePdfGenerator.exe.config" size="1101">
@@ -772,22 +772,22 @@
       <dsig:DigestValue>xU/urO6WLYoTbl51xYqPLXtduBU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Report\tax_multipage.rdlc" size="154731">
+  <file name="Report\tax_multipage.rdlc" size="154653">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>aMAJ14CxHhQVud10I7KSCP//6dA=</dsig:DigestValue>
+      <dsig:DigestValue>z1JaW/aMNmDsycNWKwpyXlF8sLY=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Report\tax_multipage_return.rdlc" size="164367">
+  <file name="Report\tax_multipage_return.rdlc" size="164381">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>jN4hR7f4bxaIE4aDfTln0wu3aS8=</dsig:DigestValue>
+      <dsig:DigestValue>b965d63QpKsEv9Qc8QNyhCjbN8s=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\ContentInformation.xml" size="30">

@@ -41,7 +41,8 @@ namespace eTaxInvoicePdfGenerator
             string fontFolderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Fonts);
             Shell32.Folder fontFolder = GetShell32NameSpaceFolder(fontFolderPath);
             string base_folder = System.AppDomain.CurrentDomain.BaseDirectory + "in\\";
-            string segueUi = "Segoe UI.ttf";
+            //string segueUi = "Segoe UI.ttf";
+            string segueUi = "segoeui.ttf";
             string sarabunBold = "THSarabun Bold.ttf";
             string sarabun = "THSarabun.ttf";
 

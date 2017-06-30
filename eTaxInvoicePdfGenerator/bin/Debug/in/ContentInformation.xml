@@ -10,65 +10,75 @@
         </ram:GuidelineSpecifiedDocumentContextParameter>
     </rsm:ExchangedDocumentContext>
     <rsm:ExchangedDocument>
-        <ram:ID>a0006</ram:ID>
+        <ram:ID>INVasdf00001</ram:ID>
         <ram:Name>ใบกำกับภาษี</ram:Name>
         <ram:TypeCode>388</ram:TypeCode>
-        <ram:IssueDateTime>2017-04-05T00:00:00.000</ram:IssueDateTime>
-        
-        
-        <ram:CreationDateTime>2017-04-05T15:12:17.000</ram:CreationDateTime>
+        <ram:IssueDateTime>2017-06-15T00:00:00.000</ram:IssueDateTime>
+        <ram:Purpose>ชื่อผิด</ram:Purpose >
+        <ram:PurposeCode>TIVC01</ram:PurposeCode >
+        <ram:CreationDateTime>2017-06-15T00:00:00.000</ram:CreationDateTime>
         
     </rsm:ExchangedDocument>
     <rsm:SupplyChainTradeTransaction>
         <ram:ApplicableHeaderTradeAgreement>
             <ram:SellerTradeParty>
-				      <ram:Name>sadfsafd</ram:Name>
+				      <ram:Name>asdf</ram:Name>
               <ram:SpecifiedTaxRegistration>
-              <ram:ID schemeID="TXID">123461136111100000</ram:ID>
+              <ram:ID schemeID="TXID">111111111111100000</ram:ID>
               </ram:SpecifiedTaxRegistration>
               <ram:DefinedTradeContact>
             <ram:EmailURIUniversalCommunication> 
- <ram:URIID>email@mail.com</ram:URIID> 
+ <ram:URIID>a@a.com</ram:URIID> 
  </ram:EmailURIUniversalCommunication> 
 
-            <ram:TelephoneUniversalCommunication> 
- <ram:CompleteNumber>+66-66666666</ram:CompleteNumber> 
- </ram:TelephoneUniversalCommunication> 
-
+           
 </ram:DefinedTradeContact>
                                  
               <ram:PostalTradeAddress>
-                    <ram:PostcodeCode>12346</ram:PostcodeCode>
-                <ram:LineOne>safdsaf</ram:LineOne>
-                <ram:LineTwo>sdsfaf</ram:LineTwo>
-                <ram:CityName>8104</ram:CityName>
-                <ram:CitySubDivisionName>810402</ram:CitySubDivisionName>
+                    <ram:PostcodeCode>11111</ram:PostcodeCode>
+                <ram:LineOne>asdf</ram:LineOne>
+                
+                <ram:CityName>4605</ram:CityName>
+                <ram:CitySubDivisionName>460506</ram:CitySubDivisionName>
                 <ram:CountryID schemeID="3166-1 alpha-2">TH</ram:CountryID>
-					<ram:CountrySubDivisionID>81</ram:CountrySubDivisionID>
-                </ram:PostalTradeAddress>
+                <ram:CountrySubDivisionID>46</ram:CountrySubDivisionID>
+                <ram:BuildingNumber>22/222</ram:BuildingNumber>
+              </ram:PostalTradeAddress>
             </ram:SellerTradeParty>
             <ram:BuyerTradeParty>
-                <ram:Name>ชื่อผู้ประกบอการ</ram:Name>
+                <ram:Name>sad</ram:Name>
               <ram:SpecifiedTaxRegistration>
-                    <ram:ID schemeID="TXID">222222222222100000</ram:ID>
+                    <ram:ID schemeID="TXID">222222222222200000</ram:ID>
                 </ram:SpecifiedTaxRegistration>
-              
+              <ram:DefinedTradeContact>
+            <ram:EmailURIUniversalCommunication> 
+ <ram:URIID>b@b.com</ram:URIID> 
+ </ram:EmailURIUniversalCommunication> 
+
+           
+</ram:DefinedTradeContact>
+                                 
               <ram:PostalTradeAddress>
-                    <ram:PostcodeCode>11111</ram:PostcodeCode>
-                <ram:LineOne>123456</ram:LineOne>
-                <ram:LineTwo>กด</ram:LineTwo>
-                <ram:CityName>8101</ram:CityName>
-                <ram:CitySubDivisionName>810402</ram:CitySubDivisionName>
+                    <ram:PostcodeCode>22222</ram:PostcodeCode>
+                
+                
+                <ram:CityName>1033</ram:CityName>
+                <ram:CitySubDivisionName>103301</ram:CitySubDivisionName>                
                 <ram:CountryID schemeID="3166-1 alpha-2">TH</ram:CountryID>
-					<ram:CountrySubDivisionID>81</ram:CountrySubDivisionID>
-				</ram:PostalTradeAddress>
+                <ram:CountrySubDivisionID>10</ram:CountrySubDivisionID>
+                <ram:BuildingNumber>2/2</ram:BuildingNumber>
+              </ram:PostalTradeAddress>
             </ram:BuyerTradeParty>
-			   
+			   			<ram:AdditionalReferencedCIReferencedDocument>
+				<ram:IssuerAssignedID>11111111111111111111</ram:IssuerAssignedID>
+				<ram:IssueDateTime>2017-06-15T00:00:00.000</ram:IssueDateTime>
+				<ram:ReferenceTypeCode>388</ram:ReferenceTypeCode>
+			</ram:AdditionalReferencedCIReferencedDocument>
         </ram:ApplicableHeaderTradeAgreement>
         <ram:ApplicableHeaderTradeDelivery>
           <ram:ShipToTradeParty>
             <ram:DefinedTradeContact>
-					    <ram:PersonName>ฟหกด</ram:PersonName>
+					    
 				  </ram:DefinedTradeContact>
             </ram:ShipToTradeParty>
         </ram:ApplicableHeaderTradeDelivery>
@@ -77,15 +87,16 @@
             <ram:ApplicableTradeTax>
                 <ram:TypeCode>VAT</ram:TypeCode>
                 <ram:CalculatedRate>7</ram:CalculatedRate>
-                <ram:BasisAmount>38</ram:BasisAmount>
-                <ram:CalculatedAmount>2.66</ram:CalculatedAmount>
+                <ram:BasisAmount>2000</ram:BasisAmount>
+                <ram:CalculatedAmount>140</ram:CalculatedAmount>
             </ram:ApplicableTradeTax>
-            
-       <ram:SpecifiedTradeSettlementHeaderMonetarySummation>
-			     <ram:LineTotalAmount>38</ram:LineTotalAmount>
-           <ram:TaxBasisTotalAmount>38</ram:TaxBasisTotalAmount>
-           <ram:TaxTotalAmount>2.66</ram:TaxTotalAmount>
-           <ram:GrandTotalAmount>40.66</ram:GrandTotalAmount>
+          
+          
+          <ram:SpecifiedTradeSettlementHeaderMonetarySummation>
+			     <ram:LineTotalAmount>2000</ram:LineTotalAmount>
+           <ram:TaxBasisTotalAmount>2000</ram:TaxBasisTotalAmount>
+           <ram:TaxTotalAmount>140</ram:TaxTotalAmount>
+           <ram:GrandTotalAmount>2140</ram:GrandTotalAmount>
        </ram:SpecifiedTradeSettlementHeaderMonetarySummation>
         </ram:ApplicableHeaderTradeSettlement>
 		            <ram:IncludedSupplyChainTradeLineItem>
@@ -95,21 +106,21 @@
             <ram:SpecifiedTradeProduct>
               
                 
-              <ram:Name>test</ram:Name>
+              <ram:Name>asfd</ram:Name>
             </ram:SpecifiedTradeProduct>
             <ram:SpecifiedLineTradeAgreement>
                 <ram:GrossPriceProductTradePrice>
-                    <ram:ChargeAmount>38</ram:ChargeAmount>
+                    <ram:ChargeAmount>2000</ram:ChargeAmount>
                 </ram:GrossPriceProductTradePrice>
             </ram:SpecifiedLineTradeAgreement>
             <ram:SpecifiedLineTradeDelivery>
-                <ram:BilledQuantity unitCode="ZZ">1</ram:BilledQuantity>
+                <ram:BilledQuantity unitCode="AS">1</ram:BilledQuantity>
             </ram:SpecifiedLineTradeDelivery>
             <ram:SpecifiedLineTradeSettlement>
               
               <ram:SpecifiedTradeSettlementLineMonetarySummation>
-                    <ram:NetLineTotalAmount>38</ram:NetLineTotalAmount>
-                    <ram:NetIncludingTaxesLineTotalAmount>40.66</ram:NetIncludingTaxesLineTotalAmount>
+                    <ram:NetLineTotalAmount>2000</ram:NetLineTotalAmount>
+                    <ram:NetIncludingTaxesLineTotalAmount>2140</ram:NetIncludingTaxesLineTotalAmount>
                 </ram:SpecifiedTradeSettlementLineMonetarySummation>
             </ram:SpecifiedLineTradeSettlement>
         </ram:IncludedSupplyChainTradeLineItem>

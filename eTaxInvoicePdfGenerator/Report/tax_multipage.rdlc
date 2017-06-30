@@ -701,7 +701,7 @@
                                         <Paragraph>
                                           <TextRuns>
                                             <TextRun>
-                                              <Value>=IIf(First(Fields!invoice_debit_flag.Value) = "Y" ,"มูลค่าสินค้า/บริการ","มูลค่าสินค้า/บริการตามใบกำกับภาษีเดิม")</Value>
+                                              <Value>=IIf(First(Fields!invoice_debit_flag.Value) = "Y","ส่วนลด","มูลค่าสินค้า/บริการที่ถูกต้อง")</Value>
                                               <Style>
                                                 <FontFamily>TH SarabunPSK</FontFamily>
                                                 <FontSize>14pt</FontSize>
@@ -734,7 +734,7 @@
                                         <Paragraph>
                                           <TextRuns>
                                             <TextRun>
-                                              <Value>=IIf(First(Fields!service_charge.Value) like 0," ","ค่าธรรมเนียม")</Value>
+                                              <Value>=IIf(First(Fields!invoice_debit_flag.Value) = "Y" ,"มูลค่าสินค้า/บริการ","มูลค่าสินค้า/บริการตามใบกำกับภาษีเดิม")</Value>
                                               <Style>
                                                 <FontFamily>TH SarabunPSK</FontFamily>
                                                 <FontSize>14pt</FontSize>
@@ -797,7 +797,7 @@
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value>=IIf(First(Fields!invoice_debit_flag.Value) = "Y","ส่วนลด","มูลค่าสินค้า/บริการที่ถูกต้อง")</Value>
+                                          <Value>=IIf(First(Fields!invoice_debit_flag.Value) = "Y","ค่าบริการ","ค่าบริการ")</Value>
                                           <Style>
                                             <FontFamily>TH SarabunPSK</FontFamily>
                                             <FontSize>14pt</FontSize>
@@ -1103,7 +1103,7 @@
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value>=First(Fields!line_total.Value)</Value>
+                                          <Value>=First(Fields!invoice_discount.Value)</Value>
                                           <Style>
                                             <FontFamily>TH SarabunPSK</FontFamily>
                                             <FontSize>14pt</FontSize>
@@ -1138,7 +1138,7 @@
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value>=First(Fields!invoice_discount.Value)</Value>
+                                          <Value>=First(Fields!service_charge.Value)</Value>
                                           <Style>
                                             <FontFamily>TH SarabunPSK</FontFamily>
                                             <FontSize>14pt</FontSize>
@@ -1409,7 +1409,7 @@
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value>=IIf(First(Fields!service_charge.Value) like 0," ",Fields!service_charge.Value)</Value>
+                                          <Value>=First(Fields!line_total.Value)</Value>
                                           <Style>
                                             <FontFamily>TH SarabunPSK</FontFamily>
                                             <FontSize>14pt</FontSize>
@@ -1444,7 +1444,7 @@
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value>=IIf(First(Fields!service_charge.Value) like 0," ","บาท")</Value>
+                                          <Value>บาท</Value>
                                           <Style>
                                             <FontFamily>TH SarabunPSK</FontFamily>
                                             <FontSize>14pt</FontSize>
