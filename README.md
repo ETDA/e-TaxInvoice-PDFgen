@@ -15,7 +15,7 @@
 * สร้างใบลดหนี้อิเล็กทรอนิกส์
 
 ## Latest Release
-Windows x64 : [โปรแกรมจัดเตรียมใบกำกับภาษีอิเล็กทรอนิกส์ในรูปแบบ PDF/A-3 สำหรับติดตั้งที่เครื่อง PC](https://github.com/ETDA/e-TaxInvoice-PDFgen/releases/download/0.1.0/e-TaxInvoice-PDFgen0.1.0.zip)
+Windows x64 : [โปรแกรมจัดเตรียมใบกำกับภาษีอิเล็กทรอนิกส์ในรูปแบบ PDF/A-3 สำหรับติดตั้งที่เครื่อง PC](https://github.com/ETDA/e-TaxInvoice-PDFgen/releases/download/1.0.0/eTaxInvoice_v1.0.0.zip)
 
 หรือตรวจสอบ version ทั้งหมดได้จากหน้า [release page](https://github.com/ETDA/e-TaxInvoice-PDFgen/releases)
 
