@@ -21,7 +21,7 @@ Windows x64 : [โปรแกรมจัดเตรียมใบกำก�
 
 ## Changelog 
 
-[Read full changelog](https://github.com/ponderelar/testgit/blob/master/CHANGELOG.md)
+[Read full changelog](https://github.com/ETDA/e-TaxInvoice-PDFgen/blob/master/CHANGELOG.md)
 
 [1.0.0] - 2017-06-30
 
