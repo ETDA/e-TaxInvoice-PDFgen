@@ -23,7 +23,7 @@ Windows x64 : [โปรแกรมจัดเตรียมใบกำก�
 
 [Read full changelog](https://github.com/ponderelar/testgit/blob/master/CHANGELOG.md)
 
-[1.0.0] - 2017-06-28
+[1.0.0] - 2017-06-30
 
 **Added** 
 - e-Tax Invoice by TeDA - PDF Generator on PC baseline version 
