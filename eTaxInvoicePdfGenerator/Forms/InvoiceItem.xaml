@@ -21,7 +21,6 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Image x:Name="image" HorizontalAlignment="Stretch" Margin="0,20,0,0" VerticalAlignment="Top" Source="/eTaxInvoicePdfGenerator;component/in/elements/popup_addProduct.png" Width="183" Height="37" />
-        <!--<Label x:Name="label" HorizontalAlignment="Left" Margin="148,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.673,-0.625" Content="เพิ่ม/แก้ไข รายการสินค้า" />-->
         <ComboBox x:Name="itemNameCbb" HorizontalAlignment="Left" Margin="200,93,0,0" VerticalAlignment="Top" Width="200" Height="22" SelectionChanged="itemNameCbb_SelectionChanged" IsEditable="True"/>
         <Label x:Name="label1" Content="ชื่อสินค้า/บริการ *" HorizontalAlignment="Left" Margin="20,90,0,0" VerticalAlignment="Top" Height="28" />
         <Label x:Name="label2" Content="จำนวน *" HorizontalAlignment="Left" Margin="20,164,0,0" VerticalAlignment="Top" Height="28" />

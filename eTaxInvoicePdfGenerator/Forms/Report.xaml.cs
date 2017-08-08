@@ -43,16 +43,9 @@ namespace eTaxInvoicePdfGenerator.Forms
         }
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            //using (StreamReader sr = new StreamReader("..\\..\\Resources\\template.xml"))
-            //{
-            //    string line = sr.ReadToEnd();
-            //    line.IndexOf()
-            //}
-
-                using (Report.InvoiceGenerator invoicegen = new Report.InvoiceGenerator())
-            {   
-                /*get inv field for test*/             
-                invoicegen.create("ETDA000007");                     
+            using (Report.InvoiceGenerator invoicegen = new Report.InvoiceGenerator())
+            {               
+                invoicegen.create("ETDA000007");
                 var a = invoicegen.getStringXml();
                 var b = invoicegen.getBytePdf();
                 var c = invoicegen.getByteXml();

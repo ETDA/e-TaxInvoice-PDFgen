@@ -87,8 +87,6 @@ namespace eTaxInvoicePdfGenerator.Forms
             provinceCbb.SelectionChanged -= new SelectionChangedEventHandler(provinceCbb_SelectionChanged);
             util.ProvinceCodeList pcl = new util.ProvinceCodeList();
             pcl.SetChangwat(provinceCbb);
-            //pcl.SetAmphoe(amphoeCbb, ((AddressCodeListObj)provinceCbb.SelectedItem).code.Substring(0, 2));
-            //pcl.SetTambon(tambonCbb, ((AddressCodeListObj)amphoeCbb.SelectedItem).code.Substring(0, 4));
             provinceCbb.SelectionChanged += new SelectionChangedEventHandler(provinceCbb_SelectionChanged);
         }
 

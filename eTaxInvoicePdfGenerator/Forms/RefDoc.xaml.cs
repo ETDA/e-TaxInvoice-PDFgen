@@ -18,7 +18,6 @@ namespace eTaxInvoicePdfGenerator.Forms
         public string invoiceId;
         public List<ReferenceObj> refList { get; set; }
         private Collection<TypeCodeObj> typeCodes = new Collection<TypeCodeObj>() {
-            //new TypeCodeObj("ALT", "ใบกำกับภาษี"),
             new TypeCodeObj("81", "ใบลดหนี้"),
             new TypeCodeObj("80", "ใบเพิ่มหนี้")
         };
@@ -131,7 +130,6 @@ namespace eTaxInvoicePdfGenerator.Forms
         {
             documentId1.Text = "";
             documentDate1.Text = "";
-            //typeCode1.SelectedItem = null;
             typeCode1.IsEditable = true;
             typeCode1.IsEnabled = false;
             typeCode1.Text = "ใบกำกับภาษี";
@@ -361,8 +359,6 @@ namespace eTaxInvoicePdfGenerator.Forms
         private void delBtn_Click(object sender, RoutedEventArgs e)
         {
             DelNo dn = new DelNo("ต้องการลบข้อมูลหรือไม่", "ยืนยันการลบรายการ");
-            //yn.yesBtn.Content = "ลบ";
-            //yn.noBtn.Content = "ยกเลิก";
             dn.ShowDialog();
             switch (dn.response)
             {

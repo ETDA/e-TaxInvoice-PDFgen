@@ -56,7 +56,6 @@ namespace eTaxInvoicePdfGenerator.Forms
                 nameCbb.ItemsSource = buyerList;
                 seller = new SellerDao().select();
                 vatTb.Text = seller.vat.ToString("N");
-                //this.invoiceID = seller.running_prefix + seller.running_number;
                 this.invoiceID = PREFIX + seller.crn_no;
 
                 List<CauseCodeListObj> list = new CauseCodeListDao().list("ใบลดหนี้");
@@ -94,7 +93,6 @@ namespace eTaxInvoicePdfGenerator.Forms
                 ReferenceObj ref1 = refList.FirstOrDefault(s => s.number == 1);
                 if (ref1 == null)
                 {
-                    //refList.Add(new ReferenceObj(1, this.invoiceID, docIdTb.Text, docDateTb.Text, REF_TYPE, new TypeCodeObj(REF_TYPE, "ใบกำกับภาษี")));
                     refList.Add(new ReferenceObj(1));
                 }
                 ref1 = refList.FirstOrDefault(s => s.number == 1);
@@ -155,8 +153,6 @@ namespace eTaxInvoicePdfGenerator.Forms
             provinceCbb.SelectionChanged -= new SelectionChangedEventHandler(provinceCbb_SelectionChanged);
             util.ProvinceCodeList pcl = new util.ProvinceCodeList();
             pcl.SetChangwat(provinceCbb);
-            //pcl.SetAmphoe(amphoeCbb, ((AddressCodeListObj)provinceCbb.SelectedItem).code.Substring(0, 2));
-            //pcl.SetTambon(tambonCbb, ((AddressCodeListObj)amphoeCbb.SelectedItem).code.Substring(0, 4));
             provinceCbb.SelectionChanged += new SelectionChangedEventHandler(provinceCbb_SelectionChanged);
         }
 
@@ -352,33 +348,6 @@ namespace eTaxInvoicePdfGenerator.Forms
             validator.validateDoubleRate(vatTb, "อัตราภาษีมูลค่าเพิ่ม", 99.99);
         }
 
-        #region backup checkBranchID function
-        //private void checkBranchID()
-        //{
-        //    if (is_branch.IsChecked == true)
-        //    {
-        //        int intTemp;
-        //        if (int.TryParse(branchNoTb.Text, out intTemp))
-        //        {
-        //            string temp = branchNoTb.Text;
-        //            while (temp.Length < 5)
-        //            {
-        //                temp = "0" + temp;
-        //            }
-        //            branchNoTb.Text = temp;
-        //        }
-        //        else
-        //        {
-        //            new AlertBox("กรุณาใส่เลขที่สาขา เป็นตัวเลขความยาวไม่เกิน 5 หลัก และไม่ใช่ \"00000\"").ShowDialog();
-        //        }
-        //    }
-        //    else
-        //    {
-        //        branchNoTb.Text = "";
-        //    }
-        //}
-        #endregion
-
         private void createBtn_Click(object sender, RoutedEventArgs e)
         {
             createBtn.IsEnabled = false;
@@ -404,7 +373,6 @@ namespace eTaxInvoicePdfGenerator.Forms
                         System.IO.File.WriteAllBytes(pdfFilePath, pdfByte);
                         string xmlFilePath = base_folder + "in/ContentInformation.xml";
                         string xmlFileName = "ETDA-invoice.xml";
-                        //System.IO.File.WriteAllBytes(xmlFileName, xmlByte);
                         System.IO.File.WriteAllText(xmlFilePath, xmlString, System.Text.Encoding.UTF8);
 
                         string xmlVersion = "1.0";
@@ -460,7 +428,6 @@ namespace eTaxInvoicePdfGenerator.Forms
             refDoc.invoiceId = this.invoiceID;
             setRef1();
             refDoc.refList = this.refList;
-            //this.Hide();
             bool result = refDoc.ShowDialog().Value;
             if (result)
             {
@@ -489,7 +456,6 @@ namespace eTaxInvoicePdfGenerator.Forms
             InvoiceItem config = new InvoiceItem();
             List<InvoiceItemObj> items = listView.Items.Cast<InvoiceItemObj>().ToList();
             config.itemObj = itemObj;
-            //this.Hide();
             bool result = config.ShowDialog().Value;
             if (result)
             {
@@ -596,15 +562,6 @@ namespace eTaxInvoicePdfGenerator.Forms
 
         private void calculate()
         {
-            //List<InvoiceItemObj> items = listView.Items.Cast<InvoiceItemObj>().ToList();
-            //double lineTotal = 0.0;
-            //foreach (InvoiceItemObj item in items)
-            //{
-            //    lineTotal += item.itemTotal;
-            //}
-            //lineTotalTb.Text = lineTotal.ToString("N");
-
-            //double basisAmount = lineTotal;
             double lineTotal;
             double.TryParse(lineTotalTb.Text, out lineTotal);
 
@@ -733,7 +690,6 @@ namespace eTaxInvoicePdfGenerator.Forms
                 amphoeCbb.SelectionChanged -= new SelectionChangedEventHandler(amphoeCbb_SelectionChanged);
                 pcl.SetAmphoe(amphoeCbb, ((AddressCodeListObj)provinceCbb.SelectedItem).code.Substring(0, 2));
                 amphoeCbb.SelectionChanged += new SelectionChangedEventHandler(amphoeCbb_SelectionChanged);
-                //pcl.SetTambon(tambonCbb, ((AddressCodeListObj)amphoeCbb.SelectedItem).code.Substring(0, 4));
             }
             else
             {

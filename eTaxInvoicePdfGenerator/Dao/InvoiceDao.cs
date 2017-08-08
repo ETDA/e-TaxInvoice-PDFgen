@@ -15,7 +15,6 @@ namespace eTaxInvoicePdfGenerator.Dao
         public InvoiceDao()
         {
             string base_folder = System.AppDomain.CurrentDomain.BaseDirectory;
-            //sqlite = new Sqlite(base_folder + Properties.Resources.datasource);
             sqlite = new Sqlite(base_folder + "database.db");
         }
         internal InvoiceObj select()

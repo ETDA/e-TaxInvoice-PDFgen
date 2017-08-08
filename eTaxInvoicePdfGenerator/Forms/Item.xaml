@@ -50,7 +50,6 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <!--<GridViewColumn Header="ID" DisplayMemberBinding="{Binding id}"  Width="40" />-->
                     <GridViewColumn Header="ชื่อสินค้า/บริการ" DisplayMemberBinding="{Binding name}" Width="150"/>
                     <GridViewColumn Header="รายละเอียดสินค้า" DisplayMemberBinding="{Binding detail}" Width="150"/>
                     <GridViewColumn Header="ราคาต่อหน่วย(บาท)" DisplayMemberBinding="{Binding price_per_unit}" Width="150"/>

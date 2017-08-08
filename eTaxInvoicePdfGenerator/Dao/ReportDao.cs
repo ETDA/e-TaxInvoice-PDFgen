@@ -126,7 +126,6 @@ namespace eTaxInvoicePdfGenerator.Dao
         {
             try
             {
-                //sqlite = new Sqlite("");
                 string Query = query;
                 DataTable dt = new System.Data.DataTable();
                 dt = sqlite.ExecuteDataTable(Query);

@@ -115,7 +115,6 @@ namespace eTaxInvoicePdfGenerator.Forms
             catch (Exception ex)
             {
                 new AlertBox(ex.Message).ShowDialog();
-                // MessageBox.Show(ex.Message);
             }
         }
 
@@ -123,9 +122,7 @@ namespace eTaxInvoicePdfGenerator.Forms
         {
             provinceCbb.SelectionChanged -= new SelectionChangedEventHandler(provinceCbb_SelectionChanged);
             util.ProvinceCodeList pcl = new util.ProvinceCodeList();
-            pcl.SetChangwat(provinceCbb);
-            //pcl.SetAmphoe(amphoeCbb, ((AddressCodeListObj)provinceCbb.SelectedItem).code.Substring(0, 2));
-            //pcl.SetTambon(tambonCbb, ((AddressCodeListObj)amphoeCbb.SelectedItem).code.Substring(0, 4));
+            pcl.SetChangwat(provinceCbb);            
             provinceCbb.SelectionChanged += new SelectionChangedEventHandler(provinceCbb_SelectionChanged);
         }
 
@@ -159,19 +156,7 @@ namespace eTaxInvoicePdfGenerator.Forms
                 obj.inv_no = invRunningNumberTb.Text;
                 obj.dbn_no = dbnRunningNumberTb.Text;
                 obj.crn_no = CrnRunningNumberTb.Text;
-
-                //Regex re = new Regex(@"([\D]+)?([\d]+)?$");
-                //Match result = re.Match(runningNumberTb.Text.Trim());
-                //if (result.Success)
-                //{
-                //    obj.running_prefix = result.Groups[1].Value;
-                //    obj.running_number = result.Groups[2].Value;
-                //}
-                //else
-                //{
-                //    obj.running_prefix = "";
-                //    obj.running_number = "0001";
-                //}
+                
                 obj.provinceCode = ((AddressCodeListObj)provinceCbb.SelectedItem).code.Substring(0, 2);
                 obj.provinceName = ((AddressCodeListObj)provinceCbb.SelectedItem).changwat_th;
                 obj.districtCode = ((AddressCodeListObj)amphoeCbb.SelectedItem).code.Substring(0, 4);
@@ -358,7 +343,6 @@ namespace eTaxInvoicePdfGenerator.Forms
                 amphoeCbb.SelectionChanged -= new SelectionChangedEventHandler(amphoeCbb_SelectionChanged);
                 pcl.SetAmphoe(amphoeCbb, ((AddressCodeListObj)provinceCbb.SelectedItem).code.Substring(0, 2));
                 amphoeCbb.SelectionChanged += new SelectionChangedEventHandler(amphoeCbb_SelectionChanged);
-                //pcl.SetTambon(tambonCbb, ((AddressCodeListObj)amphoeCbb.SelectedItem).code.Substring(0, 4));
             }
             else
             {

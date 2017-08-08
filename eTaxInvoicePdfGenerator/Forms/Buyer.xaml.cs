@@ -57,7 +57,6 @@ namespace eTaxInvoicePdfGenerator.Forms
                 checkPagination();
 
                 // add item list
-                //listView.ItemsSource = new BuyerDao().listView(page, this.pageSize);
                 listView.ItemsSource = new BuyerDao().listView(page, this.pageSize, this.sortingProperty, this.sortingDirection);
             }
             catch (Exception ex)
@@ -208,12 +207,10 @@ namespace eTaxInvoicePdfGenerator.Forms
                 if (_sortColumn != null)
                 {
                     _sortColumn.Column.HeaderTemplate = null;
-                    //_sortColumn.Column.Width = _sortColumn.ActualWidth - 10;
                 }
 
                 _sortColumn = column;
                 _sortDirection = ListSortDirection.Ascending;
-                //column.Column.Width = column.ActualWidth + 10;
             }
 
             if (_sortDirection == ListSortDirection.Ascending)
@@ -244,13 +241,6 @@ namespace eTaxInvoicePdfGenerator.Forms
                 }
             }
             listView.ItemsSource = new BuyerDao().listView(this.currentPage, this.pageSize, this.sortingProperty, this.sortingDirection);
-
-
-            //ICollectionView resultDataView = CollectionViewSource.GetDefaultView(
-            //                                           listView.ItemsSource);
-            //resultDataView.SortDescriptions.Clear();
-            //resultDataView.SortDescriptions.Add(
-            //                            new SortDescription(header, _sortDirection));
         }
 
         private void shutdownBtn_Click(object sender, RoutedEventArgs e)

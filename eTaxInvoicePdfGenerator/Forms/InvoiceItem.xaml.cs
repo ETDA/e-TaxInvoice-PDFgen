@@ -202,7 +202,6 @@ namespace eTaxInvoicePdfGenerator.Forms
                             itemObj.unitXml = "ZZ";
                         }
                         itemObj.unit = unitCbb.Text;
-                        //new CodeListDao().save(new CodeList("ZZ", unitCbb.Text));
                     }
                     else
                     {

@@ -15,7 +15,6 @@ namespace eTaxInvoicePdfGenerator.util
             {
                 obj.Focus();
                 throw new Exception(string.Format("กรุณาระบุ{0}", name));
-                //throw new Exception(string.Format("กรุณากรอก{0} ความยาวไม่เกิน {1} ตัวอักษร", name, length));
             }
         }
 
@@ -25,7 +24,6 @@ namespace eTaxInvoicePdfGenerator.util
             {
                 obj.Focus();
                 throw new Exception(string.Format("กรุณากรอก{0}", name));
-                //throw new Exception(string.Format("กรุณาระบุ{0} ความยาวไม่เกิน {1} ตัวอักษร", name, length));
             }
         }
 
@@ -143,7 +141,6 @@ namespace eTaxInvoicePdfGenerator.util
             {
                 obj.Focus();
                 throw new Exception("ระบุเลขประจำตัวผู้เสียภาษีอากรไม่ถูกต้อง โปรดตรวจสอบ");
-                //throw new Exception("กรุณากรอกเลขประจําตัวผู้เสียภาษีอากร เป็นตัวเลขความยาว 13 หลัก");
             }
         }
 
@@ -173,7 +170,6 @@ namespace eTaxInvoicePdfGenerator.util
                     if (!Regex.IsMatch(phoneExt.Text, @"^[0-9\(\)\+\-]{1,10}$"))
                     {
                         phoneExt.Focus();
-                        //throw new Exception(string.Format("กรุณาใส่{0}และเบอร์ต่อ ช่องนี้รองรับตัวเลข และอักขระ  \"(\", \")\", \" + \", \" - \" เท่านั้น ความยาว ไม่เกิน 24 ตัวอักษร", name));
                         throw new Exception(string.Format("ระบุเบอร์โทรศัพท์หรือเบอร์ต่อไม่ถูกต้อง โปรดตรวจสอบ", name));
                     }
                 }
@@ -181,7 +177,6 @@ namespace eTaxInvoicePdfGenerator.util
                 if (!Regex.IsMatch(phoneNo.Text, @"^[0-9\(\)\+\-]{1,16}$"))
                 {
                     phoneNo.Focus();
-                    //throw new Exception(string.Format("กรุณาใส่{0} ช่องนี้รองรับตัวเลข และอักขระ  \"(\", \")\", \" + \", \" - \" เท่านั้น ความยาว ไม่เกิน 26 ตัวอักษร", name));
                     throw new Exception(string.Format("ระบุเบอร์โทรศัพท์หรือเบอร์ต่อไม่ถูกต้อง โปรดตรวจสอบ", name));
                 }
 
@@ -198,7 +193,6 @@ namespace eTaxInvoicePdfGenerator.util
             {
                 phoneExt.Text = "";
                 phoneNo.Focus();
-                //new Dialogs.AlertBox(string.Format("กรุณาใส่{0} ช่องนี้รองรับตัวเลข และอักขระ  \"(\", \")\", \" + \", \" - \" เท่านั้น ความยาว ไม่เกิน 26 ตัวอักษร",name)).ShowDialog();
                 new Dialogs.AlertBox("ระบุเบอร์โทรศัพท์หรือเบอร์ต่อไม่ถูกต้อง โปรดตรวจสอบ").ShowDialog();
             }
         }
@@ -245,7 +239,6 @@ namespace eTaxInvoicePdfGenerator.util
                 if (!Regex.IsMatch(obj.Text, @"^[0-9a-zA-Z]{1,35}$") || obj.Text.Length > 35)
                 {
                     obj.Focus();
-                    //throw new Exception("กรุณากรอกรหัสสินค้า ช่องนี้รองรับตัวอักษร A-Z และตัวเลข 0-9 เท่านั้น ความยาวไม่เกิน 35 ตัวอักษร");
                     throw new Exception("ระบุรหัสสินค้าไม่ถูกต้อง โปรดตรวจสอบ");
                 }
             }
@@ -258,7 +251,6 @@ namespace eTaxInvoicePdfGenerator.util
                 if (!Regex.IsMatch(obj.Text, @"^[0-9]{13,14}$") || obj.Text.Length > 14)
                 {
                     obj.Focus();
-                    //throw new Exception("กรุณาใส่รหัสสินค้าสากล ช่องนี้รองรับตัวเลข 0-9 เท่านั้น ความยาว 13 หรือ 14 ตัวอักษร");
                     throw new Exception("ท่านระบุรหัสสินค้าสากลไม่ถูกต้อง โปรดตรวจสอบ");
                 }
             }
@@ -356,7 +348,6 @@ namespace eTaxInvoicePdfGenerator.util
             {
                 obj.Focus();
                 throw new Exception("ระบุเลขที่สาขาไม่ถูกต้อง โปรดตรวจสอบ");
-                //throw new Exception("กรุณากรอกเลขที่สาขา เป็นตัวเลขความยาวไม่เกิน 5 หลัก และไม่ใช่ \"00000\"");
             }
         }
 
@@ -376,7 +367,6 @@ namespace eTaxInvoicePdfGenerator.util
                 }
                 else
                 {
-                    //new AlertBox("กรุณาใส่เลขที่สาขา เป็นตัวเลขความยาวไม่เกิน 5 หลัก และไม่ใช่ \"00000\"").ShowDialog();
                     throw new Exception("ระบุเลขที่สาขาไม่ถูกต้อง โปรดตรวจสอบ");
                 }
             }
