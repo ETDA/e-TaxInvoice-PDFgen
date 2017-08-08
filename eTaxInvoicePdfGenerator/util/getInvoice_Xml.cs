@@ -35,25 +35,22 @@ namespace eTaxInvoicePdfGenerator.util
 
             if (!string.IsNullOrEmpty(cancleReason))
             {
-                //PurposeCode = "TIVC99";
+                
             }
             if (name == "ใบเพิ่มหนี้")
             {
                 typeCode = "80";
-                //PurposeCode = "DBNG99";
 
             }
             else if (name == "ใบลดหนี้")
             {
                 typeCode = "81";
-                //PurposeCode = "CDNG99";
             }
             else
             {
                 typeCode = "388";
                 templatePath = "Resources\\template.xml";
-            }
-            
+            }            
 
             try
             {
@@ -172,7 +169,6 @@ namespace eTaxInvoicePdfGenerator.util
                 { "*seller_country",XmlObj.sellerCountry },
                 {"*sellercountry_subdivision_id",(string.IsNullOrWhiteSpace(XmlObj.sellerCountrySubID))? "":"<ram:CountrySubDivisionID>"+XmlObj.sellerCountrySubID+"</ram:CountrySubDivisionID>"},
                 {"*seller_building_name",(string.IsNullOrWhiteSpace(XmlObj.sellerBuildingName))? "":"<ram:BuildingNumber>"+XmlObj.sellerBuildingName+"</ram:BuildingNumber>" },
-
                 { "*buyer_name",XmlObj.buyerName},
                 {"*buyer_taxid",XmlObj.buyerTaxid },
                 {"*buyer_DefinedCITradeContact",getCITradeContact(XmlObj.buyereMail,XmlObj.buyercontactPersonPhoneno)},
@@ -235,8 +231,6 @@ namespace eTaxInvoicePdfGenerator.util
                             {"*item_order",i.ToString()},
                             {"*item_price_per_unit",dr["price_per_unit"].ToString()},
                             {"*item_quantity",dr["quantity"].ToString() },
-                            //{"*item_charge_indicator",dr["charge_indicator"].ToString() },
-                            //{"*item_discount", dr["item_discount"].ToString()},
                             {"*item_total",dr["item_total"].ToString()},
                             {"*item_including_tax",dr["item_total_including_tax"].ToString()},
                             { "*item_global_id",(string.IsNullOrWhiteSpace(dr["item_code_inter"].ToString()))?"":"<ram:GlobalID schemeID=\"GTIN\" schemeAgencyID=\"GS1\">"+dr["item_code_inter"].ToString()+"</ram:GlobalID>"},
@@ -244,8 +238,6 @@ namespace eTaxInvoicePdfGenerator.util
                             {"*item_name",(string.IsNullOrWhiteSpace(dr["item_name"].ToString()))?"":"<ram:Name>"+dr["item_name"].ToString()+"</ram:Name>"},
                             {"*item_unit_code",(string.IsNullOrWhiteSpace(dr["unit_xml"].ToString()))? "":"unitCode="+'"'+dr["unit_xml"].ToString()+'"'},
                             {"*trade_allowance",(string.IsNullOrWhiteSpace(dr["item_discount"].ToString()) || dr["item_discount"].ToString() == "0" )? "":getActualAmount_discount(dr["item_discount"].ToString(),dr["charge_indicator"].ToString())}
-                            //{"*reason",(string.IsNullOrWhiteSpace(XmlObj.reason))? "":XmlObj.reason},
-                            //{"*reason_code",(string.IsNullOrWhiteSpace(XmlObj.reasonCode))? "":XmlObj.reasonCode}
                         };
 
                         // Read the stream to a string, and write the string to the console.

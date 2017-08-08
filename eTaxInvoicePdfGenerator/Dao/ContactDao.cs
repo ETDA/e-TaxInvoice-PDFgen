@@ -16,7 +16,6 @@ namespace eTaxInvoicePdfGenerator.Dao
         public ContactDao()
         {
             string base_folder = System.AppDomain.CurrentDomain.BaseDirectory;
-            //sqlite = new Sqlite(base_folder + Properties.Resources.datasource);
             sqlite = new Sqlite(base_folder + "database.db");
         }
         internal ContactObj select()
@@ -38,18 +37,13 @@ namespace eTaxInvoicePdfGenerator.Dao
                                 data.name = dr["name"].ToString();
                                 data.taxId = dr["tax_id"].ToString();
                                 data.branchId = dr["branch_id"].ToString();
-                                //data.website = dr["website"].ToString();
                                 data.email = dr["email"].ToString();
                                 data.zipCode = dr["zipcode"].ToString();
                                 data.address1 = dr["address1"].ToString();
-                                //data.address2 = dr["address2"].ToString();
                                 data.country = dr["country"].ToString();
                                 data.contactPerson = dr["contact_person"].ToString();
                                 data.phoneNo = dr["phone_no"].ToString();
                                 data.phoneExt = dr["phone_ext"].ToString();
-                                //data.faxNo = dr["fax_no"].ToString();
-                                //data.faxExt = dr["fax_ext"].ToString();
-
                                 data.provinceName = dr["province_name"].ToString();
                                 data.provinceCode = dr["province_code"].ToString();
                                 data.districtName = dr["district_name"].ToString();
@@ -119,17 +113,13 @@ namespace eTaxInvoicePdfGenerator.Dao
                     cmd.Parameters.AddWithValue("@name", obj.name);
                     cmd.Parameters.AddWithValue("@tax_id", obj.taxId);
                     cmd.Parameters.AddWithValue("@branch_id", obj.branchId);
-                    //cmd.Parameters.AddWithValue("@website", obj.website);
                     cmd.Parameters.AddWithValue("@email", obj.email);
                     cmd.Parameters.AddWithValue("@zipcode", obj.zipCode);
                     cmd.Parameters.AddWithValue("@address1", obj.address1);
-                    //cmd.Parameters.AddWithValue("@address2", obj.address2);
                     cmd.Parameters.AddWithValue("@country", obj.country);
                     cmd.Parameters.AddWithValue("@contact_person", obj.contactPerson);
                     cmd.Parameters.AddWithValue("@phone_no", obj.phoneNo);
                     cmd.Parameters.AddWithValue("@phone_ext", obj.phoneExt);
-                    //cmd.Parameters.AddWithValue("@fax_no", obj.faxNo);
-                    //cmd.Parameters.AddWithValue("@fax_ext", obj.faxExt);
 
                     cmd.Parameters.AddWithValue("@province_name", obj.provinceName);
                     cmd.Parameters.AddWithValue("@province_code", obj.provinceCode);

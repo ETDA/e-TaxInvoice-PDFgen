@@ -13,7 +13,6 @@ namespace eTaxInvoicePdfGenerator.Dao
         public BuyerDao()
         {
             string base_folder = System.AppDomain.CurrentDomain.BaseDirectory;
-            //sqlite = new Sqlite(base_folder + Properties.Resources.datasource);
             sqlite = new Sqlite(base_folder + "database.db");
         }
 
@@ -40,12 +39,8 @@ namespace eTaxInvoicePdfGenerator.Dao
                                 data.phoneExt = dr["phone_ext"].ToString();
                                 data.zipCode = dr["zipcode"].ToString();
                                 data.address1 = dr["address1"].ToString();
-                                //data.address2 = dr["address2"].ToString();
                                 data.email = dr["email"].ToString();
-                                //data.website = dr["website"].ToString();
                                 data.contactPerson = dr["contact_person"].ToString();
-                                //data.faxNo = dr["fax_no"].ToString();
-                                //data.faxExt = dr["fax_ext"].ToString();
                                 data.isBranch = Convert.ToBoolean(dr["is_branch"]);
                                 data.branchId = dr["branch_id"].ToString();
 
@@ -145,18 +140,14 @@ namespace eTaxInvoicePdfGenerator.Dao
                                 obj.id = Convert.ToInt32(dr["id"]);
                                 obj.name = dr["name"].ToString();
                                 obj.address1 = dr["address1"].ToString();
-                                //obj.address2 = dr["address2"].ToString();
                                 obj.zipCode = dr["zipcode"].ToString();
                                 obj.taxId = dr["tax_id"].ToString();
                                 obj.isBranch = Convert.ToBoolean(dr["is_branch"]);
                                 obj.branchId = dr["branch_id"].ToString();
-                                //obj.website = dr["website"].ToString();
                                 obj.email = dr["email"].ToString();
                                 obj.contactPerson = dr["contact_person"].ToString();
                                 obj.phoneNo = dr["phone_no"].ToString();
                                 obj.phoneExt = dr["phone_ext"].ToString();
-                                //obj.faxNo = dr["fax_no"].ToString();
-                                //obj.faxExt = dr["fax_ext"].ToString();
 
                                 obj.provinceCode = dr["province_code"].ToString();
                                 obj.provinceName = dr["province_name"].ToString();
@@ -230,12 +221,8 @@ namespace eTaxInvoicePdfGenerator.Dao
                     cmd.Parameters.AddWithValue("@phone_ext", obj.phoneExt);
                     cmd.Parameters.AddWithValue("@zipcode", obj.zipCode);
                     cmd.Parameters.AddWithValue("@address1", obj.address1);
-                    //cmd.Parameters.AddWithValue("@address2", obj.address2);
                     cmd.Parameters.AddWithValue("@email", obj.email);
-                    //cmd.Parameters.AddWithValue("@website", obj.website);
                     cmd.Parameters.AddWithValue("@contact_person", obj.contactPerson);
-                    //cmd.Parameters.AddWithValue("@fax_no", obj.faxNo);
-                    //cmd.Parameters.AddWithValue("@fax_ext", obj.faxExt);
                     cmd.Parameters.AddWithValue("@is_branch", (obj.isBranch) ? 1 : 0);
                     cmd.Parameters.AddWithValue("@branch_id", obj.branchId);
 

@@ -16,7 +16,6 @@
     <Grid Margin="0,1,0,-1">
         <Image x:Name="image" HorizontalAlignment="Stretch" Margin="0,20,0,0" VerticalAlignment="Top" Source="/eTaxInvoicePdfGenerator;component/in/elements/PopUp_taxinvoice.png" Width="183" Height="37" />
 
-        <!--<Label x:Name="label" Content="ใบกำกับภาษีที่อ้างถึง" HorizontalAlignment="Left" Margin="29,21,0,0" VerticalAlignment="Top" FontSize="20"/>-->
         <Label x:Name="label1" Content="ลำดับที่" HorizontalAlignment="Left" Margin="80,77,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="เลขที่เอกสารอ้างอิง *" HorizontalAlignment="Left" Margin="153,77,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label3" Content="วันที่ออกเอกสาร *" HorizontalAlignment="Left" Margin="324,77,0,0" VerticalAlignment="Top"/>

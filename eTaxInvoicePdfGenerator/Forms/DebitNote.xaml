@@ -70,7 +70,6 @@
                                 <GridViewColumn Header="หน่วย" DisplayMemberBinding="{Binding unit}" Width="120"/>
                                 <GridViewColumn Header="ราคาต่อหน่วย *" DisplayMemberBinding="{Binding pricePerUnitText}" Width="110"/>
                                 <GridViewColumn Header="ส่วนลด" DisplayMemberBinding="{Binding discountText}" Width="100" />
-                                <!--<GridViewColumn Header="" DisplayMemberBinding="{Binding discountTotal}" Width="50"/>-->
                                 <GridViewColumn Header="จำนวนเงิน (ไม่รวม VAT)" Width="160" >
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>

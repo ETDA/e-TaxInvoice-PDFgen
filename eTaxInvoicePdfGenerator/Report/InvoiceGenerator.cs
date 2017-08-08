@@ -12,9 +12,7 @@ namespace eTaxInvoicePdfGenerator.Report
         byte[] invoicePdf;
         byte[] invoiceXmlbyte;
         string invoiceXmlstring;
-
-        /*LOCAL RDLC*/
-        //const string absolutepath = "..\\..\\";
+        
 
         /*DEPLOY RDLC*/
         const string absolutepath = "";
@@ -146,23 +144,7 @@ namespace eTaxInvoicePdfGenerator.Report
 
                     util.getInvoice_Xml invXml = new util.getInvoice_Xml(buyer, seller, reference, item, invoice_id, absolutepath);
                     invoiceXmlstring = invXml.get_Xml();
-                    invoiceXmlbyte = Encoding.ASCII.GetBytes(invoiceXmlstring);
-
-                    //System.IO.File.WriteAllBytes("test.pdf", invoicePdf);
-
-                    //Response.Buffer = true;
-                    //Response.Clear();
-                    //Response.ContentType = mimeType;
-                    //Response.AddHeader("content-disposition", "attachment; filename=" + fileName + "." + extension);
-                    //Response.BinaryWrite(bytes); // create the file
-                    //Response.Flush(); // send it to the client to download
-
-                    /*string[] netpath = path.Split('\\');
-                    string newpath = netpath[0] + "\\" + netpath[1] + "\\" + netpath[2] + "\\" + netpath[3] + "\\" + "Export.xml";
-                    System.IO.File.WriteAllText(newpath, XML);*/
-
-                    //_reportViewer.RefreshReport();
-                    //_isReportViewerLoaded = true;
+                    invoiceXmlbyte = Encoding.ASCII.GetBytes(invoiceXmlstring);                    
                 }
                 else
                 {
@@ -236,7 +218,6 @@ namespace eTaxInvoicePdfGenerator.Report
                     reportViewer.LocalReport.DisplayName = "Hello";
                     invoicePdf = reportViewer.LocalReport.Render("PDF", null, out mimeType, out encoding, out extension, out streamIds, out warnings);
 
-                    //System.IO.File.WriteAllBytes("test.pdf", invoicePdf);
                     util.getInvoice_Xml invXml = new util.getInvoice_Xml(buyer, seller, reference, item, invoice_id, absolutepath);
                     invoiceXmlstring = invXml.get_Xml();
                     invoiceXmlbyte = Encoding.ASCII.GetBytes(invoiceXmlstring);
@@ -250,8 +231,6 @@ namespace eTaxInvoicePdfGenerator.Report
                 System.Windows.MessageBox.Show(ex.InnerException.StackTrace);
             }
         }
-
-
     }
 }
 

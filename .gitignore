@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.suo
+/eTaxInvoicePdfGenerator/obj/Debug/eTaxInvoicePdfGenerator_MarkupCompile.i.lref
+/eTaxInvoicePdfGenerator/obj/Debug/CoreCompileInputs.cache
+*.cache
+/eTaxInvoicePdfGenerator/obj/Debug/eTaxInvoicePdfGenerator_MarkupCompile.i.lref

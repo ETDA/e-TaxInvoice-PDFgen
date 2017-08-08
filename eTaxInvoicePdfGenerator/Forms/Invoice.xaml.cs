@@ -25,8 +25,6 @@ namespace eTaxInvoicePdfGenerator.Forms
         private const string REF_NAME = "ใบกำกับภาษี";
         private string invoiceID = "";
         private SellerObj seller;
-        //private Collection<TypeCodeObj> typeCodes = new Collection<TypeCodeObj>() { new TypeCodeObj("ALT", "ใบกำกับภาษีเดิม"), new TypeCodeObj("ZZZ", "อื่นๆ") };
-        //public Collection<TypeCodeObj> TypeCodes { get { return typeCodes; } }
 
         private List<ReferenceObj> refList;
 
@@ -60,7 +58,6 @@ namespace eTaxInvoicePdfGenerator.Forms
                 nameCbb.ItemsSource = buyerList;
                 seller = new SellerDao().select();
                 vatTb.Text = seller.vat.ToString("N");
-                //this.invoiceID = seller.running_prefix + seller.running_number;
                 this.invoiceID = PREFIX + seller.inv_no;
 
                 List<CauseCodeListObj> list = new CauseCodeListDao().list("ยกเลิกและออกใบกำกับภาษี ฉบับใหม่แทนฉบับเดิม");
@@ -97,7 +94,6 @@ namespace eTaxInvoicePdfGenerator.Forms
                 ReferenceObj ref1 = refList.FirstOrDefault(s => s.number == 1);
                 if (ref1 == null)
                 {
-                    //refList.Add(new ReferenceObj(1, this.invoiceID, docIdTb.Text, docDateTb.Text, REF_TYPE,new TypeCodeObj(REF_TYPE,"ใบกำกับภาษี")));
                     refList.Add(new ReferenceObj(1));
                 }
                 ref1 = refList.FirstOrDefault(s => s.number == 1);
@@ -158,8 +154,6 @@ namespace eTaxInvoicePdfGenerator.Forms
             provinceCbb.SelectionChanged -= new SelectionChangedEventHandler(provinceCbb_SelectionChanged);
             util.ProvinceCodeList pcl = new util.ProvinceCodeList();
             pcl.SetChangwat(provinceCbb);
-            //pcl.SetAmphoe(amphoeCbb, ((AddressCodeListObj)provinceCbb.SelectedItem).code.Substring(0, 2));
-            //pcl.SetTambon(tambonCbb, ((AddressCodeListObj)amphoeCbb.SelectedItem).code.Substring(0, 4));
             provinceCbb.SelectionChanged += new SelectionChangedEventHandler(provinceCbb_SelectionChanged);
         }
 
@@ -207,7 +201,6 @@ namespace eTaxInvoicePdfGenerator.Forms
                 obj.grandTotal = Convert.ToDouble(grandTotalTb.Text);
                 obj.service_charge = Convert.ToDouble(serviceChargeTb.Text);
                 obj.service_charge_rate = Convert.ToDouble(serviceChargeRateTb.Text);
-                //obj.issueDate = DateTime.Now.ToString();
                 obj.remark = remarkTb.Text;
 
                 BuyerObj buyer = (BuyerObj)nameCbb.SelectedItem;
@@ -346,7 +339,6 @@ namespace eTaxInvoicePdfGenerator.Forms
                 {
                     validator.validateText(otherPurposeTb, "เหตุอื่น", 256, true);
                 }
-                //validator.validateTypeCode(typeCodeTb);
             }
             validator.validateNameCbb(nameCbb, "ชื่อบริษัท/ผู้ซื้อ", 256, true);
             validator.validateText(address1Tb, "ที่อยู่", 256, false);
@@ -436,9 +428,7 @@ namespace eTaxInvoicePdfGenerator.Forms
             {
                 try
                 {
-                    //updateRunningNumber();
-                    //this.Close();
-                    //return;
+
                     using (Report.InvoiceGenerator invoicegen = new Report.InvoiceGenerator())
                     {
                         /*get inv field for test*/
@@ -458,7 +448,6 @@ namespace eTaxInvoicePdfGenerator.Forms
                         System.IO.File.WriteAllBytes(pdfFilePath, pdfByte);
                         string xmlFilePath = base_folder + "in/ContentInformation.xml";
                         string xmlFileName = "ETDA-invoice.xml";
-                        //System.IO.File.WriteAllBytes(xmlFileName, xmlByte);
                         System.IO.File.WriteAllText(xmlFilePath, xmlString, System.Text.Encoding.UTF8);
 
                         string xmlVersion = "1.0";
@@ -560,7 +549,6 @@ namespace eTaxInvoicePdfGenerator.Forms
             InvoiceItem config = new InvoiceItem();
             List<InvoiceItemObj> items = listView.Items.Cast<InvoiceItemObj>().ToList();
             config.itemObj = itemObj;
-            //this.Hide();
             bool result = config.ShowDialog().Value;
             if (result)
             {
@@ -626,7 +614,6 @@ namespace eTaxInvoicePdfGenerator.Forms
             refDoc.invoiceId = this.invoiceID;
             setRef1();
             refDoc.refList = this.refList;
-            //this.Hide();
             bool result = refDoc.ShowDialog().Value;
             if (result)
             {
@@ -691,12 +678,10 @@ namespace eTaxInvoicePdfGenerator.Forms
             docDateTb.Text = "";
             purposeCbb.SelectedIndex = 0;
             otherPurposeTb.Text = "";
-            //typeCodeTb.SelectedItem = null;
             addRefBtn.IsEnabled = false;
             docIdTb.IsEnabled = false;
             docDateTb.IsEnabled = false;
             purposeCbb.IsEnabled = false;
-            //otherPurposeTb.IsEnabled = false;
             typeEx.IsExpanded = false;
         }
 
@@ -707,7 +692,6 @@ namespace eTaxInvoicePdfGenerator.Forms
             docIdTb.IsEnabled = true;
             docDateTb.IsEnabled = true;
             purposeCbb.IsEnabled = true;
-            //otherPurposeTb.IsEnabled = true;
             typeEx.IsExpanded = true;
         }
 
@@ -772,7 +756,6 @@ namespace eTaxInvoicePdfGenerator.Forms
                 amphoeCbb.SelectionChanged -= new SelectionChangedEventHandler(amphoeCbb_SelectionChanged);
                 pcl.SetAmphoe(amphoeCbb, ((AddressCodeListObj)provinceCbb.SelectedItem).code.Substring(0, 2));
                 amphoeCbb.SelectionChanged += new SelectionChangedEventHandler(amphoeCbb_SelectionChanged);
-                //pcl.SetTambon(tambonCbb, ((AddressCodeListObj)amphoeCbb.SelectedItem).code.Substring(0, 4));
             }
             else
             {

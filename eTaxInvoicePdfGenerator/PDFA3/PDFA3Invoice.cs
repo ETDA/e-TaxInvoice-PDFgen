@@ -14,24 +14,6 @@ namespace ECertificateAPI
 {
     class PDFA3Invoice
     {
-
-        //static void Main(string[] args)
-        //{
-        //    PDFA3Invoice core = new PDFA3Invoice();
-        //    String pdfFilePath = "in/test.pdf";
-        //    String xmlFilePath = "in/ContentInformation.xml";
-        //    String xmlFileName = "content.xml";
-        //    String xmlVersion = "1.0";
-        //    String documentID = "TIV0000012";
-        //    String documentOID = "";
-        //    String outputPath = "out/test.pdf";
-
-        //    core.CreatePDFA3Invoice(pdfFilePath, xmlFilePath, xmlFileName, xmlVersion, 
-        //        documentID, documentOID, outputPath);
-
-        //    Console.ReadLine();
-        //}
-
         public void CreatePDFA3Invoice(string pdfFilePath, string xmlFilePath, string xmlFileName,
             string xmlVersion, string documentID, string documentOID, string outputPath,string documentType)
         {
@@ -55,20 +37,10 @@ namespace ECertificateAPI
                     "text/xml", new PdfName("Alternative"), writer, "Tax Invoice XML Data");
             array.Add(contentSpec.Reference);
 
-            //byte[] exchangeXMP = File.ReadAllBytes("Resources/EDocument_PDFAExtensionSchema.xml");
             string stringExchangeXMP = File.ReadAllText("Resources/EDocument_PDFAExtensionSchema.xml");
             byte[] exchangeXMP = Encoding.ASCII.GetBytes(stringExchangeXMP.Replace("@DocumentType", documentType)); 
             writer.XmpMetadata = exchangeXMP;
-
-            //// 2 add Electronic Document XMP Metadata
-            //ElectronicDocument ed = ElectronicDocument.generateED(xmlFileName, xmlVersion, documentID, documentOID);
-            //XmpWriter xmpWriter = writer.XmpWriter;
-            //xmpWriter.AddRdfDescription(ed);
-
-            //IXmpMeta edPDFAextension = XmpMetaFactory.Parse(new FileStream("Resources/EDocument_PDFAExtensionSchema.xml", FileMode.Open));
-            //IXmpMeta originalXMP = xmpWriter.XmpMeta;
-
-            //XmpUtils.AppendProperties(edPDFAextension, originalXMP, true, true);
+                       
 
             pdfAdocument.Close();
             reader.Close();

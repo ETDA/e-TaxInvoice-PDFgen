@@ -16,7 +16,6 @@ namespace eTaxInvoicePdfGenerator.Forms
     /// </summary>
     public partial class ItemConfig : Window
     {
-        //public int id;
         public ItemObj itemObj;
         public bool saveStatus;
         public ItemConfig(bool save)
@@ -36,7 +35,6 @@ namespace eTaxInvoicePdfGenerator.Forms
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             setCodeList();
-            //if (this.id != 0)
             if (this.itemObj != null)
             {
                 showData();
@@ -68,7 +66,6 @@ namespace eTaxInvoicePdfGenerator.Forms
         {
             try
             {
-                //ItemObj obj = new ItemDao().select(this.id);
                 nameTb.Text = itemObj.name;
                 detailTb.Text = itemObj.detail;
                 priceTb.Text = itemObj.pricePerUnit.ToString();
@@ -97,8 +94,6 @@ namespace eTaxInvoicePdfGenerator.Forms
             try
             {
                 validateData();
-                //ItemObj obj = new ItemObj();
-                //obj.id = this.id;
                 if (itemObj == null)
                 {
                     itemObj = new ItemObj();
@@ -181,7 +176,6 @@ namespace eTaxInvoicePdfGenerator.Forms
             }
             else
             {
-                //ItemObj obj = new ItemDao().select(this.id);
                 ItemObj obj = itemObj;
                 return nameTb.Text != obj.name || detailTb.Text != obj.detail || obj.isService != is_service.IsChecked ||
                     obj.pricePerUnit.ToString() != priceTb.Text || obj.unit != unitCbb.Text ||

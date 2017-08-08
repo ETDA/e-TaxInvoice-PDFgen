@@ -46,7 +46,6 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <!--<GridViewColumn Header="ID" DisplayMemberBinding="{Binding id}"  Width="40"/>-->
                     <GridViewColumn Header="ชื่อผู้ประกอบการ" DisplayMemberBinding="{Binding name}" Width="150" />
                     <GridViewColumn Header="เลขประจำตัวผู้เสียภาษีอากร" DisplayMemberBinding="{Binding taxid_no}" Width="200"/>
                     <GridViewColumn Header="เบอร์โทรศัพท์" DisplayMemberBinding="{Binding phone_no}" Width="200"/>

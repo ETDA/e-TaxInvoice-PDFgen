@@ -54,7 +54,6 @@ namespace eTaxInvoicePdfGenerator.Forms
                 checkPagination();
 
                 // add item list
-                //listView.ItemsSource = new ItemDao().listView(page, this.pageSize);
                 listView.ItemsSource = new ItemDao().listView(page, this.pageSize, this.sortingProperty, this.sortingDirection);
             }
             catch (Exception ex)
@@ -104,7 +103,6 @@ namespace eTaxInvoicePdfGenerator.Forms
             Hyperlink button = sender as Hyperlink;
             ItemList item = button.DataContext as ItemList;
             ItemConfig config = new ItemConfig(true);
-            //config.id = item.id;
             config.itemObj = new ItemDao().select(item.id);
             config.Show();
             this.Hide();
@@ -206,12 +204,10 @@ namespace eTaxInvoicePdfGenerator.Forms
                 if (_sortColumn != null)
                 {
                     _sortColumn.Column.HeaderTemplate = null;
-                    //_sortColumn.Column.Width = _sortColumn.ActualWidth - 10;
                 }
 
                 _sortColumn = column;
                 _sortDirection = ListSortDirection.Ascending;
-                //column.Column.Width = column.ActualWidth + 10;
             }
 
             if (_sortDirection == ListSortDirection.Ascending)
@@ -234,14 +230,7 @@ namespace eTaxInvoicePdfGenerator.Forms
                 header = b.Path.Path;
                 this.sortingProperty = header;
             }
-            listView.ItemsSource = new ItemDao().listView(this.currentPage, this.pageSize, this.sortingProperty, this.sortingDirection);
-
-
-            //ICollectionView resultDataView = CollectionViewSource.GetDefaultView(
-            //                                           listView.ItemsSource);
-            //resultDataView.SortDescriptions.Clear();
-            //resultDataView.SortDescriptions.Add(
-            //                            new SortDescription(header, _sortDirection));
+            listView.ItemsSource = new ItemDao().listView(this.currentPage, this.pageSize, this.sortingProperty, this.sortingDirection);            
         }
 
         private void shutdownBtn_Click(object sender, RoutedEventArgs e)
