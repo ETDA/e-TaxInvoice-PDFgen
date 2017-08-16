@@ -1,5 +1,5 @@
 /.vs/
-/.bin/
+eTaxInvoicePdfGenerator/bin/
 /eTaxInvoicePdfGenerator.csproj.user
-/obj/
-/publish/
+eTaxInvoicePdfGenerator/obj/
+eTaxInvoicePdfGenerator/publish/
