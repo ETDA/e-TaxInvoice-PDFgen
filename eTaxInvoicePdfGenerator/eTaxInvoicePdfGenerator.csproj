@@ -215,7 +215,6 @@
     <Compile Include="Forms\TermNConditions.xaml.cs">
       <DependentUpon>TermNConditions.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PDFA3\ElectronicDocument.cs" />
     <Compile Include="PDFA3\PDFA3Invoice.cs" />
     <Compile Include="Report\DataSet.cs">
       <DependentUpon>DataSet.xsd</DependentUpon>
