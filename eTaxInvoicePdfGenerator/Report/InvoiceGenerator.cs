@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using Microsoft.Reporting.WinForms;
+using ETDA.Invoice.Api.Generator;
 
 namespace eTaxInvoicePdfGenerator.Report
 {
@@ -144,7 +145,7 @@ namespace eTaxInvoicePdfGenerator.Report
 
                     invoicePdf = reportViewer.LocalReport.Render("PDF", null, out mimeType, out encoding, out extension, out streamIds, out warnings);
 
-                    util.getInvoice_Xml invXml = new util.getInvoice_Xml(buyer, seller, reference, item, invoice_id, absolutepath);
+                    InvoiceXmlGenerator invXml = new InvoiceXmlGenerator(buyer, seller, reference, item, invoice_id, absolutepath);
                     invoiceXmlstring = invXml.get_Xml();
                     invoiceXmlbyte = Encoding.ASCII.GetBytes(invoiceXmlstring);
 
@@ -237,7 +238,7 @@ namespace eTaxInvoicePdfGenerator.Report
                     invoicePdf = reportViewer.LocalReport.Render("PDF", null, out mimeType, out encoding, out extension, out streamIds, out warnings);
 
                     //System.IO.File.WriteAllBytes("test.pdf", invoicePdf);
-                    util.getInvoice_Xml invXml = new util.getInvoice_Xml(buyer, seller, reference, item, invoice_id, absolutepath);
+                    InvoiceXmlGenerator invXml = new InvoiceXmlGenerator(buyer, seller, reference, item, invoice_id, absolutepath);
                     invoiceXmlstring = invXml.get_Xml();
                     invoiceXmlbyte = Encoding.ASCII.GetBytes(invoiceXmlstring);
 
