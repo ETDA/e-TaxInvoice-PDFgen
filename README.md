@@ -34,12 +34,14 @@ Windows x64 : [โปรแกรมจัดเตรียมใบกำก�
 ## Document
 สามารถ download ได้จาก [ คู่มือโปรแกรมจัดเตรียมใบกำกับภาษีอิเล็กทรอนิกส์ในรูปแบบ PDF/A-3 (PC) ](http://teda.th/files/etaxdocuments/eTaxInvoice_PDF_A3_pc.pdf)  
 
-## Dependency 
-iTextSharp5.5.9.0 
- * itextsharp.dll
- * itextsharp.pdfa.dll
- * itextsharp.xtra.dll
-
+## Dependency
+ * itextsharp (version 5.5.11)
+ * itextsharp.pdfa (version 5.5.11)
+ * itextsharp.xtra (version 5.5.11)
+ * System.Data.SQLite.Core (version 1.0.105.2+)
+ * Microsoft.ReportViewer.Common (version 10.0.40219.1+)
+ * Microsoft.ReportViewer.WinForms (version 10.0.40219.1+)
+ 
 ## Font
  สามารถ download ได้จาก [THSarabun-PSK](https://github.com/ETDA/e-TaxInvoice-PDFgen/blob/master/Font/th-sarabun-psk.zip)
  
