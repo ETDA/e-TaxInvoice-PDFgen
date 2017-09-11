@@ -3,3 +3,4 @@ eTaxInvoicePdfGenerator/bin/
 /eTaxInvoicePdfGenerator.csproj.user
 eTaxInvoicePdfGenerator/obj/
 eTaxInvoicePdfGenerator/publish/
+packages/
