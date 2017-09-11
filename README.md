@@ -1,7 +1,3 @@
-| Project Status  | Master Branch |
-| --------------- | ------------- |
-| [![Build status](https://ci.appveyor.com/api/projects/status/a4slseijo87c2971?svg=true)](https://ci.appveyor.com/project/mahasak/e-taxinvoice-pdfgen)  | [![Build status](https://ci.appveyor.com/api/projects/status/a4slseijo87c2971/branch/master?svg=true)](https://ci.appveyor.com/project/mahasak/e-taxinvoice-pdfgen/branch/master) |
-
 ![Alt text](https://raw.githubusercontent.com/ETDA/e-TaxInvoice-PDFgen/master/eTaxInvoicePdfGenerator/icon_AppETax.png)
 
 
@@ -17,6 +13,10 @@
 * สร้างใบกำกับภาษีอิเล็กทรอนิกส์
 * สร้างใบเพิ่มหนี้อิเล็กทรอนิกส์
 * สร้างใบลดหนี้อิเล็กทรอนิกส์
+
+| Project Status  | Master Branch |
+| --------------- | ------------- |
+| [![Build status](https://ci.appveyor.com/api/projects/status/a4slseijo87c2971?svg=true)](https://ci.appveyor.com/project/mahasak/e-taxinvoice-pdfgen)  | [![Build status](https://ci.appveyor.com/api/projects/status/a4slseijo87c2971/branch/master?svg=true)](https://ci.appveyor.com/project/mahasak/e-taxinvoice-pdfgen/branch/master) |
 
 ## Latest Release
 Windows x64 : [โปรแกรมจัดเตรียมใบกำกับภาษีอิเล็กทรอนิกส์ในรูปแบบ PDF/A-3 สำหรับติดตั้งที่เครื่อง PC](https://github.com/ETDA/e-TaxInvoice-PDFgen/releases/download/1.0.0/eTaxInvoice_v1.0.0.zip)
