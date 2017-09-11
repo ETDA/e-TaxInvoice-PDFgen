@@ -5,6 +5,9 @@
 
   e-Tax Invoice by TeDA - PDF Generator on PC  มิติใหม่ของการสร้างใบกำกับภาษีอิเล็กทรอนิกส์ โดยอำนวยความสะดวกให้ผู้ประกอบการ สามารถสร้างใบกำกับภาษีอิเล็กทรอนิกส์ เพื่อสนับสนุนโครงการ e-Tax Invoice by Email ที่เป็นความร่วมมือระหว่าง สพธอ.และกรมสรรพากร 
 
+Current Project Status: [![Build status](https://ci.appveyor.com/api/projects/status/a4slseijo87c2971?svg=true)](https://ci.appveyor.com/project/mahasak/e-taxinvoice-pdfgen)
+Master Branch Status: [![Build status](https://ci.appveyor.com/api/projects/status/a4slseijo87c2971/branch/master?svg=true)](https://ci.appveyor.com/project/mahasak/e-taxinvoice-pdfgen/branch/master)
+
 สพธอ.ได้ พัฒนาโปรแกรมสร้างใบกํากับภาษีในรูปแบบ [PDF/A-3](https://en.wikipedia.org/wiki/PDF/A) ให้มีข้อมูล XML ตามเอกสารข้อเสนอแนะมาตรฐานด้านเทคโนโลยีสารสนเทศ และการสื่อสารที่จําเป็นต่อธุรกรรม ทางอิเล็กทรอนิกส์ [(ขมธอ. 3-2560 เวอร์ชั่น 2.0)](https://standard.etda.or.th/wp-content/uploads/2017/07/20161221-ER-EINVOICEV2-V08-16F-0706.pdf) โดยตัวโปรแกรมนี้จะทํางานบน Stand-alone PC
 
 **คุณลักษณะสำคัญของ e-Tax Invoice by TeDA - PDF Generator on PC  :**
