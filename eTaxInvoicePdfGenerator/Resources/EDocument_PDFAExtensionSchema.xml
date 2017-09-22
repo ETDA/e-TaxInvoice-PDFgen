@@ -10,7 +10,7 @@
 			<rdf:Bag>
 				<rdf:li rdf:parseType="Resource">
 					<pdfaSchema:schema>Electronic Tax Invoice PDFA Extension Schema</pdfaSchema:schema>
-					<pdfaSchema:namespaceURI>urn:etda:uncefact:data:standard:Invoice_CrossIndustryInvoice:2</pdfaSchema:namespaceURI>
+					<pdfaSchema:namespaceURI>urn:etda:uncefact:data:standard:Invoice_CrossIndustryInvoice:2#</pdfaSchema:namespaceURI>
 					<pdfaSchema:prefix>rsm</pdfaSchema:prefix>
 					<pdfaSchema:property>
 						<rdf:Seq>
@@ -38,7 +38,7 @@
 			</rdf:Bag>
 		</pdfaExtension:schemas>
 	</rdf:Description>
-    <rdf:Description xmlns:rsm="urn:etda:uncefact:data:standard:Invoice_CrossIndustryInvoice:2" rdf:about="">
+    <rdf:Description xmlns:rsm="urn:etda:uncefact:data:standard:Invoice_CrossIndustryInvoice:2#" rdf:about="">
     <rsm:DocumentFileName>ETDA-invoice.xml</rsm:DocumentFileName>
     <rsm:DocumentType>@DocumentType</rsm:DocumentType>
     <rsm:Version>2.0</rsm:Version>
