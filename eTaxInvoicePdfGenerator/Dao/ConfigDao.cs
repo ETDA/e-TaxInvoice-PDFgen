@@ -52,7 +52,6 @@ namespace eTaxInvoicePdfGenerator.Dao
         internal void save(ConfigObj obj)
         {
             string txtQuery = string.Empty;
-            // only update
             txtQuery = string.Format("UPDATE {0} SET ", this.tableName);
             string values = string.Format("value=@value ");
             string condition = string.Format("WHERE id=@id");

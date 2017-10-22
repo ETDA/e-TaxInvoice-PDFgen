@@ -89,7 +89,7 @@ namespace eTaxInvoicePdfGenerator.Dao
             }
         }
 
-        internal List<AddressCodeListObj> AmphoeList(string code)
+        internal List<AddressCodeListObj> DistrictList(string code)
         {
             string txtQuery = string.Format("SELECT * FROM {0} WHERE (Code LIKE @code) and Amphoe_TH != '' and Tambon_TH = '' order by Amphoe_TH", this.tableName);
             try
@@ -124,7 +124,7 @@ namespace eTaxInvoicePdfGenerator.Dao
             }
         }
 
-        internal List<AddressCodeListObj> TambonList(string code)
+        internal List<AddressCodeListObj> SubDistrictList(string code)
         {
             string txtQuery = string.Format("SELECT * FROM {0} WHERE (Code LIKE @code) and Tambon_TH != '' order by Tambon_TH", this.tableName);
             try

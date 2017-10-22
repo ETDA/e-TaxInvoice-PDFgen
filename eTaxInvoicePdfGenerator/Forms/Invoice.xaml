@@ -148,8 +148,8 @@
                             <TextBox x:Name="remarkTb" HorizontalAlignment="Left" Height="70" Margin="60,664,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="860" MaxLength="500" VerticalScrollBarVisibility="Auto"/>
                             <Label x:Name="label32" HorizontalAlignment="Left" Margin="80,625,0,0" VerticalAlignment="Top" Content="หมายเหตุ"/>
                             <ComboBox x:Name="provinceCbb" HorizontalAlignment="Left" Height="23" Margin="560,188,0,0" VerticalAlignment="Top" Width="360" TabIndex="9" />
-                            <ComboBox x:Name="amphoeCbb" HorizontalAlignment="Left" Height="23" Margin="560,218,0,0" VerticalAlignment="Top" Width="360" TabIndex="10"/>
-                            <ComboBox x:Name="tambonCbb" HorizontalAlignment="Left" Height="23" Margin="560,251,0,0" VerticalAlignment="Top" Width="360" TabIndex="11"/>
+                            <ComboBox x:Name="districtCbb" HorizontalAlignment="Left" Height="23" Margin="560,218,0,0" VerticalAlignment="Top" Width="360" TabIndex="10"/>
+                            <ComboBox x:Name="subDistrictCbb" HorizontalAlignment="Left" Height="23" Margin="560,251,0,0" VerticalAlignment="Top" Width="360" TabIndex="11"/>
                             <Label x:Name="label" Content="จังหวัด *" HorizontalAlignment="Left" Margin="326,186,0,0" VerticalAlignment="Top"/>
                             <Label x:Name="label16_Copy" Content="อำเภอ/เขต *" HorizontalAlignment="Left" Margin="326,216,0,0" VerticalAlignment="Top"/>
                             <Label x:Name="label17_Copy" Content="ตำบล/แขวง *" HorizontalAlignment="Left" Margin="326,249,0,0" VerticalAlignment="Top"/>

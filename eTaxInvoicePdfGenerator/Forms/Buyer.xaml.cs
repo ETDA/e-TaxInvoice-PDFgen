@@ -44,7 +44,6 @@ namespace eTaxInvoicePdfGenerator.Forms
         {
             try
             {
-                // calculate page
                 this.currentPage = page;
                 int listSize = new BuyerDao().count();
                 totalPage = (int)Math.Ceiling((double)listSize / (double)this.pageSize);
@@ -53,11 +52,9 @@ namespace eTaxInvoicePdfGenerator.Forms
                     this.currentPage = 0;
                 }
                 pageLb.Content = string.Format("หน้า {0} จาก {1}", this.currentPage, this.totalPage);
-                // เช็คการ enable ปุ่ม prev/next delete
                 checkPagination();
 
                 // add item list
-                //listView.ItemsSource = new BuyerDao().listView(page, this.pageSize);
                 listView.ItemsSource = new BuyerDao().listView(page, this.pageSize, this.sortingProperty, this.sortingDirection);
             }
             catch (Exception ex)
@@ -244,13 +241,6 @@ namespace eTaxInvoicePdfGenerator.Forms
                 }
             }
             listView.ItemsSource = new BuyerDao().listView(this.currentPage, this.pageSize, this.sortingProperty, this.sortingDirection);
-
-
-            //ICollectionView resultDataView = CollectionViewSource.GetDefaultView(
-            //                                           listView.ItemsSource);
-            //resultDataView.SortDescriptions.Clear();
-            //resultDataView.SortDescriptions.Add(
-            //                            new SortDescription(header, _sortDirection));
         }
 
         private void shutdownBtn_Click(object sender, RoutedEventArgs e)

@@ -361,8 +361,6 @@ namespace eTaxInvoicePdfGenerator.Forms
         private void delBtn_Click(object sender, RoutedEventArgs e)
         {
             DelNo dn = new DelNo("ต้องการลบข้อมูลหรือไม่", "ยืนยันการลบรายการ");
-            //yn.yesBtn.Content = "ลบ";
-            //yn.noBtn.Content = "ยกเลิก";
             dn.ShowDialog();
             switch (dn.response)
             {

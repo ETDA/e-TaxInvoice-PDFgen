@@ -11,15 +11,15 @@ namespace eTaxInvoicePdfGenerator.Dao
     class ReportDao
     {
         DataTable dt_item_raw;
-        private string base_folder = System.AppDomain.CurrentDomain.BaseDirectory;        
-        private Sqlite sqlite = new Sqlite("database.db"); 
+        private string base_folder = System.AppDomain.CurrentDomain.BaseDirectory;
+        private Sqlite sqlite = new Sqlite("database.db");
 
         public ReportDao()
         {
             sqlite = new Sqlite(base_folder + "database.db");
         }
 
-        public DataTable getReportData ( string invoiceid)
+        public DataTable getReportData(string invoiceid)
         {
             try
             {
@@ -117,7 +117,7 @@ namespace eTaxInvoicePdfGenerator.Dao
 
                 return dt;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -126,13 +126,12 @@ namespace eTaxInvoicePdfGenerator.Dao
         {
             try
             {
-                //sqlite = new Sqlite("");
                 string Query = query;
                 DataTable dt = new System.Data.DataTable();
                 dt = sqlite.ExecuteDataTable(Query);
                 return dt;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -158,7 +157,7 @@ namespace eTaxInvoicePdfGenerator.Dao
             Query = Query.Replace("*id", invoice_id);
             DataTable dt = new System.Data.DataTable();
             dt = sqlite.ExecuteDataTable(Query);
-            
+
             return flag;
         }
         public string getSellerID(string invoice_id)
@@ -175,23 +174,25 @@ namespace eTaxInvoicePdfGenerator.Dao
                 id = dt.Rows[0][0].ToString();
                 return id;
             }
-            catch(Exception ex) {
+            catch (Exception ex)
+            {
                 throw ex;
             }
         }
         public string getBuyerID(string invoice_id)
         {
-            try { 
-            string id = "";
-            string Query = @"
+            try
+            {
+                string id = "";
+                string Query = @"
                     select  buyer_id  from invoice  where invoice_id =  ""*id"";
                     ";
-            Query = Query.Replace("*id", invoice_id);
-            DataTable dt = new System.Data.DataTable();
-            dt = sqlite.ExecuteDataTable(Query);
+                Query = Query.Replace("*id", invoice_id);
+                DataTable dt = new System.Data.DataTable();
+                dt = sqlite.ExecuteDataTable(Query);
 
-            id = dt.Rows[0][0].ToString();
-            return id;
+                id = dt.Rows[0][0].ToString();
+                return id;
             }
             catch (Exception ex)
             {
