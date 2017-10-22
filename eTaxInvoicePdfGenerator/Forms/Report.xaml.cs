@@ -49,10 +49,10 @@ namespace eTaxInvoicePdfGenerator.Forms
             //    line.IndexOf()
             //}
 
-                using (Report.InvoiceGenerator invoicegen = new Report.InvoiceGenerator())
-            {   
-                /*get inv field for test*/             
-                invoicegen.create("ETDA000007");                     
+            using (Report.InvoiceGenerator invoicegen = new Report.InvoiceGenerator())
+            {
+                /*get inv field for test*/
+                invoicegen.create("ETDA000007");
                 var a = invoicegen.getStringXml();
                 var b = invoicegen.getBytePdf();
                 var c = invoicegen.getByteXml();

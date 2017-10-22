@@ -42,7 +42,6 @@ namespace eTaxInvoicePdfGenerator.Forms
         {
             try
             {
-                // calculate page
                 this.currentPage = page;
                 int listSize = new ItemDao().count();
                 totalPage = (int)Math.Ceiling((double)listSize / (double)this.pageSize);
@@ -54,7 +53,6 @@ namespace eTaxInvoicePdfGenerator.Forms
                 checkPagination();
 
                 // add item list
-                //listView.ItemsSource = new ItemDao().listView(page, this.pageSize);
                 listView.ItemsSource = new ItemDao().listView(page, this.pageSize, this.sortingProperty, this.sortingDirection);
             }
             catch (Exception ex)
@@ -104,7 +102,6 @@ namespace eTaxInvoicePdfGenerator.Forms
             Hyperlink button = sender as Hyperlink;
             ItemList item = button.DataContext as ItemList;
             ItemConfig config = new ItemConfig(true);
-            //config.id = item.id;
             config.itemObj = new ItemDao().select(item.id);
             config.Show();
             this.Hide();

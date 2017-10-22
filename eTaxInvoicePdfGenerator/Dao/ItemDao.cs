@@ -22,7 +22,6 @@ namespace eTaxInvoicePdfGenerator.Dao
             try
             {
                 ItemObj data = new ItemObj();
-                //SQLiteDataReader dr = sqlite.ExecuteReader(txtQuery);
                 using (SQLiteConnection c = new SQLiteConnection(sqlite.ConnectionString))
                 {
                     c.Open();

@@ -15,25 +15,8 @@ namespace ECertificateAPI
     class PDFA3Invoice
     {
 
-        //static void Main(string[] args)
-        //{
-        //    PDFA3Invoice core = new PDFA3Invoice();
-        //    String pdfFilePath = "in/test.pdf";
-        //    String xmlFilePath = "in/ContentInformation.xml";
-        //    String xmlFileName = "content.xml";
-        //    String xmlVersion = "1.0";
-        //    String documentID = "TIV0000012";
-        //    String documentOID = "";
-        //    String outputPath = "out/test.pdf";
-
-        //    core.CreatePDFA3Invoice(pdfFilePath, xmlFilePath, xmlFileName, xmlVersion, 
-        //        documentID, documentOID, outputPath);
-
-        //    Console.ReadLine();
-        //}
-
         public void CreatePDFA3Invoice(string pdfFilePath, string xmlFilePath, string xmlFileName,
-            string xmlVersion, string documentID, string documentOID, string outputPath,string documentType)
+            string xmlVersion, string documentID, string documentOID, string outputPath, string documentType)
         {
             // =========== Create PDF/A-3U Document =================
             // Create PDF/A-3U writer instance from existing document
@@ -55,12 +38,11 @@ namespace ECertificateAPI
                     "text/xml", new PdfName("Alternative"), writer, "Tax Invoice XML Data");
             array.Add(contentSpec.Reference);
 
-            //byte[] exchangeXMP = File.ReadAllBytes("Resources/EDocument_PDFAExtensionSchema.xml");
+            //// 2 add Electronic Document XMP Metadata
             string stringExchangeXMP = File.ReadAllText("Resources/EDocument_PDFAExtensionSchema.xml");
-            byte[] exchangeXMP = Encoding.ASCII.GetBytes(stringExchangeXMP.Replace("@DocumentType", documentType)); 
+            byte[] exchangeXMP = Encoding.ASCII.GetBytes(stringExchangeXMP.Replace("@DocumentType", documentType));
             writer.XmpMetadata = exchangeXMP;
 
-            //// 2 add Electronic Document XMP Metadata
             //ElectronicDocument ed = ElectronicDocument.generateED(xmlFileName, xmlVersion, documentID, documentOID);
             //XmpWriter xmpWriter = writer.XmpWriter;
             //xmpWriter.AddRdfDescription(ed);
@@ -100,7 +82,7 @@ namespace ECertificateAPI
             PdfName afRelationship, PdfAWriter writer, string description)
         {
             PdfDictionary parameters = new PdfDictionary();
-            parameters.Put(PdfName.MODDATE, new PdfDate(File.GetLastWriteTime(filePath))); 
+            parameters.Put(PdfName.MODDATE, new PdfDate(File.GetLastWriteTime(filePath)));
             PdfFileSpecification fileSpec = PdfFileSpecification.FileEmbedded(writer, filePath, fileName, null, mimeType,
                     parameters, 0);
             fileSpec.Put(new PdfName("AFRelationship"), afRelationship);

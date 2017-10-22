@@ -25,7 +25,6 @@ namespace eTaxInvoicePdfGenerator.Dao
             try
             {
                 RunningNumberObj data = new RunningNumberObj();
-                //SQLiteDataReader dr = sqlite.ExecuteReader(txtQuery);
                 using (SQLiteDataReader dr = sqlite.ExecuteReader(txtQuery))
                 {
                     if (dr.Read())

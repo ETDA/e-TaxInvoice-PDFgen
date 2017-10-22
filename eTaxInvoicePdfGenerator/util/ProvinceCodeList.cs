@@ -10,7 +10,7 @@ namespace eTaxInvoicePdfGenerator.util
 {
     class ProvinceCodeList
     {
-        internal void SetChangwat(ComboBox comboBox)
+        internal void SetProvince(ComboBox comboBox)
         {
             List<AddressCodeListObj> list = new AddressCodeListDao().ProvinceList();
             comboBox.DisplayMemberPath = "changwat_th";
@@ -19,18 +19,18 @@ namespace eTaxInvoicePdfGenerator.util
             comboBox.SelectedIndex = 0;
         }
 
-        internal void SetAmphoe(ComboBox comboBox, string code)
+        internal void SetDistrict(ComboBox comboBox, string code)
         {
-            List<AddressCodeListObj> list = new AddressCodeListDao().AmphoeList(code);
+            List<AddressCodeListObj> list = new AddressCodeListDao().DistrictList(code);
             comboBox.DisplayMemberPath = "amphoe_th";
             comboBox.SelectedValuePath = "code";
             comboBox.ItemsSource = list;
             comboBox.SelectedIndex = 0;
         }
 
-        internal void SetTambon(ComboBox comboBox, string code)
+        internal void SetSubDistrict(ComboBox comboBox, string code)
         {
-            List<AddressCodeListObj> list = new AddressCodeListDao().TambonList(code);
+            List<AddressCodeListObj> list = new AddressCodeListDao().SubDistrictList(code);
             comboBox.DisplayMemberPath = "tambon_th";
             comboBox.SelectedValuePath = "code";
             comboBox.ItemsSource = list;

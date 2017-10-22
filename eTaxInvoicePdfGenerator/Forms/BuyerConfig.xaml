@@ -46,8 +46,8 @@
             <Image Source="/eTaxInvoicePdfGenerator;component/in/elements/btn_close@2x.png" Style="{StaticResource imageBtn}"/>
         </Button>
         <ComboBox x:Name="provinceCbb" HorizontalAlignment="Left" Height="23" Margin="640,337,0,0" VerticalAlignment="Top" Width="285" TabIndex="5" />
-        <ComboBox x:Name="amphoeCbb" HorizontalAlignment="Left" Height="23" Margin="640,367,0,0" VerticalAlignment="Top" Width="285" TabIndex="6"/>
-        <ComboBox x:Name="tambonCbb" HorizontalAlignment="Left" Height="23" Margin="640,400,0,0" VerticalAlignment="Top" Width="285" TabIndex="7"/>
+        <ComboBox x:Name="districtCbb" HorizontalAlignment="Left" Height="23" Margin="640,367,0,0" VerticalAlignment="Top" Width="285" TabIndex="6"/>
+        <ComboBox x:Name="subDistrictCbb" HorizontalAlignment="Left" Height="23" Margin="640,400,0,0" VerticalAlignment="Top" Width="285" TabIndex="7"/>
         <Label x:Name="label" Content="จังหวัด *" HorizontalAlignment="Left" Margin="400,335,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label16" Content="อำเภอ/เขต *" HorizontalAlignment="Left" Margin="400,365,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label17" Content="ตำบล/แขวง *" HorizontalAlignment="Left" Margin="400,398,0,0" VerticalAlignment="Top"/>

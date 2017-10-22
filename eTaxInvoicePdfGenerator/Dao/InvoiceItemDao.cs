@@ -15,7 +15,6 @@ namespace eTaxInvoicePdfGenerator.Dao
         public InvoiceItemDao()
         {
             string base_folder = System.AppDomain.CurrentDomain.BaseDirectory;
-            //sqlite = new Sqlite(base_folder + Properties.Resources.datasource);
             sqlite = new Sqlite(base_folder + "database.db");
         }
 
@@ -24,14 +23,12 @@ namespace eTaxInvoicePdfGenerator.Dao
             string txtQuery = string.Empty;
             if (obj.id == 0)
             {
-                // insert
                 txtQuery = string.Format("INSERT INTO {0} (invoice_id,number,price_per_unit,discount,quantity,unit,unit_xml,item_total,item_name,item_code,item_code_inter) VALUES ", this.tableName);
                 string values = string.Format("(@invoice_id,@number,@price_per_unit,@discount,@quantity,@unit,@unit_xml,@item_total,@item_name,@item_code,@item_code_inter)");
                 txtQuery = txtQuery + values;
             }
             else
             {
-                //update 
                 txtQuery = string.Format("UPDATE {0} SET ", this.tableName);
                 string values = string.Format("invoice_id=@invoice_id,number=@number,price_per_unit=@price_per_unit,discount=@discount"
                     + ",quantity=@quantity,unit=@unit,unit_xml=@unit_xml,item_total=@item_total,item_name=@item_name,item_code=@item_code,item_code_inter=@item_code_inter ");
