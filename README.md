@@ -27,16 +27,15 @@ Windows x64 : [โปรแกรมจัดเตรียมใบกำก�
 
 [Read full changelog](https://github.com/ETDA/e-TaxInvoice-PDFgen/blob/master/CHANGELOG.md)
 
-[1.0.1] - 2018-03-27
+[1.0.3] - 2018-06-04
+
+**Add** 
+- fix #24  add SQLlite x64,x86 folder 
+
+[1.0.2] - 2018-05-24
 
 **Update** 
-- Update XMP schema for validation 
-
-
-[1.0.0] - 2017-06-30
-
-**Added** 
-- e-Tax Invoice by TeDA - PDF Generator on PC baseline version 
+- fix #22 ที่อยู่ขึ้นไม่ถูกต้องกรณีสร้างใบยกเลิก
 
 ## Contact Us
 สามารถติดต่อเราได้ที่  eservice@etda.or.th
