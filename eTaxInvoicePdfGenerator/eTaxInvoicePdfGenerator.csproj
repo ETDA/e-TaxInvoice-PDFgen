@@ -5,7 +5,7 @@
     <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PublishUrl>D:\workspace\Project\onhand_project\eTaxInvoice\apps\PDFGenerator\backup\publish\eTaxInvoice_v1.0.3\</PublishUrl>
+    <PublishUrl>D:\workspace\Project\onhand_project\eTaxInvoice\apps\PDFGenerator\backup\publish\eTaxInvoice_v1.0.4\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -19,7 +19,7 @@
     <PublisherName>สำนักงานพัฒนาธุรกรรมทางอิเล็กทรอนิกส์ %28ETDA%29</PublisherName>
     <SuiteName>สำนักงานพัฒนาธุรกรรมทางอิเล็กทรอนิกส์ %28ETDA%29</SuiteName>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.3.0</ApplicationVersion>
+    <ApplicationVersion>1.0.4.0</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
