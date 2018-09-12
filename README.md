@@ -27,7 +27,7 @@ Windows x64 : [โปรแกรมจัดเตรียมใบกำก�
 
 [Read full changelog](https://github.com/ETDA/e-TaxInvoice-PDFgen/blob/master/CHANGELOG.md)
 
-[1.0.4] - 2018-09-05
+[1.0.4] - 2018-09-17
 
 **Update** 
 - update แขวงใหม่ ได้แก่ 
