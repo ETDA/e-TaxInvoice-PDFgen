@@ -18,7 +18,7 @@
         <Label x:Name="label2" Content="ที่อยู่" HorizontalAlignment="Left" Margin="400,300,0,0" VerticalAlignment="Top" />
         <TextBox x:Name="nameTb" HorizontalAlignment="Left" Height="23" Margin="640,233,0,0" VerticalAlignment="Top" Width="285" MaxLength="256" TabIndex="0"/>
         <TextBox x:Name="address1Tb" HorizontalAlignment="Left" Height="23" Margin="640,304,0,0" VerticalAlignment="Top" Width="285" MaxLength="256" TabIndex="4"/>
-        <TextBox x:Name="houseNoTb" HorizontalAlignment="Left" Height="23" Margin="640,268,0,0" VerticalAlignment="Top" Width="285" MaxLength="256" TabIndex="3"/>
+        <TextBox x:Name="houseNoTb" HorizontalAlignment="Left" Height="23" Margin="640,268,0,0" VerticalAlignment="Top" Width="285" MaxLength="16" TabIndex="3"/>
         <Label x:Name="label3" Content="รหัสไปรษณีย์ *" HorizontalAlignment="Left" Margin="400,430,0,0" VerticalAlignment="Top" />
         <TextBox x:Name="zipcodeTb" HorizontalAlignment="Left" Height="23" Margin="640,433,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" MaxLength="5" TabIndex="8"/>
         <Label x:Name="label4" Content="เลขประจำตัวผู้เสียภาษีอากร *" HorizontalAlignment="Left" Margin="400,159,0,0" VerticalAlignment="Top" />

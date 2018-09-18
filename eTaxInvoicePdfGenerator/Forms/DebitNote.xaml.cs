@@ -732,5 +732,10 @@ namespace eTaxInvoicePdfGenerator.Forms
                 otherPurposeTb.IsEnabled = false;
             }
         }
+
+        private void houseNoTb_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -55,7 +55,7 @@
                             <Label x:Name="label2" Content="ที่อยู่" HorizontalAlignment="Left" Margin="326,155,0,0" VerticalAlignment="Top"/>
                             <TextBox x:Name="taxIdTb" HorizontalAlignment="Left" Height="23" Margin="560,25,0,0" VerticalAlignment="Top" Width="360" TabIndex="5" MaxLength="13"/>
                             <TextBox x:Name="address1Tb" HorizontalAlignment="Left" Height="23" Margin="560,157,0,0" VerticalAlignment="Top" Width="360" TabIndex="8" MaxLength="256"/>
-                            <TextBox x:Name="houseNoTb" HorizontalAlignment="Left" Height="23" Margin="560,127,0,0" VerticalAlignment="Top" Width="360" TabIndex="7" MaxLength="256"/>
+                            <TextBox x:Name="houseNoTb" HorizontalAlignment="Left" Height="23" Margin="560,127,0,0" VerticalAlignment="Top" Width="360" TabIndex="7" MaxLength="16"/>
                             <TextBox x:Name="zipcodeTb" HorizontalAlignment="Left" Height="23" Margin="560,285,0,0" VerticalAlignment="Top" Width="360" TabIndex="12" MaxLength="5"/>
                             <Label x:Name="label3" Content="รหัสไปรษณีย์ *" HorizontalAlignment="Left" Margin="326,283,0,0" VerticalAlignment="Top" />
                             <Label x:Name="label4" Content="เลขประจำตัวผู้เสียภาษีอากร *" HorizontalAlignment="Left" Margin="326,23,0,0" VerticalAlignment="Top" />
