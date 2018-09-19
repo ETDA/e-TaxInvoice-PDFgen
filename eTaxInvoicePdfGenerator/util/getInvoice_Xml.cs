@@ -20,6 +20,7 @@ namespace eTaxInvoicePdfGenerator.util
         string templatePath = "Resources\\template_debit.xml";
         string typeCode;
         string PurposeCode = "";
+        
 
         public getInvoice_Xml(DataTable buyer, DataTable seller, DataTable reference, DataTable item, string invoiceId,string path)
         {
@@ -64,62 +65,62 @@ namespace eTaxInvoicePdfGenerator.util
                 invoiceId = InvoiceId;
 
                 XmlObj.invoiceId = InvoiceId;
-                XmlObj.invoiceName = item.Rows[0]["invoice_name"].ToString() == null ? "" : item.Rows[0]["invoice_name"].ToString();
+                XmlObj.invoiceName = item.Rows[0]["invoice_name"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["invoice_name"].ToString());
                 XmlObj.invoiceTypecode = typeCode ;
                 XmlObj.invoiceIssue_date = dateTime.ToString("yyyy-MM-ddT00:00:00.000");
-                XmlObj.invoiceName = item.Rows[0]["invoice_name"].ToString() == null ? "" : item.Rows[0]["invoice_name"].ToString();
+                XmlObj.invoiceName = item.Rows[0]["invoice_name"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["invoice_name"].ToString());
                 XmlObj.invoiceCreate_date = dateTime.ToString("yyyy-MM-ddTHH:mm:ss.fff");
-                XmlObj.sellerName = seller.Rows[0]["name"].ToString() == null ? "" : seller.Rows[0]["name"].ToString();
-                XmlObj.sellerTaxid = seller.Rows[0]["tax_id"].ToString() == null ? "" : seller.Rows[0]["tax_id"].ToString()+seller.Rows[0]["branch_id"].ToString();
-                XmlObj.sellerEmail = seller.Rows[0]["email"].ToString() == null ? "" : seller.Rows[0]["email"].ToString();
-                XmlObj.sellerZipcode = seller.Rows[0]["zipcode"].ToString() == null ? "" : seller.Rows[0]["zipcode"].ToString();
-                XmlObj.sellerAddress1 = seller.Rows[0]["address1"].ToString() == null ? "" : seller.Rows[0]["address1"].ToString();
-                XmlObj.sellerAddress2 = seller.Rows[0]["address2"].ToString() == null ? "" : seller.Rows[0]["address2"].ToString();
-                XmlObj.sellerCityname = seller.Rows[0]["district_code"].ToString() == null ? "" : seller.Rows[0]["district_code"].ToString();
-                XmlObj.sellerCitySubName = seller.Rows[0]["subdistrict_code"].ToString() == null ? "" : seller.Rows[0]["subdistrict_code"].ToString();
-                XmlObj.sellerCountry = seller.Rows[0]["country"].ToString() == null ? "" : seller.Rows[0]["country"].ToString();
-                XmlObj.sellerCountrySubID = seller.Rows[0]["province_code"].ToString() == null ? "" : seller.Rows[0]["province_code"].ToString();
-                string seller_phoneno = ReportUtils.getFullThaiMobilePhone(seller.Rows[0]["phone_no"].ToString(), seller.Rows[0]["phone_ext"].ToString());
-                XmlObj.sellercontactPersonPhoneno = seller.Rows[0]["phone_no"].ToString() == null ? "" : seller_phoneno;
-                XmlObj.sellerBuildingName = seller.Rows[0]["house_no"].ToString() == null ? "" : seller.Rows[0]["house_no"].ToString();
+                XmlObj.sellerName = seller.Rows[0]["name"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(seller.Rows[0]["name"].ToString());
+                XmlObj.sellerTaxid = seller.Rows[0]["tax_id"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(seller.Rows[0]["tax_id"].ToString()+seller.Rows[0]["branch_id"].ToString());
+                XmlObj.sellerEmail = seller.Rows[0]["email"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(seller.Rows[0]["email"].ToString());
+                XmlObj.sellerZipcode = seller.Rows[0]["zipcode"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(seller.Rows[0]["zipcode"].ToString());
+                XmlObj.sellerAddress1 = seller.Rows[0]["address1"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(seller.Rows[0]["address1"].ToString());
+                XmlObj.sellerAddress2 = seller.Rows[0]["address2"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(seller.Rows[0]["address2"].ToString());
+                XmlObj.sellerCityname = seller.Rows[0]["district_code"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(seller.Rows[0]["district_code"].ToString());
+                XmlObj.sellerCitySubName = seller.Rows[0]["subdistrict_code"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(seller.Rows[0]["subdistrict_code"].ToString());
+                XmlObj.sellerCountry = seller.Rows[0]["country"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(seller.Rows[0]["country"].ToString());
+                XmlObj.sellerCountrySubID = seller.Rows[0]["province_code"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(seller.Rows[0]["province_code"].ToString());
+                string seller_phoneno = ReportUtils.getFullThaiMobilePhone(ReportUtils.replaceSpecialChar(seller.Rows[0]["phone_no"].ToString()), ReportUtils.replaceSpecialChar(seller.Rows[0]["phone_ext"].ToString()));
+                XmlObj.sellercontactPersonPhoneno = seller.Rows[0]["phone_no"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(seller_phoneno);
+                XmlObj.sellerBuildingName = seller.Rows[0]["house_no"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(seller.Rows[0]["house_no"].ToString());
 
-                XmlObj.buyerName = buyer.Rows[0]["name"].ToString() == null ? "" : buyer.Rows[0]["name"].ToString();
-                XmlObj.buyerTaxid = buyer.Rows[0]["tax_id"].ToString() == null ? "" : buyer.Rows[0]["tax_id"].ToString() + buyer.Rows[0]["branch_id"].ToString();
-                XmlObj.buyereMail = buyer.Rows[0]["email"].ToString() == null ? "" : buyer.Rows[0]["email"].ToString();
-                XmlObj.buyerZipcode = buyer.Rows[0]["zipcode"].ToString() == null ? "" : buyer.Rows[0]["zipcode"].ToString();
-                XmlObj.buyerAddress1 = buyer.Rows[0]["address1"].ToString() == null ? "" : buyer.Rows[0]["address1"].ToString();
-                XmlObj.buyerAddress2 = buyer.Rows[0]["address2"].ToString() == null ? "" : buyer.Rows[0]["address2"].ToString();
-                XmlObj.buyerCityname = buyer.Rows[0]["district_code"].ToString() == null ? "" : buyer.Rows[0]["district_code"].ToString();
-                XmlObj.buyerCitySubName = buyer.Rows[0]["subdistrict_code"].ToString() == null ? "" : buyer.Rows[0]["subdistrict_code"].ToString();
-                XmlObj.buyerCountry = buyer.Rows[0]["country"].ToString() == null ? "" : buyer.Rows[0]["country"].ToString();
-                XmlObj.buyerCountrySubID = buyer.Rows[0]["province_code"].ToString() == null ? "" : buyer.Rows[0]["province_code"].ToString();
-                XmlObj.buyerContactPerson = buyer.Rows[0]["contact_person"].ToString() == null ? "" : buyer.Rows[0]["contact_person"].ToString();
+                XmlObj.buyerName = buyer.Rows[0]["name"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["name"].ToString());
+                XmlObj.buyerTaxid = buyer.Rows[0]["tax_id"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["tax_id"].ToString() + buyer.Rows[0]["branch_id"].ToString());
+                XmlObj.buyereMail = buyer.Rows[0]["email"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["email"].ToString());
+                XmlObj.buyerZipcode = buyer.Rows[0]["zipcode"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["zipcode"].ToString());
+                XmlObj.buyerAddress1 = buyer.Rows[0]["address1"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["address1"].ToString());
+                XmlObj.buyerAddress2 = buyer.Rows[0]["address2"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["address2"].ToString());
+                XmlObj.buyerCityname = buyer.Rows[0]["district_code"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["district_code"].ToString());
+                XmlObj.buyerCitySubName = buyer.Rows[0]["subdistrict_code"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["subdistrict_code"].ToString());
+                XmlObj.buyerCountry = buyer.Rows[0]["country"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["country"].ToString());
+                XmlObj.buyerCountrySubID = buyer.Rows[0]["province_code"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["province_code"].ToString());
+                XmlObj.buyerContactPerson = buyer.Rows[0]["contact_person"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["contact_person"].ToString());
 
-                string buyer_phoneno = ReportUtils.getFullThaiMobilePhone(buyer.Rows[0]["phone_no"].ToString(), buyer.Rows[0]["phone_ext"].ToString() );
-                XmlObj.buyercontactPersonPhoneno = buyer.Rows[0]["phone_no"].ToString() == null ? "" : buyer_phoneno;
-                XmlObj.buyerBuildingName = buyer.Rows[0]["house_no"].ToString() == null ? "" : buyer.Rows[0]["house_no"].ToString();
+                string buyer_phoneno = ReportUtils.getFullThaiMobilePhone(ReportUtils.replaceSpecialChar(buyer.Rows[0]["phone_no"].ToString()), ReportUtils.replaceSpecialChar(buyer.Rows[0]["phone_ext"].ToString()));
+                XmlObj.buyercontactPersonPhoneno = buyer.Rows[0]["phone_no"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer_phoneno);
+                XmlObj.buyerBuildingName = buyer.Rows[0]["house_no"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["house_no"].ToString());
 
 
                 XmlObj.currency = "THB";
-                XmlObj.invoiceTaxcode = item.Rows[0]["tax_code"].ToString() == null ? "" : item.Rows[0]["tax_code"].ToString();
-                XmlObj.invoiceTaxrate = item.Rows[0]["tax_rate"].ToString() == null ? "" : item.Rows[0]["tax_rate"].ToString();
-                XmlObj.invoiceChargeindicator = item.Rows[0]["charge_indicator"].ToString() == null ? "" : item.Rows[0]["charge_indicator"].ToString();
-                XmlObj.invoicePurpose = item.Rows[0]["purpose"].ToString() == null ? "" : item.Rows[0]["purpose"].ToString();
-                XmlObj.invoicePurposeCode = item.Rows[0]["purpose_code"].ToString() == null ? "" : item.Rows[0]["purpose_code"].ToString();
-                XmlObj.invoiceDiscount = item.Rows[0]["invoice_discount"].ToString() == null ? "" : item.Rows[0]["invoice_discount"].ToString();
-                XmlObj.invoiceService = item.Rows[0]["service_charge"].ToString() == null ? "" : item.Rows[0]["service_charge"].ToString();
-                XmlObj.invoiceLinetotal = item.Rows[0]["line_total"].ToString() == null ? "" : item.Rows[0]["line_total"].ToString();
-                XmlObj.invoiceTaxtotal = item.Rows[0]["tax_total"].ToString() == null ? "" : item.Rows[0]["tax_total"].ToString();
-                XmlObj.invoiceGrandtotal = item.Rows[0]["grand_total"].ToString() == null ? "" : item.Rows[0]["grand_total"].ToString();
-                XmlObj.invoiceBasisamount = item.Rows[0]["basis_amount"].ToString() == null ? "" : item.Rows[0]["basis_amount"].ToString();
-                XmlObj.invoiceOriginal = item.Rows[0]["original"].ToString() == null ? "" : item.Rows[0]["original"].ToString();
-                XmlObj.invoiceDifference = item.Rows[0]["difference"].ToString() == null ? "" : item.Rows[0]["difference"].ToString();
-                XmlObj.itemCode = item.Rows[0]["item_code"].ToString() == null ? "" : item.Rows[0]["item_code"].ToString();
-                XmlObj.itemCodeInter = item.Rows[0]["item_code_inter"].ToString() == null ? "" : item.Rows[0]["item_code_inter"].ToString();
-                XmlObj.remark = item.Rows[0]["remark"].ToString() == null ? "" : item.Rows[0]["remark"].ToString();
+                XmlObj.invoiceTaxcode = item.Rows[0]["tax_code"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["tax_code"].ToString());
+                XmlObj.invoiceTaxrate = item.Rows[0]["tax_rate"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["tax_rate"].ToString());
+                XmlObj.invoiceChargeindicator = item.Rows[0]["charge_indicator"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["charge_indicator"].ToString());
+                XmlObj.invoicePurpose = item.Rows[0]["purpose"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["purpose"].ToString());
+                XmlObj.invoicePurposeCode = item.Rows[0]["purpose_code"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["purpose_code"].ToString());
+                XmlObj.invoiceDiscount = item.Rows[0]["invoice_discount"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["invoice_discount"].ToString());
+                XmlObj.invoiceService = item.Rows[0]["service_charge"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["service_charge"].ToString());
+                XmlObj.invoiceLinetotal = item.Rows[0]["line_total"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["line_total"].ToString());
+                XmlObj.invoiceTaxtotal = item.Rows[0]["tax_total"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["tax_total"].ToString());
+                XmlObj.invoiceGrandtotal = item.Rows[0]["grand_total"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["grand_total"].ToString());
+                XmlObj.invoiceBasisamount = item.Rows[0]["basis_amount"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["basis_amount"].ToString());
+                XmlObj.invoiceOriginal = item.Rows[0]["original"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["original"].ToString());
+                XmlObj.invoiceDifference = item.Rows[0]["difference"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["difference"].ToString());
+                XmlObj.itemCode = item.Rows[0]["item_code"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["item_code"].ToString());
+                XmlObj.itemCodeInter = item.Rows[0]["item_code_inter"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["item_code_inter"].ToString());
+                XmlObj.remark = item.Rows[0]["remark"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["remark"].ToString());
 
-                XmlObj.invoiceCalculatedAmount = item.Rows[0]["tax_total"].ToString() == null ? "" : item.Rows[0]["tax_total"].ToString();
-                XmlObj.invoiceTaxBasisTotalAmount = item.Rows[0]["basis_amount"].ToString() == null ? "" : item.Rows[0]["basis_amount"].ToString();
+                XmlObj.invoiceCalculatedAmount = item.Rows[0]["tax_total"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["tax_total"].ToString());
+                XmlObj.invoiceTaxBasisTotalAmount = item.Rows[0]["basis_amount"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["basis_amount"].ToString());
                 XmlObj.reason = "ส่วนลดจากราคาปกติ";
                 XmlObj.reasonCode = "91";
             }

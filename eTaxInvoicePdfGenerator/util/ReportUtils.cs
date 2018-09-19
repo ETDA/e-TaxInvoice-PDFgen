@@ -187,6 +187,30 @@ namespace eTaxInvoicePdfGenerator.util
 
             return doc_reference;
         }
+        public static string replaceSpecialChar(string input)
+        {
+            String temp = input;
 
+            char[] specialChar = { '&', '<', '>', '\'', '"' };
+            IDictionary<char, string> dict = new Dictionary<char, string>()
+                                            {
+                                                {'&',"&amp;"},
+                                                {'<', "&lt;"},
+                                                {'>', "&gt;"},
+                                                {'\'', "&apos;"},
+                                                {'"', "&quot;"}
+                                            };
+
+            foreach (char n in specialChar)
+            {
+                while (input.IndexOf(n) != -1)
+                {
+                    temp = temp.Replace(n.ToString(), dict[n]);
+                    break;
+                }
+            }
+
+            return temp;
+        }
     }
 }
