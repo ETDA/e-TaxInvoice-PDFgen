@@ -17,7 +17,7 @@
         <Image x:Name="image1" HorizontalAlignment="Left" Margin="0,160,0,0" VerticalAlignment="Top" Source="/eTaxInvoicePdfGenerator;component/in/elements/shop_txtleft.png" Width="296" Height="90"/>
         <Label x:Name="label1" Content="ชื่อผู้ประกอบการ *" HorizontalAlignment="Left" Margin="400,218,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="ที่อยู่" HorizontalAlignment="Left" Margin="401,278,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="nameTb" HorizontalAlignment="Left" Height="23" Margin="640,220,0,0" VerticalAlignment="Top" Width="285" MaxLength="256" TabIndex="2" />
+        <TextBox x:Name="nameTb" HorizontalAlignment="Left" Height="23" Margin="640,220,0,0" VerticalAlignment="Top" Width="285" MaxLength="100" TabIndex="2" />
         <TextBox x:Name="address1Tb" HorizontalAlignment="Left" Height="23" Margin="640,280,0,0" VerticalAlignment="Top" Width="285" MaxLength="256" TabIndex="4"/>
         <Label x:Name="label3" Content="รหัสไปรษณีย์ *" HorizontalAlignment="Left" Margin="400,401,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="zipcodeTb" HorizontalAlignment="Left" Height="23" Margin="640,405,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" MaxLength="5" TabIndex="8"/>
