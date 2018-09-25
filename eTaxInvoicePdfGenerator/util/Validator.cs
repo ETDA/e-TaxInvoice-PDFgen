@@ -144,6 +144,39 @@ namespace eTaxInvoicePdfGenerator.util
             }
         }
 
+        public void validateTaxID(TextBox obj ,int status)
+        {
+            if (status == 0)
+            {
+                if (obj.Text.Length == 0)
+                {
+                    throw new Exception("กรุณาระบุเลขประจําตัวผู้เสียภาษีอากร");
+                }
+
+                long longTemp = 0;
+                if (!long.TryParse(obj.Text, out longTemp) || obj.Text.Length != 13)
+                {
+                    obj.Focus();
+                    throw new Exception("ระบุเลขประจำตัวผู้เสียภาษีอากรไม่ถูกต้อง โปรดตรวจสอบ");
+                }
+            }
+
+            if (status == 1)
+            {
+                if (obj.Text.Length == 0)
+                {
+                    throw new Exception("กรุณาระบุเลขประจําตัวผู้เสียภาษีอากร");
+                }
+
+                long longTemp = 0;
+                if (!long.TryParse(obj.Text, out longTemp) || obj.Text.Length != 35)
+                {
+                    obj.Focus();
+                    throw new Exception("ระบุเลขที่หนังสือเดินทางไม่ถูกต้อง โปรดตรวจสอบ");
+                }
+            }
+        }
+
         public void validateEmail(TextBox obj)
         {
             if (obj.Text.Length > 0)
