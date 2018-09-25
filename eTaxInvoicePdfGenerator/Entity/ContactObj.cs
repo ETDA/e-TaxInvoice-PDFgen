@@ -5,6 +5,7 @@
         public int id { get; set; }
         public string name { get; set; }
         public string taxId { get; set; }
+        public string taxType { get; set; }
         public string branchId { get; set; }
         //public string website { get; set; }
         public string email { get; set; }

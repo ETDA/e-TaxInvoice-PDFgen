@@ -2093,7 +2093,7 @@
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value>สำนักงานใหญ่/เลขที่สาขา</Value>
+                                          <Value>=Parameters!buy_taxschemeflag.Value</Value>
                                           <Style>
                                             <FontFamily>TH SarabunPSK</FontFamily>
                                             <FontSize>12pt</FontSize>
@@ -2771,6 +2771,12 @@
       <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
+    <ReportParameter Name="buy_taxschemeflag">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -2921,6 +2927,11 @@
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>14</RowIndex>
           <ParameterName>buy_house_no</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>14</RowIndex>
+          <ParameterName>buy_taxschemeflag</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

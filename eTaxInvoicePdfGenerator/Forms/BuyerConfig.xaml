@@ -53,10 +53,10 @@
 		<Label x:Name="label17" Content="ตำบล/แขวง *" HorizontalAlignment="Left" Margin="400,428,0,0" VerticalAlignment="Top"/>
 		<Label x:Name="label5" Content="บ้านเลขที่ *" HorizontalAlignment="Left" Margin="400,296,0,0" VerticalAlignment="Top"/>
 		<ComboBox x:Name="taxIdType" HorizontalAlignment="Left" Height="23" Margin="640,156,0,0" VerticalAlignment="Top" Width="285" TabIndex="5" SelectionChanged="taxIdType_SelectionChanged" >
-			<ComboBoxItem Content="นิติบุคคล" HorizontalAlignment="Left" Height="23" />
-			<ComboBoxItem Content="บุคคลธรรมดา" HorizontalAlignment="Left" Height="23"/>
-			<ComboBoxItem Content="บุคคลต่างประเทศ" HorizontalAlignment="Left" Height="23"/>
-			<ComboBoxItem Content="ผู้ซื้อที่ไม่ต้องการระบุเลขผู้เสียภาษี" HorizontalAlignment="Left" Height="23"/>
+			<ComboBoxItem Content="เลขประจำตัวผู้เสียภาษีอากร" HorizontalAlignment="Left" Height="23" />
+			<ComboBoxItem Content="เลขประจำตัวประชาชน" HorizontalAlignment="Left" Height="23"/>
+			<ComboBoxItem Content="เลขที่หนังสือเดินทาง" HorizontalAlignment="Left" Height="23"/>
+			<ComboBoxItem Content="ไม่ระบุ" HorizontalAlignment="Left" Height="23"/>
 		</ComboBox>
 		<Label x:Name="label4_Copy" Content="ประเภทผู้เสียภาษีอากร *" HorizontalAlignment="Left" Margin="400,156,0,0" VerticalAlignment="Top" />
 	</Grid>

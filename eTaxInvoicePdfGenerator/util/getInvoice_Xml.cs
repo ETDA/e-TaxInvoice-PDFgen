@@ -86,6 +86,7 @@ namespace eTaxInvoicePdfGenerator.util
 
                 XmlObj.buyerName = buyer.Rows[0]["name"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["name"].ToString());
                 XmlObj.buyerTaxid = buyer.Rows[0]["tax_id"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["tax_id"].ToString() + buyer.Rows[0]["branch_id"].ToString());
+                XmlObj.buyerTaxType = buyer.Rows[0]["tax_type"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["tax_type"].ToString());
                 XmlObj.buyereMail = buyer.Rows[0]["email"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["email"].ToString());
                 XmlObj.buyerZipcode = buyer.Rows[0]["zipcode"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["zipcode"].ToString());
                 XmlObj.buyerAddress1 = buyer.Rows[0]["address1"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["address1"].ToString());
@@ -176,6 +177,7 @@ namespace eTaxInvoicePdfGenerator.util
 
                 { "*buyer_name",XmlObj.buyerName},
                 {"*buyer_taxid",XmlObj.buyerTaxid },
+                {"*buyer_taxtype",XmlObj.buyerTaxid },
                 {"*buyer_DefinedCITradeContact",getCITradeContact(XmlObj.buyereMail,XmlObj.buyercontactPersonPhoneno)},
                 {"*buyer_zipcode",XmlObj.buyerZipcode },
                 {"*buyer_address1",(string.IsNullOrWhiteSpace(XmlObj.buyerAddress1))? "":"<ram:LineOne>"+XmlObj.buyerAddress1+"</ram:LineOne>"},

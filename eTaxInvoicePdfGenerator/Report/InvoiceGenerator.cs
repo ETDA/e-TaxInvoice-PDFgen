@@ -47,9 +47,10 @@ namespace eTaxInvoicePdfGenerator.Report
                 DataTable dt = repDAO.getReportData(invoice_id);
                 DataTable item = repDAO.getDatatable_Item_Raw();
                 String date = util.ReportUtils.getThaiDate(dt.Rows[0]["issue_date"].ToString());
+                String taxType = buyer.Rows[0]["tax_type"].ToString();
                 string reftext1 = "";
                 string reftext2 = "";
-                string reftext3 = "";
+                string reftext3 = "";               
 
                 if (reference.Rows.Count > 0) // yes is reprint , !repDAO.isReprint(invoice_id)
                 {
@@ -81,7 +82,7 @@ namespace eTaxInvoicePdfGenerator.Report
 
                     ReportParameter sell_name = new ReportParameter("sell_name", seller.Rows[0]["name"].ToString());
                     ReportParameter sell_taxno = new ReportParameter("sell_taxno", seller.Rows[0]["tax_id"].ToString());
-                    ReportParameter sell_comno = new ReportParameter("sell_comno", utils.getBranch(seller.Rows[0]["branch_id"].ToString()));//
+                    ReportParameter sell_comno = new ReportParameter("sell_comno", utils.getBranch(seller.Rows[0]["branch_id"].ToString()));
                     ReportParameter sell_email = new ReportParameter("sell_email", seller.Rows[0]["email"].ToString());
                     ReportParameter sell_tellno = new ReportParameter("sell_tellno", util.ReportUtils.getFullThaiMobilePhone(seller.Rows[0]["phone_no"].ToString(), seller.Rows[0]["phone_ext"].ToString()));
 
@@ -111,6 +112,7 @@ namespace eTaxInvoicePdfGenerator.Report
                     ReportParameter referText2 = new ReportParameter("referText2", reftext2);
                     ReportParameter referText3 = new ReportParameter("referText3", reftext3);
                     ReportParameter grand_totalthai = new ReportParameter("grand_totalthai", "( " + util.ReportUtils.getFullThaiBathController(dt.Rows[0]["grand_total"].ToString()) + " )");
+                    ReportParameter buy_taxschemeflag = new ReportParameter("buy_taxschemeflag", getSchemeID(taxType));
 
                     /*FOR REPRINT*/
                     var Ref = util.ReportUtils.getReference(reference);
@@ -139,7 +141,7 @@ namespace eTaxInvoicePdfGenerator.Report
                         buy_name,buy_taxno,buy_comno,buy_email,buy_tellno,buy_refer
                         ,testflag,grand_totalthai,ref_docno,ref_docdate
                         ,sell_add1 ,sell_zipcode,buy_add1,buy_zipcode
-                        ,referText1,referText2,referText3,sell_district,sell_subdistrict,sell_province,buy_district,buy_subdistrict,buy_province,sell_house_no,buy_house_no
+                        ,referText1,referText2,referText3,sell_district,sell_subdistrict,sell_province,buy_district,buy_subdistrict,buy_province,sell_house_no,buy_house_no,
                          });
 
                     invoicePdf = reportViewer.LocalReport.Render("PDF", null, out mimeType, out encoding, out extension, out streamIds, out warnings);
@@ -251,6 +253,16 @@ namespace eTaxInvoicePdfGenerator.Report
             }
         }
 
+        private string getSchemeID(string schemeID)
+        {
+            string returnValue = "";
+
+            if(schemeID == "TXID")
+            {
+                returnValue = "สำนักงานใหญ่/เลขที่สาขา";
+            }
+            return returnValue;
+        }
 
     }
 }

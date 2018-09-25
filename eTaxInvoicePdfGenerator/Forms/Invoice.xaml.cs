@@ -24,6 +24,7 @@ namespace eTaxInvoicePdfGenerator.Forms
         private const string REF_TYPE = "388";
         private const string REF_NAME = "ใบกำกับภาษี";
         private string invoiceID = "";
+        private string taxType = "";
         private SellerObj seller;
         //private Collection<TypeCodeObj> typeCodes = new Collection<TypeCodeObj>() { new TypeCodeObj("ALT", "ใบกำกับภาษีเดิม"), new TypeCodeObj("ZZZ", "อื่นๆ") };
         //public Collection<TypeCodeObj> TypeCodes { get { return typeCodes; } }
@@ -117,6 +118,7 @@ namespace eTaxInvoicePdfGenerator.Forms
                 houseNoTb.Text = obj.houseNo;
                 zipcodeTb.Text = obj.zipCode;
                 taxIdTb.Text = obj.taxId;
+                taxType = obj.taxType;
                 if (obj.isBranch)
                 {
                     is_branch.IsChecked = true;
@@ -215,6 +217,7 @@ namespace eTaxInvoicePdfGenerator.Forms
                 buyer.houseNo = houseNoTb.Text;
                 buyer.zipCode = zipcodeTb.Text;
                 buyer.taxId = taxIdTb.Text;
+                buyer.taxType = taxType;
                 if (is_branch.IsChecked.Value)
                 {
                     buyer.isBranch = true;
