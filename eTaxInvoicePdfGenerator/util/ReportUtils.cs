@@ -67,8 +67,7 @@ namespace eTaxInvoicePdfGenerator.util
                 else
                     text_result = "สาขา(" + id + ")";
             }
-
-            return text_result;
+                return text_result;
         }
         public static string getFullThaiBathController(string txt)
         {
@@ -175,6 +174,19 @@ namespace eTaxInvoicePdfGenerator.util
             }
             return bahtTH;
         }
+
+        public string getTaxNO(string v, string taxType)
+        {
+            String textReturn = v;
+
+            if (taxType == "OTHR")
+            {
+                textReturn = "N/A";
+            }
+
+            return textReturn;
+        }
+
         public static List<string> getReference (DataTable reference)
         {
             List<string> doc_reference = new List<string>();

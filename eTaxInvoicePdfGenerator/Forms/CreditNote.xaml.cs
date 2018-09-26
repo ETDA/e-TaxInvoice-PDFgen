@@ -320,11 +320,11 @@ namespace eTaxInvoicePdfGenerator.Forms
             util.Validator validator = new util.Validator();
             validator.validateText(docIdTb, "เลขที่ใบกำกับภาษีอ้างถึง", 35, true);
             validator.validateDocDate(docDateTb, "ใบกำกับภาษีอ้างถึง");
-            if (taxIdType.SelectedIndex != 2)
+            if (taxIdType.SelectedIndex == 0 || taxIdType.SelectedIndex == 1)
             {
                 validator.validateTaxID(taxIdTb);
             }
-            else
+            else if (taxIdType.SelectedIndex == 2)
             {
                 validator.validateTaxID(taxIdTb, 1);
             }

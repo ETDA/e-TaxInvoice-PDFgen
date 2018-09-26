@@ -85,7 +85,7 @@ namespace eTaxInvoicePdfGenerator.util
                 XmlObj.sellerBuildingName = seller.Rows[0]["house_no"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(seller.Rows[0]["house_no"].ToString());
 
                 XmlObj.buyerName = buyer.Rows[0]["name"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["name"].ToString());
-                XmlObj.buyerTaxid = buyer.Rows[0]["tax_id"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["tax_id"].ToString() + buyer.Rows[0]["branch_id"].ToString());
+                XmlObj.buyerTaxid = buyer.Rows[0]["tax_id"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["tax_id"].ToString() + (buyer.Rows[0]["tax_type"].ToString() == "TXID" ? buyer.Rows[0]["branch_id"].ToString() : ""));
                 XmlObj.buyerTaxType = buyer.Rows[0]["tax_type"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["tax_type"].ToString());
                 XmlObj.buyereMail = buyer.Rows[0]["email"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["email"].ToString());
                 XmlObj.buyerZipcode = buyer.Rows[0]["zipcode"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(buyer.Rows[0]["zipcode"].ToString());
@@ -124,6 +124,12 @@ namespace eTaxInvoicePdfGenerator.util
                 XmlObj.invoiceTaxBasisTotalAmount = item.Rows[0]["basis_amount"].ToString() == null ? "" : ReportUtils.replaceSpecialChar(item.Rows[0]["basis_amount"].ToString());
                 XmlObj.reason = "ส่วนลดจากราคาปกติ";
                 XmlObj.reasonCode = "91";
+
+                //Filter Value
+                if (XmlObj.buyerTaxType == "OTHR")
+                {
+                    XmlObj.buyerTaxid = "N/A";
+                }
             }
             catch (Exception ex)
             {
