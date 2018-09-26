@@ -45,11 +45,12 @@ namespace eTaxInvoicePdfGenerator.Forms
             try
             {
                 BuyerObj obj = new BuyerDao().select(this.id);
+                taxIdType.SelectedIndex = getTaxTypeSchemaIndex(obj.taxType);
                 nameTb.Text = obj.name;
                 address1Tb.Text = obj.address1;
                 houseNoTb.Text = obj.houseNo;
                 zipcodeTb.Text = obj.zipCode;
-                taxIdTb.Text = obj.taxId;
+                taxIdTb.Text = obj.taxId;                
                 if (obj.isBranch)
                 {
                     is_branch.IsChecked = true;
@@ -312,13 +313,15 @@ namespace eTaxInvoicePdfGenerator.Forms
 
         private void taxIdType_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
             taxIdTb.Text = "";
             branchNoTb.Text = "";
             taxIdTb.MaxLength = 13;
+            taxIdTypeControl(taxIdType.SelectedIndex);
+        }
 
-
-            if (taxIdType.SelectedIndex == 0)
+        private void taxIdTypeControl(int taxTypeIdex)
+        {
+            if (taxTypeIdex == 0)
             {
                 is_main.IsEnabled = true;
                 is_branch.IsEnabled = true;
@@ -327,18 +330,18 @@ namespace eTaxInvoicePdfGenerator.Forms
                 taxIdTb.IsEnabled = true;
                 branchNoTb.IsEnabled = true;
             }
-            else if (taxIdType.SelectedIndex == 1 || taxIdType.SelectedIndex == 2)
+            else if (taxTypeIdex == 1 || taxTypeIdex == 2)
             {
                 is_branch.IsChecked = false;
                 is_main.IsEnabled = false;
                 is_branch.IsEnabled = false;
                 branchNoTb.IsEnabled = false;
-                if(taxIdType.SelectedIndex == 2)
+                if (taxIdType.SelectedIndex == 2)
                 {
                     taxIdTb.MaxLength = 35;
                 }
             }
-            else if (taxIdType.SelectedIndex == 3)
+            else if (taxTypeIdex == 3)
             {
                 is_main.IsEnabled = false;
                 is_branch.IsEnabled = false;
@@ -347,7 +350,8 @@ namespace eTaxInvoicePdfGenerator.Forms
                 taxIdTb.IsEnabled = false;
                 branchNoTb.IsEnabled = false;
             }
-        }
+        } 
+
         private string getTaxTypeSchemaID(int index)
         {
             string returnValue = "";
@@ -367,6 +371,30 @@ namespace eTaxInvoicePdfGenerator.Forms
                     returnValue = "OTHR";
                     break;
             }
+            return returnValue;
+        }
+
+        private int getTaxTypeSchemaIndex(String ID)
+        {
+            int returnValue = 0;
+            switch (ID)
+            {
+                case "TXID":
+                    returnValue = 0;
+                    break;
+                case "NIDN":
+                    returnValue = 1;
+                    break;
+                case "CCPT":
+                    returnValue = 2;
+                    break;
+                case "OTHR":
+                    returnValue = 3;
+                    break;
+            }
+
+            taxIdTypeControl(returnValue);
+
             return returnValue;
         }
     }

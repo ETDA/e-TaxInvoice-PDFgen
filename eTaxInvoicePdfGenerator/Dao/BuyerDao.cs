@@ -51,6 +51,7 @@ namespace eTaxInvoicePdfGenerator.Dao
                                 data.subdistrictName = dr["subdistrict_name"].ToString();
                                 data.subdistrcitCode = dr["subdistrict_code"].ToString();
                                 data.houseNo = dr["house_no"].ToString();
+                                data.taxType = dr["tax_type"].ToString();
                             }
                         }
                     }
