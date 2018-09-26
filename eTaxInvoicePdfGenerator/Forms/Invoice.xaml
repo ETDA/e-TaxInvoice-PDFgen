@@ -51,17 +51,17 @@
                     </Expander>
                     <DockPanel Grid.Row="2">
                         <Grid>
-                            <Label x:Name="label1" Content="ชื่อบริษัท/ผู้ชื้อ *" HorizontalAlignment="Left" Margin="326,95,0,0" VerticalAlignment="Top" Height="26"/>
-                            <Label x:Name="label2" Content="ที่อยู่" HorizontalAlignment="Left" Margin="326,155,0,0" VerticalAlignment="Top"/>
-                            <TextBox x:Name="taxIdTb" HorizontalAlignment="Left" Height="23" Margin="560,25,0,0" VerticalAlignment="Top" Width="360" TabIndex="5" MaxLength="13"/>
-                            <TextBox x:Name="address1Tb" HorizontalAlignment="Left" Height="23" Margin="560,157,0,0" VerticalAlignment="Top" Width="360" TabIndex="8" MaxLength="256"/>
-                            <TextBox x:Name="houseNoTb" HorizontalAlignment="Left" Height="23" Margin="560,127,0,0" VerticalAlignment="Top" Width="360" TabIndex="7" MaxLength="16"/>
-                            <TextBox x:Name="zipcodeTb" HorizontalAlignment="Left" Height="23" Margin="560,285,0,0" VerticalAlignment="Top" Width="360" TabIndex="12" MaxLength="5"/>
-                            <Label x:Name="label3" Content="รหัสไปรษณีย์ *" HorizontalAlignment="Left" Margin="326,283,0,0" VerticalAlignment="Top" />
-                            <Label x:Name="label4" Content="เลขประจำตัวผู้เสียภาษีอากร *" HorizontalAlignment="Left" Margin="326,23,0,0" VerticalAlignment="Top" />
-                            <RadioButton x:Name="is_main" GroupName="branch" Content="สำนักงานใหญ่" HorizontalAlignment="Left" Margin="562,64,0,0" VerticalAlignment="Top" Checked="is_main_Checked"/>
-                            <RadioButton x:Name="is_branch" Content="สาขาเลขที่" GroupName="branch" HorizontalAlignment="Left" Margin="679,65,0,0" VerticalAlignment="Top" Height="14" Checked="is_branch_Checked"/>
-                            <TextBox x:Name="branchNoTb" HorizontalAlignment="Left" Height="22" Margin="780,61,0,0" VerticalAlignment="Top" Width="140" LostFocus="branchNoTb_LostFocus" MaxLength="5"/>
+                            <Label x:Name="label1" Content="ชื่อบริษัท/ผู้ชื้อ *" HorizontalAlignment="Left" Margin="326,112,0,0" VerticalAlignment="Top" Height="26"/>
+                            <Label x:Name="label2" Content="ที่อยู่" HorizontalAlignment="Left" Margin="326,172,0,0" VerticalAlignment="Top"/>
+                            <TextBox x:Name="taxIdTb" HorizontalAlignment="Left" Height="23" Margin="560,55,0,0" VerticalAlignment="Top" Width="360" TabIndex="5" MaxLength="13"/>
+                            <TextBox x:Name="address1Tb" HorizontalAlignment="Left" Height="23" Margin="560,176,0,0" VerticalAlignment="Top" Width="360" TabIndex="8" MaxLength="256"/>
+                            <TextBox x:Name="houseNoTb" HorizontalAlignment="Left" Height="23" Margin="560,146,0,0" VerticalAlignment="Top" Width="360" TabIndex="7" MaxLength="16"/>
+                            <TextBox x:Name="zipcodeTb" HorizontalAlignment="Left" Height="23" Margin="560,296,0,0" VerticalAlignment="Top" Width="360" TabIndex="12" MaxLength="5"/>
+                            <Label x:Name="label3" Content="รหัสไปรษณีย์ *" HorizontalAlignment="Left" Margin="326,296,0,0" VerticalAlignment="Top" />
+                            <Label x:Name="label4" Content="เลขประจำตัวผู้เสียภาษีอากร *" HorizontalAlignment="Left" Margin="326,51,0,0" VerticalAlignment="Top" />
+                            <RadioButton x:Name="is_main" GroupName="branch" Content="สำนักงานใหญ่" HorizontalAlignment="Left" Margin="562,90,0,0" VerticalAlignment="Top" Checked="is_main_Checked"/>
+                            <RadioButton x:Name="is_branch" Content="สาขาเลขที่" GroupName="branch" HorizontalAlignment="Left" Margin="679,90,0,0" VerticalAlignment="Top" Height="14" Checked="is_branch_Checked"/>
+                            <TextBox x:Name="branchNoTb" HorizontalAlignment="Left" Height="22" Margin="780,86,0,0" VerticalAlignment="Top" Width="140" LostFocus="branchNoTb_LostFocus" MaxLength="5"/>
                             <Label x:Name="label7" Content="อีเมล *" HorizontalAlignment="Left" Margin="326,324,0,0" VerticalAlignment="Top"/>
                             <Label x:Name="label8" Content="ผู้ติดต่อ" HorizontalAlignment="Left" Margin="326,355,0,0" VerticalAlignment="Top"/>
                             <TextBox x:Name="emailTb" HorizontalAlignment="Left" Height="23" Margin="560,326,0,0" VerticalAlignment="Top" Width="360" TabIndex="13" MaxLength="256"/>
@@ -144,21 +144,28 @@
                             <Label x:Name="label29" Content="บาท" HorizontalAlignment="Left" Margin="880,848,0,0" VerticalAlignment="Top" />
                             <Label x:Name="label30" Content="บาท" HorizontalAlignment="Left" Margin="880,875,0,0" VerticalAlignment="Top" />
                             <Label x:Name="label31" Content="บาท" HorizontalAlignment="Left" Margin="880,904,0,0" VerticalAlignment="Top" />
-                            <ComboBox x:Name="nameCbb" HorizontalAlignment="Left" Margin="560,97,0,0" VerticalAlignment="Top" Width="360" IsEditable="True" SelectionChanged="nameCbb_SelectionChanged" TabIndex="6" Height="22" IsTextSearchEnabled="false"/>
+                            <ComboBox x:Name="nameCbb" HorizontalAlignment="Left" Margin="560,116,0,0" VerticalAlignment="Top" Width="360" IsEditable="True" SelectionChanged="nameCbb_SelectionChanged" TabIndex="6" Height="22" IsTextSearchEnabled="false"/>
                             <TextBox x:Name="remarkTb" HorizontalAlignment="Left" Height="70" Margin="60,664,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="860" MaxLength="500" VerticalScrollBarVisibility="Auto"/>
                             <Label x:Name="label32" HorizontalAlignment="Left" Margin="80,625,0,0" VerticalAlignment="Top" Content="หมายเหตุ"/>
-                            <ComboBox x:Name="provinceCbb" HorizontalAlignment="Left" Height="23" Margin="560,188,0,0" VerticalAlignment="Top" Width="360" TabIndex="9" />
-                            <ComboBox x:Name="districtCbb" HorizontalAlignment="Left" Height="23" Margin="560,218,0,0" VerticalAlignment="Top" Width="360" TabIndex="10"/>
-                            <ComboBox x:Name="subDistrictCbb" HorizontalAlignment="Left" Height="23" Margin="560,251,0,0" VerticalAlignment="Top" Width="360" TabIndex="11"/>
-                            <Label x:Name="label" Content="จังหวัด *" HorizontalAlignment="Left" Margin="326,186,0,0" VerticalAlignment="Top"/>
-                            <Label x:Name="label16_Copy" Content="อำเภอ/เขต *" HorizontalAlignment="Left" Margin="326,216,0,0" VerticalAlignment="Top"/>
-                            <Label x:Name="label17_Copy" Content="ตำบล/แขวง *" HorizontalAlignment="Left" Margin="326,249,0,0" VerticalAlignment="Top"/>
-                            <Label x:Name="label5" Content="บ้านเลขที่ *" HorizontalAlignment="Left" Margin="326,125,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.208,0.185"/>
+                            <ComboBox x:Name="provinceCbb" HorizontalAlignment="Left" Height="23" Margin="560,206,0,0" VerticalAlignment="Top" Width="360" TabIndex="9" />
+                            <ComboBox x:Name="districtCbb" HorizontalAlignment="Left" Height="23" Margin="560,236,0,0" VerticalAlignment="Top" Width="360" TabIndex="10"/>
+                            <ComboBox x:Name="subDistrictCbb" HorizontalAlignment="Left" Height="23" Margin="560,266,0,0" VerticalAlignment="Top" Width="360" TabIndex="11"/>
+                            <Label x:Name="label" Content="จังหวัด *" HorizontalAlignment="Left" Margin="328,204,0,0" VerticalAlignment="Top"/>
+                            <Label x:Name="label16_Copy" Content="อำเภอ/เขต *" HorizontalAlignment="Left" Margin="328,236,0,0" VerticalAlignment="Top"/>
+                            <Label x:Name="label17_Copy" Content="ตำบล/แขวง *" HorizontalAlignment="Left" Margin="326,262,0,0" VerticalAlignment="Top"/>
+                            <Label x:Name="label5" Content="บ้านเลขที่ *" HorizontalAlignment="Left" Margin="326,140,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.208,0.185"/>
                             <TextBox x:Name="serviceChargeTb" HorizontalAlignment="Left" Height="23" Margin="790,814,0,0" VerticalAlignment="Top" Width="80" Text="0.00" TextAlignment="Right" MaxLength="10" TabIndex="19" GotFocus="serviceChargeTb_GotFocus" KeyUp="serviceChargeTb_KeyUp" LostFocus="serviceChargeTb_LostFocus"/>
                             <TextBox x:Name="serviceChargeRateTb" HorizontalAlignment="Left" Height="23" Margin="702,814,0,0" Text="0.00" VerticalAlignment="Top" Width="50" HorizontalContentAlignment="Right" KeyUp="serviceChargeRateTb_KeyUp" MaxLength="5" TabIndex="18" GotFocus="serviceChargeRateTb_GotFocus" LostFocus="serviceChargeRateTb_LostFocus"/>
                             <Label x:Name="label10" Content="ค่าบริการ" HorizontalAlignment="Left" Margin="623,812,0,0" VerticalAlignment="Top" />
                             <Label x:Name="label12" Content="%" HorizontalAlignment="Left" Margin="758,812,0,0" VerticalAlignment="Top" />
                             <Label x:Name="label14" Content="บาท" HorizontalAlignment="Left" Margin="880,812,0,0" VerticalAlignment="Top" />
+                            <ComboBox x:Name="taxIdType" HorizontalAlignment="Left" Height="23" Margin="560,24,0,0" VerticalAlignment="Top" Width="360" TabIndex="5" SelectionChanged="taxIdType_SelectionChanged" >
+                                <ComboBoxItem Content="เลขประจำตัวผู้เสียภาษีอากร" HorizontalAlignment="Left" Height="23" />
+                                <ComboBoxItem Content="เลขประจำตัวประชาชน" HorizontalAlignment="Left" Height="23"/>
+                                <ComboBoxItem Content="เลขที่หนังสือเดินทาง" HorizontalAlignment="Left" Height="23"/>
+                                <ComboBoxItem Content="ไม่ระบุ" HorizontalAlignment="Left" Height="23"/>
+                            </ComboBox>
+                            <Label x:Name="label4_Copy" Content="ประเภทผู้เสียภาษีอากร *" HorizontalAlignment="Left" Margin="328,22,0,0" VerticalAlignment="Top" />
                         </Grid>
                     </DockPanel>
 
