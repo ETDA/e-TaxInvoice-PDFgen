@@ -121,7 +121,7 @@
                     <Label x:Name="label33" Content="มูลค่าผลต่าง" HorizontalAlignment="Left" Margin="682,1053,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.368,-0.385"/>
                     <TextBox x:Name="remarkTb" HorizontalAlignment="Left" Height="80" Margin="60,885,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="860" MaxLength="500" VerticalScrollBarVisibility="Auto"/>
                     <Label x:Name="label34" HorizontalAlignment="Left" Margin="80,853,0,0" VerticalAlignment="Top" Content="หมายเหตุ"/>
-                    <GroupBox x:Name="groupBox" Header="" HorizontalAlignment="Left" Margin="320,40,0,0" VerticalAlignment="Top" Height="140" Width="625">
+                    <GroupBox x:Name="groupBox" Header="" HorizontalAlignment="Left" Margin="320,40,0,0" VerticalAlignment="Top" Height="120" Width="625">
                         <Grid HorizontalAlignment="Left" Height="115" Margin="10,5,0,0" VerticalAlignment="Top" Width="590">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="115*"/>
@@ -148,6 +148,13 @@
                     <Label x:Name="label5" Content="บ้านเลขที่ *" HorizontalAlignment="Left" Margin="326,389,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="label6" Content="เหตุอื่น" HorizontalAlignment="Left" Margin="326,292,0,0" VerticalAlignment="Top"/>
                     <TextBox x:Name="otherPurposeTb" HorizontalAlignment="Left" Height="23" Margin="560,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" TabIndex="5"/>
+                    <ComboBox x:Name="taxIdType" HorizontalAlignment="Left" Height="23" Margin="560,170,0,0" VerticalAlignment="Top" Width="360" TabIndex="5" SelectionChanged="taxIdType_SelectionChanged" >
+                        <ComboBoxItem Content="เลขประจำตัวผู้เสียภาษีอากร" HorizontalAlignment="Left" Height="23" />
+                        <ComboBoxItem Content="เลขประจำตัวประชาชน" HorizontalAlignment="Left" Height="23"/>
+                        <ComboBoxItem Content="เลขที่หนังสือเดินทาง" HorizontalAlignment="Left" Height="23"/>
+                        <ComboBoxItem Content="ไม่ระบุ" HorizontalAlignment="Left" Height="23"/>
+                    </ComboBox>
+                    <Label x:Name="label4_Copy" Content="ประเภทผู้เสียภาษีอากร *" HorizontalAlignment="Left" Margin="326,170,0,0" VerticalAlignment="Top" />
                 </Grid>
             </ScrollViewer>
         </Grid>
