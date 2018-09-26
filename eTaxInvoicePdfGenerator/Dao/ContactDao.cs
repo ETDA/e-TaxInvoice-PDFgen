@@ -91,9 +91,9 @@ namespace eTaxInvoicePdfGenerator.Dao
             if (obj.id == 0)
             {
                 txtQuery = string.Format("INSERT INTO {0} (name,tax_id,branch_id,email,zipcode,address1,country,contact_person,phone_no,phone_ext"
-                    + ",province_name,province_code,district_name,district_code,subdistrict_name,subdistrict_code,house_no) VALUES ", this.tableName);
+                    + ",province_name,province_code,district_name,district_code,subdistrict_name,subdistrict_code,house_no,tax_type) VALUES ", this.tableName);
                 string values = string.Format("(@name,@tax_id,@branch_id,@email,@zipcode,@address1,@country,@contact_person,@phone_no,@phone_ext"
-                    + ",@province_name,@province_code,@district_name,@district_code,@subdistrict_name,@subdistrict_code,@house_no)");
+                    + ",@province_name,@province_code,@district_name,@district_code,@subdistrict_name,@subdistrict_code,@house_no,@tax_type)");
                 txtQuery = txtQuery + values;
             }
             else
@@ -102,7 +102,7 @@ namespace eTaxInvoicePdfGenerator.Dao
                 string values = string.Format("name=@name,tax_id=@tax_id,branch_id=@branch_id,email=@email,zipcode=@zipcode,address1=@address1"
                     + ",country=@country,contact_person=@contact_person,phone_no=@phone_no,phone_ext=@phone_ext"
                     + ",province_name=@province_name,province_code=@province_code,district_name=@district_name,district_code=@district_code,"
-                    + ",subdistrict_name=@subdistrict_name,subdistrict_code=@subdistrict_code,house_no=@house_no ");
+                    + ",subdistrict_name=@subdistrict_name,subdistrict_code=@subdistrict_code,house_no=@house_no,tax_type=@tax_type");
                 string condition = string.Format("WHERE id=@id");
                 txtQuery = txtQuery + values + condition;
             }
@@ -113,6 +113,7 @@ namespace eTaxInvoicePdfGenerator.Dao
                 {
                     cmd.Parameters.AddWithValue("@name", obj.name);
                     cmd.Parameters.AddWithValue("@tax_id", obj.taxId);
+                    cmd.Parameters.AddWithValue("@tax_type", obj.taxType);
                     cmd.Parameters.AddWithValue("@branch_id", obj.branchId);
                     cmd.Parameters.AddWithValue("@email", obj.email);
                     cmd.Parameters.AddWithValue("@zipcode", obj.zipCode);

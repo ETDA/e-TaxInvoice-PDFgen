@@ -177,7 +177,7 @@ namespace eTaxInvoicePdfGenerator.util
 
                 { "*buyer_name",XmlObj.buyerName},
                 {"*buyer_taxid",XmlObj.buyerTaxid },
-                {"*buyer_taxtype",XmlObj.buyerTaxid },
+                {"*buyer_taxtype",XmlObj.buyerTaxType },
                 {"*buyer_DefinedCITradeContact",getCITradeContact(XmlObj.buyereMail,XmlObj.buyercontactPersonPhoneno)},
                 {"*buyer_zipcode",XmlObj.buyerZipcode },
                 {"*buyer_address1",(string.IsNullOrWhiteSpace(XmlObj.buyerAddress1))? "":"<ram:LineOne>"+XmlObj.buyerAddress1+"</ram:LineOne>"},

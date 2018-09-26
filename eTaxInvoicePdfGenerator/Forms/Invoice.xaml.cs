@@ -118,7 +118,7 @@ namespace eTaxInvoicePdfGenerator.Forms
                 houseNoTb.Text = obj.houseNo;
                 zipcodeTb.Text = obj.zipCode;
                 taxIdTb.Text = obj.taxId;
-                taxType = obj.taxType;
+                this.taxType = obj.taxType;
                 if (obj.isBranch)
                 {
                     is_branch.IsChecked = true;
@@ -283,6 +283,7 @@ namespace eTaxInvoicePdfGenerator.Forms
             ContactObj contact = new ContactObj();
             contact.name = obj.name;
             contact.taxId = obj.taxId;
+            contact.taxType = obj.taxType;
             contact.branchId = obj.branchId;
             contact.email = obj.email;
             contact.zipCode = obj.zipCode;
@@ -843,6 +844,11 @@ namespace eTaxInvoicePdfGenerator.Forms
                 otherPurposeTb.Text = "";
                 otherPurposeTb.IsEnabled = false;
             }
+        }
+
+        private void taxIdTb_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

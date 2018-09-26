@@ -54,14 +54,19 @@ namespace eTaxInvoicePdfGenerator.util
             
             return result;
         }
-        public string getBranch(string id)
+        public string getBranch(string id,string taxScheme)
         {
-            string text_result = "("+id+")";
+            string text_result = "";
+
+            if (taxScheme == "TXID")
+            {
+                text_result = "(" + id + ")";
 
                 if (id.IndexOf("00000") != -1)
                     text_result = "สำนักงานใหญ่(" + id + ")";
                 else
                     text_result = "สาขา(" + id + ")";
+            }
 
             return text_result;
         }

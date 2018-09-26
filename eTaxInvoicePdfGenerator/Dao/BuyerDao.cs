@@ -142,6 +142,7 @@ namespace eTaxInvoicePdfGenerator.Dao
                                 obj.address1 = dr["address1"].ToString();
                                 obj.zipCode = dr["zipcode"].ToString();
                                 obj.taxId = dr["tax_id"].ToString();
+                                obj.taxType = dr["tax_type"].ToString();
                                 obj.isBranch = Convert.ToBoolean(dr["is_branch"]);
                                 obj.branchId = dr["branch_id"].ToString();
                                 obj.email = dr["email"].ToString();
@@ -155,7 +156,7 @@ namespace eTaxInvoicePdfGenerator.Dao
                                 obj.districtName = dr["district_name"].ToString();
                                 obj.subdistrcitCode = dr["subdistrict_code"].ToString();
                                 obj.subdistrictName = dr["subdistrict_name"].ToString();
-                                obj.houseNo = dr["house_no"].ToString();
+                                obj.houseNo = dr["house_no"].ToString();                                
                                 items.Add(obj);
                             }
                         }
