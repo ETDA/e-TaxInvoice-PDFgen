@@ -65,6 +65,10 @@ namespace eTaxInvoicePdfGenerator.Forms
                 purposeCbb.SelectedIndex = 0;
                 otherPurposeTb.IsEnabled = false;
                 setProvinceList();
+
+                is_main.IsChecked = true;
+                taxIdType.SelectedIndex = 0;
+                taxIdTypeControl(0);
             }
             catch (Exception ex)
             {

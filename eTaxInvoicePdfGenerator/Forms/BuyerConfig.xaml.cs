@@ -36,6 +36,8 @@ namespace eTaxInvoicePdfGenerator.Forms
             else
             {
                 is_main.IsChecked = true;
+                taxIdType.SelectedIndex = 0;
+                taxIdTypeControl(0);
             }
             Keyboard.Focus(nameTb);
         }

@@ -208,7 +208,7 @@ namespace eTaxInvoicePdfGenerator.Dao
                 string values = string.Format("name=@name,tax_id=@tax_id,phone_no=@phone_no,phone_ext=@phone_ext,zipcode=@zipcode,address1=@address1"
                     + ",email=@email,contact_person=@contact_person,is_branch=@is_branch,branch_id=@branch_id"
                     + ",province_name=@province_name,province_code=@province_code,district_name=@district_name,district_code=@district_code"
-                    + ",subdistrict_name=@subdistrict_name,subdistrict_code=@subdistrict_code,house_no=@house_no,tax_type=@tax_type");
+                    + ",subdistrict_name=@subdistrict_name,subdistrict_code=@subdistrict_code,house_no=@house_no,tax_type=@tax_type ");
                 string condition = string.Format("WHERE id=@id");
                 txtQuery = txtQuery + values + condition;
             }
