@@ -28,7 +28,7 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <RadioButton x:Name="is_first" GroupName="reference" Content="ใบกำกับภาษี" HorizontalAlignment="Left" Margin="326,13,0,0" VerticalAlignment="Top" Height="15" Checked="is_first_Checked" TabIndex="1"/>
-                    <RadioButton x:Name="is_replace" GroupName="reference" Content="ยกเลิกใบกำกับภาษีเดิม เพื่อออกใบกำกับภาษีใหม่" HorizontalAlignment="Left" Margin="466,13,0,0" VerticalAlignment="Top" Height="15" Checked="is_replace_Checked" TabIndex="2"/>
+                    <RadioButton x:Name="is_replace" GroupName="reference" Content="ยกเลิกใบกำกับภาษีเดิม เพื่อออกใบกำกับภาษีใหม่" HorizontalAlignment="Left" Margin="646,13,0,0" VerticalAlignment="Top" Height="15" Checked="is_replace_Checked" TabIndex="2"/>
                     <Expander x:Name="typeEx" IsExpanded="True" Grid.Row="1" Margin="321,0,-41,0" Style="{DynamicResource ExpanderStyle1}">
                         <GroupBox x:Name="groupBox" Header="" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Height="152" Width="620">
                             <Grid HorizontalAlignment="Left" Height="155" Margin="10,5,0,0" VerticalAlignment="Top" Width="590">
@@ -168,6 +168,7 @@
                             <Label x:Name="label4_Copy" Content="ประเภทผู้เสียภาษีอากร *" HorizontalAlignment="Left" Margin="328,22,0,0" VerticalAlignment="Top" />
                         </Grid>
                     </DockPanel>
+                    <RadioButton x:Name="is_first_2ndHeader" GroupName="reference" Content="ใบเสร็จรับเงิน/ใบกำกับภาษี" HorizontalAlignment="Left" Margin="441,13,0,0" VerticalAlignment="Top" Height="15" Checked="is_first_Checked" TabIndex="1"/>
 
                 </Grid>
             </ScrollViewer>

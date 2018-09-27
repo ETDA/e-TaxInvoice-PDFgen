@@ -52,6 +52,11 @@ namespace eTaxInvoicePdfGenerator.util
             else
             {
                 typeCode = "388";
+                if(name == "ใบเสร็จรับเงิน/ใบกำกับภาษี")
+                {
+                    typeCode = "T03";
+                }
+                
                 templatePath = "Resources\\template.xml";
             }
             

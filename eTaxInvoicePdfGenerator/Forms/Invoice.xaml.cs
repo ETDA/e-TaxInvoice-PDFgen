@@ -195,7 +195,21 @@ namespace eTaxInvoicePdfGenerator.Forms
                 {
                     obj.issueDate = DateTime.Now.ToString("dd/MM/yyyy",new CultureInfo("en-US"));
                 }
-                obj.invoiceName = "ใบกำกับภาษี";
+
+                var test =  is_first_2ndHeader.IsChecked;
+                var test2 = is_first.IsChecked;
+
+                var test3 = is_first_2ndHeader.IsChecked.Value;
+                var test4 = is_first.IsChecked.Value;
+
+                if (is_first_2ndHeader.IsChecked.Value)
+                {
+                    obj.invoiceName = "ใบเสร็จรับเงิน/ใบกำกับภาษี";
+                }
+                if(is_first.IsChecked.Value)
+                {
+                    obj.invoiceName = "ใบกำกับภาษี";
+                }
                 obj.taxCode = "VAT";
                 obj.taxRate = Convert.ToDouble(vatTb.Text);
                 obj.basisAmount = Convert.ToDouble(basisAmountTb.Text);
