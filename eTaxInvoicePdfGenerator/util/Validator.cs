@@ -334,7 +334,7 @@ namespace eTaxInvoicePdfGenerator.util
 
         public void validateTypeCode(ComboBox obj)
         {
-            if (obj.Text.Length == 0 || obj.Text.Length > 20)
+            if (obj.Text.Length == 0 || obj.Text.Length > 26)
             {
                 obj.Focus();
                 throw new Exception("กรุณาระบุประเภทเอกสารอ้างอิง");

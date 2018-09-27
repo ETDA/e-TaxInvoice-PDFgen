@@ -18,7 +18,7 @@ namespace eTaxInvoicePdfGenerator.Forms
         public string invoiceId;
         public List<ReferenceObj> refList { get; set; }
         private Collection<TypeCodeObj> typeCodes = new Collection<TypeCodeObj>() {
-            new TypeCodeObj("", "ใบกำกับภาษี"),
+            new TypeCodeObj("388", "ใบกำกับภาษี"),
             new TypeCodeObj("T03","ใบเสร็จรับเงิน/ใบกำกับภาษี"),
             new TypeCodeObj("81", "ใบลดหนี้"),
             new TypeCodeObj("80", "ใบเพิ่มหนี้")            

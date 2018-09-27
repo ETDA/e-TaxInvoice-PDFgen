@@ -98,9 +98,9 @@ namespace eTaxInvoicePdfGenerator.Forms
                 ref1 = refList.FirstOrDefault(s => s.number == 1);
                 ref1.documentId = docIdTb.Text;
                 ref1.documentDate = docDateTb.Text;
-                ref1.typeCode = REF_TYPE;
+                //ref1.typeCode = REF_TYPE;
                 ref1.invoiceId = this.invoiceID;
-                ref1.typeCodeObj = new TypeCodeObj(REF_TYPE, REF_NAME);
+                //ref1.typeCodeObj = new TypeCodeObj(REF_TYPE, REF_NAME);
             }
         }
 
@@ -432,7 +432,7 @@ namespace eTaxInvoicePdfGenerator.Forms
         {
             RefDoc refDoc = new RefDoc();
             refDoc.invoiceId = this.invoiceID;
-            setRef1();
+            //setRef1();
             refDoc.refList = this.refList;
             bool result = refDoc.ShowDialog().Value;
             if (result)
