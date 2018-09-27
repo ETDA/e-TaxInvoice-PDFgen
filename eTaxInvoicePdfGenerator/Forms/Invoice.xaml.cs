@@ -55,6 +55,7 @@ namespace eTaxInvoicePdfGenerator.Forms
         {
             try
             {
+                
                 refList = new List<ReferenceObj>();
                 List<BuyerObj> buyerList = new BuyerDao().list();
                 nameCbb.DisplayMemberPath = "name";
@@ -195,12 +196,6 @@ namespace eTaxInvoicePdfGenerator.Forms
                 {
                     obj.issueDate = DateTime.Now.ToString("dd/MM/yyyy",new CultureInfo("en-US"));
                 }
-
-                var test =  is_first_2ndHeader.IsChecked;
-                var test2 = is_first.IsChecked;
-
-                var test3 = is_first_2ndHeader.IsChecked.Value;
-                var test4 = is_first.IsChecked.Value;
 
                 if (is_first_2ndHeader.IsChecked.Value)
                 {
