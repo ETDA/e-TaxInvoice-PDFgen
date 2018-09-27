@@ -159,7 +159,7 @@
                             <Label x:Name="label10" Content="ค่าบริการ" HorizontalAlignment="Left" Margin="623,812,0,0" VerticalAlignment="Top" />
                             <Label x:Name="label12" Content="%" HorizontalAlignment="Left" Margin="758,812,0,0" VerticalAlignment="Top" />
                             <Label x:Name="label14" Content="บาท" HorizontalAlignment="Left" Margin="880,812,0,0" VerticalAlignment="Top" />
-                            <ComboBox x:Name="taxIdType" HorizontalAlignment="Left" Height="23" Margin="560,24,0,0" VerticalAlignment="Top" Width="360" TabIndex="5" SelectionChanged="taxIdType_SelectionChanged" >
+                            <ComboBox x:Name="taxIdType" HorizontalAlignment="Left" Height="23" Margin="560,24,0,0" VerticalAlignment="Top" Width="360" TabIndex="5" SelectionChanged="taxIdType_SelectionChanged" SelectedIndex="4">
                                 <ComboBoxItem Content="เลขประจำตัวผู้เสียภาษีอากร" HorizontalAlignment="Left" Height="23" />
                                 <ComboBoxItem Content="เลขประจำตัวประชาชน" HorizontalAlignment="Left" Height="23"/>
                                 <ComboBoxItem Content="เลขที่หนังสือเดินทาง" HorizontalAlignment="Left" Height="23"/>

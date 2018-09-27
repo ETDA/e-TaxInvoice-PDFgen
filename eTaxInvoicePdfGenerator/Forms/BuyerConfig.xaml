@@ -57,7 +57,8 @@
 			<ComboBoxItem Content="เลขประจำตัวประชาชน" HorizontalAlignment="Left" Height="23"/>
 			<ComboBoxItem Content="เลขที่หนังสือเดินทาง" HorizontalAlignment="Left" Height="23"/>
 			<ComboBoxItem Content="ไม่ระบุ" HorizontalAlignment="Left" Height="23"/>
-		</ComboBox>
+            <ComboBoxItem Content="กรุณาเลือก" HorizontalAlignment="Left" Height="23"/>
+        </ComboBox>
 		<Label x:Name="label4_Copy" Content="ประเภทผู้เสียภาษีอากร *" HorizontalAlignment="Left" Margin="400,156,0,0" VerticalAlignment="Top" />
 	</Grid>
 </Window>
