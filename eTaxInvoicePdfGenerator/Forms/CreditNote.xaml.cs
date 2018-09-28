@@ -124,7 +124,7 @@ namespace eTaxInvoicePdfGenerator.Forms
                     is_branch.IsChecked = true;
                     branchNoTb.Text = obj.branchId;
                 }
-                else
+                if (obj.isBranch == false && obj.taxType == "TXID")
                 {
                     is_main.IsChecked = true;
                 }
@@ -787,6 +787,8 @@ namespace eTaxInvoicePdfGenerator.Forms
         {
             taxIdTb.Text = "";
             branchNoTb.Text = "";
+            is_main.IsChecked = false;
+            is_branch.IsChecked = false;
             taxIdTb.MaxLength = 13;
             taxIdTypeControl(taxIdType.SelectedIndex);
         }
