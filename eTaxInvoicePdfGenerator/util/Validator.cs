@@ -169,7 +169,7 @@ namespace eTaxInvoicePdfGenerator.util
                 }
 
                 long longTemp = 0;
-                if (obj.Text.Length != 35)
+                if (obj.Text.Length >= 35)
                 {
                     obj.Focus();
                     throw new Exception("ระบุเลขที่หนังสือเดินทางไม่ถูกต้อง โปรดตรวจสอบ");
