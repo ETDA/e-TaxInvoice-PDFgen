@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using SqliteConnector;
 using System.Data.SQLite;
 using eTaxInvoicePdfGenerator.Entity;
+using eTaxInvoicePdfGenerator.util;
 
 namespace eTaxInvoicePdfGenerator.Dao
 {
@@ -12,8 +13,9 @@ namespace eTaxInvoicePdfGenerator.Dao
         private string tableName = "buyer";
         public BuyerDao()
         {
-            string base_folder = System.AppDomain.CurrentDomain.BaseDirectory;
-            sqlite = new Sqlite(base_folder + "database.db");
+            DatabasePath dbPath = new DatabasePath();
+            string base_folder = dbPath.CurrentDBFile(); //System.AppDomain.CurrentDomain.BaseDirectory;
+            sqlite = new Sqlite(base_folder);
         }
 
         internal BuyerObj select(int id)

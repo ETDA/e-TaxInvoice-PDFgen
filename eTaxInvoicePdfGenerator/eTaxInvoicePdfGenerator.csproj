@@ -5,7 +5,7 @@
     <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PublishUrl>D:\workspace\Project\onhand_project\eTaxInvoice\apps\PDFGenerator\backup\publish\eTaxInvoice_v1.0.4.99_master\</PublishUrl>
+    <PublishUrl>D:\workspace\Project\onhand_project\eTaxInvoice\apps\PDFGenerator\backup\publish\eTaxInvoice_v1.0.4.103_788deploy\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -18,8 +18,8 @@
     <ProductName>e-Tax Invoice by Teda</ProductName>
     <PublisherName>สำนักงานพัฒนาธุรกรรมทางอิเล็กทรอนิกส์ %28ETDA%29</PublisherName>
     <SuiteName>สำนักงานพัฒนาธุรกรรมทางอิเล็กทรอนิกส์ %28ETDA%29</SuiteName>
-    <ApplicationRevision>99</ApplicationRevision>
-    <ApplicationVersion>1.0.4.99</ApplicationVersion>
+    <ApplicationRevision>103</ApplicationRevision>
+    <ApplicationVersion>1.0.4.103</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -234,6 +234,8 @@
     </Compile>
     <Compile Include="Report\InvoiceGenerator.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="util\DatabaseMigration.cs" />
+    <Compile Include="util\DatabasePath.cs" />
     <Compile Include="util\DateHelper.cs" />
     <Compile Include="util\getInvoice_Xml.cs" />
     <Compile Include="util\ProvinceCodeList.cs" />

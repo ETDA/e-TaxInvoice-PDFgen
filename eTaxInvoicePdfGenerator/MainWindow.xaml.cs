@@ -5,6 +5,7 @@ using eTaxInvoicePdfGenerator.Dao;
 using eTaxInvoicePdfGenerator.Dialogs;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using eTaxInvoicePdfGenerator.util;
 
 namespace eTaxInvoicePdfGenerator
 {
@@ -15,13 +16,8 @@ namespace eTaxInvoicePdfGenerator
     {
         public MainWindow()
         {
-            //Process proc = Process.GetCurrentProcess();
-            //int count = Process.GetProcesses().Where(p =>
-            //                 p.ProcessName == proc.ProcessName).Count();
-            //if (count == 0)
-            //{
+
             InitializeComponent();
-            //}
 
         }
 

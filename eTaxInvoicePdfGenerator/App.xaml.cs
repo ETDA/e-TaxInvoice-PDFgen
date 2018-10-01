@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.IO;
+using eTaxInvoicePdfGenerator.util;
 
 namespace eTaxInvoicePdfGenerator
 {
@@ -27,6 +28,10 @@ namespace eTaxInvoicePdfGenerator
 
         protected override void OnStartup(StartupEventArgs e)
         {
+            DatabaseMigration dbMigration = new DatabaseMigration();
+            dbMigration.MigrationController();
+
+
             Process current = Process.GetCurrentProcess();
             Process[] processes = Process.GetProcessesByName(current.ProcessName);
             

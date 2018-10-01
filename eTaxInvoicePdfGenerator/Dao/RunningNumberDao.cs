@@ -5,6 +5,7 @@ using System.Text;
 using SqliteConnector;
 using eTaxInvoicePdfGenerator.Entity;
 using System.Data.SQLite;
+using eTaxInvoicePdfGenerator.util;
 
 namespace eTaxInvoicePdfGenerator.Dao
 {
@@ -15,8 +16,9 @@ namespace eTaxInvoicePdfGenerator.Dao
 
         public RunningNumberDao()
         {
-            string base_folder = System.AppDomain.CurrentDomain.BaseDirectory;
-            sqlite = new Sqlite(base_folder + "database.db");
+            DatabasePath dbPath = new DatabasePath();
+            string base_folder = dbPath.CurrentDBFile(); //System.AppDomain.CurrentDomain.BaseDirectory;
+            sqlite = new Sqlite(base_folder);
         }
 
         public RunningNumberObj select(int id)
