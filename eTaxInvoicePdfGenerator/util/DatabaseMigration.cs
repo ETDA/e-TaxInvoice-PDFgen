@@ -44,7 +44,7 @@ namespace eTaxInvoicePdfGenerator.util
 
         public void MigrationController()
         {
-            if(status != 1)
+            if(status == 1)
             {
                 ExecuteSQLStatement(GetRemoveAllStatement("address_code_list"),currentDBFile);
                 ExecuteSQLStatement(GetRemoveAllStatement("cause_code_list"), currentDBFile);
