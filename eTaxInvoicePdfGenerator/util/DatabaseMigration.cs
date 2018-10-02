@@ -19,34 +19,43 @@ namespace eTaxInvoicePdfGenerator.util
         CodeListDao codelistDAO = new CodeListDao();
         private string currentDBFile;
         private string templateDBFile;
+        private string currentTable;
+        private string backupDBFile;
+
         public DatabaseMigration()
         {
             Init();
         }
-
         public void Init()
         {
+            this.currentDBFile = dbPath.CurrentDBFile();
+            this.templateDBFile = dbPath.TemplateDBFile();
+            this.backupDBFile = dbPath.BackupDBFile();
 
             if (!Directory.Exists(dbPath.UserAppDBDir()))
             {
                 Directory.CreateDirectory(dbPath.UserAppDBDir());
             }
-            if (!System.IO.File.Exists(dbPath.CurrentDBFile()))
+            if (!File.Exists(dbPath.CurrentDBFile()))
             {
-                File.Copy(dbPath.TemplateDBFile(),dbPath.CurrentDBFile());
+                File.Copy(dbPath.TemplateDBFile(), dbPath.CurrentDBFile());
                 this.status = 1;
             }
-
-            this.currentDBFile = dbPath.CurrentDBFile();
-            this.templateDBFile = dbPath.TemplateDBFile();
+            if (File.Exists(backupDBFile))
+            {
+                BackupMigrationController();
+                File.Delete(backupDBFile);
+            }
 
         }
 
+        #region Controller 
+
         public void MigrationController()
         {
-            if(status != 1)
+            if (status != 1)
             {
-                ExecuteSQLStatement(GetRemoveAllStatement("address_code_list"),currentDBFile);
+                ExecuteSQLStatement(GetRemoveAllStatement("address_code_list"), currentDBFile);
                 ExecuteSQLStatement(GetRemoveAllStatement("cause_code_list"), currentDBFile);
 
                 DataTable dtAddressCodelist = ExcuteDatatable(GetSelectAllStatement("address_code_list"), templateDBFile);
@@ -56,6 +65,105 @@ namespace eTaxInvoicePdfGenerator.util
                 ExecuteSQLStatement(GetUpdateCauseCodelistStatement(dtCauseCodelist), currentDBFile);
             }
         }
+
+        /*
+            Backup Migration for migrate old version database(below than 1.0.4) to new one (version 1.0.5)
+            but first.We need to run migration.exe for create backup folder.
+                        
+        */
+        public void BackupMigrationController()
+        {
+            //Do migration
+            
+            //clean table
+            ExecuteSQLStatement(GetRemoveAllStatement("code_list_unit"), currentDBFile);
+            ExecuteSQLStatement(GetRemoveAllStatement("sqlite_sequence"), currentDBFile);
+
+            BackupGetSelectAllStatement(("code_list_unit"));
+            BackupGetSelectAllStatement(("invoice"));
+            BackupGetSelectAllStatement(("invoice_item"));
+            BackupGetSelectAllStatement(("item"));
+            BackupGetSelectAllStatement(("reference"));
+            BackupGetSelectAllStatement(("seller"));
+            BackupGetSelectAllStatement(("sqlite_sequence"));
+
+            BackupGetSelectAllStatement(("buyer"));
+            BackupGetSelectAllStatement(("contact"));
+
+
+        }
+
+        #endregion
+
+        #region Old DB Migration function
+        private void BackupGetSelectAllStatement(string tableName)
+        {
+            this.currentTable = tableName;
+            BackupExcuteData(string.Format("Select * from {0};", this.currentTable));
+        }
+
+        internal void BackupExcuteData(string SQLStatement)
+        {
+            using (SQLiteConnection con = new SQLiteConnection(string.Format("Data Source={0};", backupDBFile)))
+            {
+                con.Open();
+                using (SQLiteCommand cmd = new SQLiteCommand(SQLStatement, con))
+                {
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        string querystatement = BackupgetData(ref reader);
+                        Backupinsert(querystatement);
+                    }
+                    reader.Close();
+                }
+                con.Close();
+            }
+        }
+        internal string BackupgetData(ref SQLiteDataReader reader)
+        {
+            int limit = reader.FieldCount;
+            string statement = "";
+            for (int i = 0; i < limit; i++)
+            {
+                Console.WriteLine(reader[i]);
+                statement += "'" + reader[i] + "'";
+                if (i != limit - 1)
+                {
+                    statement += ',';
+                }
+                else
+                {
+                    if(this.currentTable == "buyer" || (this.currentTable == "contact"))
+                    {
+                        statement += ","+"'"+"TXID"+"'";
+                    }
+                }
+            }
+            return BackupgetQueryStatement(statement);
+        }
+
+        public string BackupgetQueryStatement(string statement)
+        {
+            return string.Format("insert into {0} values ({1});", currentTable, statement);
+        }
+
+        internal void Backupinsert(string SQLStatement)
+        {
+            using (SQLiteConnection con = new SQLiteConnection(string.Format("Data Source={0};", currentDBFile)))
+            {
+                con.Open();
+                using (SQLiteCommand cmd = new SQLiteCommand(SQLStatement, con))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                con.Close();
+            }
+        }
+
+        #endregion
+
+        #region district and new other field migration function
 
         private string GetRemoveAllStatement(string tableName)
         {
@@ -154,5 +262,7 @@ namespace eTaxInvoicePdfGenerator.util
 
             return dt;
         }
+
+        #endregion
     }
 }

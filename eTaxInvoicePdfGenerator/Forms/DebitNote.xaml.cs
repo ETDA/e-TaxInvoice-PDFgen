@@ -775,6 +775,7 @@ namespace eTaxInvoicePdfGenerator.Forms
             }
             else if (taxTypeIdex == 1 || taxTypeIdex == 2)
             {
+                taxIdTb.IsEnabled = true;
                 is_branch.IsChecked = false;
                 is_main.IsEnabled = false;
                 is_branch.IsEnabled = false;

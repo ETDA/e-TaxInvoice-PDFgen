@@ -35,6 +35,10 @@ namespace eTaxInvoicePdfGenerator.util
         {
             return Path.Combine(UserAppDBDir(), dbFileName);
         }
+        public string BackupDBFile()
+        {
+            return Path.Combine(UserAppDBDir(), templateFileDBName);
+        }
         public string UserAppDataDir()
         {
             return  userAppDataDir;
