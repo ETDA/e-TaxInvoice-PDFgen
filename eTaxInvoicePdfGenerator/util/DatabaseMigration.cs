@@ -78,6 +78,7 @@ namespace eTaxInvoicePdfGenerator.util
             //clean table
             ExecuteSQLStatement(GetRemoveAllStatement("code_list_unit"), currentDBFile);
             ExecuteSQLStatement(GetRemoveAllStatement("sqlite_sequence"), currentDBFile);
+            ExecuteSQLStatement(GetRemoveAllStatement("config"), currentDBFile);
 
             BackupGetSelectAllStatement(("code_list_unit"));
             BackupGetSelectAllStatement(("invoice"));
@@ -86,6 +87,7 @@ namespace eTaxInvoicePdfGenerator.util
             BackupGetSelectAllStatement(("reference"));
             BackupGetSelectAllStatement(("seller"));
             BackupGetSelectAllStatement(("sqlite_sequence"));
+            BackupGetSelectAllStatement(("config"));
 
             BackupGetSelectAllStatement(("buyer"));
             BackupGetSelectAllStatement(("contact"));
