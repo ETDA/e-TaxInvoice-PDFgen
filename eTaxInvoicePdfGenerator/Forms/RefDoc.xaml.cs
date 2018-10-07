@@ -216,16 +216,16 @@ namespace eTaxInvoicePdfGenerator.Forms
             validateRef(documentId5, documentDate5, typeCode5);
         }
 
-        private void validateRef(TextBox id,DatePicker date,ComboBox typeCode)
+        private void validateRef(TextBox id, DatePicker date, ComboBox typeCode)
         {
             if (id.Text.Length > 0)
             {
                 util.Validator validator = new util.Validator();
-                validator.validateText(id,"เลขที่ของใบกำกับภาษีเดิม",35,false);
+                validator.validateText(id, "เลขที่ของใบกำกับภาษีเดิม", 35, false);
 
                 validator.validateTypeCode(typeCode);
 
-                validator.validateDocDate(date,"เอกสารอ้างถึง");
+                validator.validateDocDate(date, "เอกสารอ้างถึง");
             }
         }
 

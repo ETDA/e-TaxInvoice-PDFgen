@@ -54,16 +54,20 @@ namespace eTaxInvoicePdfGenerator.util
             
             return result;
         }
-        public string getBranch(string id)
+        public string getBranch(string id,string taxScheme)
         {
-            string text_result = "("+id+")";
+            string text_result = "";
+
+            if (taxScheme == "TXID")
+            {
+                text_result = "(" + id + ")";
 
                 if (id.IndexOf("00000") != -1)
                     text_result = "สำนักงานใหญ่(" + id + ")";
                 else
                     text_result = "สาขา(" + id + ")";
-
-            return text_result;
+            }
+                return text_result;
         }
         public static string getFullThaiBathController(string txt)
         {
@@ -170,6 +174,19 @@ namespace eTaxInvoicePdfGenerator.util
             }
             return bahtTH;
         }
+
+        public string getTaxNO(string v, string taxType)
+        {
+            String textReturn = v;
+
+            if (taxType == "OTHR")
+            {
+                textReturn = "N/A";
+            }
+
+            return textReturn;
+        }
+
         public static List<string> getReference (DataTable reference)
         {
             List<string> doc_reference = new List<string>();
@@ -187,6 +204,30 @@ namespace eTaxInvoicePdfGenerator.util
 
             return doc_reference;
         }
+        public static string replaceSpecialChar(string input)
+        {
+            String temp = input;
 
+            char[] specialChar = { '&', '<', '>', '\'', '"' };
+            IDictionary<char, string> dict = new Dictionary<char, string>()
+                                            {
+                                                {'&',"&amp;"},
+                                                {'<', "&lt;"},
+                                                {'>', "&gt;"},
+                                                {'\'', "&apos;"},
+                                                {'"', "&quot;"}
+                                            };
+
+            foreach (char n in specialChar)
+            {
+                while (input.IndexOf(n) != -1)
+                {
+                    temp = temp.Replace(n.ToString(), dict[n]);
+                    break;
+                }
+            }
+
+            return temp;
+        }
     }
 }

@@ -5,18 +5,21 @@ using System.Text;
 using System.Data;
 using SqliteConnector;
 using System.Data.SQLite;
+using eTaxInvoicePdfGenerator.util;
 
 namespace eTaxInvoicePdfGenerator.Dao
 {
     class ReportDao
     {
         DataTable dt_item_raw;
-        private string base_folder = System.AppDomain.CurrentDomain.BaseDirectory;
-        private Sqlite sqlite = new Sqlite("database.db");
+        private string base_folder = "";
+        private Sqlite sqlite;
 
         public ReportDao()
         {
-            sqlite = new Sqlite(base_folder + "database.db");
+            DatabasePath dbPath = new DatabasePath();
+            string base_folder = dbPath.CurrentDBFile(); //System.AppDomain.CurrentDomain.BaseDirectory;
+            sqlite = new Sqlite(base_folder);
         }
 
         public DataTable getReportData(string invoiceid)

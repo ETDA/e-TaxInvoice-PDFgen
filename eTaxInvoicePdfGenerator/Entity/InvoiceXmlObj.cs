@@ -29,6 +29,7 @@ namespace eTaxInvoicePdfGenerator.Entity
         public string sellerBuildingName{ get; set; }
         public string buyerName { get; set; }
         public string buyerTaxid { get; set; }
+        public string buyerTaxType { get; set; }        
         public string buyerWebsite { get; set; }
         public string buyereMail { get; set; }
         public string buyerZipcode { get; set; }

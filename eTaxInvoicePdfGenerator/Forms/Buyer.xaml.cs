@@ -258,5 +258,10 @@ namespace eTaxInvoicePdfGenerator.Forms
             }
             Application.Current.Shutdown();
         }
+
+        private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

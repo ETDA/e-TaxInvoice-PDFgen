@@ -25,7 +25,7 @@
                     <Label x:Name="label1" Content="ชื่อบริษัท/ผู้ชื้อ *" HorizontalAlignment="Left" Margin="326,336,0,0"  VerticalAlignment="Top" Height="26"/>
                     <Label x:Name="label2" Content="ที่อยู่" HorizontalAlignment="Left" Margin="326,396,0,0" VerticalAlignment="Top" />
                     <TextBox x:Name="address1Tb" HorizontalAlignment="Left" Height="23" Margin="560,398,0,0" VerticalAlignment="Top" Width="360" TabIndex="8" MaxLength="256"/>
-                    <TextBox x:Name="houseNoTb" HorizontalAlignment="Left" Height="23" Margin="560,370,0,0" VerticalAlignment="Top" Width="360" TabIndex="7" MaxLength="256"/>
+                    <TextBox x:Name="houseNoTb" HorizontalAlignment="Left" Height="23" Margin="560,370,0,0" VerticalAlignment="Top" Width="360" TabIndex="7" MaxLength="16" TextChanged="houseNoTb_TextChanged"/>
                     <TextBox x:Name="zipcodeTb" HorizontalAlignment="Left" Height="23" Margin="560,524,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" TabIndex="12" MaxLength="5"/>
                     <Label x:Name="label3" Content="รหัสไปรษณีย์ *" HorizontalAlignment="Left" Margin="326,522,0,0" VerticalAlignment="Top" />
                     <Label x:Name="label4" Content="เลขประจำตัวผู้เสียภาษีอากร *" Margin="326,203,414,0" VerticalAlignment="Top" />
@@ -120,7 +120,7 @@
                     <Label x:Name="label33" Content="มูลค่าผลต่าง" HorizontalAlignment="Left" Margin="681,1048,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.368,-0.385" />
                     <TextBox x:Name="remarkTb" HorizontalAlignment="Left" Height="80" Margin="60,885,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="860" MaxLength="500" VerticalScrollBarVisibility="Auto"/>
                     <Label x:Name="label34" HorizontalAlignment="Left" Margin="85,850,0,0" VerticalAlignment="Top" Content="หมายเหตุ"/>
-                    <GroupBox x:Name="groupBox" Header="" HorizontalAlignment="Left" Margin="320,40,0,0" VerticalAlignment="Top" Height="140" Width="620">
+                    <GroupBox x:Name="groupBox" Header="" HorizontalAlignment="Left" Margin="320,40,0,0" VerticalAlignment="Top" Height="120" Width="620">
                         <Grid HorizontalAlignment="Left" Height="115" Margin="10,5,0,0" VerticalAlignment="Top" Width="590">
                             <Label x:Name="label16" Content="เลขที่ใบกำกับภาษีอ้างถึง *" HorizontalAlignment="Left" Margin="9,18,0,0" VerticalAlignment="Top" />
                             <TextBox x:Name="docIdTb" HorizontalAlignment="Left" Height="23" Margin="229,21,0,0" VerticalAlignment="Top" Width="360" TabIndex="2" MaxLength="35"/>
@@ -144,6 +144,13 @@
                     <Label x:Name="label5" Content="บ้านเลขที่ *" HorizontalAlignment="Left" Margin="326,368,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="label6" Content="เหตุอื่น" HorizontalAlignment="Left" Margin="326,301,0,0" VerticalAlignment="Top"/>
                     <TextBox x:Name="otherPurposeTb" HorizontalAlignment="Left" Height="23" Margin="560,303,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" TabIndex="5"/>
+                    <ComboBox x:Name="taxIdType" HorizontalAlignment="Left" Height="23" Margin="560,173,0,0" VerticalAlignment="Top" Width="360" TabIndex="5" SelectionChanged="taxIdType_SelectionChanged" >
+                        <ComboBoxItem Content="เลขประจำตัวผู้เสียภาษีอากร" HorizontalAlignment="Left" Height="23" />
+                        <ComboBoxItem Content="เลขประจำตัวประชาชน" HorizontalAlignment="Left" Height="23"/>
+                        <ComboBoxItem Content="เลขที่หนังสือเดินทาง" HorizontalAlignment="Left" Height="23"/>
+                        <ComboBoxItem Content="ไม่ระบุ" HorizontalAlignment="Left" Height="23"/>
+                    </ComboBox>
+                    <Label x:Name="label4_Copy" Content="ประเภทผู้เสียภาษีอากร *" HorizontalAlignment="Left" Margin="326,173,0,0" VerticalAlignment="Top" />
                 </Grid>
             </ScrollViewer>
         </Grid>

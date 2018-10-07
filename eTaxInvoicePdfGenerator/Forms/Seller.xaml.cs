@@ -361,6 +361,11 @@ namespace eTaxInvoicePdfGenerator.Forms
                 tambonCbb.ItemsSource = null;
             }
         }
+
+        private void houseNoTb_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 
 }

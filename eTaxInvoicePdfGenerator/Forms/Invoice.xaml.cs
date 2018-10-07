@@ -24,6 +24,7 @@ namespace eTaxInvoicePdfGenerator.Forms
         private const string REF_TYPE = "388";
         private const string REF_NAME = "ใบกำกับภาษี";
         private string invoiceID = "";
+        private string taxType = "";
         private SellerObj seller;
         //private Collection<TypeCodeObj> typeCodes = new Collection<TypeCodeObj>() { new TypeCodeObj("ALT", "ใบกำกับภาษีเดิม"), new TypeCodeObj("ZZZ", "อื่นๆ") };
         //public Collection<TypeCodeObj> TypeCodes { get { return typeCodes; } }
@@ -54,6 +55,7 @@ namespace eTaxInvoicePdfGenerator.Forms
         {
             try
             {
+                
                 refList = new List<ReferenceObj>();
                 List<BuyerObj> buyerList = new BuyerDao().list();
                 nameCbb.DisplayMemberPath = "name";
@@ -68,6 +70,10 @@ namespace eTaxInvoicePdfGenerator.Forms
                 purposeCbb.ItemsSource = list;
                 purposeCbb.SelectedIndex = 0;
                 setProvinceList();
+
+                is_main.IsChecked = true;
+                taxIdType.SelectedIndex = 0;
+                taxIdTypeControl(0);
             }
             catch (Exception ex)
             {
@@ -112,17 +118,19 @@ namespace eTaxInvoicePdfGenerator.Forms
         {
             try
             {
+                taxIdType.SelectedIndex = getTaxTypeSchemaIndex(obj.taxType);
                 nameCbb.SelectedItem = obj;
                 address1Tb.Text = obj.address1;
                 houseNoTb.Text = obj.houseNo;
                 zipcodeTb.Text = obj.zipCode;
                 taxIdTb.Text = obj.taxId;
+                this.taxType = obj.taxType;
                 if (obj.isBranch)
                 {
                     is_branch.IsChecked = true;
                     branchNoTb.Text = obj.branchId;
                 }
-                else
+                if (obj.isBranch == false && obj.taxType == "TXID")
                 {
                     is_main.IsChecked = true;
                 }
@@ -192,7 +200,15 @@ namespace eTaxInvoicePdfGenerator.Forms
                 {
                     obj.issueDate = DateTime.Now.ToString("dd/MM/yyyy",new CultureInfo("en-US"));
                 }
-                obj.invoiceName = "ใบกำกับภาษี";
+
+                if (is_first_2ndHeader.IsChecked.Value)
+                {
+                    obj.invoiceName = "ใบเสร็จรับเงิน/ใบกำกับภาษี";
+                }
+                if(is_first.IsChecked.Value)
+                {
+                    obj.invoiceName = "ใบกำกับภาษี";
+                }
                 obj.taxCode = "VAT";
                 obj.taxRate = Convert.ToDouble(vatTb.Text);
                 obj.basisAmount = Convert.ToDouble(basisAmountTb.Text);
@@ -215,6 +231,7 @@ namespace eTaxInvoicePdfGenerator.Forms
                 buyer.houseNo = houseNoTb.Text;
                 buyer.zipCode = zipcodeTb.Text;
                 buyer.taxId = taxIdTb.Text;
+                buyer.taxType = getTaxTypeSchemaID(taxIdType.SelectedIndex);
                 if (is_branch.IsChecked.Value)
                 {
                     buyer.isBranch = true;
@@ -280,6 +297,7 @@ namespace eTaxInvoicePdfGenerator.Forms
             ContactObj contact = new ContactObj();
             contact.name = obj.name;
             contact.taxId = obj.taxId;
+            contact.taxType = obj.taxType;
             contact.branchId = obj.branchId;
             contact.email = obj.email;
             contact.zipCode = obj.zipCode;
@@ -326,7 +344,15 @@ namespace eTaxInvoicePdfGenerator.Forms
         {
             util.Validator validator = new util.Validator();
 
-            validator.validateTaxID(taxIdTb);
+            if (taxIdType.SelectedIndex == 0 || taxIdType.SelectedIndex == 1)
+            {
+                validator.validateTaxID(taxIdTb);
+            }
+            else if (taxIdType.SelectedIndex == 2)
+            {
+                validator.validateTaxID(taxIdTb, 1);
+            }
+
             if (is_branch.IsChecked.Value)
             {
                 validator.validateBranchNo(branchNoTb);
@@ -840,6 +866,102 @@ namespace eTaxInvoicePdfGenerator.Forms
                 otherPurposeTb.Text = "";
                 otherPurposeTb.IsEnabled = false;
             }
+        }
+
+        private void taxIdTb_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void taxIdType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            taxIdTb.Text = "";
+            branchNoTb.Text = "";
+            is_main.IsChecked = false;
+            is_branch.IsChecked = false;
+            taxIdTb.MaxLength = 13;
+            taxIdTypeControl(taxIdType.SelectedIndex);
+        }
+
+        private void taxIdTypeControl(int taxTypeIdex)
+        {
+            if (taxTypeIdex == 0)
+            {
+                is_main.IsEnabled = true;
+                is_branch.IsEnabled = true;
+                is_main.IsChecked = false;
+                is_branch.IsChecked = false;
+                taxIdTb.IsEnabled = true;
+                branchNoTb.IsEnabled = true;
+            }
+            else if (taxTypeIdex == 1 || taxTypeIdex == 2)
+            {
+                taxIdTb.IsEnabled = true;
+                is_branch.IsChecked = false;
+                is_main.IsEnabled = false;
+                is_branch.IsEnabled = false;
+                branchNoTb.IsEnabled = false;
+                if (taxIdType.SelectedIndex == 2)
+                {
+                    taxIdTb.MaxLength = 35;
+                }
+            }
+            else if (taxTypeIdex == 3)
+            {
+                is_main.IsEnabled = false;
+                is_branch.IsEnabled = false;
+                is_main.IsChecked = false;
+                is_branch.IsChecked = false;
+                taxIdTb.IsEnabled = false;
+                branchNoTb.IsEnabled = false;
+            }
+        }
+
+        private string getTaxTypeSchemaID(int index)
+        {
+            string returnValue = "";
+
+            switch (index)
+            {
+                case 0:
+                    returnValue = "TXID";
+                    break;
+                case 1:
+                    returnValue = "NIDN";
+                    break;
+                case 2:
+                    returnValue = "CCPT";
+                    break;
+                case 3:
+                    returnValue = "OTHR";
+                    break;
+            }
+            return returnValue;
+        }
+
+
+        private int getTaxTypeSchemaIndex(String ID)
+        {
+            int returnValue = 0;
+            switch (ID)
+            {
+                case "TXID":
+                    returnValue = 0;
+                    break;
+                case "NIDN":
+                    returnValue = 1;
+                    break;
+                case "CCPT":
+                    returnValue = 2;
+                    break;
+                case "OTHR":
+                    returnValue = 3;
+                    break;
+            }
+
+            taxIdTypeControl(returnValue);
+
+            return returnValue;
         }
     }
 }

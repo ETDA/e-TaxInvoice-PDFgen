@@ -41,7 +41,7 @@
             <ram:BuyerTradeParty>
                 <ram:Name>*buyer_name</ram:Name>
               <ram:SpecifiedTaxRegistration>
-                    <ram:ID schemeID="TXID">*buyer_taxid</ram:ID>
+                    <ram:ID schemeID="*buyer_taxtype">*buyer_taxid</ram:ID>
                 </ram:SpecifiedTaxRegistration>
               *buyer_DefinedCITradeContact
               <ram:PostalTradeAddress>

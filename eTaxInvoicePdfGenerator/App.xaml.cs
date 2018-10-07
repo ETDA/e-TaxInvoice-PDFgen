@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.IO;
+using eTaxInvoicePdfGenerator.util;
 
 namespace eTaxInvoicePdfGenerator
 {
@@ -27,6 +28,10 @@ namespace eTaxInvoicePdfGenerator
 
         protected override void OnStartup(StartupEventArgs e)
         {
+            DatabaseMigration dbMigration = new DatabaseMigration();
+            dbMigration.MigrationController();
+
+
             Process current = Process.GetCurrentProcess();
             Process[] processes = Process.GetProcessesByName(current.ProcessName);
             
@@ -34,14 +39,9 @@ namespace eTaxInvoicePdfGenerator
             {
                 this.Shutdown();
             }
-
-            //Shell32.Shell shell = new Shell32.Shell();
-
-            //Shell32.Folder fontFolder = shell.NameSpace(0x14);
             string fontFolderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Fonts);
             Shell32.Folder fontFolder = GetShell32NameSpaceFolder(fontFolderPath);
             string base_folder = System.AppDomain.CurrentDomain.BaseDirectory + "in\\";
-            //string segueUi = "Segoe UI.ttf";
             string segueUi = "segoeui.ttf";
             string sarabunBold = "THSarabun Bold.ttf";
             string sarabun = "THSarabun.ttf";
