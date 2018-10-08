@@ -16,7 +16,7 @@
 
 | Project Status  | Master Branch |
 | --------------- | ------------- |
-| [![Build status](https://ci.appveyor.com/api/projects/status/a4slseijo87c2971?svg=true)](https://ci.appveyor.com/project/pragasitcha/e-taxinvoice-pdfgen)  | [![Build status](https://ci.appveyor.com/api/projects/status/a4slseijo87c2971/branch/master?svg=true)](https://ci.appveyor.com/project/pragasitcha/e-taxinvoice-pdfgen/branch/master) |
+| [![Build status](https://ci.appveyor.com/api/projects/status/a4slseijo87c2971?svg=true)](https://ci.appveyor.com/project/pragasitcha/e-taxinvoice-pdfgen-4irkxn)  | [![Build status](https://ci.appveyor.com/api/projects/status/a4slseijo87c2971/branch/master?svg=true)](https://ci.appveyor.com/project/pragasitcha/e-taxinvoice-pdfgen-4irkx/branch/master) |
 
 ## Latest Release
 Windows x64 : [โปรแกรมจัดเตรียมใบกำกับภาษีอิเล็กทรอนิกส์ในรูปแบบ PDF/A-3 สำหรับติดตั้งที่เครื่อง PC](https://github.com/ETDA/e-TaxInvoice-PDFgen/releases/download/1.0.0/eTaxInvoice_v1.0.0.zip)
