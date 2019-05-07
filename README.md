@@ -16,7 +16,9 @@
 
 | Project Status  | Master Branch |
 | --------------- | ------------- |
-| [![Build status](https://ci.appveyor.com/api/projects/status/a4slseijo87c2971?svg=true)](https://ci.appveyor.com/project/pragasitcha/e-taxinvoice-pdfgen)  | [![Build status](https://ci.appveyor.com/api/projects/status/a4slseijo87c2971/branch/master?svg=true)](https://ci.appveyor.com/project/pragasitcha/e-taxinvoice-pdfgen/branch/master) |
+
+| [![Build status](https://ci.appveyor.com/api/projects/status/a4slseijo87c2971?svg=true)](https://ci.appveyor.com/project/pragasitcha/e-taxinvoice-pdfgen-4irkx)  | [![Build status](https://ci.appveyor.com/api/projects/status/a4slseijo87c2971/branch/master?svg=true)](https://ci.appveyor.com/project/pragashtcha/e-taxinvoice-pdfgen-4irkx/branch/master) |
+
 
 ## Latest Release
 Windows x64 : [โปรแกรมจัดเตรียมใบกำกับภาษีอิเล็กทรอนิกส์ในรูปแบบ PDF/A-3 สำหรับติดตั้งที่เครื่อง PC](https://github.com/ETDA/e-TaxInvoice-PDFgen/releases/download/1.0.0/eTaxInvoice_v1.0.0.zip)
@@ -26,6 +28,11 @@ Windows x64 : [โปรแกรมจัดเตรียมใบกำก�
 ## Changelog 
 
 [Read full changelog](https://github.com/ETDA/e-TaxInvoice-PDFgen/blob/master/CHANGELOG.md)
+
+[1.0.6] - 2019-05-03
+
+**Fix** 
+- fix #29  หัวใบกำกับภาษีหายกรณีสร้างใบยกเลิกมากกว่าสองใบ
 
 [1.0.5] - 2018-10-05
 

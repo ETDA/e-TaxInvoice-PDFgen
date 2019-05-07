@@ -209,6 +209,10 @@ namespace eTaxInvoicePdfGenerator.Forms
                 {
                     obj.invoiceName = "ใบกำกับภาษี";
                 }
+                if (is_replace.IsChecked.Value)
+                {
+                    obj.invoiceName = "ใบกำกับภาษี";
+                }
                 obj.taxCode = "VAT";
                 obj.taxRate = Convert.ToDouble(vatTb.Text);
                 obj.basisAmount = Convert.ToDouble(basisAmountTb.Text);
