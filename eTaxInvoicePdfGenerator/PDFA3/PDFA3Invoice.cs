@@ -43,15 +43,6 @@ namespace ECertificateAPI
             byte[] exchangeXMP = Encoding.ASCII.GetBytes(stringExchangeXMP.Replace("@DocumentType", documentType));
             writer.XmpMetadata = exchangeXMP;
 
-            //ElectronicDocument ed = ElectronicDocument.generateED(xmlFileName, xmlVersion, documentID, documentOID);
-            //XmpWriter xmpWriter = writer.XmpWriter;
-            //xmpWriter.AddRdfDescription(ed);
-
-            //IXmpMeta edPDFAextension = XmpMetaFactory.Parse(new FileStream("Resources/EDocument_PDFAExtensionSchema.xml", FileMode.Open));
-            //IXmpMeta originalXMP = xmpWriter.XmpMeta;
-
-            //XmpUtils.AppendProperties(edPDFAextension, originalXMP, true, true);
-
             pdfAdocument.Close();
             reader.Close();
 
