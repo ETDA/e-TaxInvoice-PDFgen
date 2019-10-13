@@ -332,7 +332,7 @@ namespace eTaxInvoicePdfGenerator.Forms
             {
                 validator.validateTaxID(taxIdTb, 1);
             }
-            if (is_branch.IsChecked == true)
+            if (is_branch.IsChecked)
             {
                 validator.validateBranchNo(branchNoTb);
                 validator.checkBranchID(branchNoTb, is_branch.IsChecked.Value);
@@ -427,7 +427,7 @@ namespace eTaxInvoicePdfGenerator.Forms
                         dlg.DefaultExt = ".pdf";
                         dlg.Filter = "Pdf Files|*.pdf";
                         bool result = dlg.ShowDialog().Value;
-                        if (result == true)
+                        if (result)
                         {
                             string outputPath = dlg.FileName;
                             pdf.CreatePDFA3Invoice(pdfFilePath, xmlFilePath, xmlFileName, xmlVersion, documentID, documentOID, outputPath, "Credit Note");
