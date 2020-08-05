@@ -19,7 +19,7 @@
 
 | [![Build status](https://ci.appveyor.com/api/projects/status/a4slseijo87c2971?svg=true)](https://ci.appveyor.com/project/pragasitcha/e-taxinvoice-pdfgen-4irkx)  | [![Build status](https://ci.appveyor.com/api/projects/status/a4slseijo87c2971/branch/master?svg=true)](https://ci.appveyor.com/project/pragashtcha/e-taxinvoice-pdfgen-4irkx/branch/master) |
 
-## Please Attention !
+## Please Attention
 source code ของ e-Tax Invoice by TeDA - PDF Generator on PC นี้ เป็นเพียงตัวอย่างแนวทางสำหรับโปรแกรมจัดทำใบกำกับภาษีอิเล็กทรอนิกส์เท่านั้น ใบกำกับภาษีที่จัดทำขึ้นมาอาจจะมีบางจุดที่ไม่สอดคล้องกับข้อกำหนดปัจจุบันของกรมสรรพากร
 
 ## Latest Release
