@@ -1,5 +1,5 @@
 ## :warning:  PLEASE ATTENTION !  :warning:
-source code ของ e-Tax Invoice by TeDA - PDF Generator on PC นี้ เป็นเพียงแนวทางสำหรับ จะเป็นแค่แนวทาง เพราะไม่ fully compatible กับระเบียบตัวใหม่แล้ว
+source code ของ e-Tax Invoice by TeDA - PDF Generator on PC นี้ เป็นเพียงตัวอย่างแนวทางสำหรับโปรแกรมจัดทำใบกำกับภาษีอิเล็กทรอนิกส์เท่านั้น ใบกำกับภาษีที่สร้างขึ้นมาอาจจะไม่สอดคล้องตามระเบียบกรมสรรพากรฉบับปัจจุบันได้
 
 ![Alt text](https://raw.githubusercontent.com/ETDA/e-TaxInvoice-PDFgen/master/eTaxInvoicePdfGenerator/icon_AppETax.png)
 
