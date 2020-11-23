@@ -14,7 +14,7 @@ namespace eTaxInvoicePdfGenerator.Dao
         public BuyerDao()
         {
             DatabasePath dbPath = new DatabasePath();
-            string base_folder = dbPath.CurrentDBFile(); //System.AppDomain.CurrentDomain.BaseDirectory;
+            string base_folder = dbPath.CurrentDBFile(); 
             sqlite = new Sqlite(base_folder);
         }
 

@@ -53,7 +53,7 @@ namespace eTaxInvoicePdfGenerator.Forms
                 houseNoTb.Text = obj.houseNo;
                 zipcodeTb.Text = obj.zipCode;
                 taxIdTb.Text = obj.taxId;                
-                if (obj.isBranch == true)
+                if (obj.isBranch)
                 {
                     is_branch.IsChecked = true;
                     branchNoTb.Text = obj.branchId;

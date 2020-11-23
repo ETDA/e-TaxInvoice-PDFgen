@@ -393,7 +393,7 @@ namespace eTaxInvoicePdfGenerator.Forms
                         dlg.DefaultExt = ".pdf";
                         dlg.Filter = "Pdf Files|*.pdf";
                         bool result = dlg.ShowDialog().Value;
-                        if (result == true)
+                        if (result)
                         {
                             string outputPath = dlg.FileName;
                             pdf.CreatePDFA3Invoice(pdfFilePath, xmlFilePath, xmlFileName, xmlVersion, documentID, documentOID, outputPath, "Debit Note");

@@ -43,7 +43,7 @@ namespace eTaxInvoicePdfGenerator.Report {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         protected DataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
-            if ((this.IsBinarySerialized(info, context) == true)) {
+            if ((this.IsBinarySerialized(info, context))) {
                 this.InitVars(false);
                 global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler1 = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
                 this.Tables.CollectionChanged += schemaChangedHandler1;
@@ -189,7 +189,7 @@ namespace eTaxInvoicePdfGenerator.Report {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
             this.tableTax = ((TaxDataTable)(base.Tables["Tax"]));
-            if ((initTable == true)) {
+            if ((initTable)) {
                 if ((this.tableTax != null)) {
                     this.tableTax.InitVars();
                 }
