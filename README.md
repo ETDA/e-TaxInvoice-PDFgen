@@ -27,6 +27,10 @@ Download version ล่าสุดได้ที่นี่ [release page](ht
 ## Changelog 
 
 [Read full changelog](https://github.com/ETDA/e-TaxInvoice-PDFgen/blob/master/CHANGELOG.md)
+[1.1.0] - 2022-01-31
+
+**Fix** 
+- fix  แก้ไขชื่ออำเภอ
 
 [1.0.6] - 2019-05-13
 
