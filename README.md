@@ -18,7 +18,8 @@ source code ของ e-Tax Invoice by TeDA - PDF Generator on PC นี้ เ�
 | Project Status  | Master Branch |
 | --------------- | ------------- |
 
-| [![Build status](https://ci.appveyor.com/api/projects/status/a4slseijo87c2971?svg=true)](https://ci.appveyor.com/project/pragasitcha/e-taxinvoice-pdfgen-4irkx)  | [![Build status](https://ci.appveyor.com/api/projects/status/a4slseijo87c2971/branch/master?svg=true)](https://ci.appveyor.com/project/pragashtcha/e-taxinvoice-pdfgen-4irkx/branch/master) |
+| [![Build status](https://ci.appveyor.com/api/projects/status/p3jsldv9m6ijqcg7?svg=true)](https://ci.appveyor.com/project/jitti-etda/e-taxinvoice-pdfgen)
+  | [![Build status](https://ci.appveyor.com/api/projects/status/p3jsldv9m6ijqcg7/branch/master?svg=true)](https://ci.appveyor.com/project/jitti-etda/e-taxinvoice-pdfgen/branch/master) |
 
 ## Latest Release
 
