@@ -64,7 +64,7 @@ Download version ล่าสุดได้ที่นี่ [release page](ht
   7. เขตบางบอน - แขวงบางบอนเหนือ แขวงบางบอนใต้ แขวงคลองบางพราน และแขวงคลองบางบอน
 
 ## Contact Us
-สามารถติดต่อเราได้ที่  eservice@etda.or.th
+สามารถติดต่อเราได้ที่ eservice@etda.or.th หรือ Support-center: โทร 0 2026 6933
 
 ## Document
 สามารถ download ได้จาก [ คู่มือโปรแกรมจัดเตรียมใบกำกับภาษีอิเล็กทรอนิกส์ในรูปแบบ PDF/A-3 (PC) ](https://etax.teda.th/etaxdocuments/eTaxInvoice_PDF_A3_pc.pdf)  
